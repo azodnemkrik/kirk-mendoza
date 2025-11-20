@@ -1,13 +1,14 @@
 import { useState, useEffect } from 'react'
 import { Link, Route, Routes } from 'react-router-dom';
+import Navigation from './components/Site/Navigation';
 
 
 function App() {
-  
+
 
   return (
-    <div>
-      <h1>Start of your template!</h1>
+    <div className="wrapper">
+      <Navigation />
     </div>
   )
 }
