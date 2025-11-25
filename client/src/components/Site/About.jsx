@@ -27,10 +27,6 @@ const About = ({ }) => {
 						<ul>
 							<li><img className="skill" src={iconReact} alt="React Icon" style={{ width: '100%', maxWidth: '400px', margin: '20px 0' }} /></li>
 							<li><img className="skill" src={iconReact} alt="React Icon" style={{ width: '100%', maxWidth: '400px', margin: '20px 0' }} /></li>
-							<li><img className="skill" src={iconReact} alt="React Icon" style={{ width: '100%', maxWidth: '400px', margin: '20px 0' }} /></li>
-							<li><img className="skill" src={iconReact} alt="React Icon" style={{ width: '100%', maxWidth: '400px', margin: '20px 0' }} /></li>
-							<li><img className="skill" src={iconReact} alt="React Icon" style={{ width: '100%', maxWidth: '400px', margin: '20px 0' }} /></li>
-							<li><img className="skill" src={iconReact} alt="React Icon" style={{ width: '100%', maxWidth: '400px', margin: '20px 0' }} /></li>
 						</ul>
 					</div>
 
