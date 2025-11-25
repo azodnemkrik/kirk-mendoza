@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_2" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" width="45.33" height="68" viewBox="0 0 45.33 68">
+  <g id="icons">
+    <g id="figma">
+      <path id="path0_fill" data-name="path0 fill" d="M11.33,68c6.26,0,11.33-5.08,11.33-11.33v-11.33h-11.33c-6.26,0-11.33,5.08-11.33,11.33s5.08,11.33,11.33,11.33Z" style="fill: #0acf83;"/>
+      <path id="path1_fill" data-name="path1 fill" d="M0,34c0-6.26,5.08-11.33,11.33-11.33h11.33v22.67h-11.33c-6.26,0-11.33-5.08-11.33-11.33Z" style="fill: #a259ff;"/>
+      <path id="path1_fill-2" data-name="path1 fill" d="M0,11.33C0,5.08,5.08,0,11.33,0h11.33v22.67h-11.33C5.08,22.67,0,17.59,0,11.33Z" style="fill: #f24e1e;"/>
+      <path id="path2_fill" data-name="path2 fill" d="M22.67,0h11.33c6.26,0,11.33,5.08,11.33,11.33s-5.08,11.33-11.33,11.33h-11.33V0Z" style="fill: #ff7262;"/>
+      <path id="path3_fill" data-name="path3 fill" d="M45.33,34c0,6.26-5.08,11.33-11.33,11.33s-11.33-5.08-11.33-11.33,5.08-11.33,11.33-11.33,11.33,5.08,11.33,11.33Z" style="fill: #1abcfe;"/>
+    </g>
+  </g>
+</svg>

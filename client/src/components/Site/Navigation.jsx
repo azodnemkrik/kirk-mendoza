@@ -11,15 +11,29 @@ const maintl = gsap.timeline();
 const Navigation = ({ }) => {
 	const navRef = useRef(null);
 
+
 	useEffect(() => {
+		// Setup hover animation for #logo
+		const logo = document.getElementById("logo-container");
+
+
+		const showNavButtons = () => {
+			// document.querySelector(".right-nav").style.visibility = "visible";
+			// document.querySelector(".right-nav").style.display = "flex";
+		}
+
 		const addRolloverListeners = () => {
 			if (logo) {
 				logo.addEventListener("mouseenter", () => {
 					rollOverAnimation.play();
+					gsap.to("#logo-container", { width: 500, height: 100, duration: 0.5, ease: "power4.inOut" });
+					gsap.to("#logo", { scale: 1, duration: 0.4, ease: "power4.inOut" });
 				});
 
 				logo.addEventListener("mouseleave", () => {
 					rollOverAnimation.reverse();
+					gsap.to("#logo-container", { width: 100, height: 100, duration: 0.35, ease: "power4.inOut" });
+					gsap.to("#logo", { scale: 5, duration: 0.4, ease: "power4.inOut" });
 				});
 			}
 		}
@@ -39,7 +53,8 @@ const Navigation = ({ }) => {
 			.to(".outline", 1, { drawSVG: "100%", stagger: 0.05, ease: "power1.inOut" }, "frame2")
 			.set(".fill", { autoAlpha: 1, stagger: 0.1 }, "frame2+=1")
 			.set(".outline", { autoAlpha: 0, stagger: 0.1 }, "frame2+=1")
-			.from(".fill", .25, { stagger: 0.08, scale: 1.03, ease: "power1.inOut", fill: "#FFFFFF", transformOrigin: "50% 50%" }, "frame2+=1.2")
+			// .from(".fill", .25, { stagger: 0.08, scale: 1.03, ease: "power1.inOut", fill: "#FFFFFF", transformOrigin: "50% 50%" }, "frame2+=1.2")
+			.from(".fill", .25, { stagger: 0.08, scale: 1.03, ease: "power1.inOut", fill: "#FFFFFF"}, "frame2+=1.2")
 
 			.add("frame3", "+=1")
 			.to(".logo-kirk, .k-temp, #morphing-k", 1, { x: -50, ease: "power4.inOut" }, "frame3")
@@ -48,20 +63,25 @@ const Navigation = ({ }) => {
 			.add("frame4", "+=0")
 			.set(".k-temp, .m-temp", { autoAlpha: 0 }, "frame4")
 			.set("#morphing-k, .morphing-m", { autoAlpha: 1 }, "frame4")
-			.to(".logo-kirk, .k-temp, #morphing-k, .morphing-m", .25, { x: 0, ease: "power4.in" }, "frame4")
-			.to(".m-letter", .25, { x: -1080, ease: "power4.in" }, "frame4")
-			.to(".k-letter", .25, { x: 470, ease: "power4.in" }, "frame4")
-			.to(".logo-mendoza", .25, { x: 0, ease: "power4.in" }, "frame4")
+			.to("#clip-path-kirk", .75, { x: 45, ease: "power4.inOut" }, "frame4")
+			.to("#clip-path-mendoza", .75, { x: -40, ease: "power4.inOut" }, "frame4")
+			.to(".logo-kirk, .k-temp, #morphing-k, .morphing-m", .75, { x: 0, ease: "power4.inOut" }, "frame4")
+			.to(".m-letter", .75, { x: -1080, ease: "power4.inOut" }, "frame4")
+			.to(".k-letter", .75, { x: 470, ease: "power4.inOut" }, "frame4")
+			.to(".logo-mendoza", .75, { x: 0, ease: "power4.inOut" }, "frame4")
 			.set(".k-temp", { autoAlpha: 0 }, "frame4+=.5")
 			.set(".morphing", { autoAlpha: 1 }, "frame4+=.5")
-			.to("#morphing-m1", .25, { ease: "power4.in", morphSVG: { shape: "#M1-guide", shapeIndex: "auto" } }, "frame4")
-			.to("#morphing-m2", .25, { ease: "power4.in", morphSVG: { shape: "#M2-guide", shapeIndex: "auto" } }, "frame4")
-			.to("#morphing-m3", .25, { ease: "power4.in", morphSVG: { shape: "#M3-guide", shapeIndex: "auto" } }, "frame4")
-			.to("#morphing-k", .25, { ease: "power4.in", fill: "#0054a6", morphSVG: { shape: "#k-guide", shapeIndex: "auto" } }, "frame4")
-			.fromTo("#logo", .25, { x: 0, scale: .75, transformOrigin: "50% 50%" }, { x: 300, scale: 1, ease: "power4.in", transformOrigin: "50% 50%", onComplete: addRolloverListeners}, "frame4")
+			.to("#morphing-m1", .75, { ease: "power4.inOut", morphSVG: { shape: "#M1-guide", shapeIndex: "auto" } }, "frame4")
+			.to("#morphing-m2", .75, { ease: "power4.inOut", morphSVG: { shape: "#M2-guide", shapeIndex: "auto" } }, "frame4")
+			.to("#morphing-m3", .75, { ease: "power4.inOut", morphSVG: { shape: "#M3-guide", shapeIndex: "auto" } }, "frame4")
+			.to("#morphing-k", .75, { ease: "power4.inOut", fill: "#0054a6", morphSVG: { shape: "#k-guide", shapeIndex: "auto" } }, "frame4")
+			// .fromTo("#logo", .75, { x: 0, transformOrigin: "50% 50%" }, { x: 300, ease: "power4.inOut", transformOrigin: "50% 50%" }, "frame4")
 
-		// Setup hover animation for #logo
-		const logo = document.querySelector("#bounding-box");
+			.add("frame5", "+=0")
+			.to(".logo-container", .75, { x: 0 , width: 100, height: 100, ease: "power4.inOut" }, "frame5")
+			.to(".navigation-bar", .75, { style: {flexDirection: 'column'} , ease: "power4.inOut" }, "frame5")
+			.to("#logo", 1, { scale: 5, ease: "power4.inOut", transformOrigin: "50% 50%", onStart: showNavButtons, onComplete: addRolloverListeners }, "frame5")
+
 
 		const rollOverAnimation = gsap.timeline({ paused: true });
 		rollOverAnimation
@@ -72,18 +92,20 @@ const Navigation = ({ }) => {
 			.to("#morphing-k", .5, { ease: "power4.inOut", fill: "#00a1e4", morphSVG: { shape: "#morphing-k", shapeIndex: "auto" } }, "start")
 			.to(".m-letter", .5, { x: 0, ease: "power4.inOut" }, "start")
 			.to(".k-letter", .5, { x: 0, ease: "power4.inOut" }, "start")
-			.to("#logo", .5, { x: 0, scale: .75, ease: "power4.inOut", transformOrigin: "50% 50%" }, "start")
+			// .to("#logo", .5, { x: 300, ease: "power4.inOut", transformOrigin: "50% 50%" }, "start")
+			.to("#logo", .5, { x: 300, ease: "power4.inOut" }, "start")
+			.to("#clip-path-kirk", .5, { x: 0, ease: "power4.inOut" }, "start")
+			.to("#clip-path-mendoza", .5, { x: 0, ease: "power4.inOut" }, "start")
 			.add("end", "+=0")
 			;
-
 
 	})
 
 	return (
-		<div>
-			<div className='container logo-container'>
+		<div className="navigation-bar" >
+			<div className="left-nav">
 				<Link to="/">
-					<svg width="1920" height="430" viewBox="0 0 1920 430">
+					<svg className="logo-container" id="logo-container" width="1920" height="430" viewBox="0 0 1920 430">
 						<defs>
 							<clipPath id="clip-path-mendoza">
 								<polygon points="1865.76 346.16 822.58 346.16 872.93 197.84 1916.11 197.84 1865.76 346.16" style={{ fill: "#fff", opacity: .5 }} />
@@ -92,8 +114,7 @@ const Navigation = ({ }) => {
 								<polygon points="440.87 296.16 16.93 296.16 67.28 147.84 491.23 147.84 440.87 296.16" style={{ fill: "#fff", opacity: .5 }} />
 							</clipPath>
 						</defs>
-						<g className="logo-container">
-
+						<g>
 							<g id="logo">
 								<g className="logo-kirk" clipPath="url(#clip-path-kirk)">
 									<path className="k-letter fill k" d="M169.41,215.06h8.55c5.48,0,9.48,1.92,12.01,5.76,2.52,3.84,2.9,8.61,1.15,14.31l-18.09,52.96h-40.79c-5.71,0-9.82-1.92-12.33-5.76-2.52-3.83-2.8-8.6-.82-14.31l9.21-27.3c1.09-2.63.99-4.93-.33-6.91-1.32-1.97-3.4-2.96-6.25-2.96h-17.43l-19.41,57.23H24.03l44.08-130.26h60.85l-19.41,57.23h1.32l49.34-57.23h62.83l-53.62,57.23Z" style={{ fill: "#00a1e4" }} />
@@ -139,11 +160,23 @@ const Navigation = ({ }) => {
 									</g>
 								</g>
 							</g>
-						<rect id="bounding-box" width="1920" height="430" style={{ fill: "#fff" , opacity: 0 }} />
+							<rect id="bounding-box" width="1920" height="430" style={{ fill: "#fff", opacity: .1 }} />
 						</g>
 					</svg>
 				</Link>
 			</div>
+			{/* <div className="right-nav">
+				<Link to="/about" className="nav-link link-about">
+					About
+				</Link>
+				<Link to="/services" className="nav-link link-services">
+					Services
+				</Link>
+				<Link to="/contact" className="nav-link link-contact">
+					Contact
+				</Link>
+			</div> */}
+
 		</div>
 	)
 }

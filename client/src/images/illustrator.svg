@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_2" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" width="68" height="68" viewBox="0 0 68 68">
+  <g id="icons">
+    <g id="illustrator">
+      <rect width="68" height="68" rx="11.63" ry="11.63" style="fill: #300;"/>
+      <path d="M33.21,17.99h-10.18l-11.69,31.45h9.11l1.52-4.7h11.69l1.52,4.7h9.38l-11.35-31.45h0ZM27.82,36.9h-3.31l3.31-10.25,3.31,10.25h-3.31Z" style="fill: #ff9a00;"/>
+      <rect x="45.73" y="24.68" width="8.43" height="24.76" style="fill: #ff9a00;"/>
+      <path d="M54.43,20.2c.02,2.31-1.84,3.94-4.49,3.92-2.65.02-4.51-1.61-4.49-3.92-.02-2.31,1.84-3.94,4.49-3.92,2.65-.02,4.51,1.61,4.49,3.92Z" style="fill: #ff9a00;"/>
+    </g>
+  </g>
+</svg>

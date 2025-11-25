@@ -5,10 +5,13 @@ html {
    padding: 0;
    margin: 0;
    background: #111111;
-   color: #ffffff;
    -webkit-font-smoothing: antialiased !important;
    text-rendering: optimizeLegibility !important;
-   -webkit-text-size-adjust: 100%
+   -webkit-text-size-adjust: 100%;
+   font-family: 'SegoePro Regular', sans-serif;
+   font-size: 18px;
+   line-height: 1.25;
+   color: #333333;
 }
 
 div {
@@ -46,6 +49,22 @@ div {
    stroke-dashoffset: 1000;
 }
 
+.navigation-bar {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   background-color: #000000;
+}
+
+.right-nav {
+   display: flex;
+   display: none;
+   visibility: hidden;
+   justify-content: space-between;
+   align-items: center;
+   gap: 20px;
+   padding-right: 2%;
+}
 
 @font-face {
    font-family: 'SegoeUI Semibold';
@@ -81,7 +100,7 @@ div {
    overflow: hidden;
    width: auto;
    height: 80px;
-   background-color: red;
+   /* background-color: red; */
 }
 
 .insignia-outline {
@@ -106,6 +125,90 @@ div {
 svg {
    overflow: visible;
 }
+
+.centered-container {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   width: 100%;
+}
+
+/* LOGO HERO SECTION */
+
+/* .logo-container   {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   height: auto;
+   width: auto;
+   padding: 2% 8%;
+   margin: 0;
+} */
+
+/* ABOUT ME SECTION */
+
+.profileImage {
+   flex: 1;
+   /* align-self: flex-start; */
+   width: 100%;
+   height: auto;
+   border-radius: 50%;
+   border: 0.75em solid #00a1e4;
+   margin-bottom: 20px;
+   min-width: 250px;
+   max-width: 300px;
+}
+
+.aboutBG {
+   background-color: #cccccc;
+}
+
+.about-container,
+.logo-container {
+   display: flex;
+   flex-wrap: wrap;
+   justify-content: center;
+   align-items: start;
+   flex-direction: row;
+   padding: 2% 8%;
+   gap: 5%;
+   height: auto;
+   width: auto;
+   max-width: 1380px;
+}
+
+.aboutText {
+   flex: 2;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: flex-start;
+   height: auto;
+   width: auto;
+   min-width: 300px;
+   max-width: 900px;
+}
+
+.skill {
+   height: 50px;
+   -webkit-filter: grayscale(100%);
+   -moz-filter: grayscale(100%);
+   -ms-filter: grayscale(100%);
+   -o-filter: grayscale(100%);
+   filter: grayscale(100%) brightness(0%) drop-shadow(0px 0px 0px #00000000);
+   transition: .15s;
+   cursor: pointer;
+   overflow: visible;
+}
+
+.skill:hover {
+   -webkit-filter: grayscale(0%);
+   -moz-filter: grayscale(0%);
+   -ms-filter: grayscale(0%);
+   -o-filter: grayscale(0%);
+   filter: grayscale(0%) brightness(100%) drop-shadow(0px 2px 1px #000000FF);
+}
+
 /* Scrubber */
 
 .scrubber-container {
