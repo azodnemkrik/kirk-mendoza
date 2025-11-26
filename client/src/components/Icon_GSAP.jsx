@@ -10,7 +10,7 @@ const Icon_GSAP = () => {
 	return (
 		<div className="skill">
 			<img className="skillIcon" src={iconGSAP} alt="GSAP" style={{ width: '100%', maxWidth: '400px' }} />
-			<p className='float skillLabel' style={{color: '#008f37ff', fontWeight: 'bold'}}>GSAP Animation</p>
+			<p className='float skillLabel' style={{color: '#008f37ff', fontWeight: 'bold'}}>GreenSock Animation Platform</p>
 		</div>
 	);
 }
