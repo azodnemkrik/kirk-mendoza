@@ -19,7 +19,7 @@ import Icon_Figma from "../Icon_Figma";
 import Icon_Illustrator from "../Icon_Illustrator";
 import Icon_Premiere from "../Icon_Premiere";
 import Icon_React from "../Icon_React";
-const About = ({ }) => {
+const About = ({ id, className }) => {
 
 	const navRef = useRef(null);
 
@@ -28,7 +28,7 @@ const About = ({ }) => {
 	})
 
 	return (
-		<div className="centered-container aboutBG">
+		<div id={id} className={`centered-container aboutBG ${className}`}>
 			<div className="about-container">
 				<div>
 					<img className="profileImage" src={profileImage} alt="Kirk Mendoza - Front-End Web Developer, Motion Graphics Designer, Video Editor, Animator" />

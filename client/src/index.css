@@ -49,16 +49,18 @@ div {
    stroke-dashoffset: 1000;
 }
 
-/* NAVIGATION BAR */
+/* NAVIGATION  */
+
+
 .navigation-bar {
+   flex: 1;
    top: 250px;
-   left: 50%;
    margin: 10px;
    display: flex;
+   flex-wrap: wrap;
    gap: 2rem;
    align-items: center; 
-   position: fixed;
-   transform: translateX(-50%);
+   align-self: center;
    z-index: 1000;
 }
 
@@ -78,6 +80,21 @@ div {
 .nav-link:hover {
    border: 0.15em solid #00a1e4;
    color: #00a1e4;
+}
+
+#navigation {
+   flex-direction: column;
+   align-items: center;
+   position: fixed;
+   z-index: 1000;
+   background-color: #000000;
+}
+
+#navigation .heroLogo {
+}
+
+.starting-container {
+   padding-top: 30%;
 }
 
 @font-face {

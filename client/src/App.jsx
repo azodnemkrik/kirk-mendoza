@@ -12,7 +12,7 @@ function App() {
     <>
       <Navigation />
       <div className="wrapper">
-        <About id="about-me"/>
+        <About id="about-me" className="starting-container"/>
         <WhatIDo id="what-i-do"/>
         <About id="case-studies"/>
         <LogoHero id="contact"/>

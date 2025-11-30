@@ -16,23 +16,23 @@ const Navigation = ({ }) => {
 	})
 
 	return (
-		<>
-		<LogoHero />
-		<div className="navigation-bar" >
-			<Link to="#about-me" className="nav-link link-about-me">
-				About Me
-			</Link>
-			<Link to="#what-i-do" className="nav-link link-what-i-do">
-				What I Do
-			</Link>
-			<Link to="#case-studies" className="nav-link link-case-studies">	
-				Case Studies
-			</Link>
-			<Link to="#contact" className="nav-link link-contact">	
-				Contact
-			</Link>
-		</div>
-		</>
+			<div id="navigation" className="centered-container">
+				<LogoHero className="heroLogo"/>
+				<div className="navigation-bar" >
+					<Link to="#about-me" className="nav-link link-about-me">
+						About Me
+					</Link>
+					<Link to="#what-i-do" className="nav-link link-what-i-do">
+						What I Do
+					</Link>
+					<Link to="#case-studies" className="nav-link link-case-studies">
+						Case Studies
+					</Link>
+					<Link to="#contact" className="nav-link link-contact">
+						Contact
+					</Link>
+				</div>
+			</div>
 	)
 }
 export default Navigation;
