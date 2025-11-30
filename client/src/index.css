@@ -49,21 +49,35 @@ div {
    stroke-dashoffset: 1000;
 }
 
+/* NAVIGATION BAR */
 .navigation-bar {
+   top: 250px;
+   left: 50%;
+   margin: 10px;
    display: flex;
-   justify-content: center;
-   align-items: center;
-   background-color: #000000;
+   gap: 2rem;
+   align-items: center; 
+   position: fixed;
+   transform: translateX(-50%);
+   z-index: 1000;
 }
 
-.right-nav {
-   display: flex;
-   display: none;
-   visibility: hidden;
-   justify-content: space-between;
-   align-items: center;
-   gap: 20px;
-   padding-right: 2%;
+.nav-link {
+   white-space: nowrap;
+   display: inline-block; 
+   padding: 4px 20px;
+   color: #ffffff;
+   background-color: #0054a6;
+   border-radius: 250px 0 250px 0;
+   border-radius: 100px;
+   transition: .25s;
+   border: 0.15em solid #0054a6;
+   text-decoration: none;
+}
+
+.nav-link:hover {
+   border: 0.15em solid #00a1e4;
+   color: #00a1e4;
 }
 
 @font-face {
@@ -152,6 +166,7 @@ svg {
    /* align-self: flex-start; */
    width: 100%;
    height: auto;
+   border-radius: 100px 0 100px 0;
    border-radius: 50%;
    border: 0.75em solid #00a1e4;
    margin-bottom: 20px;
@@ -261,6 +276,16 @@ li {
 .skillIcon:hover+.skillLabel,
 .skillIcon:hover~.skillLabel {
    opacity: 1;
+}
+
+/* What I Do Section */
+video {
+   width: 100%;
+   height: auto;
+   background-size: cover;
+   margin: 0;
+   padding: 0;
+   opacity: .5;
 }
 
 /* Scrubber */

@@ -35,9 +35,7 @@ const About = ({ }) => {
 				</div>
 				<div className="aboutText">
 					<h1>Hello, I'm Kirk!</h1>
-
 					<p> I'm a front-end web developer with over 20 years in the industry, creating clean, high-performing digital ad experiences. With a background in animation, my skill set extends into motion graphics and video editing, allowing me to blend strong technical development with eye-catching visual storytelling.</p>
-
 					<div className="skills-container">
 						<Icon_HTML />	
 						<Icon_CSS />
