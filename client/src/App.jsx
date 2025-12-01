@@ -4,6 +4,7 @@ import Navigation from './components/Site/Navigation';
 import LogoHero from './components/Site/LogoHero';
 import About from './components/Site/About';
 import WhatIDo from './components/Site/WhatIDo';
+import BrandCrawler from './components/Site/BrandCrawler';
 
 function App() {
 
@@ -14,25 +15,41 @@ function App() {
   const [isFixed, setIsFixed] = useState(false);
 
   useEffect(() => {
+    if(location.hash) {
+      const el = document.querySelector(location.hash);
+      if (el) el.scrollIntoView({ behavior: 'smooth'});
+    }
+
     const handleScroll = () => {
       setIsFixed(window.scrollY > 150);
     };
+
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
+
+
+  }, [location]);
   
   return (
     <>
       <Navigation ref={navRef} pathname={pathname} isFixed={isFixed} />
       <div className="wrapper">
         <About id="about-me"/>
+        <BrandCrawler />
+        <WhatIDo/>
+        <LogoHero/>
+        <About id="what-i-do"/>
+        <BrandCrawler />
         <WhatIDo/>
         <LogoHero/>
         <About id="case-studies"/>
+        <BrandCrawler />
+        <WhatIDo/>
         <LogoHero/>
-        <WhatIDo id="what-i-do"/>
-        <About />
-        <LogoHero id="contact"/>
+        <About id="contact"/>
+        <BrandCrawler />
+        <WhatIDo/>
+        <LogoHero/>
       </div>
 
       <Routes>

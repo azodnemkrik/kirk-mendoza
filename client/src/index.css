@@ -14,6 +14,11 @@ html {
    color: #333333;
 }
 
+/* Enable smooth scrolling for anchor jumps */
+html {
+   scroll-behavior: smooth;
+}
+
 div {
    padding: 0;
    margin: 0;
@@ -141,6 +146,14 @@ div {
 
 #insignia-fill {
    filter: drop-shadow(0px 2px 1px #000000);
+}
+
+/* Ensure anchored sections aren't hidden behind the sticky/fixed nav */
+#about-me,
+#what-i-do,
+#case-studies,
+#contact {
+   scroll-margin-top: 120px; /* adjust to match nav height */
 }
 
 .intro-about {
@@ -301,6 +314,23 @@ video {
    padding: 0;
    opacity: .5;
 }
+
+/* Brand Crawler Section */
+.brand-crawler-container {
+   height: 7%;
+   margin: 0;
+   padding: 0;
+   background-color: #f2f2f2;
+   /* background-size: 5170px 140px; */
+   /* background-size: 2585px 70px; */
+}
+.brands {
+   width: 2585px;
+   height: 70px;
+   margin: 0;
+   padding: 0;
+}
+
 
 /* Scrubber */
 
