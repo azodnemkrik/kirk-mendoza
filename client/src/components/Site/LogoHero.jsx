@@ -8,7 +8,7 @@ gsap.registerPlugin(DrawSVGPlugin, MorphSVGPlugin, SplitText);
 
 let hasAnimated = false;
 const maintl = gsap.timeline();
-const LogoHero = ({ }) => {
+const LogoHero = ({ id, className }) => {
 	const navRef = useRef(null);
 
 
@@ -48,11 +48,6 @@ const LogoHero = ({ }) => {
 			.to("#morphing-m2", .5, { ease: "back.inOut", morphSVG: { shape: "#M2-guide", shapeIndex: "auto" } }, "frame4")
 			.to("#morphing-m3", .5, { ease: "back.inOut", morphSVG: { shape: "#M3-guide", shapeIndex: "auto" } }, "frame4")
 			.to("#morphing-k", .5, { ease: "back.inOut", fill: "#0054a6", morphSVG: { shape: "#k-guide", shapeIndex: "auto" } }, "frame4")
-			// .fromTo("#logo", .5, { x: 0, transformOrigin: "50% 50%" }, { x: 300, ease: "back.inOut", transformOrigin: "50% 50%" }, "frame4")
-
-			.add("frame5", "+=0")
-			// .to(".logo-container", .75, { x: 0, width: 100, height: 100, ease: "power4.inOut" }, "frame5")
-			// .to("#logo", 1, { scale: 5, ease: "power4.inOut", transformOrigin: "50% 50%", onStart: showNavButtons, onComplete: addRolloverListeners }, "frame5")
 
 
 		const rollOverAnimation = gsap.timeline({ paused: true });
@@ -74,9 +69,9 @@ const LogoHero = ({ }) => {
 	})
 
 	return (
-		<div className="centered-container logoHeroBG">
+		<div id={id} className={`centered-container logoHeroBG ${className}`}>
 			{/* <svg className="logo-container" id="logo-container" width="1920" height="430" viewBox="0 0 1920 430"> */}
-			<svg className="logo-container" id="logo-container" viewBox="0 0 1920 430">
+			<svg className="logo-container" id="logo-container" viewBox="0 0 1920 330">
 				<defs>
 					<clipPath id="clip-path-mendoza">
 						<polygon points="1865.76 346.16 822.58 346.16 872.93 197.84 1916.11 197.84 1865.76 346.16" style={{ fill: "#fff", opacity: .5 }} />
