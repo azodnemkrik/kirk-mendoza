@@ -342,8 +342,10 @@ video {
 
 /* Brand Crawler Section */
 .brand-crawler-wrapper {
+   display: flex;
+   align-items: center;
    width: 100%;
-   height: 70px;
+   height: 110px;
    overflow: hidden;
    background-color: #f2f2f2;
    margin: 0;
