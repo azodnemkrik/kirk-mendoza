@@ -1,0 +1,375 @@
+/* -- BOILER PLATE -- START */
+body,
+html {
+  color: #000000;
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  margin: 0;
+  background: #808080;
+  -webkit-font-smoothing: antialiased !important;
+  text-rendering: optimizeLegibility !important;
+  -webkit-text-size-adjust: 100%;
+}
+
+div {
+  padding: 0;
+  margin: 0;
+  z-index: 20;
+}
+
+.test {
+  background-color: #480b00;
+  background-color: #8f4619;
+  background-color: #831313;
+}
+
+.wrapper {
+  background: #000000;
+  padding: 0;
+  margin: 0;
+  position: absolute;
+  transform: translateZ(0);
+  -webkit-transform: translateZ(0);
+}
+
+.banner {
+  width: 300px;
+  height: 600px;
+  overflow: hidden;
+  position: relative;
+}
+
+.banner .border {
+  position: absolute;
+  z-index: 100;
+  pointer-events: none;
+  background: #B5B5B5;
+}
+
+.banner .border-top {
+  width: 100%;  
+  height: 1px;
+  top: 0;
+  left: 0;
+}
+
+.banner .border-bottom {
+  width: 100%;
+  height: 1px;
+  bottom: 0;
+  left: 0;
+}
+
+.banner .border-left {
+  height: 100%;
+  width: 1px;
+  top: 1px;
+  left: 0;
+}
+
+.banner .border-right {
+  height: 100%;
+  width: 1px;
+  top: 1px;
+  right: 0;
+}
+
+.banner .stage {
+  position: absolute;
+  z-index: 20;
+  width: 300px;
+  height: 600px;
+  opacity: 0;
+  visibility: hidden;
+  cursor: pointer;
+}
+
+.float {
+  display: block;
+  position: absolute;
+  z-index: 20;
+}
+/* -- BOILER PLATE -- END */
+
+
+.carouselVid {
+  /* width: 182px;
+  height: 102px; */
+  width: 230px;
+  height: 151px;
+  border-radius: 10px;
+  border: 1px solid #682014; 
+  background-color:  #682014; 
+}
+.vid6, .vid5, .vid4 {
+}
+
+
+
+
+/* -- FONTS -- */
+@font-face {
+  font-family: 'SegoeUI Regular';
+  src: url('../fonts/SegoeUI-Regular.woff') format('woff');
+} 
+@font-face {
+  font-family: 'Segoe UI Black';
+  src: url('../fonts/SegoeUI-Black.woff') format('woff');
+} 
+@font-face {
+  font-family: 'Segoe UI Bold';
+  src: url('../fonts/SegoeUI-Bold.woff') format('woff');
+} 
+
+
+
+/* Buttons */
+.navButton {
+  width: 75px;
+  height: 600px;
+  /* background-color: red; */
+  opacity: 0;
+  z-index: 20;
+}
+.navLeft {
+  top: 0px;
+  left: 0px;
+  /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#000000+0,000000+100&0.9+0,0+100 */
+  background: linear-gradient(to right, rgba(0, 0, 0, 0.65) 0%, rgba(0, 0, 0, 0) 100%);
+}
+
+.navRight {
+  top: 0px;
+  right: 0px;
+  /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#000000+0,000000+100&0+0,0.9+100 */
+  background: linear-gradient(to right, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.65) 100%);
+}
+
+
+
+/* -- SPRITESHEET -- */
+/* SPRITE SHEET - JPG */
+.jpg-element {
+  position: absolute;
+  display: block;
+  background-image: url('../images/jpg-element.jpg');
+  background-repeat: no-repeat;
+  background-size: 300px 600px;
+  overflow: hidden;
+  z-index: 20;
+}
+.background {
+  width: 300px;
+  height: 600px;
+  background-position: 0px 0px;
+}
+
+.png-element {
+  position: absolute;
+  display: block;
+  z-index: 20;
+  background-image: url('../images/png-element.png');
+  background-repeat: no-repeat;
+  background-size: 218px 118px; /*436px 236px;*/
+  overflow: hidden;
+}
+
+.doomLogo {
+  width: 218px; /*432px;*/
+  height: 123px; /*242px;*/
+  background-position: -1px -1px; /*-2px -2px;*/
+}
+
+/* Sprite sheet positioning */
+
+
+
+
+/* -- PROJECT STYLING & POSITIONING-- */
+.doomLogo {
+  top: 190px;
+  left: 50%;
+  transform: translateX(-50%);
+  pointer-events: none;
+}
+
+.background {
+  pointer-events: none;
+}
+
+.banner .stage {
+  font-family: "SegoeUI Regular", Arial, Helvetica, sans-serif; 
+}
+
+.introGradient {
+  width: 300px;
+  height: 600px;
+  /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#000000+1,37150e+81 */
+  background: linear-gradient(to bottom,  rgba(0,0,0,1) 1%,rgba(55,21,14,1) 81%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+}
+
+.logo {
+  position: absolute;
+  left: 45px;
+  top: 37px;
+  height: 36px;
+  pointer-events: none;
+  z-index: 1001;
+}
+
+.text {
+  font-family: "Segoe UI Black", Arial, Helvetica, sans-serif;
+  width: 300px;
+  /* top: 50%; */
+  text-align: center;
+  pointer-events: none;
+  color: #FFFFFF;
+  font-size: 29.6px;
+  letter-spacing: -0.5px;
+  line-height: 27px;
+}
+
+
+.text1 {
+  font-family: "Segoe UI Bold";
+  font-size: 16px;
+  top: 317px;
+  left: 50%;
+  transform: translateX(-50%);
+  /* letter-spacing: .25px; */
+}
+
+
+.text2 {
+  font-family: 'SegoeUI Regular', Arial, Helvetica, sans-serif;
+  font-size: 8.5px;
+  /* letter-spacing: -.1px; */
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.text4 {
+  top: 309px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 100;
+}
+
+.text5 {
+  top: 336px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 22;
+}
+
+.green_shape {
+  width: 17px;
+  height: 6px;
+  top: 393px;
+  scale: 1.5;
+  left: 141px;
+  pointer-events: none;
+}
+
+.esrb {
+  height: 71.2px;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 37px;
+}
+
+
+/* -- CTA -- */
+.cta-button {
+  top: 426px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 128px;
+  height: 27px;
+  background-color: #9bf00b;
+  overflow: hidden;
+  z-index: 100;
+  /* opacity: .5; */
+}
+
+.cta-text {
+  top: 10px;
+  left: 18px;
+  font-family: 'Segoe UI Black';
+  font-size: 13px;
+  line-height: 7px;
+  pointer-events: none;
+  color: #054b16;
+}
+
+.ctaArrowContainer {
+  top: 9px;
+  left: 97px;
+  width: 22px;
+  height: 11px;
+  position: relative;
+  display: flex;
+  align-self: center;
+  justify-content: center;
+  overflow: hidden !important;
+  pointer-events: none;
+}
+
+ 
+.ctaArrow {
+  height: 9px;
+  position: absolute;
+  pointer-events: none;
+  fill: #054b16;
+}
+
+
+.ctaBackgroundArrow{
+  top: 0px;
+  left: -42px;
+  width: 200px;
+  height: 23px;
+  scale: 2;
+  pointer-events: none;
+}
+
+/* -- REPLAY -- */
+.replay-button {
+  width: 12px;
+  height: 12px;
+  right: 4px;
+  top: 4px;
+  z-index: 31 !important;
+  opacity: 0;
+  visibility: hidden;
+  cursor: pointer;
+}
+
+.replay-icon {
+  width: 11px;
+  height: 11px;
+}
+
+.ref {
+  top: 0px;
+  left: 0px;
+  width: 300px;
+  height: 600px;
+  background-size: 300px 600px;
+  pointer-events: none;
+  opacity: 0.25;
+}
+
+#ember_canvas {
+  z-index: 20 !important;
+  position: absolute;
+  width: 300px;
+  height: 600px;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  pointer-events: none;
+}

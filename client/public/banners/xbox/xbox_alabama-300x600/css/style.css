@@ -1,0 +1,301 @@
+.float {
+  display: block;
+  position: absolute;
+  z-index: 20;
+}
+
+.overlay {
+  position: absolute;
+  top: 0px;
+}
+
+#anim2 {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 300px;
+  height: 600px;
+  background-color: #000000;
+  z-index: 1000;
+  /* opacity: 0; */
+  /* display: none; */
+}
+
+.container {
+  display: grid;
+  grid-template-columns: repeat(1, auto);
+  align-items: center;
+  height: 100%;
+  width: 80%;
+  margin: 0 auto;
+}
+
+.pic,
+.endframe-cape {
+  width: 100%;
+  filter: url(#noise);
+}
+
+.ref {
+  top: 0px;
+  left: 0px;
+  width: 300px;
+  height: 600px;
+  background-size: 300px 600px;
+  opacity: 0.25;
+}
+
+/* Sprite Sheet Locations */
+.endframe-element {
+  background-image: url('../images/endframe-element.png');
+  background-repeat: no-repeat;
+  display: block;
+  position: absolute;
+  background-size: 254px 1005px;
+  overflow: hidden;
+  z-index: 20;
+}
+
+.endframe-body {
+  width: 252px;
+  height: 379px;
+  background-position: -1px -1px;
+}
+
+.endframe-cape {
+  width: 228px;
+  height: 181px;
+  background-position: -1px -382px;
+}
+
+.endframe-dirt1 {
+  width: 58px;
+  height: 31px;
+  background-position: -1px -565px;
+}
+
+.endframe-dirt2 {
+  width: 58px;
+  height: 31px;
+  background-position: -1px -598px;
+}
+
+.endframe-dirt3 {
+  width: 58px;
+  height: 31px;
+  background-position: -1px -631px;
+}
+
+.endframe-dirt4 {
+  width: 58px;
+  height: 31px;
+  background-position: -1px -664px;
+}
+
+.endframe-dirt5 {
+  width: 58px;
+  height: 31px;
+  background-position: -1px -697px;
+}
+
+.endframe-dirt6 {
+  width: 58px;
+  height: 31px;
+  background-position: -1px -730px;
+}
+
+.endframe-leaf1 {
+  width: 10px;
+  height: 20px;
+  background-position: -1px -763px;
+}
+
+.endframe-leaf2 {
+  width: 9px;
+  height: 13px;
+  background-position: -1px -785px;
+}
+
+.endframe-leaf3 {
+  width: 14px;
+  height: 9px;
+  background-position: -1px -800px;
+}
+
+.endframe-leaf4 {
+  width: 11px;
+  height: 7px;
+  background-position: -1px -811px;
+}
+
+.endframe-leaf5 {
+  width: 11px;
+  height: 9px;
+  background-position: -1px -820px;
+}
+
+.endframe-leaf6 {
+  width: 14px;
+  height: 6px;
+  background-position: -1px -831px;
+}
+
+.endframe-leaf7 {
+  width: 47px;
+  height: 38px;
+  background-position: -1px -839px;
+}
+
+.endframe-smoke-ring {
+  width: 125px;
+  height: 125px;
+  background-position: -1px -879px;
+}
+
+#masker {
+  top: -52px;
+  left: -5px;
+  transform: scale(.5);
+  display: none;
+  /* Hide the mask image itself */
+}
+
+.container {
+  -webkit-perspective: 300px;
+  /* Chrome, Safari, Opera */
+  -webkit-perspective-origin: 50% 50%;
+  /* Chrome, Safari, Opera */
+  perspective: 300px;
+  perspective-origin: 50% 50%;
+}
+
+/* .sword-glare {
+  width: 14px;
+  height: 104px;
+  top: 3px;
+  left: 161px;
+  mask-image: url('../images/sword-mask.png');
+  mask-size: cover;
+  mask-repeat: no-repeat;
+  -webkit-mask-image: url('../images/sword-mask.png');
+  -webkit-mask-size: cover;
+  -webkit-mask-repeat: no-repeat;
+} */
+
+.white-glare {
+  width: 14px;
+  height: 104px;
+  top: 0px;
+  left: 0px;
+  opacity: 0.25;
+  background-color: white;
+  /* Glare color */
+}
+
+
+/* Sprite Sheet Positioning */
+.endframe-body {
+  top: 142px;
+  left: -3px;
+}
+
+.endframe-cape {
+  top: 269px;
+  left: 152px;
+}
+
+.leaf1 {
+  top: 195px;
+  left: 175px;
+}
+
+.leaf2 {
+  top: 209px;
+  left: 179px;
+}
+
+.leaf3 {
+  top: 211px;
+  left: 191px;
+}
+
+.leaf4 {
+  top: 220px;
+  left: 192px;
+}
+
+.leaf5 {
+  top: 208px;
+  left: 207px;
+}
+
+.leaf6 {
+  top: 245px;
+  left: 196px;
+}
+
+.leaf7 {
+  top: 201px;
+  left: 148px;
+}
+
+
+.endframe-dirt1 {
+  top: 0px;
+  left: 0px;
+}
+
+.endframe-dirt2 {
+  top: 0px;
+  left: 0px;
+}
+
+.endframe-dirt3 {
+  top: 0px;
+  left: 0px;
+}
+
+.endframe-dirt4 {
+  top: 0px;
+  left: 0px;
+}
+
+.endframe-dirt5 {
+  top: 0px;
+  left: 0px;
+}
+
+.endframe-dirt6 {
+  top: 0px;
+  left: 0px;
+}
+
+.endframe-sword-mask {
+  top: 0px;
+  left: 0px;
+}
+
+.dirt {
+  opacity: .15;
+  scale: .5;
+}
+
+.flash-cover {
+  top: 0px;
+  left: 0px;
+  width: 300px;
+  height: 600px;
+  background-color: #FFFFFF;
+}
+
+.largeLeaf {
+  top: 0px;
+  left: 0px;
+}
+
+.portal {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  filter: brightness(0) invert(1);
+}

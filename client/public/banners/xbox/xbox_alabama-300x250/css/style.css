@@ -1,0 +1,303 @@
+.float {
+  display: block;
+  position: absolute;
+  z-index: 20;
+}
+
+.overlay {
+  position: absolute;
+  top: 0px;
+}
+
+#anim2 {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 300px;
+  height: 250px;
+  background-color: #000000;
+  z-index: 1000;
+  /* opacity: 0; */
+  /* display: none; */
+}
+
+.container {
+  display: grid;
+  grid-template-columns: repeat(1, auto);
+  align-items: center;
+  height: 100%;
+  width: 80%;
+  margin: 0 auto;
+}
+
+.pic, .endframe-cape {
+  width: 100%;
+  filter: url(#noise);
+}
+
+.ref {
+  top: 0px;
+  left: 0px;
+  width: 300px;
+  height: 250px;
+  background-size: 300px 250px;
+  opacity: 0.25;
+}
+
+/* Sprite Sheet Locations */
+.endframe-element {
+  background-image: url('../images/endframe-element.png');
+  background-repeat: no-repeat;
+  display: block;
+  position: absolute;
+  background-size: 166px 884px;
+  overflow: hidden;
+  z-index: 20;
+}
+
+.endframe-body {
+  width: 164px;
+  height: 248px;
+  background-position: -1px -1px;
+}
+
+.endframe-cape {
+  width: 149px;
+  height: 122px;
+  background-position: -1px -251px;
+}
+
+.endframe-dirt1 {
+  width: 58px;
+  height: 31px;
+  background-position: -1px -371px;
+}
+
+.endframe-dirt2 {
+  width: 58px;
+  height: 31px;
+  background-position: -1px -404px;
+}
+
+.endframe-dirt3 {
+  width: 58px;
+  height: 31px;
+  background-position: -1px -437px;
+}
+
+.endframe-dirt4 {
+  width: 58px;
+  height: 31px;
+  background-position: -1px -470px;
+}
+
+.endframe-dirt5 {
+  width: 58px;
+  height: 31px;
+  background-position: -1px -503px;
+}
+
+.endframe-dirt6 {
+  width: 58px;
+  height: 31px;
+  background-position: -1px -536px;
+}
+
+.endframe-leaf1 {
+  width: 6px;
+  height: 13px;
+  background-position: -1px -569px;
+}
+
+.endframe-leaf2 {
+  width: 6px;
+  height: 9px;
+  background-position: -1px -584px;
+}
+
+.endframe-leaf3 {
+  width: 9px;
+  height: 6px;
+  background-position: -1px -595px;
+}
+
+.endframe-leaf4 {
+  width: 7px;
+  height: 5px;
+  background-position: -1px -603px;
+}
+
+.endframe-leaf5 {
+  width: 7px;
+  height: 6px;
+  background-position: -1px -610px;
+}
+
+.endframe-leaf6 {
+  width: 10px;
+  height: 5px;
+  background-position: -1px -618px;
+}
+
+.endframe-leaf7 {
+  width: 31px;
+  height: 25px;
+  background-position: -1px -625px;
+}
+
+.endframe-smoke-ring {
+  width: 125px;
+  height: 125px;
+  background-position: -1px -652px;
+}
+
+.endframe-sword-mask {
+  width: 14px;
+  height: 104px;
+  background-position: -1px -779px;
+}
+
+#masker {
+  top: -52px;
+  left: -5px;
+  transform: scale(.5);
+  display: none; /* Hide the mask image itself */
+}
+
+.container {
+  -webkit-perspective: 300px; /* Chrome, Safari, Opera */
+  -webkit-perspective-origin: 50% 50%; /* Chrome, Safari, Opera */
+  perspective: 300px;
+  perspective-origin: 50% 50%;
+}
+
+.sword-glare {
+  /* background-color: red; */
+  width: 14px;
+  height: 104px;
+  top: 3px;
+  left: 161px;  
+  mask-image: url('../images/sword-mask.png'); /* Path to your mask image */
+  mask-size: cover; /* Adjust the size of the mask image */
+  mask-repeat: no-repeat; /* Ensure the mask image does not repeat */
+  -webkit-mask-image: url('../images/sword-mask.png'); /* For WebKit browsers */
+  -webkit-mask-size: cover; /* For WebKit browsers */
+  -webkit-mask-repeat: no-repeat; /* For WebKit browsers */
+}
+
+.white-glare {
+  width: 14px;
+  height: 104px;
+  top: 0px;
+  left: 0px;
+  opacity: 0.25;
+  background-color: white; /* Glare color */
+}
+
+
+/* Sprite Sheet Positioning */
+.endframe-body {
+  top: 3px;
+  left: 135px;
+}
+
+.endframe-cape {
+  top: 86px;
+  left: 242px;
+}
+
+.leaf1 {
+  top: 36px;
+  left: 251px;
+}
+
+.leaf2 {
+  top: 44px;
+  left: 255px;
+}
+
+.leaf3 {
+  top: 47px;
+  left: 262px;
+}
+
+.leaf4 {
+  top: 52px;
+  left: 264px;
+}
+
+.leaf5 {
+  top: 45px;
+  left: 273px;
+}
+
+.leaf6 {
+  top: 69px;
+  left: 265px;
+}
+
+.leaf7 {
+  top: 39px;
+  left: 269px;
+}
+
+
+.endframe-dirt1 {
+  top: 0px;
+  left: 0px;
+}
+
+.endframe-dirt2 {
+  top: 0px;
+  left: 0px;
+}
+
+.endframe-dirt3 {
+  top: 0px;
+  left: 0px;
+}
+
+.endframe-dirt4 {
+  top: 0px;
+  left: 0px;
+}
+
+.endframe-dirt5 {
+  top: 0px;
+  left: 0px;
+}
+
+.endframe-dirt6 {
+  top: 0px;
+  left: 0px;
+}
+
+.endframe-sword-mask {
+  top: 0px;
+  left: 0px;
+}
+
+.dirt {
+  opacity: .15;
+  scale: .5;
+}
+
+.flash-cover {
+  top: 0px;
+  left: 0px;
+  width: 300px;
+  height: 250px;
+  background-color: #FFFFFF;
+}
+
+.largeLeaf {
+  top: 0px;
+  left: 0px;
+}
+
+.portal {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  filter: brightness(0) invert(1);
+}

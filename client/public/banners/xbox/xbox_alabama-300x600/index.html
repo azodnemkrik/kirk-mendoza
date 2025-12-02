@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="tBannerV" content="2.51b">
+	<title>Alabama_300x600</title>
+	<script src="js/tools/iphone-inline-video.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/js/all.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.8.0/gsap.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/createjs@1.0.1/builds/1.0.0/createjs.min.js"></script>
+	<meta name="ad.size" content="width=300,height=600">
+	<script>
+		var clickTag = "https://www.google.com";
+		const fontToLoad = [
+			['Segoe UI Black', 'url(fonts/SegoeUI-Black.woff)'],
+			['Segoe Pro Cond', 'url(fonts/SegoePro-Cond.woff)'],
+			['SegoeUI-Bold', 'url(fonts/SegoeUI-Bold.woff)']
+		],
+			videoSrc = ['./video/Avowed.mp4'];
+	</script>
+	<link rel="stylesheet" href="css/main.css">
+	<link rel="stylesheet" href="css/style.css">
+</head>
+
+<body onload="loaded('body')">
+	<div id="aria-text" style="opacity: 0;">
+		<div style="top: 17px; left: 17px; width: 32px; height: 32px; opacity: 0;">X BOX Game Pass</div>
+		<div style="top: 148px; left: 78px; width: 144px; height: 12px; opacity: 0;">Play it now with P C Game Pass.</div>
+		<div style="top: 80px; left: 12px; width: 144px; height: 42px; opacity: 0;">Avowed.</div>
+		<div style="top:125px; left: 14px; width: 132px; height: 22px; opacity: 0;">Play now.</div>
+		<div style="top:162px; left: 14px; width: 94px; height: 14px; opacity: 0;">Game availability varies by plan.</div>
+		<div style="top:212px; left: 12px; width: 268px; height: 32px; opacity: 0;">ESRB Rating MATURE 17+: Blood and Gore,
+			<br />
+			Strong Language and Violence
+		</div>
+		<div id="aria-button" role="button" style="opacity: 0;">JOIN GAME PASS</div>
+	</div>
+
+	<div id="init" aria-hidden="true"></div>
+	<div id="rHit" class="replay-color alpha copy" aria-hidden="true">
+		<i class="fas fa-redo fa-xs"></i>
+	</div>
+
+	<div id="outline" aria-hidden="true">
+		<div id="border"></div>
+		<div id="logo_intro"
+			style="position: absolute; display: block; left: 44px; top: 37px; width: 32px; height: 32px; z-index: 1001;">
+			<svg xmlns="http://www.w3.org/2000/svg" width="211.166" height="36" viewBox="0 0 211.166 36">
+				<path id="logo" data-name="Game Pass Logo"
+					d="M18,14.436a.11.11,0,0,1,.059.029c5.383,4.095,14.6,14.223,11.79,17.084a18,18,0,0,1-23.7,0C3.34,28.689,12.557,18.56,17.94,14.466a.116.116,0,0,1,.06-.029m9.377-11.8a18.007,18.007,0,0,0-18.754,0,.068.068,0,0,0-.03.089.072.072,0,0,0,.087.031C12.166,2,17.46,5.011,17.962,5.314A.079.079,0,0,0,18,5.327a.077.077,0,0,0,.038-.014c.5-.3,5.8-3.312,9.282-2.559a.071.071,0,0,0,.087-.031.068.068,0,0,0-.03-.089M5.4,5.165a.32.32,0,0,0-.08.061A18,18,0,0,0,3.68,28.905a.078.078,0,0,0,.1.029.075.075,0,0,0,.021-.093C2.425,24.6,9.441,14.314,13.064,10a.084.084,0,0,0,.025-.052.079.079,0,0,0-.031-.059C7.567,4.429,5.7,5.009,5.4,5.165M22.942,9.89a.077.077,0,0,0-.031.059.081.081,0,0,0,.025.052c3.623,4.313,10.638,14.6,9.267,18.839a.075.075,0,0,0,.021.093.077.077,0,0,0,.1-.029,17.994,17.994,0,0,0-1.64-23.679.311.311,0,0,0-.08-.061c-.3-.156-2.167-.737-7.657,4.725m56.337-2.44H75.54L67.092,29.088h3.432l2.091-5.605H82.2L84.3,29.088h3.432ZM73.669,20.6l3.741-9.906L81.15,20.6Zm-8.306-2.909v11.4h-3.11V26.255a7.805,7.805,0,0,1-2.938,2.473,9.371,9.371,0,0,1-4.074.844,10.8,10.8,0,0,1-4.2-.783,8.919,8.919,0,0,1-3.246-2.349,10.281,10.281,0,0,1-2.12-3.593,14.024,14.024,0,0,1-.706-4.578,14.05,14.05,0,0,1,.713-4.616,10.1,10.1,0,0,1,2.143-3.587,9.13,9.13,0,0,1,3.314-2.326,11.308,11.308,0,0,1,4.284-.775,10.351,10.351,0,0,1,6.595,2.067,8.554,8.554,0,0,1,3.1,5.565l.005.036h-3.4l-.005-.025a5.554,5.554,0,0,0-2.154-3.435,6.736,6.736,0,0,0-4.117-1.266,6.375,6.375,0,0,0-5.127,2.261,9.054,9.054,0,0,0-1.932,6.1,9.052,9.052,0,0,0,1.932,6.1,6.554,6.554,0,0,0,5.187,2.262,6.825,6.825,0,0,0,4.736-1.749,5.932,5.932,0,0,0,2.018-4.369H55.906V17.692Zm52.919-7.269v6.269h10.748v2.76H118.281v6.663h12.15v2.972H114.975V7.451h15.456v2.972ZM111.67,7.451V29.088h-3.185V11.918c-.409,1.2-.958,2.7-1.636,4.454l-4.886,12.716H99.193l-.008-.02-4.939-12.7c-.588-1.568-1.126-3.041-1.605-4.392V29.088H89.457V7.451h4.538l4.432,11.5c.889,2.331,1.623,4.349,2.182,6,.656-1.965,1.4-4.086,2.213-6.3l4.28-11.2Zm41.7,1.842A7.69,7.69,0,0,0,147.9,7.451h-9.213V29.088h3.305V21.119H147.9a7.693,7.693,0,0,0,5.475-1.842,6.549,6.549,0,0,0,1.949-4.977,6.587,6.587,0,0,0-1.949-5.007m-11.383,1.069h5.847a4.249,4.249,0,0,1,3.068,1.022,3.9,3.9,0,0,1,1.051,2.916,3.847,3.847,0,0,1-1.051,2.9,4.292,4.292,0,0,1-3.069,1.006h-5.847Zm49.93,12.725a5.711,5.711,0,0,1-2.239,4.752,9.913,9.913,0,0,1-6.186,1.734,10.33,10.33,0,0,1-6.671-1.946,7.024,7.024,0,0,1-2.421-5.691V21.9h3.305v.031a4.547,4.547,0,0,0,1.5,3.612,6.731,6.731,0,0,0,4.343,1.2,6.255,6.255,0,0,0,3.663-.918,3.078,3.078,0,0,0,1.274-2.656,2.537,2.537,0,0,0-1.047-2.171,10.966,10.966,0,0,0-3.806-1.373l-1.848-.394a10.66,10.66,0,0,1-5.044-2.189,5.371,5.371,0,0,1-1.707-4.2,5.156,5.156,0,0,1,2.073-4.282,8.969,8.969,0,0,1,5.594-1.6c2.823,0,4.975.614,6.4,1.825a6.446,6.446,0,0,1,2.208,5.023v.033H188.04l0-.029a4.1,4.1,0,0,0-1.367-3.053,6.334,6.334,0,0,0-3.934-.978,5.6,5.6,0,0,0-3.224.782,2.558,2.558,0,0,0-1.108,2.216A2.617,2.617,0,0,0,179.393,15a9.241,9.241,0,0,0,3.684,1.388l1.879.394a11.526,11.526,0,0,1,5.333,2.28,5.209,5.209,0,0,1,1.631,4.023m19.246,0a5.711,5.711,0,0,1-2.239,4.752,9.913,9.913,0,0,1-6.186,1.734,10.329,10.329,0,0,1-6.671-1.946,7.024,7.024,0,0,1-2.421-5.691V21.9h3.305v.031a4.549,4.549,0,0,0,1.5,3.612,6.729,6.729,0,0,0,4.343,1.2,6.252,6.252,0,0,0,3.663-.918,3.079,3.079,0,0,0,1.275-2.656,2.537,2.537,0,0,0-1.048-2.171,10.959,10.959,0,0,0-3.806-1.373l-1.848-.394a10.66,10.66,0,0,1-5.044-2.189,5.37,5.37,0,0,1-1.707-4.2,5.156,5.156,0,0,1,2.073-4.282,8.967,8.967,0,0,1,5.594-1.6c2.823,0,4.975.614,6.4,1.825a6.447,6.447,0,0,1,2.208,5.023v.033h-3.273l0-.029a4.1,4.1,0,0,0-1.367-3.053,6.332,6.332,0,0,0-3.934-.978,5.605,5.605,0,0,0-3.224.782,2.557,2.557,0,0,0-1.108,2.216A2.618,2.618,0,0,0,198.639,15a9.247,9.247,0,0,0,3.684,1.388l1.879.394a11.523,11.523,0,0,1,5.332,2.28,5.209,5.209,0,0,1,1.632,4.023M165.205,7.451h-3.739l-8.449,21.637h3.432l2.091-5.605h9.59l2.091,5.605h3.432Zm-5.61,13.15,3.741-9.906,3.741,9.906Z"
+					fill="#2f2f2f" />
+			</svg>
+
+		</div>
+
+		<div id="intro" class="copy unselectable"
+			style="font-family:'SegoeUI-Bold', Arial, Helvetica, sans-serif; text-align: center; font-size: 17px; line-height: 17px; top: 303px; left: 43px; color: #FFFFFF;">
+			Play it now with Game Pass.
+		</div>
+
+
+		<div id="introesbr2" class="copy unselectable"
+			style="opacity:0; font-family:'Segoe Pro Cond', Arial, Helvetica, sans-serif; font-size: 8px; line-height: 12px; letter-spacing: 0px; top: 467px; left: 105px; color: #FFFFFF">
+			Game availability varies by plan.
+		</div>
+
+		<div id="headline1" class="copy unselectable"
+			style="opacity:0; font-family:'Segoe UI Black', Arial, Helvetica, sans-serif; text-align: center; font-size: 29.5px; line-height: 26.6px; letter-spacing: -0.4px; top: 96.5px; left: 41.5px; color: #FFFFFF;">
+			PLAY AVOWED<br>NOW
+		</div>
+
+		<div id="headline2" class="copy unselectable"
+			style="opacity:0; font-family:'SegoeUI-Bold', Arial, Helvetica, sans-serif; font-size: 15.5px; line-height: 20px; top: 164.5px; left: 81px; color: #FFFFFF;">
+			Forge Your Destiny.
+		</div>
+
+		<svg id="green_shape" class="copy unselectable" width="28" viewBox="0 0 47.062 7.512" style="opacity: 0;">
+			<path id="path1" data-name="path1" d="M5.321,0,0,7.512H41.741L47.062,0Z" transform="translate(0 0)"
+				fill="#9bf00b" />
+		</svg>
+
+		<div id="disclaimer" class="copy unselectable"
+			style="opacity:0; font-family:'Segoe Pro Cond', Arial, Helvetica, sans-serif; font-size: 8px; line-height: 12px; letter-spacing: 0px; top: 412px; left: 104.8px; color: #ffffff">
+			Game availability varies by plan.
+		</div>
+
+		<div id="esrbtxt" style="position: absolute; opacity:1; top:490px; left: 78px; z-index: 100;">
+			<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="144.622" height="74"
+				viewBox="0 0 144.622 74">
+				<defs>
+					<clipPath id="clip-path">
+						<rect id="Rectangle_1036" data-name="Rectangle 1036" width="144.622" height="74" fill="none" />
+					</clipPath>
+				</defs>
+				<g id="ESRB" transform="translate(24.704 18.186)">
+					<g id="Group_573" data-name="Group 573" transform="translate(-24.704 -18.186)">
+						<path id="Path_3236" data-name="Path 3236" d="M0,0V73.991L144.622,74V.009L144.494,0Z" fill="#fff" />
+						<rect id="Rectangle_1032" data-name="Rectangle 1032" width="142.744" height="72.342"
+							transform="translate(0.94 0.866)" fill="#231f20" />
+						<rect id="Rectangle_1033" data-name="Rectangle 1033" width="93.35" height="67.629"
+							transform="translate(48.147 3.075)" fill="#fff" />
+						<rect id="Rectangle_1034" data-name="Rectangle 1034" width="42.269" height="11.877"
+							transform="translate(3.263 3.262)" fill="#fff" />
+						<rect id="Rectangle_1035" data-name="Rectangle 1035" width="42.295" height="43.66"
+							transform="translate(3.242 17.738)" fill="#fff" />
+						<g id="Group_572" data-name="Group 572">
+							<g id="Group_571" data-name="Group 571" clip-path="url(#clip-path)">
+								<path id="Path_3237" data-name="Path 3237"
+									d="M19.439,65.665a.647.647,0,0,0-.5-.392,3.175,3.175,0,0,0-.9-.108c-.761,0-1.1.124-1.1.338,0,.856,6.075.32,6.075,2.429,0,1.343-2.04,2-4.945,2-2.789,0-4.606-.895-4.681-1.94H16.7a.843.843,0,0,0,.576.455,3.163,3.163,0,0,0,.985.148c.868,0,1.442-.152,1.442-.426,0-.879-6.082-.275-6.082-2.482,0-1.235,1.936-1.85,4.581-1.85,2.933,0,4.269.818,4.523,1.833Z"
+									fill="#fff" />
+								<path id="Path_3238" data-name="Path 3238"
+									d="M28.2,66.485h1.365c1.071,0,1.646-.155,1.646-.554s-.585-.606-1.394-.606H28.208Zm0,1.262v2.032H24.741v-5.8h4.991c3.517,0,4.677.532,4.677,1.66,0,.668-.541,1.226-1.774,1.422,1.118.221,1.79.358,1.79,1.526,0,.753-.045,1.018.366,1.018v.174H31.282a2.235,2.235,0,0,1-.173-1.015c0-.762-.236-1.007-1.849-1.007Z"
+									fill="#fff" />
+								<path id="Path_3239" data-name="Path 3239"
+									d="M40,65.332V66.3h1.443c.691,0,1.192-.175,1.192-.507,0-.455-.683-.464-1.41-.464Zm0,2.022v1.068h1.512c.857,0,1.5-.1,1.5-.531,0-.506-.8-.537-1.909-.537Zm-3.46,2.425v-5.8h5.052c2.377,0,4.27.316,4.27,1.464,0,.6-.706,1.032-1.377,1.258,1.14.163,1.754.707,1.754,1.326,0,1.293-1.8,1.751-4.55,1.751Z"
+									fill="#fff" />
+								<path id="Path_3240" data-name="Path 3240"
+									d="M4.841,28.546l13.165-3.5,7.5,17.424.063-.02-2.26-18.8,13.158-3.489,8.218,30.423L36.66,52.7,30.785,30.952l-.064.024,2.49,22.639-8.69,2.308L15.27,35.07l-.066.019,5.875,21.753-8.018,2.124Z"
+									fill="#231f20" />
+								<path id="Path_3241" data-name="Path 3241"
+									d="M4.456,12.556V5.833H6.394l.9,4.572h.017l.954-4.572h1.877v6.723H8.972V7.37H8.956L7.845,12.556H6.7L5.645,7.37H5.629v5.186Z"
+									fill="#231f20" />
+								<path id="Path_3242" data-name="Path 3242"
+									d="M10.686,12.556l1.6-6.725h1.588l1.56,6.725H14.163l-.32-1.489H12.2l-.326,1.489Zm2.323-5.429h-.02l-.548,2.907h1.147Z"
+									fill="#231f20" />
+								<path id="Path_3243" data-name="Path 3243" d="M18.95,5.833V6.95H17.609v5.606H16.4V6.949H15.066V5.832Z"
+									fill="#231f20" />
+								<path id="Path_3244" data-name="Path 3244"
+									d="M23.4,5.833V10.6a2.8,2.8,0,0,1-.1.745,1.828,1.828,0,0,1-.327.661,1.63,1.63,0,0,1-.6.476,2.083,2.083,0,0,1-.927.183,1.855,1.855,0,0,1-1.477-.559,2.222,2.222,0,0,1-.483-1.509V5.833h1.206v4.672a1.5,1.5,0,0,0,.2.888.65.65,0,0,0,.538.268.629.629,0,0,0,.582-.3,1.652,1.652,0,0,0,.184-.856V5.833Z"
+									fill="#231f20" />
+								<path id="Path_3245" data-name="Path 3245"
+									d="M25.563,12.556h-1.2V5.833h2.225a1.208,1.208,0,0,1,.986.447,2.059,2.059,0,0,1,.36,1.316,2.239,2.239,0,0,1-.248,1.089,1.118,1.118,0,0,1-.822.561v.018c.064.012.154.03.271.057a.862.862,0,0,1,.346.166,1.067,1.067,0,0,1,.3.389,1.576,1.576,0,0,1,.124.711c0,.107,0,.255.006.447s.006.393.019.6.023.4.043.568a1.486,1.486,0,0,0,.069.362H26.861a1.721,1.721,0,0,1-.124-.642c0-.223-.006-.444-.006-.662v-.568a1.367,1.367,0,0,0-.077-.47.671.671,0,0,0-.26-.325.938.938,0,0,0-.526-.124h-.31Zm0-3.819H26.1a.481.481,0,0,0,.294-.1.721.721,0,0,0,.189-.239.965.965,0,0,0,.1-.322,2.494,2.494,0,0,0,.028-.334,1.1,1.1,0,0,0-.164-.684.548.548,0,0,0-.449-.2h-.534Z"
+									fill="#231f20" />
+								<path id="Path_3246" data-name="Path 3246"
+									d="M28.814,12.556V5.833h3.144V6.868H30.02v1.66h1.786V9.556H30.02v1.966h2v1.034Z" fill="#231f20" />
+								<path id="Path_3247" data-name="Path 3247"
+									d="M34.46,6.843a5.143,5.143,0,0,0,.583-.457,2.844,2.844,0,0,0,.5-.589h1.069v6.757h-1.2v-5.2a3.992,3.992,0,0,1-.452.41q-.24.182-.487.347Z"
+									fill="#231f20" />
+								<path id="Path_3248" data-name="Path 3248"
+									d="M40.855,7.083,39.5,12.554h-1.25l1.524-5.71h-1.91V5.793h2.993Z" fill="#231f20" />
+								<path id="Path_3249" data-name="Path 3249"
+									d="M42.712,7.133H43.6V8.975h1.347v1.032H43.6v1.836h-.887V10.008H41.355V8.975h1.357Z" fill="#231f20" />
+								<path id="Path_3250" data-name="Path 3250"
+									d="M3.253,69.78v-5.8h8.492v1.357H6.663v.829h4.295V67.52H6.663v.907H11.94V69.78Z" fill="#fff" />
+							</g>
+						</g>
+					</g>
+					<text id="Blood_and_Gore_Strong_Language_Violence" data-name="Blood and Gore Strong Language Violence"
+						transform="translate(32.903 8.815)" font-size="12" font-family="Segoe Pro Cond, Segoe Pro">
+						<tspan x="0" y="0">Blood and Gore</tspan>
+						<tspan x="0" y="14">Strong Language</tspan>
+						<tspan x="0" y="28">Violence</tspan>
+					</text>
+				</g>
+			</svg>
+		</div>
+
+		<div id="cta" class="copy unselectable" style="opacity: 0;">
+			<div id="txtCta" style="font-family: 'Segoe UI Black', Arial, Helvetica, sans-serif; font-size: 13px;">
+				JOIN NOW&nbsp;<span>
+					<svg id="arrow" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 35.52 54.05">
+						<path d="M35.52,27.04l-16.16,27.01H0S16.26,27.04,16.26,27.04L0,0H19.36s16.16,27.04,16.16,27.04Z" />
+					</svg></span>
+			</div>
+			<svg id="bg_arrow" viewBox="0 0 402.49 62.53">
+				<polygon fill="#107c10" points="376.24 0 0 0 26.25 31.65 0 62.53 376.24 62.53 402.49 31.65 376.24 0" />
+			</svg>
+		</div>
+
+		<div class="endframe-gradient" style="position: absolute; left: 69px; top: 120px; z-index: 100; opacity: 0;">
+			<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="162" height="318"
+				viewBox="0 0 162 318">
+				<defs>
+					<radialGradient id="radial-gradient" cx="0.5" cy="0.5" r="0.5" gradientUnits="objectBoundingBox">
+						<stop offset="0" stop-color="#1d201e" />
+						<stop offset="0.512" stop-color="#1d201e" />
+						<stop offset="1" stop-color="#1d201e" stop-opacity="0" />
+					</radialGradient>
+					<radialGradient id="radial-gradient-2" cx="0.5" cy="0.5" r="0.5" gradientUnits="objectBoundingBox">
+						<stop offset="0" stop-color="#ebe6d2" />
+						<stop offset="0.97" stop-color="#ebe6d2" stop-opacity="0.031" />
+						<stop offset="1" stop-color="#fcf6e0" stop-opacity="0" />
+					</radialGradient>
+					<filter id="blur">
+						<feGaussianBlur stdDeviation="5 2" x="-50%" y="-50%" width="200%" height="200%"/>
+					</filter>
+				</defs>
+				<g id="Adjustments" transform="translate(-69 -120)">
+					<ellipse id="Disclaimer" cx="69" cy="7.5" rx="69" ry="7.5" transform="translate(81 411)"
+						 filter="url(#blur)" fill="url(#radial-gradient)"/>
+					<!-- <ellipse id="Jump" cx="52" cy="32" rx="52" ry="32" transform="translate(98 120)"
+						fill="url(#radial-gradient-2)" /> -->
+				</g>
+			</svg>
+		</div>
+
+		<video id="vid1" autoplay playsinline preload="auto" webkit-playsinline="" muted></video>
+		<svg class='float' style="top: 0px; left: -27px;" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="356" height="454" viewBox="0 0 356 454">
+			<defs>
+			  <linearGradient id="linear-gradient" x1="0.614" y1="0.5" x2="0.99" y2="0.5" gradientUnits="objectBoundingBox">
+				<stop offset="0" stop-color="#080704"/>
+				<stop offset="0.525" stop-opacity="0.502"/>
+				<stop offset="1" stop-color="#14191c" stop-opacity="0"/>
+			  </linearGradient>
+			  <radialGradient id="radial-gradient" cx="0.5" cy="0.5" r="0.5" gradientUnits="objectBoundingBox">
+				<stop offset="0" stop-opacity="0.757"/>
+				<stop offset="0.512" stop-opacity="0.275"/>
+				<stop offset="1" stop-opacity="0"/>
+			  </radialGradient>
+			  <radialGradient id="radial-gradient-2" cx="0.5" cy="0.5" r="0.5" gradientUnits="objectBoundingBox">
+				<stop offset="0" stop-opacity="0.749"/>
+				<stop offset="0.512" stop-opacity="0.502"/>
+				<stop offset="1" stop-opacity="0"/>
+			  </radialGradient>
+			  <radialGradient id="jump-gradient" cx="0.5" cy="0.5" r="0.5" gradientUnits="objectBoundingBox">
+				<stop offset="0" stop-color="#ebe6d2" />
+				<stop offset="0.97" stop-color="#ebe6d2" stop-opacity="0.031" />
+				<stop offset="1" stop-color="#fcf6e0" stop-opacity="0" />
+			</radialGradient>
+			</defs>
+			<g id="Adjustments" transform="translate(28)">
+				<!-- <ellipse class="text-gradient" id="Ellipse_7" data-name="Ellipse 7" cx="178" cy="86" rx="178" ry="86" transform="translate(-28 45)" fill="url(#radial-gradient)"/> -->
+				<rect class="text-gradient" id="Top_gradient" data-name="Top gradient" width="247" height="300" transform="translate(300) rotate(90)" fill="url(#linear-gradient)"/>
+				<ellipse class='jump-gradient' id="Jump" cx="52" cy="32" rx="52" ry="32" transform="translate(98 120)" fill="url(#jump-gradient)" />
+			</g>
+		</svg>
+		<div id='anim2' class='float container'>
+			<div class='endframe-element endframe-cape'></div>
+			<img class="bg" src="images/background.jpg" style="transform-origin: center center;" />
+			<svg>
+				<filter id="noise" x="0%" y="0%" width="100%" height="100%">
+					<feTurbulence id="feturbulence" type="fractalNoise" numOctaves="3" seed="2"></feTurbulence>
+					<feDisplacementMap xChannelSelector="G" yChannelSelector="B" scale="20" in="SourceGraphic">
+					</feDisplacementMap>
+				</filter>
+			</svg>
+
+			<div class='endframe-element dirt dirt1 endframe-dirt6'></div>
+			<div class='endframe-element dirt dirt1 endframe-dirt5'></div>
+			<div class='endframe-element dirt dirt1 endframe-dirt3'></div>
+
+			<div class='endframe-element dirt dirt2 endframe-dirt5'></div>
+			<div class='endframe-element dirt dirt2 endframe-dirt4'></div>
+			<div class='endframe-element dirt dirt2 endframe-dirt3'></div>
+
+			<div class='endframe-element dirt dirt3 endframe-dirt4'></div>
+			<div class='endframe-element dirt dirt3 endframe-dirt2'></div>
+			<div class='endframe-element dirt dirt3 endframe-dirt6'></div>
+
+			<div class='endframe-element dirt dirt4 endframe-dirt1'></div>
+			<div class='endframe-element dirt dirt4 endframe-dirt2'></div>
+			<div class='endframe-element dirt dirt4 endframe-dirt3'></div>
+
+			<div class='endframe-element dirt dirt5 endframe-dirt4'></div>
+			<div class='endframe-element dirt dirt5 endframe-dirt1'></div>
+			<div class='endframe-element dirt dirt5 endframe-dirt2'></div>
+
+			<div class='endframe-element dirt dirt6 endframe-dirt1'></div>
+			<div class='endframe-element dirt dirt6 endframe-dirt2'></div>
+			<div class='endframe-element dirt dirt6 endframe-dirt6'></div>
+
+			<div class='endframe-element dirt dirt7 endframe-dirt4'></div>
+			<div class='endframe-element dirt dirt7 endframe-dirt1'></div>
+			<div class='endframe-element dirt dirt7 endframe-dirt3'></div>
+
+			<div class='endframe-element dirt dirt8 endframe-dirt4'></div>
+			<div class='endframe-element dirt dirt8 endframe-dirt5'></div>
+			<div class='endframe-element dirt dirt8 endframe-dirt6'></div>
+
+			<div class="overlay">
+				<div class="container">
+					<div class='endframe-element endframe-cape pic'></div>
+				</div>
+			</div>
+
+			<div class='endframe-element endframe-smoke-ring smoke3'></div>
+			<div class='endframe-element endframe-smoke-ring smoke4'></div>
+			<div class='endframe-element endframe-smoke-ring smoke5'></div>
+
+			<div class='endframe-element endframe-body'></div>
+
+			<div class='endframe-element endframe-leaf1 largeLeaf largeLeaf1'></div>
+			<div class='endframe-element endframe-leaf2 largeLeaf largeLeaf2'></div>
+			<div class='endframe-element endframe-leaf3 largeLeaf largeLeaf3'></div>
+			<div class='endframe-element endframe-leaf4 largeLeaf largeLeaf4'></div>
+			<div class='endframe-element endframe-leaf5 largeLeaf largeLeaf5'></div>
+			<div class='endframe-element endframe-leaf6 largeLeaf largeLeaf6'></div>
+
+			<div class='endframe-element endframe-leaf1 leaf1'></div>
+			<div class='endframe-element endframe-leaf2 leaf2'></div>
+			<div class='endframe-element endframe-leaf3 leaf3'></div>
+			<div class='endframe-element endframe-leaf4 leaf4'></div>
+			<div class='endframe-element endframe-leaf5 leaf5'></div>
+			<div class='endframe-element endframe-leaf6 leaf6'></div>
+			<div class='endframe-element endframe-leaf7 leaf7'></div>
+
+			<div class='endframe-element endframe-smoke-ring smoke1'></div>
+			<div class='endframe-element endframe-smoke-ring smoke2'></div>
+		</div>
+
+		<img class="float portal" src="images/smoke-ring-white.png" />
+
+		<div class='float flash-cover'></div>
+	</div>
+
+	<script src="js/tools/tools.js"></script>
+	<script src="js/tools/ctaAnimation.js"></script>
+	<script src="js/tools/videoTools.js"></script>
+	<script src="js/tools/SplitText.min.js"></script>
+	<script src="js/anim.js"></script>
+	<script src="js/init.js"></script>
+</body>
+
+</html>

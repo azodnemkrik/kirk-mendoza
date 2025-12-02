@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="300" height="250" viewBox="0 0 300 250">
+  <defs>
+    <radialGradient id="radial-gradient" cx="0.5" cy="0.5" r="0.5" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-opacity="0.502"/>
+      <stop offset="0.667" stop-opacity="0.149"/>
+      <stop offset="1" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="radial-gradient-2" cx="0.5" cy="0.5" r="0.5" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-opacity="0.251"/>
+      <stop offset="1" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="radial-gradient-3" cx="0.5" cy="0.5" r="0.5" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-opacity="0.302"/>
+      <stop offset="0.616" stop-opacity="0.149"/>
+      <stop offset="1" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="linear-gradient" x1="0.036" y1="0.5" x2="0.99" y2="0.5" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-opacity="0.6"/>
+      <stop offset="1" stop-opacity="0"/>
+    </linearGradient>
+    <clipPath id="clip-Alabama_PN_300x250_F6_1">
+      <rect width="300" height="250"/>
+    </clipPath>
+  </defs>
+  <g id="Alabama_PN_300x250_F6_1" data-name="Alabama_PN_300x250 – F6 – 1" clip-path="url(#clip-Alabama_PN_300x250_F6_1)">
+    <g id="Key_art" data-name="Key art" transform="translate(7 6.053)">
+      <ellipse id="Ellipse_12" data-name="Ellipse 12" cx="145" cy="42.488" rx="145" ry="42.488" transform="translate(-33.316 177.167)" fill="url(#radial-gradient)"/>
+      <ellipse id="Ellipse_16" data-name="Ellipse 16" cx="89.5" cy="42.488" rx="89.5" ry="42.488" transform="translate(-27.316 52.167)" fill="url(#radial-gradient-2)"/>
+      <ellipse id="Ellipse_18" data-name="Ellipse 18" cx="89.5" cy="17.488" rx="89.5" ry="17.488" transform="translate(-27.316 123.167)" fill="url(#radial-gradient-3)"/>
+      <ellipse id="Ellipse_17" data-name="Ellipse 17" cx="28" cy="26.5" rx="28" ry="26.5" transform="translate(-1.316 0.167)" fill="url(#radial-gradient-2)"/>
+      <rect id="Left_gradient" data-name="Left gradient" width="150" height="250" transform="translate(-7 -6.053)" fill="url(#linear-gradient)"/>
+    </g>
+  </g>
+</svg>

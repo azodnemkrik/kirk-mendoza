@@ -3,7 +3,7 @@ import { Link, Route, Routes, useLocation, useNavigate } from 'react-router-dom'
 import Navigation from './components/Site/Navigation';
 import LogoHero from './components/Site/LogoHero';
 import About from './components/Site/About';
-import WhatIDo from './components/Site/WhatIDo';
+import StuffIDone from './components/Site/StuffIDone';
 import BrandCrawler from './components/Site/BrandCrawler';
 import CaseStudies from './components/Site/CaseStudies';
 import ContactMe from './components/Site/ContactMe';
@@ -37,8 +37,19 @@ function App() {
       <Navigation ref={navRef} pathname={pathname} isFixed={isFixed} />
       <div className="wrapper">
         <About id="about-me"/>
-        <WhatIDo id="what-i-do"/>
+        <StuffIDone id="stuff-i-done"/>
         <CaseStudies id="case-studies"/>
+        <BrandCrawler />
+        <BrandCrawler />
+        <BrandCrawler />
+        <BrandCrawler />
+        <BrandCrawler />
+        <BrandCrawler />
+        <BrandCrawler />
+        <BrandCrawler />
+        <BrandCrawler />
+        <BrandCrawler />
+        <BrandCrawler />
         <BrandCrawler />
         <ContactMe id="contact"/>
       </div>

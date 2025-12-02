@@ -1,0 +1,492 @@
+/* -- BOILER PLATE -- */
+body,
+html {
+	/* color: #ffffff; */
+	width: 100%;
+	height: 100%;
+	padding: 0;
+	margin: 0;
+	background: #FFFFFF;
+	-webkit-font-smoothing: antialiased !important;
+	text-rendering: optimizeLegibility !important;
+	-webkit-text-size-adjust: 100%;
+}
+
+div {
+	padding: 0;
+	margin: 0;
+	z-index: 20;
+}
+
+.wrapper {
+	background: #f5f7fc;
+	/* #f2f5fb;*/
+	padding: 0;
+	margin: 0;
+	position: absolute;
+	transform: translateZ(0);
+	-webkit-transform: translateZ(0);
+}
+
+.banner {
+	width: 300px;
+	height: 600px;
+	overflow: hidden;
+	position: relative;
+}
+
+.banner .border {
+	position: absolute;
+	z-index: 100;
+	pointer-events: none;
+	background: #B5B5B5;
+}
+
+.banner .border-top {
+	width: 100%;
+	height: 1px;
+	top: 0;
+	left: 0;
+}
+
+.banner .border-bottom {
+	width: 100%;
+	height: 1px;
+	bottom: 0;
+	left: 0;
+}
+
+.banner .border-left {
+	height: 100%;
+	width: 1px;
+	top: 1px;
+	left: 0;
+}
+
+.banner .border-right {
+	height: 100%;
+	width: 1px;
+	top: 1px;
+	right: 0;
+}
+
+.banner .stage {
+	position: absolute;
+	z-index: 20;
+	width: 300px;
+	height: 600px;
+	opacity: 0;
+	visibility: hidden;
+	cursor: pointer;
+}
+
+.float {
+	display: block;
+	position: absolute;
+	z-index: 20;
+}
+
+
+/* -- FONTS -- */
+@font-face {
+	font-family: 'SegoeUI Semibold';
+	src: url('../fonts/segoeui-semibold.woff') format('woff');
+}
+
+@font-face {
+	font-family: 'SegoePro Semibold';
+	src: url('../fonts/SegoePro-Semibold.woff') format('woff');
+}
+
+@font-face {
+	font-family: 'SegoePro Regular';
+	src: url('../fonts/SegoePro-Regular.woff') format('woff');
+}
+
+/* -- SPRITESHEET -- */
+
+.png-element {
+	position: absolute;
+	display: block;
+	z-index: 20;
+	background-image: url('../images/png-element.png');
+	background-repeat: no-repeat;
+	background-size: 1656px 1568px;
+	overflow: hidden;
+}
+
+.app-icon {
+    width: 44px;
+    height: 44px;
+    background-size: 780px 588px;
+    background-position: -1px -1px;
+}
+
+.app-window {
+    width: 248px;
+    height: 80px;
+    background-size: 780px 588px;
+    background-position: -47px -1px;
+}
+
+.frame-3-ui-1 {
+    width: 96px;
+    height: 6px;
+    background-size: 780px 588px;
+    background-position: -297px -1px;
+}
+
+.frame-3-ui-2 {
+    width: 228px;
+    height: 126px;
+    background-size: 780px 588px;
+    background-position: -297px -9px;
+}
+
+.icon-copilot {
+    width: 194px;
+    height: 194px;
+    background-size: 780px 588px;
+    background-position: -1px -137px;
+}
+
+.icon-end-1 {
+    width: 230px;
+    height: 230px;
+    background-size: 780px 588px;
+    background-position: -197px -137px;
+}
+
+.icon-end-2 {
+    width: 154px;
+    height: 154px;
+    background-size: 780px 588px;
+    background-position: -429px -137px;
+}
+
+.icon-end-3 {
+    width: 130px;
+    height: 130px;
+    background-size: 780px 588px;
+    background-position: -429px -293px;
+}
+
+.icon-end-4 {
+    width: 82px;
+    height: 82px;
+    background-size: 780px 588px;
+    background-position: -1px -425px;
+}
+
+.icon-end-5 {
+    width: 128px;
+    height: 128px;
+    background-size: 780px 588px;
+    background-position: -85px -425px;
+}
+
+.icon-excel {
+    width: 194px;
+    height: 194px;
+    background-size: 780px 588px;
+    background-position: -215px -369px;
+}
+
+.icon-outlook {
+    width: 194px;
+    height: 194px;
+    background-size: 780px 588px;
+    background-position: -585px -1px;
+}
+
+.icon-powerpoint {
+    width: 194px;
+    height: 194px;
+    background-size: 780px 588px;
+    background-position: -585px -197px;
+}
+
+.icon-word {
+    width: 194px;
+    height: 194px;
+    background-size: 780px 588px;
+    background-position: -561px -393px;
+}
+
+.white-ellipse {
+    width: 54px;
+    height: 14px;
+    background-size: 780px 588px;
+    background-position: -527px -1px;
+}
+
+
+
+/* -- PROJECT STYLING & POSITIONING-- */
+.banner .stage {
+	/* font-family: SegoeUI Semibold; */
+	font-family: SegoePro Semibold;
+}
+
+.M365logo {
+	top: 32px;
+	left: 32px;
+}
+
+.container {
+	width: 300px;
+	height: 600px;
+}
+
+.icons-container {
+	width: 300px;
+	height: 600px;
+	overflow: visible;
+	/* filter: drop-shadow(0px 10px 8px rgba(0, 0, 0, 0.25)); */
+	transform: translateY(100px);
+}
+
+.icon-intro {
+	left: -300px;
+	filter: drop-shadow(0px 10px 8px rgba(0, 0, 0, 0.25));
+}
+
+.white-ellipse {
+	top: 333px;
+	left: 126px;
+	/* background-color: red; */
+}
+
+.pill1 {
+	top: -76px;
+	left: 170px;
+}
+
+.pill2 {
+	top: 522px;
+	left: -113px;
+}
+
+.app-window {
+	top: 221px;
+	left: 26px;
+}
+
+.box1 {
+	top: 0px;
+	left: 0px;
+}
+
+.text {
+	width: 243px;
+	left: 6px;
+	font-size: 24px;
+	line-height: 29px;
+	/* letter-spacing: -0.3px; */
+	color: #091f2c;
+	font-family: SegoePro Regular;
+}
+
+.text1 {
+	top: 90px;
+	left: 30px;
+}
+
+.text2 {
+	top: 253px;
+	left: 46px;
+	width: 300px;
+	text-align: left;
+	font-size: 12px;
+	line-height: 13px;
+	letter-spacing: -0.1px;
+	/* background-color: red; */
+}
+
+.arrow-icon {
+	top: 258px;
+	left: 235px;
+	width: 19px;
+	height: 19px;
+}
+
+.frame-3-ui-1-container{
+	top: 188px;
+	left: 38px;
+    width: 250px;
+    height: 152px;
+    background-color: #FFF;
+    border-radius: 10px;
+	filter: drop-shadow(1px 2px 2px rgba(0, 0, 0, 0.1));
+}
+
+.frame-3-ui-1 {
+    top: 7px;
+    left: 36px;
+}
+
+.frame-3-ui-2 {
+	top: 208px;
+	left: 48px;
+}
+
+
+.app-icon {
+	top: 195px;
+	left: 16px;
+}
+
+
+.text3 {
+	top: 221px;
+	left: 70px;
+	width: 300px;
+	text-align: left;
+	font-size: 12.4px;
+	line-height: 13px;
+	letter-spacing: -0.15px;
+	font-family: SegoePro Semibold;
+}
+
+.text4 {
+	top: 237px;
+	left: 73px;
+	width: 216px;
+	height: 104px;
+	text-align: left;
+	font-size: 10px;
+	line-height: 12px;
+	letter-spacing: 0px;
+	/* font-family: SegoePro Regular; */
+}
+
+.text5 {
+	top: 90px;
+	left: 30px;
+	width: 243px;
+	/* text-align: center; */
+	font-size: 24px;
+	line-height: 29px;
+	/* letter-spacing: -0.3px; */
+	color: #091f2c;
+	font-family: SegoePro Regular;
+}
+
+.frame-3-UI {
+	top: 7px;
+	left: 35px;
+}
+
+.bar2 {
+	top: 209px;
+	left: 48px;
+	filter: drop-shadow(0px 0px 4px rgba(0, 0, 0, 0.25));
+}
+
+.icon-end {
+	filter: drop-shadow(0px 10px 4px rgba(0, 0, 0, 0.18));
+}
+
+.icon-end-1 {
+	top: 232px;
+	left: 71px;
+}
+
+.icon-end-2 {
+	top: 359px;
+	left: 5px;
+}
+
+.icon-end-3 {
+	top: 150px;
+	left: 155px;
+}
+
+.icon-end-4 {
+	top: 220px;
+	left: 68px;
+}
+
+.icon-end-5 {
+	top: 435px;
+	left: 144px;
+}
+
+
+.blueText {
+	color: #0a3fe2;
+}
+
+.endframe-text .red-text {
+	color: #ff5c39;
+}
+
+
+
+/* -- CTA -- */
+.cta-button {
+	bottom: 0px;
+	left: 0px;
+	width: 300px;
+	height: 30px;
+	display: flex;
+	justify-content: center;
+	align-self: center;
+	background-color: #0F1F2B;
+	z-index: 20;
+
+	color: #FFFFFF;
+	font-family: SegoeUI Semibold;
+    font-size: 12px;
+    line-height: 28px;
+    letter-spacing: 0;
+	padding: 5px 0;
+	transition-duration: .25s;
+
+}
+
+.cta-button:hover {
+	background-color: #f5f7fc;
+	color: #0F1F2B;
+
+	.cta-arrow-2 {
+		fill: #0F1F2B;
+		transition-duration: .25s;
+	}
+}
+
+.cta-arrow-2 {
+	fill: #FFFFFF;
+	transition-duration: .25s;
+}
+
+.cta-arrow {
+	padding-top: 13px;
+	padding-left: 4px;
+}
+
+/* -- REPLAY -- */
+.replay-button {
+	width: 12px;
+	height: 12px;
+	right: 4px;
+	top: 4px;
+	z-index: 31 !important;
+	cursor: pointer;
+}
+
+.replay-icon {
+	width: 11px;
+	height: 11px;
+}
+
+.ref {
+	top: 0px;
+	left: 0px;
+	width: 300px;
+	height: 600px;
+	background-size: 300px 600px;
+	background-size: 300px 600px;
+	opacity: 0.5;
+	pointer-events: none;
+}

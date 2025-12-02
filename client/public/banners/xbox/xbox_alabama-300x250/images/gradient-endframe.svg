@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="300" height="250" viewBox="0 0 300 250">
+  <defs>
+    <radialGradient id="radial-gradient" cx="0.5" cy="0.5" r="0.5" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#f5ebc1"/>
+      <stop offset="1" stop-color="#f5ebc1" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="linear-gradient" x1="0.036" y1="0.5" x2="0.99" y2="0.5" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#e8deb6"/>
+      <stop offset="1" stop-color="#e8ddb9" stop-opacity="0"/>
+    </linearGradient>
+    <radialGradient id="radial-gradient-3" cx="0.5" cy="0.5" r="0.5" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#d9cda2"/>
+      <stop offset="1" stop-color="#ded3ae" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="radial-gradient-4" cx="0.5" cy="0.5" r="0.5" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#eae3c4"/>
+      <stop offset="1" stop-color="#eae3c4" stop-opacity="0"/>
+    </radialGradient>
+    <clipPath id="clip-Alabama_PN_300x250_F12_1">
+      <rect width="300" height="250"/>
+    </clipPath>
+  </defs>
+  <g id="Alabama_PN_300x250_F12_1" data-name="Alabama_PN_300x250 – F12 – 1" clip-path="url(#clip-Alabama_PN_300x250_F12_1)">
+    <g id="Key_art" data-name="Key art" transform="translate(7 6.053)">
+      <ellipse id="Ellipse_15" data-name="Ellipse 15" cx="63.5" cy="39" rx="63.5" ry="39" transform="translate(113 179.947)" fill="url(#radial-gradient)"/>
+      <rect id="Left_gradient" data-name="Left gradient" width="135" height="250" transform="translate(-7 -6.053)" opacity="0.7" fill="url(#linear-gradient)"/>
+      <ellipse id="Ellipse_10" data-name="Ellipse 10" cx="52" cy="32" rx="52" ry="32" transform="translate(-27 93.947)" fill="url(#radial-gradient)"/>
+      <ellipse id="Ellipse_12" data-name="Ellipse 12" cx="129" cy="56.988" rx="129" ry="56.988" transform="matrix(0.995, 0.105, -0.105, 0.995, -86.653, 140.995)" fill="url(#radial-gradient-3)"/>
+      <ellipse id="Ellipse_14" data-name="Ellipse 14" cx="61.221" cy="32.537" rx="61.221" ry="32.537" transform="matrix(0.995, 0.105, -0.105, 0.995, 28.031, 140.995)" fill="url(#radial-gradient-4)"/>
+    </g>
+  </g>
+</svg>
