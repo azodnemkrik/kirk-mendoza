@@ -9,7 +9,7 @@ html {
    text-rendering: optimizeLegibility !important;
    -webkit-text-size-adjust: 100%;
    font-family: 'SegoePro Regular', sans-serif;
-   font-size: 14px;
+   font-size: 16px;
    line-height: 1.25;
    color: #333333;
 }
@@ -114,6 +114,12 @@ div {
    src: url(../fonts/SegoePro-Regular.woff) format('woff')
 }
 
+@font-face {
+   font-family: 'BulletSmallCaps';
+   src: url(./fonts/BulletSmallCaps.woff) format('woff')
+}
+
+
 .container {
    display: flex;
    justify-content: center;
@@ -136,14 +142,6 @@ div {
    /* background-color: red; */
 }
 
-.insignia-outline {
-   /* stroke: 1px solid #0054a6;
-   fill: none;
-   stroke: #29abe2;
-   stroke-width: .2px;
-   stroke-miterlimit: 10; */
-}
-
 #insignia-fill {
    filter: drop-shadow(0px 2px 1px #000000);
 }
@@ -153,8 +151,19 @@ div {
 #what-i-do,
 #case-studies,
 #contact {
-   scroll-margin-top: 120px; /* adjust to match nav height */
+   scroll-margin-top: 150px; /* adjust to match nav height */
 }
+
+.accent-word {
+   font-size: 2em;
+   font-weight: normal;
+   font-family: BulletSmallCaps, sans-serif;
+}
+
+.accent-blue {
+   color: #0054a6;
+}
+
 
 .intro-about {
    padding-top: 2%;
@@ -205,14 +214,26 @@ svg {
    background-color: #cccccc;
 }
 
-.about-container,
+.about-container, .what-i-do-container {
+   display: flex;
+   flex-wrap: wrap;
+   justify-content: center;
+   align-items: center;
+   flex-direction: row;
+   padding: .5% 8%;
+   gap: 5%;
+   height: auto;
+   width: auto;
+   max-width: 1380px;
+}
+
 .logo-container {
    display: flex;
    flex-wrap: wrap;
    justify-content: flex-start;
    align-items: start;
    flex-direction: row;
-   padding: 2% 8%;
+   padding: .5% 8%;
    gap: 5%;
    height: auto;
    width: auto;
@@ -306,6 +327,10 @@ li {
 }
 
 /* What I Do Section */
+.what-i-do-BG {
+   background-color: #FF0;
+}
+
 video {
    width: 100%;
    height: auto;
@@ -316,21 +341,47 @@ video {
 }
 
 /* Brand Crawler Section */
-.brand-crawler-container {
-   height: 7%;
+.brand-crawler-wrapper {
+   width: 100%;
+   height: 70px;
+   overflow: hidden;
+   background-color: #f2f2f2;
    margin: 0;
    padding: 0;
-   background-color: #f2f2f2;
-   /* background-size: 5170px 140px; */
-   /* background-size: 2585px 70px; */
 }
+
+.brand-crawler-container {
+   display: flex;
+   width: fit-content;
+   animation: scroll 45s linear infinite;
+}
+
+@keyframes scroll {
+   0% {
+      transform: translateX(0);
+   }
+   100% {
+      transform: translateX(-50%);
+   }
+}
+
 .brands {
    width: 2585px;
    height: 70px;
    margin: 0;
    padding: 0;
+   display: block;
 }
 
+/* Case Studies Section */
+.case-studies-BG {
+   background-color: #0FF;
+}
+
+/* Contact Me Section */
+.contact-BG {
+   background-color: #003ae8;
+}
 
 /* Scrubber */
 

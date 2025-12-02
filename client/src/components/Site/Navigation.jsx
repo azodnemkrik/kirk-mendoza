@@ -17,7 +17,8 @@ const Navigation = forwardRef(({ id, className, pathname, isFixed }, ref) => {
 		navTL
 			.add("frame1")
 			// .to("#navigation", 1 ,{ height: "5em" , ease: "power4.out"}, "frame1+=3.5")
-			.to(".logo-container", 1, { width: "40em", ease: "power4.out" }, "frame1+=3.5")
+			// .to(".logo-container", 1, { width: "40em", ease: "power4.out" }, "frame1+=3.5")
+			.to(".logo-container", 1, { height: "6em", ease: "power4.out" }, "frame1+=3.5")
 			;
 
 	})

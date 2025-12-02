@@ -33,7 +33,7 @@ const LogoHero = ({ id, className }) => {
 			// .from(".fill", .25, { stagger: 0.08, scale: 1.03, ease: "power1.inOut", fill: "#FFFFFF", transformOrigin: "50% 50%" }, "frame2+=1.2")
 			.from(".fill", .25, { stagger: 0.08, scale: 1.03, ease: "power1.inOut", fill: "#FFFFFF" }, "frame2+=1.2")
 
-			.add("frame4", "+=0")
+			.add("frame4", 3.15)
 			.set(".k-temp, .m-temp", { autoAlpha: 0 }, "frame4")
 			.set("#morphing-k, .morphing-m", { autoAlpha: 1 }, "frame4")
 			.to("#clip-path-kirk", .5, { x: 35, ease: "back.inOut" }, "frame4")
@@ -50,21 +50,21 @@ const LogoHero = ({ id, className }) => {
 			.to("#morphing-k", .5, { ease: "back.inOut", fill: "#0054a6", morphSVG: { shape: "#k-guide", shapeIndex: "auto" } }, "frame4")
 
 
-		const rollOverAnimation = gsap.timeline({ paused: true });
-		rollOverAnimation
-			.add("start", "+=0")
-			.to("#morphing-m1", .5, { ease: "power4.inOut", morphSVG: { shape: "#morphing-m1", shapeIndex: "auto" } }, "start")
-			.to("#morphing-m2", .5, { ease: "power4.inOut", morphSVG: { shape: "#morphing-m2", shapeIndex: "auto" } }, "start")
-			.to("#morphing-m3", .5, { ease: "power4.inOut", morphSVG: { shape: "#morphing-m3", shapeIndex: "auto" } }, "start")
-			.to("#morphing-k", .5, { ease: "power4.inOut", fill: "#00a1e4", morphSVG: { shape: "#morphing-k", shapeIndex: "auto" } }, "start")
-			.to(".m-letter", .5, { x: 0, ease: "power4.inOut" }, "start")
-			.to(".k-letter", .5, { x: 0, ease: "power4.inOut" }, "start")
-			// .to("#logo", .5, { x: 300, ease: "power4.inOut", transformOrigin: "50% 50%" }, "start")
-			.to("#logo", .5, { x: 300, ease: "power4.inOut" }, "start")
-			.to("#clip-path-kirk", .5, { x: 0, ease: "power4.inOut" }, "start")
-			.to("#clip-path-mendoza", .5, { x: 0, ease: "power4.inOut" }, "start")
-			.add("end", "+=0")
-			;
+		// const rollOverAnimation = gsap.timeline({ paused: true });
+		// rollOverAnimation
+		// 	.add("start", "+=0")
+		// 	.to("#morphing-m1", .5, { ease: "power4.inOut", morphSVG: { shape: "#morphing-m1", shapeIndex: "auto" } }, "start")
+		// 	.to("#morphing-m2", .5, { ease: "power4.inOut", morphSVG: { shape: "#morphing-m2", shapeIndex: "auto" } }, "start")
+		// 	.to("#morphing-m3", .5, { ease: "power4.inOut", morphSVG: { shape: "#morphing-m3", shapeIndex: "auto" } }, "start")
+		// 	.to("#morphing-k", .5, { ease: "power4.inOut", fill: "#00a1e4", morphSVG: { shape: "#morphing-k", shapeIndex: "auto" } }, "start")
+		// 	.to(".m-letter", .5, { x: 0, ease: "power4.inOut" }, "start")
+		// 	.to(".k-letter", .5, { x: 0, ease: "power4.inOut" }, "start")
+		// 	// .to("#logo", .5, { x: 300, ease: "power4.inOut", transformOrigin: "50% 50%" }, "start")
+		// 	.to("#logo", .5, { x: 300, ease: "power4.inOut" }, "start")
+		// 	.to("#clip-path-kirk", .5, { x: 0, ease: "power4.inOut" }, "start")
+		// 	.to("#clip-path-mendoza", .5, { x: 0, ease: "power4.inOut" }, "start")
+		// 	.add("end", "+=0")
+		// 	;
 
 	})
 

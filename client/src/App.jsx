@@ -5,6 +5,8 @@ import LogoHero from './components/Site/LogoHero';
 import About from './components/Site/About';
 import WhatIDo from './components/Site/WhatIDo';
 import BrandCrawler from './components/Site/BrandCrawler';
+import CaseStudies from './components/Site/CaseStudies';
+import ContactMe from './components/Site/ContactMe';
 
 function App() {
 
@@ -35,21 +37,10 @@ function App() {
       <Navigation ref={navRef} pathname={pathname} isFixed={isFixed} />
       <div className="wrapper">
         <About id="about-me"/>
+        <WhatIDo id="what-i-do"/>
+        <CaseStudies id="case-studies"/>
         <BrandCrawler />
-        <WhatIDo/>
-        <LogoHero/>
-        <About id="what-i-do"/>
-        <BrandCrawler />
-        <WhatIDo/>
-        <LogoHero/>
-        <About id="case-studies"/>
-        <BrandCrawler />
-        <WhatIDo/>
-        <LogoHero/>
-        <About id="contact"/>
-        <BrandCrawler />
-        <WhatIDo/>
-        <LogoHero/>
+        <ContactMe id="contact"/>
       </div>
 
       <Routes>

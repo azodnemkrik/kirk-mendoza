@@ -34,8 +34,8 @@ const About = ({ id, className }) => {
 					<img className="profileImage" src={profileImage} alt="Kirk Mendoza - Front-End Web Developer, Motion Graphics Designer, Video Editor, Animator" />
 				</div>
 				<div className="aboutText">
-					<h1>Hello, I'm Kirk!</h1>
-					<p> I'm a front-end web developer with over 20 years in the industry, creating clean, high-performing digital ad experiences. With a background in animation, my skill set extends into motion graphics and video editing, allowing me to blend strong technical development with eye-catching visual storytelling.</p>
+					 <h1><span className="accent-word">Hello, I'm <span className="accent-blue">Kirk</span>!</span></h1>
+					<p>As a front-end web developer, I've spent the last 20 years working as a front-end developer, building digital ad experiences that are clean, fast, and easy to use. At the same time, my animation background pulled me into motion graphics and video editing, and that blend of visuals and code is where I do my best work.</p>
 					<div className="skills-container">
 						<Icon_HTML />	
 						<Icon_CSS />
@@ -47,7 +47,7 @@ const About = ({ id, className }) => {
 						<Icon_Premiere />
 					</div>
 
-					<p>I recently completed my Full-Stack Developer certification, adding back-end React development to my toolkit. This lets me deliver complete solutions, from polished interfaces to fully functional applications.</p>
+					<p>I recently wrapped up my Full-Stack Developer certification, which added back-end and React development to my skill set. It’s been exciting to expand beyond front-end work and deliver full, end-to-end solutions.</p>
 					<div className="skills-container">
 						<Icon_React />
 					</div>
