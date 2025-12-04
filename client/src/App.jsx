@@ -7,6 +7,7 @@ import StuffIDone from './components/Site/StuffIDone';
 import BrandCrawler from './components/Site/BrandCrawler';
 import CaseStudies from './components/Site/CaseStudies';
 import ContactMe from './components/Site/ContactMe';
+import Modal from './components/Site/Modal';
 
 function App() {
 
@@ -15,6 +16,8 @@ function App() {
   const { pathname } = location;
   const navRef = useRef(null);
   const [isFixed, setIsFixed] = useState(false);
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const [modalContent, setModalContent] = useState(null);
 
   useEffect(() => {
     if(location.hash) {
@@ -53,6 +56,10 @@ function App() {
         <BrandCrawler />
         <ContactMe id="contact"/>
       </div>
+
+      {/* <Modal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} src={"/banners/discover/cityscapes-300x250/index.html"} >
+        {modalContent}
+      </Modal> */}
 
       <Routes>
         <Route path="/" element={
