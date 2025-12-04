@@ -525,10 +525,11 @@ background: linear-gradient(to top,  #0054a6 0%,#003367 70%,#001428 95%); /* W3C
 	height: auto;
 	cursor: pointer;
 	box-shadow: #00000000 0px 0px 0px;
+	transform: scale(.95);
 	transition: transform 0.15s, box-shadow 0.15s;
 }
 
-.thumbnail:hover {
+.thumbnail:hover, .thumbnail.selected {
 	box-shadow: #000000A6 0px 16px 24px;
 	transform: translateY(-5px);
 }

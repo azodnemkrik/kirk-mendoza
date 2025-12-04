@@ -9,9 +9,9 @@ gsap.registerPlugin(DrawSVGPlugin, MorphSVGPlugin, SplitText);
 let hasAnimated = false;
 const maintl = gsap.timeline();
 const LogoHero = ({ id, className }) => {
+
 	const navRef = useRef(null);
-
-
+	
 	useEffect(() => {
 
 		// Only run animation once
