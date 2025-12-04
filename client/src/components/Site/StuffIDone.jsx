@@ -25,15 +25,15 @@ const StuffIDone = ({ id, className }) => {
 				<h1>Stuff I've Done</h1>
 
 				<div className="three-cards-labels-container">
-					<h2 onClick={() => { handleCardClick(1) }} className="card-label card-label-1">Banners</h2>
-					<h2 onClick={() => { handleCardClick(2) }} className="card-label card-label-2">Video</h2>
-					<h2 onClick={() => { handleCardClick(3) }} className="card-label card-label-3">Development</h2>
+					<h2 onClick={() => { handleCardClick(1) }} className={`card-label card-label-1 ${activeCard === 1 ? 'selected' : ''}`}>Banners</h2>
+					<h2 onClick={() => { handleCardClick(2) }} className={`card-label card-label-2 ${activeCard === 2 ? 'selected' : ''}`}>Video</h2>
+					<h2 onClick={() => { handleCardClick(3) }} className={`card-label card-label-3 ${activeCard === 3 ? 'selected' : ''}`}>Development</h2>
 				</div>
 
 				<div className="three-cards-container">
 
 					{/* <div className="card card-1 hidden"> */}
-					<div className={`card card-1 ${activeCard !== 1 ? 'hidden' : ''}`}>
+					<div className={`card card-1 ${activeCard !== 1 ? 'hidden' : 'selected'}`}>
 						<p>These are some banner examples. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ullam, voluptatum.</p>
 						{/* Banner Grid */}
 						<div className="thumbnails-container">
@@ -48,13 +48,13 @@ const StuffIDone = ({ id, className }) => {
 					</div>
 
 					{/* Card 2 */}
-					<div className={`card card-2 ${activeCard !== 2 ? 'hidden' : ''}`}>
+					<div className={`card card-2 ${activeCard !== 2 ? 'hidden' : 'selected'}`}>
 						<p>Here's stuff about videos. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rerum reprehenderit asperiores ipsa repellendus alias earum dicta cupiditate natus odio suscipit.</p>
 						<video src="https://www.kirk-mendoza.com/video/kirk-mendoza_motion-graphics.mp4" type="video/mp4" autoPlay loop muted width="auto" min-width="100%" height="20%" background="cover"></video>
 					</div>
 
 					{/* Card 3 */}
-					<div className={`card card-3 ${activeCard !== 3 ? 'hidden' : ''}`}>
+					<div className={`card card-3 ${activeCard !== 3 ? 'hidden' : 'selected'}`}>
 						<p>Here's stuff about development.</p>
 						<p>Remember Flash? See some classic work.</p>
 					</div>
