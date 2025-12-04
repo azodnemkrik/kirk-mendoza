@@ -20,31 +20,30 @@ const StuffIDone = ({ id, className }) => {
 	}
 
 	return (
-		<div id={id} className={`centered-container stuff-i-done-BG ${className}`}>
-			<div className="stuff-i-done-container">
-				<h1>Stuff I've Done</h1>
-
-				<div className="three-cards-labels-container">
-					<h2 onClick={() => { handleCardClick(1) }} className={`card-label card-label-1 ${activeCard === 1 ? 'selected' : ''}`}>Banners</h2>
-					<h2 onClick={() => { handleCardClick(2) }} className={`card-label card-label-2 ${activeCard === 2 ? 'selected' : ''}`}>Video</h2>
-					<h2 onClick={() => { handleCardClick(3) }} className={`card-label card-label-3 ${activeCard === 3 ? 'selected' : ''}`}>Development</h2>
+		<>
+			<div id={id} className={`centered-container stuff-i-done-BG ${className}`}>
+				<div className="stuff-i-done-container">
+					<h1>Stuff I've Done</h1>
+					<div className="three-cards-labels-container">
+						<h2 onClick={() => { handleCardClick(1) }} className={`card-label card-label-1 ${activeCard === 1 ? 'selected' : ''}`}>Banners</h2>
+						<h2 onClick={() => { handleCardClick(2) }} className={`card-label card-label-2 ${activeCard === 2 ? 'selected' : ''}`}>Video</h2>
+						<h2 onClick={() => { handleCardClick(3) }} className={`card-label card-label-3 ${activeCard === 3 ? 'selected' : ''}`}>Development</h2>
+					</div>
 				</div>
 
-				<div className="three-cards-container ">
+				<div className="three-cards-container">
 
-					{/* <div className="card card-1 hidden"> */}
+					{/* Card 1 */}
 					<div className={`card card-1 ${activeCard !== 1 ? 'hidden' : 'selected'}`}>
-						<p>These are some banner examples. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ullam, voluptatum.</p>
-						{/* Banner Grid */}
 						<div className="thumbnails-container">
-							<img onClick={() => { }} src={thumb1} width="300" height="250" className="thumbnail"/>
-							<img onClick={() => { }} src={thumb2} width="300" height="250" className="thumbnail"/>
-							<img onClick={() => { }} src={thumb3} width="300" height="250" className="thumbnail"/>
-							<img onClick={() => { }} src={thumb4} width="300" height="250" className="thumbnail"/>
-							<img onClick={() => { }} src={thumb5} width="300" height="250" className="thumbnail"/>
-							<img onClick={() => { }} src={thumb6} width="300" height="250" className="thumbnail"/>
+						<p>These are some banner examples. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod sunt in ratione dolorem facere neque ut, id quibusdam et eum fugit enim quos eaque dolores est! Suscipit quibusdam ab beatae. Illum facere labore est corporis fugit accusantium numquam earum itaque provident harum. Laborum in quibusdam vel iusto aliquam molestiae facere?</p>
+							<img onClick={() => { }} src={thumb1} width="300" height="250" className="thumbnail" />
+							<img onClick={() => { }} src={thumb2} width="300" height="250" className="thumbnail" />
+							<img onClick={() => { }} src={thumb3} width="300" height="250" className="thumbnail" />
+							<img onClick={() => { }} src={thumb4} width="300" height="250" className="thumbnail" />
+							<img onClick={() => { }} src={thumb5} width="300" height="250" className="thumbnail" />
+							<img onClick={() => { }} src={thumb6} width="300" height="250" className="thumbnail" />
 						</div>
-
 					</div>
 
 					{/* Card 2 */}
@@ -61,7 +60,7 @@ const StuffIDone = ({ id, className }) => {
 
 				</div>
 			</div>
-		</div>
+		</>
 	)
 }
 
