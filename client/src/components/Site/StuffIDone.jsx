@@ -30,7 +30,7 @@ const StuffIDone = ({ id, className }) => {
 					<h2 onClick={() => { handleCardClick(3) }} className={`card-label card-label-3 ${activeCard === 3 ? 'selected' : ''}`}>Development</h2>
 				</div>
 
-				<div className="three-cards-container">
+				<div className="three-cards-container ">
 
 					{/* <div className="card card-1 hidden"> */}
 					<div className={`card card-1 ${activeCard !== 1 ? 'hidden' : 'selected'}`}>
