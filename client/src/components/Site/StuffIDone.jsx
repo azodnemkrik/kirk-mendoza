@@ -6,6 +6,7 @@ import thumb3 from '../../banners/refocus/30-percent-more-film-300x250.jpg';
 import thumb4 from '../../banners/microsoft/microsoft_neutral-300x250.jpg';
 import thumb5 from '../../banners/xbox/xbox_titan-300x250.jpg';
 import thumb6 from '../../banners/borden/crisps_n_cubes-300x250.jpg';
+import Peekabo from "./Peekabo";
 
 const StuffIDone = ({ id, className }) => {
 
@@ -44,6 +45,7 @@ const StuffIDone = ({ id, className }) => {
 							<img onClick={() => { }} src={thumb5} width="300" height="250" className="thumbnail" />
 							<img onClick={() => { }} src={thumb6} width="300" height="250" className="thumbnail" />
 						</div>
+						<Peekabo id="peekabo" className="" />
 					</div>
 
 					{/* Card 2 */}

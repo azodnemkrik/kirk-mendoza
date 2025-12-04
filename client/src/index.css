@@ -395,15 +395,23 @@ li {
 	/* border-top: 10px solid red; */
 }
 
+.stuff-i-done-container h1 {
+	margin: 10px 0;
+	color: #00a1e4;
+	filter: drop-shadow(2px 2px 2px #000000A6);
+	/* box-shadow: #000000A6 5px -5px 5px 1px; */
+}
 .three-cards-container {
 	color: #FFFFFF;
 	width: 100%;
 	height: 100%;
-	margin: -3px 0px;
+	margin: -1px 0px;
 	padding: 0;
 	height: auto;
 	gap: 0px;
 	z-index: 19;
+/* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#0054a6+0,000000+100 */
+background: linear-gradient(to top,  #0054a6 0%,#003367 70%,#001428 95%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
 }
 
 .three-cards-labels-container {
@@ -413,6 +421,7 @@ li {
 	align-items: center;
 	margin: 0;
 	padding: 0;
+	gap: 2em;
 	/* background-color: red; */
 	z-index: 21;
 }
@@ -423,7 +432,7 @@ li {
 	/* border-top: 1px solid #FFFFFF; */
 	/* border-left: 1px solid #FFFFFF; */
 	/* border-right: 1px solid #FFFFFF; */
-	border-radius: 10px 10px 0 0;
+	border-radius: 20px 0px 0 0;
 	margin: 10px 0px 0px 0px;
 	padding: 3px 10px;
 	cursor: pointer;
@@ -431,13 +440,14 @@ li {
 }
 
 .card-label.selected {
-	background-color: #0054a6;
 	color: #00a1e4;
-	border-radius: 10px 10px 0 0;
-	border-top: 1px solid #FFFFFF;
-	border-left: 1px solid #FFFFFF;
-	border-right: 1px solid #FFFFFF;
-	border-bottom: 4px solid #0054a6;
+	border-radius: 20px 0px 0 0;
+	border-top: 1px solid #0054a6;
+	border-left: 1px solid #0054a6;
+	border-right: 1px solid #0054a6;
+	border-bottom: 1px solid #001428;
+	background-color: #001428;
+	box-shadow: #000000A6 5px -5px 5px 1px;
 }
 
 /* .card-label.selected:before {
@@ -461,7 +471,7 @@ li {
 .card {
 	/* display: inline-block; */
 	/* position: absolute; */
-	border-top: 1px solid #FFFFFF;
+	border-top: 1px solid #0054a6;
 	width: 100%;
 	height: auto;
 	/* background-color: #eee; */
@@ -503,6 +513,12 @@ li {
 	/* 3 x 300px + 2 x 20px gap + padding */
 }
 
+.thumbnails-container p {
+	margin: 10px 8% 0px 8%;
+	/* color: #00a1e4; */
+}
+
+
 .thumbnail {
 	width: 300px; /* Fixed width */
 	flex: 0 0 300px; /* No grow, no shrink, fixed at 300px */
@@ -516,6 +532,24 @@ li {
 	box-shadow: #000000A6 0px 16px 24px;
 	transform: translateY(-5px);
 }
+
+.peekabo-container {
+	position: absolute;
+	/* bottom: 0; */
+	right: 0;
+	width: 150px;
+	height: auto;
+	z-index: 100;
+	pointer-events: none;
+}
+
+#peekabo {
+	top: 50%0;
+	width: 7em;
+	height: auto;
+}
+
+
 
 .hidden {
 	display: none;
@@ -615,7 +649,7 @@ video {
 /* Background Colors */
 
 .stuff-i-done-BG {
-	background-color: #0054a6;
+	background-color: #001428;
 	/* border-top: 10px solid red; */
 	/* border-bottom: 10px solid red; */
 	flex-direction: column;
