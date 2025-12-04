@@ -22,8 +22,8 @@ const Peekabo = ({ id, className }) => {
 
          .add("frame2", "+=0")
          .from("#opening", 1, { ease: "power4.inOut", morphSVG: { shape: "#opening-start", shapeIndex: "auto" } }, "frame2")
-         .from("#wrinkle1", 1, { ease: "power4.inOut", morphSVG: { shape: "#wrinkle1-start", shapeIndex: "auto" } }, "frame2")
-         .from("#wrinkle2", 1, { ease: "power4.inOut", morphSVG: { shape: "#wrinkle2-start", shapeIndex: "auto" } }, "frame2")
+         .from("#wrinkle1", 1, { y: 15, rotation: -10,  ease: "power3.inOut", morphSVG: { shape: "#wrinkle1-start", shapeIndex: "auto" } }, "frame2")
+         .from("#wrinkle2", 1, {y: -15, rotation: -10,  ease: "power3.inOut", morphSVG: { shape: "#wrinkle2-start", shapeIndex: "auto" } }, "frame2")
          .from("#hand", 1, { x: 130, y: 20, ease: "power4.inOut"}, "frame2")
          .from("#eyes", 1, { x: 80, y: -20, scale:.5, transformOrigin: "center", ease: "power4.inOut"}, "frame2")
 
@@ -36,7 +36,7 @@ const Peekabo = ({ id, className }) => {
          .set("#eye-R, #eye-L", { scaleY:.1, transformOrigin: "center", ease: "power4.inOut"}, "frame4+=0.3")
          .set("#eye-R, #eye-L", { scaleY:1, transformOrigin: "center", ease: "power4.inOut"}, "frame4+=0.4")
 
-         .add("frameEND", "+=3")
+         .add("frameEND", "+=1")
          .set(".guide", { autoAlpha: 1 }, "frameEND")
          })
 
@@ -58,8 +58,8 @@ const Peekabo = ({ id, className }) => {
                   <path id="eye-R" d="M172.79,243.3c-5.2,10.08-16.26-2.31-11.99-11.55,4.75-10.29,17.77.35,11.99,11.55Z" />
                   <path id="eye-L" d="M152.17,240.69c-8.75,6.15-13.01-13.49-1.86-15.03,6.8,1.21,6.49,11.77,1.86,15.03Z" />
                </g>
-               <path id="wrinkle2" d="M165.4,351.5c-9-3.63-17.59-11.13-25.01-17.48-30.24-25.86-59.1-58.17-58.98-100.51l10.13,27.35c16.2,36.78,45.79,63.16,73.86,90.63Z" style={{ opacity: .66 }} />
-               <path id="wrinkle1" d="M181.39,75.51c2.62,2.93-13.29,18.99-15.98,21.51-35.09,32.8-89.91,50.29-102.94,101.06-3.96,15.43-3.11,24.59-1.14,40.01.25,1.97-.23,1.44-1.92,1.41-12.37-44.09-1.74-73.07,34.68-98.82,28.04-19.83,49.9-29.17,75.34-54.66,3.63-3.64,6.3-9.1,11.97-10.52Z" style={{ opacity: .65 }} />
+               <path id="wrinkle2" d="M165.4,351.5c-9-3.63-17.59-11.13-25.01-17.48-30.24-25.86-59.1-58.17-58.98-100.51l10.13,27.35c16.2,36.78,45.79,63.16,73.86,90.63Z" style={{ opacity: .66 , fill: "#001428"}} />
+               <path id="wrinkle1" d="M181.39,75.51c2.62,2.93-13.29,18.99-15.98,21.51-35.09,32.8-89.91,50.29-102.94,101.06-3.96,15.43-3.11,24.59-1.14,40.01.25,1.97-.23,1.44-1.92,1.41-12.37-44.09-1.74-73.07,34.68-98.82,28.04-19.83,49.9-29.17,75.34-54.66,3.63-3.64,6.3-9.1,11.97-10.52Z" style={{ opacity: .65 , fill: "#001428"}} />
             </g>
             <g id="bubble">
                <g id="bubble-fill">
