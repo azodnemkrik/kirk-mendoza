@@ -1,12 +1,12 @@
 import { useEffect, useState } from "react";
 import React from "react";
 import thumb1 from '../../banners/visit_mississippi/visit_mississippi-300x250.jpg';
-import thumb2 from '../../banners/discover/stackable-300x250.jpg';
+import thumb2 from '../../banners/borden/crisps_n_cubes-300x250.jpg';
 import thumb3 from '../../banners/refocus/30-percent-more-film-300x250.jpg';
 import thumb4 from '../../banners/microsoft/microsoft_neutral-300x250.jpg';
 import thumb5 from '../../banners/xbox/xbox_titan-300x250.jpg';
-import thumb6 from '../../banners/borden/crisps_n_cubes-300x250.jpg';
-import Peekabo from "./Peekabo";
+import thumb6 from '../../banners/discover/stackable-300x250.jpg';
+import Peekaboo from "./Peekaboo";
 
 const StuffIDone = ({ id, className }) => {
 
@@ -27,7 +27,7 @@ const StuffIDone = ({ id, className }) => {
 					<h1>Stuff I've Done</h1>
 					<div className="three-cards-labels-container">
 						<h2 onClick={() => { handleCardClick(1) }} className={`card-label card-label-1 ${activeCard === 1 ? 'selected' : ''}`}>Banners</h2>
-						<h2 onClick={() => { handleCardClick(2) }} className={`card-label card-label-2 ${activeCard === 2 ? 'selected' : ''}`}>Video</h2>
+						<h2 onClick={() => { handleCardClick(2) }} className={`card-label card-label-2 ${activeCard === 2 ? 'selected' : ''}`}>Videos</h2>
 						<h2 onClick={() => { handleCardClick(3) }} className={`card-label card-label-3 ${activeCard === 3 ? 'selected' : ''}`}>Development</h2>
 					</div>
 				</div>
@@ -45,7 +45,7 @@ const StuffIDone = ({ id, className }) => {
 							<img onClick={() => { }} src={thumb5} width="300" height="250" className="thumbnail" />
 							<img onClick={() => { }} src={thumb6} width="300" height="250" className="thumbnail" />
 						</div>
-						<Peekabo id="peekabo-container" className="" />
+						<Peekaboo id="peekaboo-container" className="" />
 					</div>
 
 					{/* Card 2 */}

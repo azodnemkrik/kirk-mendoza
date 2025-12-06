@@ -13,8 +13,8 @@ html {
 	font-family: 'SegoePro Semibold', sans-serif;
 	/* font-family: 'SegoePro Regular'; */
 	font-size: 16px;
-	font-size: 1rem;
-	line-height: 1.25;
+	font-size: 1.1em;
+	line-height: 1.5;
 	color: #333333;
 }
 
@@ -31,9 +31,11 @@ div, h1, h2, p {
 
 h1 {
 	font-size: 4em;
+	font-size: 4.25rem;
 	font-weight: normal;
 	font-family: BulletSmallCaps, sans-serif;
 	line-height: .75em;
+	/* padding-top: 2vh; */
 	/* margin: 0.5em 0; */
 }
 
@@ -155,6 +157,7 @@ h2 {
 	position: sticky;
 	z-index: 1000;
 	background-color: #000000;
+	box-shadow: #000000A6 0px 5px 10px 0px;
 }
 
 #navigation .heroLogo {}
@@ -278,6 +281,8 @@ svg {
 	height: auto;
 	width: auto;
 	max-width: 1380px;
+	margin-top: 1vh;
+
 }
 
 .logo-container {
@@ -538,10 +543,10 @@ background: linear-gradient(to top,  #0054a6 0%,#003367 70%,#001428 95%); /* W3C
 	transform: translateY(-5px);
 }
 
-.peekabo-container {
+.peekaboo-container {
 	position: absolute;
 	/* bottom: 0; */
-	top: 50%;
+	bottom: 0%;
 	right: 0;
 	width: 150px;
 	width: 7em;
@@ -549,12 +554,12 @@ background: linear-gradient(to top,  #0054a6 0%,#003367 70%,#001428 95%); /* W3C
 	z-index: 100;
 }
 
-#peekabo {
+#peekaboo {
 	width: 7em;
 	height: auto;
 }
 
-#peekabo-container {
+#peekaboo-container {
 	cursor: pointer!important;
 }
 

@@ -34,7 +34,7 @@ const About = ({ id, className }) => {
 					<img className="profileImage" src={profileImage} alt="Kirk Mendoza - Front-End Web Developer, Motion Graphics Designer, Video Editor, Animator" />
 				</div>
 				<div className="aboutText">
-					<h1>Hello, I'm <span className="accent-blue">Kirk</span>!</h1>
+					<h1>Hi, I'm <span className="accent-blue">Kirk</span>!</h1>
 					<p>As a front-end web developer, I've spent the last 20 years building digital ad experiences that are clean, fast, and easy to use. At the same time, my animation background pulled me into motion graphics and video editing, and that blend of visuals and code is where I do my best work.</p>
 					<div className="skills-container">
 						<Icon_HTML />
