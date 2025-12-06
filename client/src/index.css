@@ -8,8 +8,12 @@ html {
 	-webkit-font-smoothing: antialiased !important;
 	text-rendering: optimizeLegibility !important;
 	-webkit-text-size-adjust: 100%;
-	font-family: 'SegoePro Regular', sans-serif;
+	/* font-family: 'SegoePro Regular', sans-serif; */
+	/* font-family: 'SegoeUI Semibold'; */
+	font-family: 'SegoePro Semibold', sans-serif;
+	/* font-family: 'SegoePro Regular'; */
 	font-size: 16px;
+	font-size: 1rem;
 	line-height: 1.25;
 	color: #333333;
 }
@@ -157,17 +161,17 @@ h2 {
 
 @font-face {
 	font-family: 'SegoeUI Semibold';
-	src: url(../fonts/segoeui-semibold.woff) format('woff')
+	src: url(./fonts/segoeui-semibold.woff) format('woff')
 }
 
 @font-face {
 	font-family: 'SegoePro Semibold';
-	src: url(../fonts/SegoePro-Semibold.woff) format('woff')
+	src: url(./fonts/SegoePro-Semibold.woff) format('woff')
 }
 
 @font-face {
 	font-family: 'SegoePro Regular';
-	src: url(../fonts/SegoePro-Regular.woff) format('woff')
+	src: url(./fonts/SegoePro-Regular.woff) format('woff')
 }
 
 @font-face {
@@ -537,17 +541,21 @@ background: linear-gradient(to top,  #0054a6 0%,#003367 70%,#001428 95%); /* W3C
 .peekabo-container {
 	position: absolute;
 	/* bottom: 0; */
+	top: 50%;
 	right: 0;
 	width: 150px;
+	width: 7em;
 	height: auto;
 	z-index: 100;
-	pointer-events: none;
 }
 
 #peekabo {
-	top: 50%0;
 	width: 7em;
 	height: auto;
+}
+
+#peekabo-container {
+	cursor: pointer!important;
 }
 
 

@@ -45,7 +45,7 @@ const StuffIDone = ({ id, className }) => {
 							<img onClick={() => { }} src={thumb5} width="300" height="250" className="thumbnail" />
 							<img onClick={() => { }} src={thumb6} width="300" height="250" className="thumbnail" />
 						</div>
-						<Peekabo id="peekabo" className="" />
+						<Peekabo id="peekabo-container" className="" />
 					</div>
 
 					{/* Card 2 */}
