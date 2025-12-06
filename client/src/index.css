@@ -211,7 +211,7 @@ h2 {
 #stuff-i-done,
 #case-studies,
 #contact {
-	scroll-margin-top: 150px;
+	scroll-margin-top: 7.5vh;
 	/* adjust to match nav height */
 }
 

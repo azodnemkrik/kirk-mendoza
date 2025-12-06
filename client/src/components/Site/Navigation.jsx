@@ -18,7 +18,8 @@ const Navigation = forwardRef(({ id, className, pathname, isFixed }, ref) => {
 			.add("frame1")
 			// .to("#navigation", 1 ,{ height: "5em" , ease: "power4.out"}, "frame1+=3.5")
 			// .to(".logo-container", 1, { width: "40em", ease: "power4.out" }, "frame1+=3.5")
-			.to(".logo-container", 1, { height: "6em", ease: "power4.out" }, "frame1+=3.5")
+			// .to(".logo-container", 1, { height: "6em", ease: "power4.out" }, "frame1+=3.5") // keep
+			.to(".logo-container", .75, { height: "7.5vh", ease: "power4.inOut" }, "frame1+=3.15")
 			;
 
 	})

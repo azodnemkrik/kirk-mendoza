@@ -49,23 +49,6 @@ const LogoHero = ({ id, className }) => {
 			.to("#morphing-m3", .5, { ease: "back.inOut", morphSVG: { shape: "#M3-guide", shapeIndex: "auto" } }, "frame4")
 			.to("#morphing-k", .5, { ease: "back.inOut", fill: "#0054a6", morphSVG: { shape: "#k-guide", shapeIndex: "auto" } }, "frame4")
 
-
-		// const rollOverAnimation = gsap.timeline({ paused: true });
-		// rollOverAnimation
-		// 	.add("start", "+=0")
-		// 	.to("#morphing-m1", .5, { ease: "power4.inOut", morphSVG: { shape: "#morphing-m1", shapeIndex: "auto" } }, "start")
-		// 	.to("#morphing-m2", .5, { ease: "power4.inOut", morphSVG: { shape: "#morphing-m2", shapeIndex: "auto" } }, "start")
-		// 	.to("#morphing-m3", .5, { ease: "power4.inOut", morphSVG: { shape: "#morphing-m3", shapeIndex: "auto" } }, "start")
-		// 	.to("#morphing-k", .5, { ease: "power4.inOut", fill: "#00a1e4", morphSVG: { shape: "#morphing-k", shapeIndex: "auto" } }, "start")
-		// 	.to(".m-letter", .5, { x: 0, ease: "power4.inOut" }, "start")
-		// 	.to(".k-letter", .5, { x: 0, ease: "power4.inOut" }, "start")
-		// 	// .to("#logo", .5, { x: 300, ease: "power4.inOut", transformOrigin: "50% 50%" }, "start")
-		// 	.to("#logo", .5, { x: 300, ease: "power4.inOut" }, "start")
-		// 	.to("#clip-path-kirk", .5, { x: 0, ease: "power4.inOut" }, "start")
-		// 	.to("#clip-path-mendoza", .5, { x: 0, ease: "power4.inOut" }, "start")
-		// 	.add("end", "+=0")
-		// 	;
-
 	})
 
 	return (

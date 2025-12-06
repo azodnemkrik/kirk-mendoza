@@ -22,7 +22,7 @@ const Peekabo = ({ id, className }) => {
 			.from("#opening", .5, { ease: "power4.inOut", morphSVG: { shape: "#opening-start", shapeIndex: "auto" } }, "frame2")
 			.from("#wrinkle1", .5, { y: 15, rotation: -10, ease: "power3.inOut", morphSVG: { shape: "#wrinkle1-start", shapeIndex: "auto" } }, "frame2")
 			.from("#wrinkle2", .5, { y: -15, rotation: -10, ease: "power3.inOut", morphSVG: { shape: "#wrinkle2-start", shapeIndex: "auto" } }, "frame2")
-			.from("#hand", .5, { x: 120, y: 20, ease: "power4.inOut" }, "frame2")
+			.from("#hand", .5, { x: 110, y: 20, rotation: -30, ease: "power4.inOut" }, "frame2")
 			.from("#eyes", .5, { x: 80, y: -20, scale: .5, transformOrigin: "center", ease: "power4.inOut" }, "frame2")
 
 			.add("frame3", "+=0")
