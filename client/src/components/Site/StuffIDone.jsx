@@ -12,6 +12,9 @@ import htmlIcon from '../../images/html.svg';
 import gsapIcon from "../../images/gsap.svg";
 import aiIcon from '../../images/illustrator.svg';
 import Icon_Illustrator from "../Icon_Illustrator";
+import Icon_HTML from "../Icon_HTML";
+import Icon_CSS from "../Icon_CSS";
+import Icon_GSAP from "../Icon_GSAP";
 
 const StuffIDone = ({ id, className }) => {
 
@@ -48,11 +51,10 @@ const StuffIDone = ({ id, className }) => {
 									<div className="thumbnail-info-title">Visit<br />Mississippi</div>
 									<div onClick={() => { }} className="nav-link">View banner</div>
 									<div className="container skills-used">
-										<Icon_Illustrator className="skillIcon" alt="" />	
-										<div><img src={aiIcon} className="skillIcon" alt="" /></div>
-										<div><img src={htmlIcon} className="skillIcon" alt="" /></div>
-										<div><img src={cssIcon} className="skillIcon" alt="" /></div>
-										<div><img src={gsapIcon} className="skillIcon" alt="" /></div>
+										<Icon_Illustrator className="skillIcon" alt="" />
+										<Icon_HTML className="skillIcon" alt="" />
+										<Icon_CSS className="skillIcon" alt="" />
+										<Icon_GSAP className="skillIcon" alt="" />
 									</div>
 								</div>
 								<img src={thumb1} width="300" height="250" className="thumbnail-image" />
@@ -62,60 +64,60 @@ const StuffIDone = ({ id, className }) => {
 									<div className="thumbnail-info-title">Borden<br />Cheese</div>
 									<div onClick={() => { }} className="nav-link">View banner</div>
 									<div className="container skills-used">
-										<div><img src={htmlIcon} className="skillIcon" alt="" /></div>
-										<div><img src={cssIcon} className="skillIcon" alt="" /></div>
-										<div><img src={gsapIcon} className="skillIcon" alt="" /></div>
+										<Icon_HTML className="skillIcon" alt="" />
+										<Icon_CSS className="skillIcon" alt="" />
+										<Icon_GSAP className="skillIcon" alt="" />
 									</div>
 								</div>
-								<img src={thumb2} width="300" height="250" className="" />
+								<img src={thumb2} width="300" height="250" className="thumbnail-image" />
 							</div>
 							<div className="thumbnail">
 								<div className="thumbnail-info">
 									<div className="thumbnail-info-title">Refocus</div>
 									<div onClick={() => { }} className="nav-link">View banner</div>
 									<div className="container skills-used">
-										<div><img src={htmlIcon} className="skillIcon" alt="" /></div>
-										<div><img src={cssIcon} className="skillIcon" alt="" /></div>
-										<div><img src={gsapIcon} className="skillIcon" alt="" /></div>
+										<Icon_HTML className="skillIcon" alt="" />
+										<Icon_CSS className="skillIcon" alt="" />
+										<Icon_GSAP className="skillIcon" alt="" />
 									</div>
 								</div>
-								<img src={thumb3} width="300" height="250" className="" />
+								<img src={thumb3} width="300" height="250" className="thumbnail-image" />
 							</div>
 							<div className="thumbnail">
 								<div className="thumbnail-info">
 									<div className="thumbnail-info-title">Microsoft</div>
 									<div onClick={() => { }} className="nav-link">View banner</div>
 									<div className="container skills-used">
-										<div><img src={htmlIcon} className="skillIcon" alt="" /></div>
-										<div><img src={cssIcon} className="skillIcon" alt="" /></div>
-										<div><img src={gsapIcon} className="skillIcon" alt="" /></div>
+										<Icon_HTML className="skillIcon" alt="" />
+										<Icon_CSS className="skillIcon" alt="" />
+										<Icon_GSAP className="skillIcon" alt="" />
 									</div>
 								</div>
-								<img src={thumb4} width="300" height="250" className="" />
+								<img src={thumb4} width="300" height="250" className="thumbnail-image" />
 							</div>
 							<div className="thumbnail">
 								<div className="thumbnail-info">
 									<div className="thumbnail-info-title">XBox</div>
 									<div onClick={() => { }} className="nav-link">View banner</div>
 									<div className="container skills-used">
-										<div><img src={htmlIcon} className="skillIcon" alt="" /></div>
-										<div><img src={cssIcon} className="skillIcon" alt="" /></div>
-										<div><img src={gsapIcon} className="skillIcon" alt="" /></div>
+										<Icon_HTML className="skillIcon" alt="" />
+										<Icon_CSS className="skillIcon" alt="" />
+										<Icon_GSAP className="skillIcon" alt="" />
 									</div>
 								</div>
-								<img src={thumb5} width="300" height="250" className="" />
+								<img src={thumb5} width="300" height="250" className="thumbnail-image" />
 							</div>
 							<div className="thumbnail">
 								<div className="thumbnail-info">
 									<div className="thumbnail-info-title">Discover</div>
 									<div onClick={() => { }} className="nav-link">View banner</div>
 									<div className="container skills-used">
-										<div><img src={htmlIcon} className="skillIcon" alt="" /></div>
-										<div><img src={cssIcon} className="skillIcon" alt="" /></div>
-										<div><img src={gsapIcon} className="skillIcon" alt="" /></div>
+										<Icon_HTML className="skillIcon" alt="" />
+										<Icon_CSS className="skillIcon" alt="" />
+										<Icon_GSAP className="skillIcon" alt="" />
 									</div>
 								</div>
-								<img src={thumb6} width="300" height="250" className="" />
+								<img src={thumb6} width="300" height="250" className="thumbnail-image" />
 							</div>
 						</div>
 						<Peekaboo id="peekaboo-container" className="" />
