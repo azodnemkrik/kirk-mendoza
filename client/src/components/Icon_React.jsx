@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import iconReact from '../images/react.svg';
 
-const Icon_React = () => {
+const Icon_React = ({ className }) => {
 
 	useEffect(() => {
 
@@ -10,8 +10,8 @@ const Icon_React = () => {
 	return (
 
 		<div className="skill">
-			<img className="skillIcon" src={iconReact} alt="React" style={{ width: '100%', maxWidth: '400px' }} />
-			<p className='float skillLabel' style={{color: '#008db4ff', fontWeight: 'bold'}}>React</p>
+			<img className={`skillIcon ${className}`} src={iconReact} alt="React" style={{ width: '100%', maxWidth: '400px' }} />
+			<p className='float skillLabel' style={{color: '#0054a6ff', fontWeight: 'bold'}}>React</p>
 		</div>
 	);
 }

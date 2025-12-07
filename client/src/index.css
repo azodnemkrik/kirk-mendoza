@@ -13,8 +13,8 @@ html {
 	font-family: 'SegoePro Semibold', sans-serif;
 	/* font-family: 'SegoePro Regular'; */
 	font-size: 16px;
-	font-size: 1.1em;
-	line-height: 1.5;
+	font-size: 1.05em;
+	line-height: 1.25;
 	color: #333333;
 }
 
@@ -23,7 +23,10 @@ html {
 	scroll-behavior: smooth;
 }
 
-div, h1, h2, p {
+div,
+h1,
+h2,
+p {
 	padding: 0;
 	margin: 0;
 	z-index: 20
@@ -150,6 +153,7 @@ h2 {
 	background-color: #00a1e4;
 	color: #00a1e4;
 }
+
 #navigation {
 	flex-direction: column;
 	align-items: center;
@@ -276,7 +280,7 @@ svg {
 	justify-content: center;
 	align-items: center;
 	flex-direction: row;
-	padding: .5% 8%  0;
+	padding: .5% 8% 0;
 	gap: 5%;
 	height: auto;
 	width: auto;
@@ -348,7 +352,7 @@ li {
 	overflow: visible;
 }
 
-.skillIcon {
+.grayScale {
 	-webkit-filter: grayscale(100%) brightness(30%) contrast(70%) drop-shadow(0px 0px 0px #00000000);
 	-moz-filter: grayscale(100%) brightness(30%) contrast(70%) drop-shadow(0px 0px 0px #00000000);
 	-ms-filter: grayscale(100%) brightness(30%) contrast(70%) drop-shadow(0px 0px 0px #00000000);
@@ -357,12 +361,13 @@ li {
 	transition: .2s;
 }
 
+
 .skillLabel {
 	font-family: 'SegoePro Semibold', sans-serif;
 	font-size: 14px;
 	color: #333333;
 	text-align: left;
-	margin-top: -22px;
+	margin-top: -22px !important;
 	transition: .2s;
 	-webkit-filter: drop-shadow(0px 2px 2px #0000004D);
 	-moz-filter: drop-shadow(0px 2px 2px #0000004D);
@@ -384,6 +389,8 @@ li {
 .skillIcon:hover~.skillLabel {
 	opacity: 1;
 }
+
+
 
 
 /* Stuff I Done Section */
@@ -410,6 +417,7 @@ li {
 	filter: drop-shadow(2px 2px 2px #000000A6);
 	/* box-shadow: #000000A6 5px -5px 5px 1px; */
 }
+
 .three-cards-container {
 	color: #FFFFFF;
 	width: 100%;
@@ -419,8 +427,9 @@ li {
 	height: auto;
 	gap: 0px;
 	z-index: 19;
-/* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#0054a6+0,000000+100 */
-background: linear-gradient(to top,  #0054a6 0%,#003367 70%,#001428 95%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	/* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#0054a6+0,000000+100 */
+	background: linear-gradient(to top, #0054a6 0%, #003367 70%, #001428 95%);
+	/* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
 }
 
 .three-cards-labels-container {
@@ -519,6 +528,7 @@ background: linear-gradient(to top,  #0054a6 0%,#003367 70%,#001428 95%); /* W3C
 	gap: 50px;
 	padding: 10px;
 	max-width: 1200px;
+	z-index: 21;
 	/* 3 x 300px + 2 x 20px gap + padding */
 }
 
@@ -529,18 +539,93 @@ background: linear-gradient(to top,  #0054a6 0%,#003367 70%,#001428 95%); /* W3C
 
 
 .thumbnail {
-	width: 300px; /* Fixed width */
-	flex: 0 0 300px; /* No grow, no shrink, fixed at 300px */
-	height: auto;
+	/*flex: 0 0 300px;  No grow, no shrink, fixed at 300px */
+	width: 300px;
+	/* Fixed width */
+	height: 250px;
 	cursor: pointer;
-	box-shadow: #00000000 0px 0px 0px;
+	/* box-shadow: #00000000 0px 0px 0px; */
 	transform: scale(.95);
 	transition: transform 0.15s, box-shadow 0.15s;
+	margin: 0;
+	padding: 0;
+	z-index: 21;
+	overflow: hidden;
 }
 
-.thumbnail:hover, .thumbnail.selected {
+.thumbnail:hover,
+.thumbnail.selected {
 	box-shadow: #000000A6 0px 16px 24px;
 	transform: translateY(-5px);
+	z-index: 22;
+
+	.thumbnail-info {
+		opacity: 1;
+		visibility: visible;
+	}
+
+	.thumbnail-image {
+		filter: blur(2px);
+	}
+}
+
+.thumbnail-info {
+	position: absolute;
+	display: flex;
+	flex-direction: column;
+	gap: 20px;
+	justify-content: center;
+	align-items: center;
+	width: 300px;
+	/* Fixed width */
+	height: 250px;
+	/* Fixed height */
+	transition: transform 0.15s, opacity 0.15s, filter 0.15s, visibility 0.15s;
+	margin: 0;
+	padding: 0;
+	/* background-color: #000000E6; */
+	/* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	/* background: linear-gradient(to bottom,  #0054a6F0 -50% ,#001428F0 100%);  */
+	background: linear-gradient(to bottom, #444444E6 15%, #ddddddBF 90%);
+	opacity: 0;
+	visibility: hidden;
+}
+
+.thumbnail-info .thumbnail-info-title {
+	color: #00a1e4;
+	font-weight: normal;
+	font-family: "BulletSmallCaps", sans-serif;
+	font-size: 2.5em;
+	line-height: 0.75em;
+	/* letter-spacing: 0.05em; */
+	text-align: center;
+	/* text-shadow: 2px 2px 4px #000000A6; */
+	-webkit-filter: drop-shadow(2px 2px 2px #000000A6);
+	-moz-filter: drop-shadow(2px 2px 2px #000000A6);
+	-ms-filter: drop-shadow(2px 2px 2px #000000A6);
+	-o-filter: drop-shadow(2px 2px 2px #000000A6);
+	filter: drop-shadow(2px 2px 2px #000000A6);
+}
+
+.skills-used {
+	gap: 1em;
+	width: 100%;
+	flex: .5;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+	padding-top: 30px;
+}
+
+.skills-used .skillIcon {
+	width: 30px;
+	height: 30px;
+	/* cursor: pointer; */
+	/* overflow: visible; */
+}
+
+#peekaboo-container {
+	cursor: pointer !important;
 }
 
 .peekaboo-container {
@@ -557,10 +642,6 @@ background: linear-gradient(to top,  #0054a6 0%,#003367 70%,#001428 95%); /* W3C
 #peekaboo {
 	width: 7em;
 	height: auto;
-}
-
-#peekaboo-container {
-	cursor: pointer!important;
 }
 
 

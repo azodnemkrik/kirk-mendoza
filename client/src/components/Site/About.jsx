@@ -37,19 +37,19 @@ const About = ({ id, className }) => {
 					<h1>Hi, I'm <span className="accent-blue">Kirk</span>!</h1>
 					<p>As a front-end web developer, I've spent the last 20 years building digital ad experiences that are clean, fast, and easy to use. At the same time, my animation background pulled me into motion graphics and video editing, and that blend of visuals and code is where I do my best work.</p>
 					<div className="skills-container">
-						<Icon_HTML />
-						<Icon_CSS />
-						<Icon_GSAP />
-						<Icon_Figma />
-						<Icon_PhotoShop />
-						<Icon_Illustrator />
-						<Icon_AfterEffects />
-						<Icon_Premiere />
+						<Icon_HTML className="grayScale" />
+						<Icon_CSS className="grayScale" />
+						<Icon_GSAP className="grayScale" />
+						<Icon_Figma className="grayScale" />
+						<Icon_PhotoShop className="grayScale" />
+						<Icon_Illustrator className="grayScale" />
+						<Icon_AfterEffects className="grayScale" />
+						<Icon_Premiere className="grayScale" />
 					</div>
 
 					<p>I recently wrapped up my Full-Stack Developer certification, which added back-end and React development to my skill set. It’s been exciting to expand beyond front-end work and deliver full, end-to-end solutions.</p>
 					<div className="skills-container">
-						<Icon_React />
+						<Icon_React className="grayScale"/>
 					</div>
 					{/* <p>I've had the opportunity to work with a number of recognizable brands and agencies, collaborating closely with design, marketing, and technical teams. Clear communication is one of my strongest assets, and clients appreciate that I make the process smooth, efficient, and easy to understand.</p>
 

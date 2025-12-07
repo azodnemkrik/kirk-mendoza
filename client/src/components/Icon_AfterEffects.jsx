@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import iconAfterEffects from '../images/after_effects.svg';
 
-const Icon_AfterEffects = () => {
+const Icon_AfterEffects = ({ className }) => {
 
 	useEffect(() => {
 
@@ -9,7 +9,7 @@ const Icon_AfterEffects = () => {
 
 	return (
 		<div className="skill">
-			<img className="skillIcon" src={iconAfterEffects} alt="After Effects" style={{ width: '100%', maxWidth: '400px' }} />
+			<img className={`skillIcon ${className}`} src={iconAfterEffects} alt="After Effects" style={{ width: '100%', maxWidth: '400px' }} />
          <p className='float skillLabel' style={{color: '#00005b', fontWeight: 'bold'}}>After Effects</p>
 		</div>
 	);

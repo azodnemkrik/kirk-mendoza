@@ -7,6 +7,11 @@ import thumb4 from '../../banners/microsoft/microsoft_neutral-300x250.jpg';
 import thumb5 from '../../banners/xbox/xbox_titan-300x250.jpg';
 import thumb6 from '../../banners/discover/stackable-300x250.jpg';
 import Peekaboo from "./Peekaboo";
+import cssIcon from '../../images/css.svg';
+import htmlIcon from '../../images/html.svg';
+import gsapIcon from "../../images/gsap.svg";
+import aiIcon from '../../images/illustrator.svg';
+import Icon_Illustrator from "../Icon_Illustrator";
 
 const StuffIDone = ({ id, className }) => {
 
@@ -37,13 +42,81 @@ const StuffIDone = ({ id, className }) => {
 					{/* Card 1 */}
 					<div className={`card card-1 ${activeCard !== 1 ? 'hidden' : 'selected'}`}>
 						<div className="thumbnails-container">
-						<p>These are some banner examples. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod sunt in ratione dolorem facere neque ut, id quibusdam et eum fugit enim quos eaque dolores est! Suscipit quibusdam ab beatae. Illum facere labore est corporis fugit accusantium numquam earum itaque provident harum. Laborum in quibusdam vel iusto aliquam molestiae facere?</p>
-							<img onClick={() => { }} src={thumb1} width="300" height="250" className="thumbnail" />
-							<img onClick={() => { }} src={thumb2} width="300" height="250" className="thumbnail" />
-							<img onClick={() => { }} src={thumb3} width="300" height="250" className="thumbnail" />
-							<img onClick={() => { }} src={thumb4} width="300" height="250" className="thumbnail" />
-							<img onClick={() => { }} src={thumb5} width="300" height="250" className="thumbnail" />
-							<img onClick={() => { }} src={thumb6} width="300" height="250" className="thumbnail" />
+							<p>These are some banner examples. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod sunt in ratione dolorem facere neque ut, id quibusdam et eum fugit enim quos eaque dolores est! Suscipit quibusdam ab beatae. Illum facere labore est corporis fugit accusantium numquam earum itaque provident harum. Laborum in quibusdam vel iusto aliquam molestiae facere?</p>
+							<div className="thumbnail">
+								<div className="thumbnail-info">
+									<div className="thumbnail-info-title">Visit<br />Mississippi</div>
+									<div onClick={() => { }} className="nav-link">View banner</div>
+									<div className="container skills-used">
+										<Icon_Illustrator className="skillIcon" alt="" />	
+										<div><img src={aiIcon} className="skillIcon" alt="" /></div>
+										<div><img src={htmlIcon} className="skillIcon" alt="" /></div>
+										<div><img src={cssIcon} className="skillIcon" alt="" /></div>
+										<div><img src={gsapIcon} className="skillIcon" alt="" /></div>
+									</div>
+								</div>
+								<img src={thumb1} width="300" height="250" className="thumbnail-image" />
+							</div>
+							<div className="thumbnail">
+								<div className="thumbnail-info">
+									<div className="thumbnail-info-title">Borden<br />Cheese</div>
+									<div onClick={() => { }} className="nav-link">View banner</div>
+									<div className="container skills-used">
+										<div><img src={htmlIcon} className="skillIcon" alt="" /></div>
+										<div><img src={cssIcon} className="skillIcon" alt="" /></div>
+										<div><img src={gsapIcon} className="skillIcon" alt="" /></div>
+									</div>
+								</div>
+								<img src={thumb2} width="300" height="250" className="" />
+							</div>
+							<div className="thumbnail">
+								<div className="thumbnail-info">
+									<div className="thumbnail-info-title">Refocus</div>
+									<div onClick={() => { }} className="nav-link">View banner</div>
+									<div className="container skills-used">
+										<div><img src={htmlIcon} className="skillIcon" alt="" /></div>
+										<div><img src={cssIcon} className="skillIcon" alt="" /></div>
+										<div><img src={gsapIcon} className="skillIcon" alt="" /></div>
+									</div>
+								</div>
+								<img src={thumb3} width="300" height="250" className="" />
+							</div>
+							<div className="thumbnail">
+								<div className="thumbnail-info">
+									<div className="thumbnail-info-title">Microsoft</div>
+									<div onClick={() => { }} className="nav-link">View banner</div>
+									<div className="container skills-used">
+										<div><img src={htmlIcon} className="skillIcon" alt="" /></div>
+										<div><img src={cssIcon} className="skillIcon" alt="" /></div>
+										<div><img src={gsapIcon} className="skillIcon" alt="" /></div>
+									</div>
+								</div>
+								<img src={thumb4} width="300" height="250" className="" />
+							</div>
+							<div className="thumbnail">
+								<div className="thumbnail-info">
+									<div className="thumbnail-info-title">XBox</div>
+									<div onClick={() => { }} className="nav-link">View banner</div>
+									<div className="container skills-used">
+										<div><img src={htmlIcon} className="skillIcon" alt="" /></div>
+										<div><img src={cssIcon} className="skillIcon" alt="" /></div>
+										<div><img src={gsapIcon} className="skillIcon" alt="" /></div>
+									</div>
+								</div>
+								<img src={thumb5} width="300" height="250" className="" />
+							</div>
+							<div className="thumbnail">
+								<div className="thumbnail-info">
+									<div className="thumbnail-info-title">Discover</div>
+									<div onClick={() => { }} className="nav-link">View banner</div>
+									<div className="container skills-used">
+										<div><img src={htmlIcon} className="skillIcon" alt="" /></div>
+										<div><img src={cssIcon} className="skillIcon" alt="" /></div>
+										<div><img src={gsapIcon} className="skillIcon" alt="" /></div>
+									</div>
+								</div>
+								<img src={thumb6} width="300" height="250" className="" />
+							</div>
 						</div>
 						<Peekaboo id="peekaboo-container" className="" />
 					</div>
