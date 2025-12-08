@@ -17,8 +17,10 @@ import Icon_HTML from "../Icon_HTML";
 import Icon_GSAP from "../Icon_GSAP";
 import Icon_Figma from "../Icon_Figma";
 import Icon_Illustrator from "../Icon_Illustrator";
+import Icon_JavaScript from "../Icon_JavaScript";
 import Icon_Premiere from "../Icon_Premiere";
 import Icon_React from "../Icon_React";
+import Icon_XD from "../Icon_XD";
 const About = ({ id, className }) => {
 
 	const navRef = useRef(null);
@@ -39,8 +41,10 @@ const About = ({ id, className }) => {
 					<div className="skills-container">
 						<Icon_HTML className="grayScale" />
 						<Icon_CSS className="grayScale" />
-						<Icon_GSAP className="grayScale" />
+						<Icon_JavaScript className="grayScale" />
+						<Icon_GSAP className="grayScale gsap" />
 						<Icon_Figma className="grayScale" />
+						<Icon_XD className="grayScale" />
 						<Icon_PhotoShop className="grayScale" />
 						<Icon_Illustrator className="grayScale" />
 						<Icon_AfterEffects className="grayScale" />
