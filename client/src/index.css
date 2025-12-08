@@ -356,8 +356,12 @@ li {
 	overflow: visible;
 }
 
-.skill .gsap{
+.skills-container .skill .gsap {
 	width: 100% !important;
+	height: 40px ;
+}
+
+.skill .gsap{
 	padding: 0px 10px;
 }
 
@@ -585,17 +589,12 @@ li {
 	gap: 20px;
 	justify-content: center;
 	align-items: center;
-	width: 300px;
-	/* Fixed width */
-	height: 250px;
-	/* Fixed height */
+	width: 300px; /* Fixed width */
+	height: 250px; /* Fixed height */
 	transition: transform .2s, opacity .2s, filter .2s, visibility .2s;
 	margin: 0;
 	padding: 0;
 	background-color: #000000E6;
-	/* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-	/* background: linear-gradient(to bottom,  #0054a6F0 -50% ,#001428F0 100%);  */
-	/* background: linear-gradient(to bottom, #000000BF 20%, #b7b7b7e6 90%); */
 	/* opacity: 0;
 	visibility: hidden; */
 }
@@ -608,7 +607,6 @@ li {
 	line-height: 0.75em;
 	/* letter-spacing: 0.05em; */
 	text-align: center;
-	/* text-shadow: 2px 2px 4px #000000A6; */
 	-webkit-filter: drop-shadow(2px 2px 2px #000000A6);
 	-moz-filter: drop-shadow(2px 2px 2px #000000A6);
 	-ms-filter: drop-shadow(2px 2px 2px #000000A6);
@@ -620,9 +618,6 @@ li {
 	flex-direction: column;
 	flex: 1;
 	gap: 1em;
-	/* width: 100%; */
-	/* height: auto; */
-	/* padding-top: 20px; */
 }
 
 
@@ -630,11 +625,7 @@ li {
 	flex-direction: column;
 	flex: 1;
 	justify-self: flex-end;
-	/* gap: 1em; */
-	/* width: 100%; */
-	/* height: auto; */
-	/* padding-top: 20px; */
-    justify-content: space-evenly !important;
+	justify-content: space-evenly !important;
 }
 
 
@@ -645,14 +636,11 @@ li {
 	flex-direction: row;
 	justify-content: center;
 	align-items: center;
-	/* padding-top: 30px; */
 }
 
 .skills-used .skillIcon {
 	width: 20px;
 	height: 20px !important;
-	/* cursor: pointer; */
-	/* overflow: visible; */
 }
 
 #peekaboo-container {
@@ -661,8 +649,7 @@ li {
 
 .peekaboo-container {
 	position: absolute;
-	/* bottom: 0; */
-	bottom: 0%;
+	bottom: 0;
 	right: 0;
 	width: 150px;
 	width: 7em;
