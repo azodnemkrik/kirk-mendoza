@@ -595,8 +595,8 @@ li {
 	margin: 0;
 	padding: 0;
 	background-color: #000000E6;
-	/* opacity: 0;
-	visibility: hidden; */
+	opacity: 0;
+	visibility: hidden;
 }
 
 .thumbnail-info .thumbnail-info-title {
