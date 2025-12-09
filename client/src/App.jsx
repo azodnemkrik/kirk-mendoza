@@ -19,6 +19,7 @@ function App() {
 	const [isModalOpen, setIsModalOpen] = useState(false);
 	const [modalContent, setModalContent] = useState(null);
 	const [modalSrc, setModalSrc] = useState(null);
+	const [showScrubber, setShowScrubber] = useState(true);
 
 	useEffect(() => {
 		if (location.hash) {
@@ -41,17 +42,18 @@ function App() {
 		<Navigation ref={navRef} pathname={pathname} isFixed={isFixed} />
 		<div className="wrapper">
 			<About id="about-me" />
-			<StuffIDone id="stuff-i-done" onOpenModal={(content, src) => {
+			<StuffIDone id="stuff-i-done" onOpenModal={(content, src, shouldShowScrubber = true) => {
 				setModalContent(content);
 				setModalSrc(src);
+				setShowScrubber(shouldShowScrubber);
 				setIsModalOpen(true);
 			}} />
-			<CaseStudies id="case-studies" />
+		<CaseStudies id="case-studies" />
 			<BrandCrawler />
 			<ContactMe id="contact" />
 		</div>
 
-		<Modal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} src={modalSrc}>
+		<Modal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} src={modalSrc} showScrubber={showScrubber}>
 			{modalContent}
 		</Modal>
 

@@ -19,6 +19,7 @@ import Icon_Figma from "../Icon_Figma";
 import Icon_PhotoShop from "../Icon_PhotoShop";
 import Icon_JavaScript from "../Icon_JavaScript";
 import Icon_XD from "../Icon_XD";
+import Scrubber from "./Scrubber";
 
 const StuffIDone = ({ id, className, onOpenModal }) => {
 	
@@ -52,7 +53,7 @@ const StuffIDone = ({ id, className, onOpenModal }) => {
 										<div className="thumbnail-info-title">Visit<br />Mississippi</div>
 									</div>
 									<div className="thumbnail-info-bottom container">
-										<div onClick={() => onOpenModal(<div><h2>Visit Mississippi</h2><iframe src="/banners/visit_mississippi/visit_mississippi-300x250/index.html" width="300" height="250"></iframe><Icon_Figma /></div>, "/banners/visit_mississippi/visit_mississippi-300x250/index.html")} className="nav-link">View</div>
+										<div onClick={() => onOpenModal(<div><h2>Visit Mississippi</h2><iframe src="/banners/visit_mississippi/visit_mississippi-300x250/index.html" width="300" height="250"></iframe></div>, "/banners/visit_mississippi/visit_mississippi-300x250/index.html", false)} className="nav-link">View</div>
 										<div className="container skills-used">
 											<Icon_HTML className="skillIcon" />
 											<Icon_CSS className="skillIcon" />
@@ -158,7 +159,7 @@ const StuffIDone = ({ id, className, onOpenModal }) => {
 						<img src={thumb6} width="300" height="250" className="thumbnail-image" />
 					</div>
 				</div>
-				<Peekaboo id="peekaboo-container" onClick={() => onOpenModal(<video className="flash-content" src="https://www.kirk-mendoza.com/video/pg-site.mp4" type="video/mp4" autoPlay loop muted width="auto" height="20%"></video>)} />
+				<Peekaboo id="peekaboo-container" onClick={() => onOpenModal(<video className="flash-content" src="https://www.kirk-mendoza.com/video/pg-site.mp4" type="video/mp4" autoPlay loop muted controls width="auto" height="20%"></video>, "https://www.kirk-mendoza.com/video/pg-site.mp4")} />
 			</div>
 					{/* Card 2 */}
 					<div className={`card card-2 ${activeCard !== 2 ? 'hidden' : 'selected'}`}>

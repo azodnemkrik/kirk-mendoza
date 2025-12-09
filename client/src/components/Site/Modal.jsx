@@ -1,10 +1,20 @@
 import { useEffect, useRef, useState } from "react";
 import { gsap } from "gsap/dist/gsap";
+import Scrubber from "./Scrubber";
 
-const Modal = ({ isOpen, onClose, src, children }) => {
+// Helper to detect if src is a video file
+const isVideoFile = (src) => {
+	if (!src) return false;
+	const videoExtensions = ['.mp4', '.webm', '.ogg', '.mov', '.avi', '.mkv', '.m4v'];
+	const lowerSrc = src.toLowerCase();
+	return videoExtensions.some(ext => lowerSrc.includes(ext));
+};
+
+const Modal = ({ isOpen, onClose, src, children, showScrubber = true }) => {
 	const backdropRef = useRef(null);
 	const contentRef = useRef(null);
 	const [shouldRender, setShouldRender] = useState(false);
+	const [iframeTimeline, setIframeTimeline] = useState(null);
 
 	useEffect(() => {
 		if (isOpen) {
@@ -33,151 +43,173 @@ const Modal = ({ isOpen, onClose, src, children }) => {
 		if (shouldRender && backdropRef.current && contentRef.current) {
 			gsap.fromTo(backdropRef.current,
 				{ autoAlpha: 0 },
-				{ autoAlpha: 1, duration: 0.3, ease: "power2.out" }
+				{ autoAlpha: 1, duration: 0.3, ease: "power2.inOut" }
 			);
 			gsap.fromTo(contentRef.current,
 				{ scale: 0.8, autoAlpha: 0, y: 20 },
-				{ scale: 1, autoAlpha: 1, y: 0, duration: 0.3, ease: "back.out(1.7)" }
+				{ scale: 1, autoAlpha: 1, y: 0, duration: 0.3, ease: "power2.inOut" }
 			);
 		}
 	}, [shouldRender]);
 
-	// Access iframe's maintl timeline
+	// Access iframe's maintl timeline (skip for videos)
 	useEffect(() => {
 		console.log("iframe useEffect - isOpen:", isOpen, "src:", src);
+		
+		// Reset timeline state when src changes or modal closes
+		setIframeTimeline(null);
+		
+		// Skip timeline detection for video files
+		if (isVideoFile(src)) {
+			console.log("Video file detected, skipping timeline detection");
+			return;
+		}
+		
 		if (!isOpen || !src) {
 			console.log("Exiting early - no isOpen or src");
 			return;
 		}
 
-		// Wait for next render cycle to ensure iframe is in DOM
-		const timeoutId = setTimeout(() => {
-			// Get reference to the iframe
+		// Track timeouts and listeners for cleanup
+		const timeoutIds = [];
+		let iframeElement = null;
+		let loadHandler = null;
+
+		// Retry mechanism to find iframe (Safari needs more time)
+		let attempts = 0;
+		const maxAttempts = 10;
+		
+		const findIframe = () => {
+			attempts++;
+			console.log(`Attempt ${attempts} to find iframe...`);
+			
 			const iframe = document.querySelector('.modal-content iframe');
-			console.log("Found iframe element:", iframe);
-
-			if (!iframe) {
-				console.warn("Iframe still not found after timeout");
-				return;
+			
+			if (iframe) {
+				console.log("Found iframe element:", iframe);
+				iframeElement = iframe;
+				setupIframeListener(iframe);
+			} else if (attempts < maxAttempts) {
+				console.log("Iframe not found, retrying in 100ms...");
+				const tid = setTimeout(findIframe, 100);
+				timeoutIds.push(tid);
+			} else {
+				console.warn("Iframe not found after", maxAttempts, "attempts");
 			}
+		};
+		
+		const setupIframeListener = (iframe) => {
 
-			// Wait for iframe to load
-			const handleIframeLoad = () => {
-				console.log("handleIframeLoad!");
-				try {
-					// Access the iframe's window and get maintl
-					const iframeWindow = iframe.contentWindow;
-					console.log("iframeWindow:", iframeWindow);
-					console.log("All window properties:", Object.keys(iframeWindow));
-					console.log("Looking for maintl:", iframeWindow.maintl);
-
-					const gsapTL = iframeWindow.maintl;
-
-					if (gsapTL) {
-						console.log("Got maintl from iframe:", gsapTL);
-						console.log("Timeline duration:", gsapTL.duration());
-						console.log("Timeline progress:", gsapTL.progress());
-
-						let isPlaying = gsapTL.isActive();
-						const scrubber = document.getElementById("scrubber");
-						const totalProgressEl = document.getElementById("totalProgress");
-						console.log("Scrubber element:", scrubber);
-
-						// Pause the iframe timeline so we can control it
-						gsapTL.pause();
-
-						// Update scrubber based on iframe timeline
-						const update = () => {
-							// const progress = gsapTL.progress() * 100;
-							// scrubber.value = progress;
-							const progress = scrubber.value = gsapTL.progress() * 100;
-							// const progress = gsapTL.progress() * 100;
-							console.log("Update called - progress:", progress);
-
-							if (progress >= 100) {
-								isPlaying = false;
-								gsap.set(".pause_circle", { autoAlpha: 0 });
-								gsap.set(".play_circle", { autoAlpha: 1 });
-							}
-
-							if (totalProgressEl) {
-								totalProgressEl.textContent = gsapTL.time().toFixed(2) + " / " + gsapTL.duration().toFixed(2);
+			// Function to check for maintl
+			const checkForMaintlWithRetry = () => {
+				console.log("checkForMaintlWithRetry started!");
+				
+				let maintlAttempts = 0;
+				const maxMaintlAttempts = 20;
+				
+				const checkForMaintl = () => {
+					maintlAttempts++;
+					console.log(`Checking for maintl (attempt ${maintlAttempts}/${maxMaintlAttempts})`);
+					
+					try {
+						// Access the iframe's window and get maintl
+						const iframeWindow = iframe.contentWindow;
+						console.log("iframeWindow:", iframeWindow);
+						console.log("Looking for maintl:", iframeWindow.maintl);
+						
+						// Try to get maintl (might be undefined if using 'let' instead of 'var')
+						let gsapTL = iframeWindow.maintl;
+						
+						// If not found, try to manually assign it to window for banners using 'let'
+						if (!gsapTL && iframeWindow.document) {
+							console.log("maintl not on window, checking if we can add it...");
+							// Execute a small script in the iframe to expose maintl
+							try {
+								const script = iframeWindow.document.createElement('script');
+								script.textContent = 'if (typeof maintl !== "undefined") { window.maintl = maintl; }';
+								iframeWindow.document.body.appendChild(script);
+								gsapTL = iframeWindow.maintl;
+								console.log("After script injection, maintl:", gsapTL);
+							} catch (e) {
+								console.error("Failed to inject script:", e);
 							}
 						}
 
-						// Add ticker to update scrubber as timeline plays
-						gsap.ticker.add(update);
-
-						// Add scrubber interaction
-						const handleScrubberInput = (e) => {
-							const progress = parseFloat(e.target.value) / 100;
-							gsapTL.progress(progress);
-							console.log("Scrubbing to:", progress);
-						};
-
-						scrubber.addEventListener('input', handleScrubberInput);
-
-						// Start the timeline
-						gsapTL.play();
-
-						console.log("Connected maintl to scrubber with ticker");
-						console.log("Timeline paused, then played");
-
-						// Cleanup when modal closes
-						return () => {
-							gsap.ticker.remove(update);
-							scrubber.removeEventListener('input', handleScrubberInput);
-						};
-					} else {
-						console.warn("maintl not found in iframe window");
-						console.log("Available properties:", Object.keys(iframeWindow).filter(k => k.includes('tl') || k.includes('timeline')));
+						if (gsapTL) {
+							console.log("Got maintl from iframe:", gsapTL);
+							console.log("Timeline duration:", gsapTL.duration());
+							console.log("Timeline progress:", gsapTL.progress());
+							
+							// Set the timeline to state so Scrubber component can use it
+							console.log("Setting iframeTimeline state...");
+							setIframeTimeline(gsapTL);
+							console.log("iframeTimeline state set!");
+						} else if (maintlAttempts < maxMaintlAttempts) {
+							console.log("maintl not found yet, retrying in 50ms...");
+							const tid = setTimeout(checkForMaintl, 50);
+							timeoutIds.push(tid);
+						} else {
+							console.warn("maintl not found in iframe window after max attempts");
+							console.log("Available properties:", Object.keys(iframeWindow).filter(k => k.includes('tl') || k.includes('timeline')));
+						}
+					} catch (error) {
+						console.error("Cannot access iframe content:", error);
+						// This will fail if iframe is cross-origin
 					}
-				} catch (error) {
-					console.error("Cannot access iframe content:", error);
-					// This will fail if iframe is cross-origin
-				}
+				};
+				
+				checkForMaintl();
 			};
 
-			iframe.addEventListener('load', handleIframeLoad);
-
-			// Cleanup function
-			return () => {
-				iframe.removeEventListener('load', handleIframeLoad);
-			};
-		}, 0);
+			// Check if iframe is already loaded (cached)
+			// readyState can be 'complete' or 'interactive' when already loaded
+			const isAlreadyLoaded = iframe.contentDocument && 
+				(iframe.contentDocument.readyState === 'complete' || 
+				 iframe.contentDocument.readyState === 'interactive');
+			
+			console.log("Iframe readyState:", iframe.contentDocument?.readyState, "isAlreadyLoaded:", isAlreadyLoaded);
+			
+			if (isAlreadyLoaded) {
+				// Iframe already loaded, check for maintl immediately
+				console.log("Iframe already loaded, checking for maintl immediately");
+				checkForMaintlWithRetry();
+			}
+			
+			// Also add load listener for future loads or in case readyState check was wrong
+			loadHandler = checkForMaintlWithRetry;
+			iframe.addEventListener('load', loadHandler);
+		};
+		
+		// Start looking for iframe after a short delay
+		const initialTimeoutId = setTimeout(findIframe, 100);
+		timeoutIds.push(initialTimeoutId);
 
 		return () => {
-			clearTimeout(timeoutId);
+			// Clear all pending timeouts
+			timeoutIds.forEach(id => clearTimeout(id));
+			// Remove load listener if it was added
+			if (iframeElement && loadHandler) {
+				iframeElement.removeEventListener('load', loadHandler);
+			}
 		};
 	}, [isOpen, src]); if (!shouldRender) return null;
 
 	return (
-		<>
-			<link rel="preconnect" href="https://fonts.googleapis.com" />
-			<link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-			<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet" />
-
-			<div ref={backdropRef} className="modal-backdrop" onClick={onClose}>
+		<div ref={backdropRef} className="modal-backdrop" onClick={onClose} style={{ opacity: 0, visibility: 'hidden' }}>
 
 				<button className="modal-close-btn" onClick={onClose}>×</button>
 
-				<div ref={contentRef} className="modal-content" onClick={(e) => e.stopPropagation()}>
+				<div ref={contentRef} className="modal-content" onClick={(e) => e.stopPropagation()} style={{ opacity: 0, visibility: 'hidden', transform: 'scale(0.8) translateY(20px)' }}>
 					{children}
-
-					<div className='scrubber-container scrub-top'>
-						<input className="scrubber" id="scrubber" type="range" min="0" max="100" defaultValue="0"></input>
-						<div className='scrub-bottom'>
-							<div className='playPauseBtn' id="playPauseBtn">
-								<span className="float material-symbols-outlined play_circle"> play_circle </span>
-								<span className="float material-symbols-outlined pause_circle"> pause_circle </span>
-							</div>
-							<div id="totalProgress">totalProgress <span>0.0</span></div>
-						</div>
-					</div>
+					{console.log("Rendering Modal - iframeTimeline:", iframeTimeline, "isVideo:", isVideoFile(src))}
+					{showScrubber && !isVideoFile(src) && iframeTimeline ? (
+						<Scrubber timeline={iframeTimeline} />
+					) : showScrubber && !isVideoFile(src) && !iframeTimeline ? (
+						<div style={{color: 'white', padding: '10px'}}>Waiting for timeline...</div>
+					) : null}
 				</div>
 
 			</div>
-		</>
 	);
 };
 
