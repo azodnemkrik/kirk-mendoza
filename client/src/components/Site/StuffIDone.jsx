@@ -1,11 +1,11 @@
 import { useEffect, useState } from "react";
 import React from "react";
-import thumb1 from '../../banners/visit_mississippi/visit_mississippi-300x250.jpg';
-import thumb2 from '../../banners/borden/crisps_n_cubes-300x250.jpg';
-import thumb3 from '../../banners/refocus/30-percent-more-film-300x250.jpg';
-import thumb4 from '../../banners/microsoft/microsoft_neutral-300x250.jpg';
-import thumb5 from '../../banners/xbox/xbox_titan-300x250.jpg';
-import thumb6 from '../../banners/discover/stackable-300x250.jpg';
+import thumb1 from '../../../public/banners/visit_mississippi/visit_mississippi-300x250.jpg';
+import thumb2 from '../../../public/banners/borden/crisps_n_cubes-300x250.jpg';
+import thumb3 from '../../../public/banners/refocus/30-percent-more-film-300x250.jpg';
+import thumb4 from '../../../public/banners/microsoft/microsoft_neutral-300x250.jpg';
+import thumb5 from '../../../public/banners/xbox/xbox_titan-300x250.jpg';
+import thumb6 from '../../../public/banners/discover/stackable-300x250.jpg';
 import Peekaboo from "./Peekaboo";
 import cssIcon from '../../images/css.svg';
 import htmlIcon from '../../images/html.svg';
@@ -20,7 +20,7 @@ import Icon_PhotoShop from "../Icon_PhotoShop";
 import Icon_JavaScript from "../Icon_JavaScript";
 import Icon_XD from "../Icon_XD";
 
-const StuffIDone = ({ id, className }) => {
+const StuffIDone = ({ id, className, onOpenModal }) => {
 
 	useEffect(() => {
 
@@ -56,14 +56,14 @@ const StuffIDone = ({ id, className }) => {
 										<div className="thumbnail-info-title">Visit<br />Mississippi</div>
 									</div>
 									<div className="thumbnail-info-bottom container">
-										<div onClick={() => { }} className="nav-link">View</div>
+										<div onClick={() => onOpenModal(<div><h2>Visit Mississippi</h2><iframe src="/banners/visit_mississippi/visit_mississippi-300x600/index.html" width="300" height="600"></iframe></div>)} className="nav-link">View</div>
 										<div className="container skills-used">
-											<Icon_HTML className="skillIcon"/>
-											<Icon_CSS className="skillIcon"/>
-											<Icon_JavaScript className="skillIcon"/>
-											<Icon_GSAP className="skillIcon gsap"/>
-											<Icon_Illustrator className="skillIcon"/>
-											<Icon_Figma className="skillIcon"/>
+											<Icon_HTML className="skillIcon" />
+											<Icon_CSS className="skillIcon" />
+											<Icon_JavaScript className="skillIcon" />
+											<Icon_GSAP className="skillIcon gsap" />
+											<Icon_Illustrator className="skillIcon" />
+											<Icon_Figma className="skillIcon" />
 										</div>
 									</div>
 								</div>
@@ -77,11 +77,11 @@ const StuffIDone = ({ id, className }) => {
 									<div className="thumbnail-info-bottom container">
 										<div onClick={() => { }} className="nav-link">View</div>
 										<div className="container skills-used">
-											<Icon_HTML className="skillIcon"/>
-											<Icon_CSS className="skillIcon"/>
-											<Icon_JavaScript className="skillIcon"/>
-											<Icon_GSAP className="skillIcon gsap"/>
-											<Icon_PhotoShop className="skillIcon"/>
+											<Icon_HTML className="skillIcon" />
+											<Icon_CSS className="skillIcon" />
+											<Icon_JavaScript className="skillIcon" />
+											<Icon_GSAP className="skillIcon gsap" />
+											<Icon_PhotoShop className="skillIcon" />
 										</div>
 									</div>
 								</div>
@@ -95,11 +95,11 @@ const StuffIDone = ({ id, className }) => {
 									<div className="thumbnail-info-bottom container">
 										<div onClick={() => { }} className="nav-link">View</div>
 										<div className="container skills-used">
-											<Icon_HTML className="skillIcon"/>
-											<Icon_CSS className="skillIcon"/>
-											<Icon_JavaScript className="skillIcon"/>
-											<Icon_GSAP className="skillIcon gsap"/>
-											<Icon_Figma className="skillIcon"/>
+											<Icon_HTML className="skillIcon" />
+											<Icon_CSS className="skillIcon" />
+											<Icon_JavaScript className="skillIcon" />
+											<Icon_GSAP className="skillIcon gsap" />
+											<Icon_Figma className="skillIcon" />
 										</div>
 									</div>
 								</div>
@@ -113,12 +113,12 @@ const StuffIDone = ({ id, className }) => {
 									<div className="thumbnail-info-bottom container">
 										<div onClick={() => { }} className="nav-link">View</div>
 										<div className="container skills-used">
-											<Icon_HTML className="skillIcon"/>
-											<Icon_CSS className="skillIcon"/>
-											<Icon_JavaScript className="skillIcon"/>
-											<Icon_GSAP className="skillIcon gsap"/>
-											<Icon_XD className="skillIcon"/>
-											<Icon_PhotoShop className="skillIcon"/>
+											<Icon_HTML className="skillIcon" />
+											<Icon_CSS className="skillIcon" />
+											<Icon_JavaScript className="skillIcon" />
+											<Icon_GSAP className="skillIcon gsap" />
+											<Icon_XD className="skillIcon" />
+											<Icon_PhotoShop className="skillIcon" />
 										</div>
 									</div>
 								</div>
@@ -132,12 +132,12 @@ const StuffIDone = ({ id, className }) => {
 									<div className="thumbnail-info-bottom container">
 										<div onClick={() => { }} className="nav-link">View</div>
 										<div className="container skills-used">
-											<Icon_HTML className="skillIcon"/>
-											<Icon_CSS className="skillIcon"/>
-											<Icon_JavaScript className="skillIcon"/>
-											<Icon_GSAP className="skillIcon gsap"/>
-											<Icon_XD className="skillIcon"/>
-											<Icon_PhotoShop className="skillIcon"/>
+											<Icon_HTML className="skillIcon" />
+											<Icon_CSS className="skillIcon" />
+											<Icon_JavaScript className="skillIcon" />
+											<Icon_GSAP className="skillIcon gsap" />
+											<Icon_XD className="skillIcon" />
+											<Icon_PhotoShop className="skillIcon" />
 										</div>
 									</div>
 								</div>
@@ -151,11 +151,11 @@ const StuffIDone = ({ id, className }) => {
 									<div className="thumbnail-info-bottom container">
 										<div onClick={() => { }} className="nav-link">View</div>
 										<div className="container skills-used">
-											<Icon_HTML className="skillIcon"/>
-											<Icon_CSS className="skillIcon"/>
-											<Icon_JavaScript className="skillIcon"/>
-											<Icon_GSAP className="skillIcon gsap"/>
-											<Icon_Figma className="skillIcon"/>
+											<Icon_HTML className="skillIcon" />
+											<Icon_CSS className="skillIcon" />
+											<Icon_JavaScript className="skillIcon" />
+											<Icon_GSAP className="skillIcon gsap" />
+											<Icon_Figma className="skillIcon" />
 										</div>
 									</div>
 								</div>
@@ -167,14 +167,18 @@ const StuffIDone = ({ id, className }) => {
 
 					{/* Card 2 */}
 					<div className={`card card-2 ${activeCard !== 2 ? 'hidden' : 'selected'}`}>
-						<p>Here's stuff about videos. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rerum reprehenderit asperiores ipsa repellendus alias earum dicta cupiditate natus odio suscipit.</p>
-						<video src="https://www.kirk-mendoza.com/video/kirk-mendoza_motion-graphics.mp4" type="video/mp4" autoPlay loop muted width="auto" min-width="100%" height="20%" background="cover"></video>
+						<div className="thumbnails-container">
+							<p>Here's stuff about videos. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rerum reprehenderit asperiores ipsa repellendus alias earum dicta cupiditate natus odio suscipit.</p>
+							<video src="https://www.kirk-mendoza.com/video/kirk-mendoza_motion-graphics.mp4" type="video/mp4" autoPlay loop muted width="auto" min-width="100%" height="20%" background="cover"></video>
+						</div>
 					</div>
 
 					{/* Card 3 */}
 					<div className={`card card-3 ${activeCard !== 3 ? 'hidden' : 'selected'}`}>
-						<p>Here's stuff about development.</p>
-						<p>Remember Flash? See some classic work.</p>
+						<div className="thumbnails-container">
+							<p>Here's stuff about development.</p>
+							<p>Remember Flash? See some classic work.</p>
+						</div>
 					</div>
 
 				</div>
