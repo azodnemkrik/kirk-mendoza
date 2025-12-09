@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from "react";
+import { useState } from "react";
 import React from "react";
 import thumb1 from '../../../public/banners/visit_mississippi/visit_mississippi-300x250.jpg';
 import thumb2 from '../../../public/banners/borden/crisps_n_cubes-300x250.jpg';
@@ -19,38 +19,10 @@ import Icon_Figma from "../Icon_Figma";
 import Icon_PhotoShop from "../Icon_PhotoShop";
 import Icon_JavaScript from "../Icon_JavaScript";
 import Icon_XD from "../Icon_XD";
-import { gsap } from "gsap/dist/gsap";
 
 const StuffIDone = ({ id, className, onOpenModal }) => {
 	
-	const flashContentRef = useRef(null);
-	const [ showFlash, setShowFlash ]= useState(false); 
 	const [ activeCard, setActiveCard ] = useState(1);
-	const [ shouldRenderFlash, setShouldRenderFlash ] = useState(false);
-
-	useEffect(() => {
-		if (showFlash) {
-
-			// Reveal the flash video
-			setShouldRenderFlash(true);
-
-			// Animate Flash video reveal
-			gsap.fromTo(flashContentRef.current, 1, 
-				{ y: -1080, autoAlpha: 0 },
-				{ y: 0, autoAlpha: 1, ease: "power2.out" }
-			);
-
-		} else if (shouldRenderFlash) {
-			// Hide the flash video
-			gsap.to(flashContentRef.current, 1, { y: -1080, opacity: 0, onComplete: () => setShouldRenderFlash(false) });
-			// gsap.fromTo(flashContentRef.current, 1,
-			// 	{ y: 0, autoAlpha: 1, duration: 0.5 },
-			// 	{ y: -1080, autoAlpha: 0 , ease: "power2.out"},
-			// );
-		}
-
-	}, [showFlash, shouldRenderFlash]);
-
 
 	const handleCardClick = (cardNumber) => {
 		setActiveCard(cardNumber);
@@ -80,7 +52,7 @@ const StuffIDone = ({ id, className, onOpenModal }) => {
 										<div className="thumbnail-info-title">Visit<br />Mississippi</div>
 									</div>
 									<div className="thumbnail-info-bottom container">
-										<div onClick={() => onOpenModal(<div><h2>Visit Mississippi</h2><iframe src="/banners/visit_mississippi/visit_mississippi-300x600/index.html" width="300" height="600"></iframe></div>)} className="nav-link">View</div>
+										<div onClick={() => onOpenModal(<div><h2>Visit Mississippi</h2><iframe src="/banners/visit_mississippi/visit_mississippi-300x250/index.html" width="300" height="250"></iframe><Icon_Figma /></div>, "/banners/visit_mississippi/visit_mississippi-300x250/index.html")} className="nav-link">View</div>
 										<div className="container skills-used">
 											<Icon_HTML className="skillIcon" />
 											<Icon_CSS className="skillIcon" />
@@ -99,7 +71,7 @@ const StuffIDone = ({ id, className, onOpenModal }) => {
 										<div className="thumbnail-info-title">Borden<br />Cheese</div>
 									</div>
 									<div className="thumbnail-info-bottom container">
-										<div onClick={() => { }} className="nav-link">View</div>
+										<div onClick={() => onOpenModal(<div><h2>Borden Cheese</h2><iframe src="/banners/borden/crisps_n_cubes-300x250/index.html" width="300" height="250"></iframe></div>, "/banners/borden/crisps_n_cubes-300x250/index.html")} className="nav-link">View</div>
 										<div className="container skills-used">
 											<Icon_HTML className="skillIcon" />
 											<Icon_CSS className="skillIcon" />
@@ -117,7 +89,7 @@ const StuffIDone = ({ id, className, onOpenModal }) => {
 										<div className="thumbnail-info-title">Refocus</div>
 									</div>
 									<div className="thumbnail-info-bottom container">
-										<div onClick={() => { }} className="nav-link">View</div>
+										<div onClick={() => onOpenModal(<div><h2>Refocus</h2><iframe src="/banners/refocus/30-percent-more-film-300x250/index.html" width="300" height="250"></iframe></div>, "/banners/refocus/30-percent-more-film-300x250/index.html")} className="nav-link">View</div>
 										<div className="container skills-used">
 											<Icon_HTML className="skillIcon" />
 											<Icon_CSS className="skillIcon" />
@@ -135,7 +107,7 @@ const StuffIDone = ({ id, className, onOpenModal }) => {
 										<div className="thumbnail-info-title">Microsoft</div>
 									</div>
 									<div className="thumbnail-info-bottom container">
-										<div onClick={() => { }} className="nav-link">View</div>
+										<div onClick={() => onOpenModal(<div><h2>Microsoft</h2><iframe src="/banners/microsoft/microsoft_neutral-300x250/index.html" width="300" height="250"></iframe></div>, "/banners/microsoft/microsoft_neutral-300x250/index.html")} className="nav-link">View</div>
 										<div className="container skills-used">
 											<Icon_HTML className="skillIcon" />
 											<Icon_CSS className="skillIcon" />
@@ -154,7 +126,7 @@ const StuffIDone = ({ id, className, onOpenModal }) => {
 										<div className="thumbnail-info-title">XBox</div>
 									</div>
 									<div className="thumbnail-info-bottom container">
-										<div onClick={() => { }} className="nav-link">View</div>
+										<div onClick={() => onOpenModal(<div><h2>XBox</h2><iframe src="/banners/xbox/xbox_titan-300x250/index.html" width="300" height="250"></iframe></div>, "/banners/xbox/xbox_titan-300x250/index.html")} className="nav-link">View</div>
 										<div className="container skills-used">
 											<Icon_HTML className="skillIcon" />
 											<Icon_CSS className="skillIcon" />
@@ -173,7 +145,7 @@ const StuffIDone = ({ id, className, onOpenModal }) => {
 										<div className="thumbnail-info-title">Discover</div>
 									</div>
 									<div className="thumbnail-info-bottom container">
-										<div onClick={() => { }} className="nav-link">View</div>
+										<div onClick={() => onOpenModal(<div><h2>Discover</h2><iframe src="/banners/discover/stackable-300x250/index.html" width="300" height="250"></iframe></div>, "/banners/discover/stackable-300x250/index.html")} className="nav-link">View</div>
 										<div className="container skills-used">
 											<Icon_HTML className="skillIcon" />
 											<Icon_CSS className="skillIcon" />
@@ -183,15 +155,11 @@ const StuffIDone = ({ id, className, onOpenModal }) => {
 										</div>
 									</div>
 								</div>
-								<img src={thumb6} width="300" height="250" className="thumbnail-image" />
-							</div>
-						</div>
-						<Peekaboo id="peekaboo-container" onClick={() => {console.log("Peekaboo Clicked!"); setShowFlash(!showFlash)}} />
-							{shouldRenderFlash && (
-								<video ref={flashContentRef} className="flash-content" src="https://www.kirk-mendoza.com/video/pg-site.mp4" type="video/mp4" autoPlay loop muted width="auto" min-width="100%" height="20%" background="cover"></video>
-							)}
+						<img src={thumb6} width="300" height="250" className="thumbnail-image" />
 					</div>
-
+				</div>
+				<Peekaboo id="peekaboo-container" onClick={() => onOpenModal(<video className="flash-content" src="https://www.kirk-mendoza.com/video/pg-site.mp4" type="video/mp4" autoPlay loop muted width="auto" height="20%"></video>)} />
+			</div>
 					{/* Card 2 */}
 					<div className={`card card-2 ${activeCard !== 2 ? 'hidden' : 'selected'}`}>
 						<div className="thumbnails-container">

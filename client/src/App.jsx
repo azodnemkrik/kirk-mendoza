@@ -18,6 +18,7 @@ function App() {
 	const [isFixed, setIsFixed] = useState(false);
 	const [isModalOpen, setIsModalOpen] = useState(false);
 	const [modalContent, setModalContent] = useState(null);
+	const [modalSrc, setModalSrc] = useState(null);
 
 	useEffect(() => {
 		if (location.hash) {
@@ -40,8 +41,9 @@ function App() {
 		<Navigation ref={navRef} pathname={pathname} isFixed={isFixed} />
 		<div className="wrapper">
 			<About id="about-me" />
-			<StuffIDone id="stuff-i-done" onOpenModal={(content) => {
+			<StuffIDone id="stuff-i-done" onOpenModal={(content, src) => {
 				setModalContent(content);
+				setModalSrc(src);
 				setIsModalOpen(true);
 			}} />
 			<CaseStudies id="case-studies" />
@@ -49,7 +51,7 @@ function App() {
 			<ContactMe id="contact" />
 		</div>
 
-		<Modal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)}>
+		<Modal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} src={modalSrc}>
 			{modalContent}
 		</Modal>
 
