@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import React from "react";
 import thumb1 from '../../../public/banners/visit_mississippi/visit_mississippi-300x250.jpg';
 import thumb2 from '../../../public/banners/borden/crisps_n_cubes-300x250.jpg';
@@ -19,14 +19,38 @@ import Icon_Figma from "../Icon_Figma";
 import Icon_PhotoShop from "../Icon_PhotoShop";
 import Icon_JavaScript from "../Icon_JavaScript";
 import Icon_XD from "../Icon_XD";
+import { gsap } from "gsap/dist/gsap";
 
 const StuffIDone = ({ id, className, onOpenModal }) => {
+	
+	const flashContentRef = useRef(null);
+	const [ showFlash, setShowFlash ]= useState(false); 
+	const [ activeCard, setActiveCard ] = useState(1);
+	const [ shouldRenderFlash, setShouldRenderFlash ] = useState(false);
 
 	useEffect(() => {
+		if (showFlash) {
 
-	})
+			// Reveal the flash video
+			setShouldRenderFlash(true);
 
-	const [activeCard, setActiveCard] = useState(1);
+			// Animate Flash video reveal
+			gsap.fromTo(flashContentRef.current, 1, 
+				{ y: -1080, autoAlpha: 0 },
+				{ y: 0, autoAlpha: 1, ease: "power2.out" }
+			);
+
+		} else if (shouldRenderFlash) {
+			// Hide the flash video
+			gsap.to(flashContentRef.current, 1, { y: -1080, opacity: 0, onComplete: () => setShouldRenderFlash(false) });
+			// gsap.fromTo(flashContentRef.current, 1,
+			// 	{ y: 0, autoAlpha: 1, duration: 0.5 },
+			// 	{ y: -1080, autoAlpha: 0 , ease: "power2.out"},
+			// );
+		}
+
+	}, [showFlash, shouldRenderFlash]);
+
 
 	const handleCardClick = (cardNumber) => {
 		setActiveCard(cardNumber);
@@ -162,7 +186,10 @@ const StuffIDone = ({ id, className, onOpenModal }) => {
 								<img src={thumb6} width="300" height="250" className="thumbnail-image" />
 							</div>
 						</div>
-						<Peekaboo id="peekaboo-container" className="" />
+						<Peekaboo id="peekaboo-container" onClick={() => {console.log("Peekaboo Clicked!"); setShowFlash(!showFlash)}} />
+							{shouldRenderFlash && (
+								<video ref={flashContentRef} className="flash-content" src="https://www.kirk-mendoza.com/video/pg-site.mp4" type="video/mp4" autoPlay loop muted width="auto" min-width="100%" height="20%" background="cover"></video>
+							)}
 					</div>
 
 					{/* Card 2 */}

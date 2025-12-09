@@ -517,20 +517,10 @@ li {
 	align-items: center;
 	justify-content: center;
 	transition: transform 0.3s, box-shadow 0.3s;
+	background-color: none;
 	/* z-index: 1; */
 }
 
-.card-1 {
-	background-color: none;
-}
-
-.card-2 {
-	background-color: #333;
-}
-
-.card-3 {
-	background-color: #333;
-}
 
 /* Banners */
 .thumbnails-container {
@@ -662,6 +652,8 @@ li {
 	height: auto;
 }
 
+/* Videos Section */
+
 
 
 .hidden {
@@ -674,7 +666,7 @@ video {
 	background-size: cover;
 	margin: 0;
 	padding: 0;
-	opacity: .5;
+	/* opacity: .5; */
 }
 
 /* Brand Crawler Section */

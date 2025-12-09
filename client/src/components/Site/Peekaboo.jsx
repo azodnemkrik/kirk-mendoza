@@ -3,7 +3,7 @@ import { gsap } from "gsap/dist/gsap";
 import { MorphSVGPlugin } from "gsap/dist/MorphSVGPlugin";
 gsap.registerPlugin(MorphSVGPlugin);
 
-const Peekaboo = ({ id, className }) => {
+const Peekaboo = ({ id, className ,onClick }) => {
    const [hasPlayed, setHasPlayed] = useState(false);
    const maintl = useRef(null);
 
@@ -35,7 +35,9 @@ const Peekaboo = ({ id, className }) => {
 			.set("#eye-R, #eye-L", { scaleY: 1, transformOrigin: "center", ease: "power4.inOut" }, "frame4+=0.4")
 
 		;
-	}, []);   const handleMouseEnter = () => {
+	}, []);
+
+	const handleMouseEnter = () => {
       if (maintl.current) {
          // If timeline is at the start or reversing, play forward
          if (maintl.current.progress() === 0 || maintl.current.reversed()) {
@@ -59,7 +61,7 @@ const Peekaboo = ({ id, className }) => {
    };
 
 	return (
-		<div id={id} className={`float peekaboo-container ${className}`} onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave} onClick={handleClick}>
+		<div id={id} className={`float peekaboo-container ${className}`} onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave} onClick={onClick}>
 			<svg id="peekaboo" xmlns="http://www.w3.org/2000/svg" width="214.38" height="367.63" viewBox="0 0 214.38 367.63">
 				<g id="start-state">
 					<path id="opening-start" className="guide" d="M213.12,184.23c.13-16.01.43-50,.65-65.34.15-10.61.34-26.71.45-39.79.06-7.72.1-16.44.17-23.72v312c-.02,2.46-.57-13.48-.61-16.49-.27-19.21-.51-30.25-.68-55.84-.16-23.85-.22-54.72-.2-82.63.02-3.22.18-17.75.22-28.19Z" />
