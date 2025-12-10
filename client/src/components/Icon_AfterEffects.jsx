@@ -10,7 +10,7 @@ const Icon_AfterEffects = ({ className }) => {
 	return (
 		<div className="skill">
 			<img className={`skillIcon ${className}`} src={iconAfterEffects} alt="After Effects" style={{ width: '100%', maxWidth: '400px' }} />
-         <p className='float skillLabel' style={{color: '#00005b', fontWeight: 'bold'}}>After Effects</p>
+         <p className='float skillLabel' style={{color: '#6060ffff', fontWeight: 'bold'}}>After Effects</p>
 		</div>
 	);
 }

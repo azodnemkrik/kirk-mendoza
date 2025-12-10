@@ -11,7 +11,7 @@ const Icon_Premiere = ({ className }) => {
 
 		<div className="skill">
 			<img className={`skillIcon ${className}`} src={iconPremiere} alt="Premiere" style={{ width: '100%', maxWidth: '400px' }} />
-			<p className='float skillLabel' style={{color: '#00005b', fontWeight: 'bold'}}>Premiere</p>
+			<p className='float skillLabel' style={{color: '#6060ffff', fontWeight: 'bold'}}>Premiere</p>
 		</div>
 	);
 }

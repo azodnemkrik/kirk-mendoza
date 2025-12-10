@@ -8,6 +8,9 @@ import BrandCrawler from './components/Site/BrandCrawler';
 import CaseStudies from './components/Site/CaseStudies';
 import ContactMe from './components/Site/ContactMe';
 import Modal from './components/Site/Modal';
+import SampleBanners from './components/Site/SampleBanners';
+import SampleVideos from './components/Site/SampleVIdeos';
+import SampleDev from './components/Site/SampleDev';
 
 function App() {
 
@@ -42,7 +45,19 @@ function App() {
 		<Navigation ref={navRef} pathname={pathname} isFixed={isFixed} />
 		<div className="wrapper">
 			<About id="about-me" />
-			<StuffIDone id="stuff-i-done" onOpenModal={(content, src, shouldShowScrubber = true) => {
+			<SampleBanners id="sample-banners" className="banners-BG" onOpenModal={(content, src, shouldShowScrubber = true) => {
+				setModalContent(content);
+				setModalSrc(src);
+				setShowScrubber(shouldShowScrubber);
+				setIsModalOpen(true);
+			}} />
+			<SampleVideos id="sample-videos" className="videos-BG" onOpenModal={(content, src, shouldShowScrubber = true) => {
+				setModalContent(content);
+				setModalSrc(src);
+				setShowScrubber(shouldShowScrubber);
+				setIsModalOpen(true);
+			}} />
+			<SampleDev id="sample-dev" className="dev-BG" onOpenModal={(content, src, shouldShowScrubber = true) => {
 				setModalContent(content);
 				setModalSrc(src);
 				setShowScrubber(shouldShowScrubber);
