@@ -13,6 +13,7 @@ import Icon_JavaScript from "../Icon_JavaScript";
 import Icon_XD from "../Icon_XD";
 import Scrubber from "./Scrubber";
 import Icon_AfterEffects from "../Icon_AfterEffects";
+import Icon_Premiere from "../Icon_Premiere";
 
 const SampleVideos = ({ id, className, onOpenModal }) => {
 
@@ -51,6 +52,7 @@ const SampleVideos = ({ id, className, onOpenModal }) => {
 											<Icon_AfterEffects className="skillIcon" />
 											<Icon_Illustrator className="skillIcon" />
 											<Icon_PhotoShop className="skillIcon" />
+											<Icon_Premiere className="skillIcon" />
 										</div>
 									</div>
 								</div>
@@ -69,6 +71,7 @@ const SampleVideos = ({ id, className, onOpenModal }) => {
 											<Icon_Illustrator className="skillIcon" />
 											<Icon_PhotoShop className="skillIcon" />
 											<Icon_Figma className="skillIcon" />
+											<Icon_Premiere className="skillIcon" />
 										</div>
 									</div>
 								</div>
@@ -86,6 +89,7 @@ const SampleVideos = ({ id, className, onOpenModal }) => {
 											<Icon_AfterEffects className="skillIcon" />
 											<Icon_Illustrator className="skillIcon" />
 											<Icon_PhotoShop className="skillIcon" />
+											<Icon_Premiere className="skillIcon" />
 										</div>
 									</div>
 								</div>

@@ -573,13 +573,14 @@ li {
 .card {
 	/* display: inline-block; */
 	/* position: absolute; */
+	position: relative;
 	border-top: 1px solid #0054a6;
 	width: 100%;
 	height: auto;
 	/* background-color: #eee; */
 	border-radius: 0px 0px 20px 20px;
 	/* border: 1px solid #FFFFFF; */
-	overflow: hidden;
+	/* overflow: hidden; */
 	/* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); */
 	/* margin: -3px 0px; */
 	padding: 0px 0px;
@@ -694,13 +695,14 @@ li {
 	align-self: center;
 	color: #FFFFFF;
 	font-size: 1em;
-	line-height: 1.2em;
+	line-height: 1.5;
 	text-align: center;
 }
 
 .video-size {
 	width: 480px;
 	height: 270px;
+	border: 1px solid #cccccc;
 	/* object-fit: cover; */
 	/* transition: filter .2s; */
 }
