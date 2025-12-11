@@ -2,6 +2,8 @@ import { useState } from "react";
 import thumb1 from '../../../public/videos/ogilvy_magic_intro.jpg';
 import thumb2 from '../../../public/videos/discover_card_smarts.jpg';
 import thumb3 from '../../../public/videos/parchment.jpg';
+import thumb4 from '../../../public/videos/discover_basketball.jpg';
+import thumb5 from '../../../public/videos/discover_piggybank.jpg';
 import Icon_Illustrator from "../Icon_Illustrator";
 import Icon_Figma from "../Icon_Figma";
 import Icon_PhotoShop from "../Icon_PhotoShop";
@@ -62,8 +64,8 @@ const SampleVideos = ({ id, className, onOpenModal }) => {
 										<div className="container skills-used">
 											<Icon_AfterEffects className="skillIcon" />
 											<Icon_Illustrator className="skillIcon" />
-											<Icon_PhotoShop className="skillIcon" />
 											<Icon_Figma className="skillIcon" />
+											<Icon_PhotoShop className="skillIcon" />
 											<Icon_Premiere className="skillIcon" />
 										</div>
 									</div>
@@ -87,6 +89,44 @@ const SampleVideos = ({ id, className, onOpenModal }) => {
 									</div>
 								</div>
 								<img src={thumb3} width="300" height="250" className="thumbnail-image video-size" />
+							</div>
+							<div className="thumbnail video-size">
+								<div className="thumbnail-info video-size">
+									<div className="thumbnail-info-top container">
+										<div className="thumbnail-info-title">Discover:<br />Basketball</div>
+										<div className="thumbnail-description">Animation • Editing</div>
+									</div>
+									<div className="thumbnail-info-bottom container">
+										<div onClick={() => onOpenModal(<div><h2>Discover: Basketball</h2><video src="https://www.kirk-mendoza.com/video/discover_basketball.mp4" type="video/mp4" autoPlay loop controls width="auto" min-width="100%" height="20%" background="cover"></video></div>, "https://www.kirk-mendoza.com/video/discover_basketball.mp4", false)} className="nav-link">View</div>
+										<div className="container skills-used">
+											<Icon_AfterEffects className="skillIcon" />
+											<Icon_Illustrator className="skillIcon" />
+											<Icon_Figma className="skillIcon" />
+											<Icon_PhotoShop className="skillIcon" />
+											<Icon_Premiere className="skillIcon" />
+										</div>
+									</div>
+								</div>
+								<img src={thumb4} width="300" height="250" className="thumbnail-image video-size" />
+							</div>
+							<div className="thumbnail " style={{ width: '250px', height: '375px' }}>
+								<div className="thumbnail-info "  style={{ width: '250px', height: '375px' }}>
+									<div className="thumbnail-info-top container">
+										<div className="thumbnail-info-title">Discover:<br />PiggyBank</div>
+										<div className="thumbnail-description">Animation • Editing</div>
+									</div>
+									<div className="thumbnail-info-bottom container">
+										<div onClick={() => onOpenModal(<div style={{width: '40vh', height: 'auto'}}><h2>Discover: PiggyBank</h2><video src="https://www.kirk-mendoza.com/video/discover_piggybank.mp4" type="video/mp4" autoPlay loop controls width="auto" min-width="100%" height="20%" background="cover"></video></div>, "https://www.kirk-mendoza.com/video/discover_piggybank.mp4", false)} className="nav-link">View</div>
+										<div className="container skills-used">
+											<Icon_AfterEffects className="skillIcon" />
+											<Icon_Illustrator className="skillIcon" />
+											<Icon_Figma className="skillIcon" />
+											<Icon_PhotoShop className="skillIcon" />
+											<Icon_Premiere className="skillIcon" />
+										</div>
+									</div>
+								</div>
+								<img src={thumb5} width="250" height="375" className="thumbnail-image" />
 							</div>
 						</div>
 					</div>
