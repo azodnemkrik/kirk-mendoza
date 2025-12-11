@@ -1,12 +1,17 @@
 import { useState } from "react";
 import React from "react";
-import thumb1 from '../../../public/banners/visit_mississippi/visit_mississippi-300x250.jpg';
-import thumb2 from '../../../public/banners/borden/crisps_n_cubes-300x250.jpg';
-import thumb3 from '../../../public/banners/refocus/30-percent-more-film-300x250.jpg';
-import thumb4 from '../../../public/banners/microsoft/microsoft_neutral-300x250.jpg';
-import thumb5 from '../../../public/banners/xbox/xbox_titan-300x250.jpg';
-import thumb6 from '../../../public/banners/discover/stackable-300x250.jpg';
+import carouselImg1 from '../../../public/dev/carousel/itg-frame-01.jpg';
+import carouselImg2 from '../../../public/dev/carousel/itg-frame-02.jpg';
+import carouselImg3 from '../../../public/dev/carousel/itg-frame-03.jpg';
+import carouselImg4 from '../../../public/dev/carousel/itg-frame-04.jpg';
+import carouselImg5 from '../../../public/dev/carousel/itg-frame-05.jpg';
+import carouselImg6 from '../../../public/dev/carousel/itg-frame-06.jpg';
+import carouselImg7 from '../../../public/dev/carousel/itg-frame-07.jpg';
+import carouselImg8 from '../../../public/dev/carousel/itg-frame-08.jpg';
+import carouselImg9 from '../../../public/dev/carousel/itg-frame-09.jpg';
+import carouselImg10 from '../../../public/dev/carousel/itg-frame-10.jpg';
 import Peekaboo from "./Peekaboo";
+import Carousel from "./Carousel";
 import Icon_Illustrator from "../Icon_Illustrator";
 import Icon_HTML from "../Icon_HTML";
 import Icon_CSS from "../Icon_CSS";
@@ -25,6 +30,21 @@ const SampleDev = ({ id, className, onOpenModal }) => {
 		setActiveCard(cardNumber);
 	}
 
+	// Carousel images - easily add/remove images from this array
+	const carouselImages = [
+		{ src: carouselImg1, alt: "ITG Frame 1" },
+		{ src: carouselImg2, alt: "ITG Frame 2" },
+		{ src: carouselImg3, alt: "ITG Frame 3" },
+		{ src: carouselImg4, alt: "ITG Frame 4" },
+		{ src: carouselImg5, alt: "ITG Frame 5" },
+		{ src: carouselImg6, alt: "ITG Frame 6" },
+		{ src: carouselImg7, alt: "ITG Frame 7" },
+		{ src: carouselImg8, alt: "ITG Frame 8" },
+		{ src: carouselImg9, alt: "ITG Frame 9" },
+		{ src: carouselImg10, alt: "ITG Frame 10" },
+		// Add more images here as needed
+	];
+
 	return (
 		<>
 			<div id={id} className={`centered-container ${className}`}>
@@ -36,9 +56,7 @@ const SampleDev = ({ id, className, onOpenModal }) => {
 					<div className={`card card-1`}>
 						<div className="thumbnails-container">
 							<p>These are some examples. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod sunt in ratione dolorem facere neque ut, id quibusdam et eum fugit enim quos eaque dolores est! Suscipit quibusdam ab beatae. Illum facere labore est corporis fugit accusantium numquam earum itaque provident harum. Laborum in quibusdam vel iusto aliquam molestiae facere?</p>
-							<div className="carousel-container">
-								Carousel
-							</div>
+							<Carousel images={carouselImages} />
 						</div>
 					</div>
 
