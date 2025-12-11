@@ -479,7 +479,7 @@ li {
 	gap: 0px;
 	z-index: 19;
 	/* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#0054a6+0,000000+100 */
-	background: linear-gradient(to bottom, #CCCCCC 0%, #666666 70%, #222222 95%);
+	background: linear-gradient(to bottom, #CCCCCC 10%, #666666 95%);
 	/* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
 	/* box-shadow: #00000046 0px -3px 3px 2px; */
 }
@@ -816,7 +816,7 @@ video {
 }
 
 .dev-BG {
-	background: linear-gradient(to bottom, #cccccc 4% , #000000 20%);
+	background: linear-gradient(to bottom, #666666 4% , #000000 20%);
 	flex-direction: column;
 }
 

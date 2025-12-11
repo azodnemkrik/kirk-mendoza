@@ -1,17 +1,10 @@
 import { useState } from "react";
-import React from "react";
 import thumb1 from '../../../public/videos/ogilvy_magic_intro.jpg';
 import thumb2 from '../../../public/videos/discover_card_smarts.jpg';
 import thumb3 from '../../../public/videos/parchment.jpg';
 import Icon_Illustrator from "../Icon_Illustrator";
-import Icon_HTML from "../Icon_HTML";
-import Icon_CSS from "../Icon_CSS";
-import Icon_GSAP from "../Icon_GSAP";
 import Icon_Figma from "../Icon_Figma";
 import Icon_PhotoShop from "../Icon_PhotoShop";
-import Icon_JavaScript from "../Icon_JavaScript";
-import Icon_XD from "../Icon_XD";
-import Scrubber from "./Scrubber";
 import Icon_AfterEffects from "../Icon_AfterEffects";
 import Icon_Premiere from "../Icon_Premiere";
 
