@@ -10,7 +10,6 @@ import carouselImg7 from '../../../public/dev/carousel/itg-frame-07.jpg';
 import carouselImg8 from '../../../public/dev/carousel/itg-frame-08.jpg';
 import carouselImg9 from '../../../public/dev/carousel/itg-frame-09.jpg';
 import carouselImg10 from '../../../public/dev/carousel/itg-frame-10.jpg';
-import Peekaboo from "./Peekaboo";
 import Carousel from "./Carousel";
 import Icon_Illustrator from "../Icon_Illustrator";
 import Icon_HTML from "../Icon_HTML";
@@ -21,6 +20,7 @@ import Icon_PhotoShop from "../Icon_PhotoShop";
 import Icon_JavaScript from "../Icon_JavaScript";
 import Icon_XD from "../Icon_XD";
 import Scrubber from "./Scrubber";
+import Icon_React from "../Icon_React";
 
 const SampleDev = ({ id, className, onOpenModal }) => {
 
@@ -49,7 +49,7 @@ const SampleDev = ({ id, className, onOpenModal }) => {
 		<>
 			<div id={id} className={`centered-container ${className}`}>
 				<div className="dev-container">
-					<h1 onClick={() => { handleCardClick(1) }} className={`card-label card-label-dev`}>Developement</h1>
+					<h1 onClick={() => { handleCardClick(1) }} className={`card-label card-label-dev`}>React <Icon_React className="icon-react" /></h1>
 				</div>
 				<div className="dev-container2">
 

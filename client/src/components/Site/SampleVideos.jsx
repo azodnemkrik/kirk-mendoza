@@ -24,8 +24,8 @@ const SampleVideos = ({ id, className, onOpenModal }) => {
 				<div className="videos-container">
 
 					{/* <div className="three-cards-labels-container"> */}
-					<h1 onClick={() => { handleCardClick(1) }} className={`card-label card-label-videos`}>Videos</h1>
-
+					{/* <h1 onClick={() => { handleCardClick(1) }} className={`card-label card-label-videos`}>Videos</h1> */}
+					<h1 onClick={() => { handleCardClick(1) }} className={`card-label card-label-videos`}>Videos<span className="material-symbols-outlined asIcon">live_tv</span></h1>
 					{/* </div> */}
 				</div>
 
@@ -37,7 +37,7 @@ const SampleVideos = ({ id, className, onOpenModal }) => {
 							<div className="thumbnail video-size">
 								<div className="thumbnail-info video-size">
 									<div className="thumbnail-info-top container">
-										<div className="thumbnail-info-title">Ogilvy: Magic Intro</div>
+										<div className="thumbnail-info-title">Ogilvy: Magic Intro<br /><span className="video-duration">(0:45)</span></div>
 										<div className="thumbnail-description">Script Writing • Storyboard • Illustration<br />Animation • Editing</div>
 									</div>
 									<div className="thumbnail-info-bottom container">
@@ -56,7 +56,7 @@ const SampleVideos = ({ id, className, onOpenModal }) => {
 							<div className="thumbnail video-size">
 								<div className="thumbnail-info video-size">
 									<div className="thumbnail-info-top container">
-										<div className="thumbnail-info-title">Discover:<br />Card Smarts</div>
+										<div className="thumbnail-info-title">Discover:<br />Card Smarts<br /><span className="video-duration">(2:59)</span></div>
 										<div className="thumbnail-description">Animation • Editing</div>
 									</div>
 									<div className="thumbnail-info-bottom container">
@@ -75,7 +75,7 @@ const SampleVideos = ({ id, className, onOpenModal }) => {
 							<div className="thumbnail video-size">
 								<div className="thumbnail-info video-size">
 									<div className="thumbnail-info-top container">
-										<div className="thumbnail-info-title">Parchment</div>
+										<div className="thumbnail-info-title">Parchment<br /><span className="video-duration">(2:01)</span></div>
 										<div className="thumbnail-description">Animation • Editing</div>
 									</div>
 									<div className="thumbnail-info-bottom container">
@@ -93,7 +93,7 @@ const SampleVideos = ({ id, className, onOpenModal }) => {
 							<div className="thumbnail video-size">
 								<div className="thumbnail-info video-size">
 									<div className="thumbnail-info-top container">
-										<div className="thumbnail-info-title">Discover:<br />Basketball</div>
+										<div className="thumbnail-info-title">Discover:<br />Basketball<br /><span className="video-duration">(0:04)</span></div>
 										<div className="thumbnail-description">Animation • Editing</div>
 									</div>
 									<div className="thumbnail-info-bottom container">
@@ -112,7 +112,7 @@ const SampleVideos = ({ id, className, onOpenModal }) => {
 							<div className="thumbnail " style={{ width: '250px', height: '375px' }}>
 								<div className="thumbnail-info "  style={{ width: '250px', height: '375px' }}>
 									<div className="thumbnail-info-top container">
-										<div className="thumbnail-info-title">Discover:<br />PiggyBank</div>
+										<div className="thumbnail-info-title">Discover:<br />PiggyBank<br /><span className="video-duration">(0:09)</span></div>
 										<div className="thumbnail-description">Animation • Editing</div>
 									</div>
 									<div className="thumbnail-info-bottom container">

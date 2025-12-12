@@ -38,6 +38,7 @@ h1 {
 	font-weight: normal;
 	font-family: BulletSmallCaps, sans-serif;
 	line-height: .75em;
+	line-height: .5em;
 	/* padding-top: 2vh; */
 	/* margin: 0.5em 0; */
 }
@@ -434,24 +435,24 @@ li {
 
 /* H1's */
 .banners-container h1 {
-	margin: 0px 0px;
-	padding: 2px 40px;
+	margin: 0px 0px 0px 0px;
+	padding: 5px 40px 0px 40px;
 	color: #00a1e4;
 	/* filter: drop-shadow(0px 0px 0px #000000A6); */
 	box-shadow: #0000004D 5px -5px 15px 1px;
 }
 
 .videos-container h1 {
-	margin: 0px 0px;
-	padding: 2px 40px;
+	margin: 0px 0px 0px 0px;
+	padding: 5px 40px 0px 40px;
 	color: #111111;
 	/* filter: drop-shadow(0px 0px 0px #000000A6); */
 	box-shadow: #00000040 5px -8px 8px 0px;
 }
 
 .dev-container h1 {
-	margin: 0px 0px;
-	padding: 2px 40px;
+	margin: 0px 0px 0px 0px;
+	padding: 5px 40px 0px 40px;
 	color: #0054a6;
 	/* filter: drop-shadow(0px 0px 0px #000000A6); */
 	/* box-shadow: #000000A6 5px -5px 5px 1px; */
@@ -485,7 +486,7 @@ li {
 	gap: 0px;
 	z-index: 19;
 	/* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#0054a6+0,000000+100 */
-	background: linear-gradient(to bottom, #CCCCCC 10%, #666666 95%);
+	background: linear-gradient(to bottom, #CCCCCC 10%, #aaaaaa 25%, #666666 50%, #333333 95%);
 	/* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
 	/* box-shadow: #00000046 0px -3px 3px 2px; */
 }
@@ -579,6 +580,30 @@ li {
 	transition: .25s;
 } */
 
+/* .card-label-dev .skill .skillIcon { */
+	/* font-size: .6em; */
+	/* vertical-align: middle; */
+	/* margin-left: 8px; */
+/* } */
+
+.asIcon {
+	font-size: .5em;
+	vertical-align: middle;
+	margin-left: 8px;
+}
+
+/* Default React icon color */
+.skill ,
+.skill svg g path {
+	fill: #61dafb;
+}
+
+/* Override for dev section */
+.card-label-dev .skill .skillIcon path,
+.card-label-dev .skill .skillIcon circle {
+	fill: #0054a6;
+}
+
 .card {
 	/* display: inline-block; */
 	/* position: absolute; */
@@ -658,7 +683,7 @@ li {
 	position: absolute;
 	display: flex;
 	flex-direction: column;
-	gap: 20px;
+	/* gap: 20px; */
 	justify-content: center;
 	align-items: center;
 	width: 300px; /* Fixed width */
@@ -676,7 +701,7 @@ li {
 	font-weight: normal;
 	font-family: "BulletSmallCaps", sans-serif;
 	font-size: 2.75em;
-	line-height: 0.75em;
+	line-height: 0.65em;
 	/* letter-spacing: 0.05em; */
 	text-align: center;
 	-webkit-filter: drop-shadow(2px 2px 2px #000000A6);
@@ -688,7 +713,7 @@ li {
 
 .thumbnail-info-top  {
 	flex-direction: column;
-	flex: 2;
+	flex: 3;
 	gap: 1em;
 }
 
@@ -704,6 +729,15 @@ li {
 	align-self: center;
 	color: #FFFFFF;
 	font-size: 1em;
+	line-height: 1.5;
+	text-align: center;
+}
+
+.video-duration {
+	font-family: "BulletSmallCaps", sans-serif;
+	/* font-style: italic; */
+	font-size: .65em;
+	color: #FFFFFF;
 	line-height: 1.5;
 	text-align: center;
 }
@@ -796,6 +830,10 @@ video {
 
 /* Background Colors */
 .card-label-banners {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	gap: 15px;
 	border-radius: 20px 0px 0 0;
 	border-top: 1px solid #0054a6;
 	border-left: 1px solid #0054a6;
@@ -806,6 +844,10 @@ video {
 
 
 .card-label-videos {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	gap: 15px;
 	border-radius: 20px 0px 0 0;
 	border-top: 1px solid #0054a6;
 	border-left: 1px solid #0054a6;
@@ -815,12 +857,24 @@ video {
 }
 
 .card-label-dev {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	gap: 15px;
+	justify-content: center;
 	border-radius: 20px 0px 0 0;
 	border-top: 1px solid #0054a6;
 	border-left: 1px solid #0054a6;
 	border-right: 1px solid #0054a6;
 	border-bottom: 1px solid #00a1e4;
 	background-color: #00a1e4;
+}
+
+/* React Icon Only */
+.card-label-dev .skill  {
+	margin-top: 0px !important;
+	pointer-events: none;
+	cursor: default !important;
 }
 
 .banners-BG {
@@ -834,7 +888,7 @@ video {
 }
 
 .dev-BG {
-	background: linear-gradient(to bottom, #666666 4% , #000000 40%);
+	background: linear-gradient(to bottom, #333333 4% , #000000 40%);
 	flex-direction: column;
 }
 
@@ -958,22 +1012,35 @@ video {
 	cursor: pointer;
 }
 
+/* Carousel Wrapper */
+.carousel-wrapper {
+	position: relative;
+	width: 100%;
+	max-width: 900px;
+	height: 500px;
+	margin: 2rem auto;
+}
+
 /* Carousel Styles */
 .carousel {
 	position: relative;
 	width: 100%;
-	max-width: 800px;
-	height: 500px;
-	margin: 2rem auto;
-	overflow: hidden;
-	border-radius: 12px;
-	background: #000;
+	height: 100%;
+	/* border-radius: 12px; */
+	/* background: #000; */
+	touch-action: pan-y; /* Allow vertical scrolling but prevent horizontal */
+	-webkit-user-select: none;
+	user-select: none;
+	/* box-shadow: #00000040 5px -8px 8px 0px; */
+	filter: drop-shadow(0px 2px 1px #000000);
+
 }
 
 .carousel-inner {
 	position: relative;
 	width: 100%;
 	height: 100%;
+	overflow: hidden;
 }
 
 .carousel-slide {
@@ -1023,11 +1090,11 @@ video {
 }
 
 .carousel-arrow-left {
-	left: 20px;
+	left: -70px;
 }
 
 .carousel-arrow-right {
-	right: 20px;
+	right: -70px;
 }
 
 .carousel-arrow .material-symbols-outlined {
@@ -1037,7 +1104,7 @@ video {
 
 .carousel-dots {
 	position: absolute;
-	bottom: 20px;
+	bottom: 60px;
 	left: 50%;
 	transform: translateX(-50%);
 	display: flex;
@@ -1049,8 +1116,9 @@ video {
 	width: 12px;
 	height: 12px;
 	border-radius: 50%;
-	border: 2px solid #fff;
-	background: rgba(255, 255, 255, 0.3);
+	border: none;
+	background: rgba(255, 255, 255, 0.4);
+	background: #00000066;
 	cursor: pointer;
 	transition: all 0.3s ease;
 	padding: 0;
@@ -1058,19 +1126,24 @@ video {
 
 .carousel-dot:hover {
 	background: rgba(255, 255, 255, 0.6);
+	background: #00a1e4;
 	transform: scale(1.2);
 }
 
 .carousel-dot.active {
 	background: #fff;
+	background: #0054a6ff;
 	width: 14px;
 	height: 14px;
 }
 
 /* Responsive Carousel */
 @media (max-width: 768px) {
-	.carousel {
+	.carousel-wrapper {
 		height: 400px;
+	}
+
+	.carousel {
 		max-width: 100%;
 		border-radius: 0;
 	}
@@ -1093,7 +1166,6 @@ video {
 	}
 
 	.carousel-dots {
-		bottom: 10px;
 		gap: 8px;
 	}
 
@@ -1109,7 +1181,7 @@ video {
 }
 
 @media (max-width: 480px) {
-	.carousel {
+	.carousel-wrapper {
 		height: 300px;
 	}
 }
