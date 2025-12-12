@@ -33,13 +33,13 @@ const SampleBanners = ({ id, className, onOpenModal }) => {
 	return (
 		<>
 			<div id={id} className={`centered-container ${className}`}>
-				
+
 				<div className="banners-container">
 					<h1 onClick={() => { handleCardClick(1) }} className={`card-label card-label-banners`}>Banners<span className="material-symbols-outlined asIcon">image_inset</span></h1>
 				</div>
 
 				<div className="banners-container2">
-					<div className={`card card-1 ${activeCard !== 1 ? 'hidden' : 'selected'}`}>
+					<div className="section-content">
 						<div className="thumbnails-container">
 							<p>These are some examples. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod sunt in ratione dolorem facere neque ut, id quibusdam et eum fugit enim quos eaque dolores est! Suscipit quibusdam ab beatae. Illum facere labore est corporis fugit accusantium numquam earum itaque provident harum. Laborum in quibusdam vel iusto aliquam molestiae facere?</p>
 							<div className="thumbnail">

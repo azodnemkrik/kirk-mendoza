@@ -7,10 +7,6 @@ import thumb4 from '../../../public/banners/microsoft/microsoft_neutral-300x250.
 import thumb5 from '../../../public/banners/xbox/xbox_titan-300x250.jpg';
 import thumb6 from '../../../public/banners/discover/stackable-300x250.jpg';
 import Peekaboo from "./Peekaboo";
-import cssIcon from '../../images/css.svg';
-import htmlIcon from '../../images/html.svg';
-import gsapIcon from "../../images/gsap.svg";
-import aiIcon from '../../images/illustrator.svg';
 import Icon_Illustrator from "../Icon_Illustrator";
 import Icon_HTML from "../Icon_HTML";
 import Icon_CSS from "../Icon_CSS";
@@ -20,10 +16,11 @@ import Icon_PhotoShop from "../Icon_PhotoShop";
 import Icon_JavaScript from "../Icon_JavaScript";
 import Icon_XD from "../Icon_XD";
 import Scrubber from "./Scrubber";
+import About from "./About";
 
-const StuffIDone = ({ id, className, onOpenModal }) => {
-	
-	const [ activeCard, setActiveCard ] = useState(1);
+const ThreeTabs = ({ id, className, onOpenModal }) => {
+
+	const [activeCard, setActiveCard] = useState(1);
 
 	const handleCardClick = (cardNumber) => {
 		setActiveCard(cardNumber);
@@ -31,21 +28,22 @@ const StuffIDone = ({ id, className, onOpenModal }) => {
 
 	return (
 		<>
-			<div id={id} className={`centered-container stuff-i-done-BG ${className}`}>
-				<div className="stuff-i-done-container">
-					<h1>Stuff I've Done</h1>
+			<div id={id} className={`three-tabs-BG ${className}`}>
+				<div className="three-tabs-container">
+					<h1>About Me</h1>
 					<div className="three-cards-labels-container">
-						<h2 onClick={() => { handleCardClick(1) }} className={`card-label card-label-1 ${activeCard === 1 ? 'selected' : ''}`}>Banners</h2>
-						<h2 onClick={() => { handleCardClick(2) }} className={`card-label card-label-2 ${activeCard === 2 ? 'selected' : ''}`}>Videos</h2>
-						<h2 onClick={() => { handleCardClick(3) }} className={`card-label card-label-3 ${activeCard === 3 ? 'selected' : ''}`}>Development</h2>
+						<h2 onClick={() => { handleCardClick(1) }} className={`card-label card-label-3 ${activeCard === 1 ? 'selected' : ''}`}>Hi there!</h2>
+						<h2 onClick={() => { handleCardClick(2) }} className={`card-label card-label-1 ${activeCard === 2 ? 'selected' : ''}`}>Professionally</h2>
+						<h2 onClick={() => { handleCardClick(3) }} className={`card-label card-label-2 ${activeCard === 3 ? 'selected' : ''}`}>Boy at <span className="material-symbols-outlined filled" >favorite</span> </h2>
+						<h2 onClick={() => { handleCardClick(4) }} className={`card-label card-label-3 ${activeCard === 4 ? 'selected' : ''}`}>Game Show Host</h2>
 					</div>
 				</div>
-
 				<div className="three-cards-container">
 
 					{/* Card 1 */}
 					<div className={`card card-1 ${activeCard !== 1 ? 'hidden' : 'selected'}`}>
-						<div className="thumbnails-container">
+						<About />
+						{/* <div className="thumbnails-container">
 							<p>These are some examples. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod sunt in ratione dolorem facere neque ut, id quibusdam et eum fugit enim quos eaque dolores est! Suscipit quibusdam ab beatae. Illum facere labore est corporis fugit accusantium numquam earum itaque provident harum. Laborum in quibusdam vel iusto aliquam molestiae facere?</p>
 							<div className="thumbnail">
 								<div className="thumbnail-info">
@@ -156,25 +154,25 @@ const StuffIDone = ({ id, className, onOpenModal }) => {
 										</div>
 									</div>
 								</div>
-						<img src={thumb6} width="300" height="250" className="thumbnail-image" />
+								<img src={thumb6} width="300" height="250" className="thumbnail-image" />
+							</div>
+						</div>
+						<Peekaboo id="peekaboo-container" onClick={() => onOpenModal(<video className="flash-content" src="https://www.kirk-mendoza.com/video/pg-site.mp4" type="video/mp4" autoPlay loop muted controls width="auto" height="20%"></video>, "https://www.kirk-mendoza.com/video/pg-site.mp4")} /> */}
 					</div>
-				</div>
-				<Peekaboo id="peekaboo-container" onClick={() => onOpenModal(<video className="flash-content" src="https://www.kirk-mendoza.com/video/pg-site.mp4" type="video/mp4" autoPlay loop muted controls width="auto" height="20%"></video>, "https://www.kirk-mendoza.com/video/pg-site.mp4")} />
-			</div>
+
 					{/* Card 2 */}
 					<div className={`card card-2 ${activeCard !== 2 ? 'hidden' : 'selected'}`}>
-						<div className="thumbnails-container">
-							<p>Here's stuff about videos. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rerum reprehenderit asperiores ipsa repellendus alias earum dicta cupiditate natus odio suscipit.</p>
-							<video src="https://www.kirk-mendoza.com/video/kirk-mendoza_motion-graphics.mp4" type="video/mp4" autoPlay loop muted width="auto" min-width="100%" height="20%" background="cover"></video>
-						</div>
+						<About />
 					</div>
 
 					{/* Card 3 */}
 					<div className={`card card-3 ${activeCard !== 3 ? 'hidden' : 'selected'}`}>
-						<div className="thumbnails-container">
-							<p>Here's stuff about development.</p>
-							<p>Remember Flash? See some classic work.</p>
-						</div>
+						<About />
+					</div>
+
+					{/* Card 4 */}
+					<div className={`card card-4 ${activeCard !== 4 ? 'hidden' : 'selected'}`}>
+						<About />
 					</div>
 
 				</div>
@@ -183,4 +181,4 @@ const StuffIDone = ({ id, className, onOpenModal }) => {
 	)
 }
 
-export default StuffIDone;
+export default ThreeTabs;

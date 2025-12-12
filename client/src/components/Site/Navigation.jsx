@@ -32,11 +32,14 @@ const Navigation = forwardRef(({ id, className, pathname, isFixed }, ref) => {
 					<Link to={{pathname: '/', hash: '#about-me'}} className="nav-link link-about-me">
 						About Me
 					</Link>
-					<Link to={{pathname: '/', hash: '#what-i-do'}} className="nav-link link-what-i-do">
-						What I Do
+					<Link to={{pathname: '/', hash: '#banners'}} className="nav-link link-banners">
+						Banners
 					</Link>
-					<Link to={{pathname: '/', hash: '#case-studies'}} className="nav-link link-case-studies">
-						Case Studies
+					<Link to={{pathname: '/', hash: '#videos'}} className="nav-link link-videos">
+						Video
+					</Link>
+					<Link to={{pathname: '/', hash: '#react'}} className="nav-link link-react">
+						React
 					</Link>
 					<Link to={{pathname: '/', hash: '#contact'}} className="nav-link link-contact">
 						Contact

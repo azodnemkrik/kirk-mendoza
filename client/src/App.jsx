@@ -3,7 +3,7 @@ import { Link, Route, Routes, useLocation, useNavigate } from 'react-router-dom'
 import Navigation from './components/Site/Navigation';
 import LogoHero from './components/Site/LogoHero';
 import About from './components/Site/About';
-import StuffIDone from './components/Site/StuffIDone';
+import ThreeTabs from './components/Site/ThreeTabs';
 import BrandCrawler from './components/Site/BrandCrawler';
 import CaseStudies from './components/Site/CaseStudies';
 import ContactMe from './components/Site/ContactMe';
@@ -45,26 +45,31 @@ function App() {
 		<Navigation ref={navRef} pathname={pathname} isFixed={isFixed} />
 		<div className="wrapper">
 			<About id="about-me" />
-			<SampleBanners id="sample-banners" className="banners-BG" onOpenModal={(content, src, shouldShowScrubber = true) => {
+			<SampleBanners id="banners" className="banners-BG" onOpenModal={(content, src, shouldShowScrubber = true) => {
 				setModalContent(content);
 				setModalSrc(src);
 				setShowScrubber(shouldShowScrubber);
 				setIsModalOpen(true);
 			}} />
-			<SampleVideos id="sample-videos" className="videos-BG" onOpenModal={(content, src, shouldShowScrubber = true) => {
+			<SampleVideos id="videos" className="videos-BG" onOpenModal={(content, src, shouldShowScrubber = true) => {
 				setModalContent(content);
 				setModalSrc(src);
 				setShowScrubber(shouldShowScrubber);
 				setIsModalOpen(true);
 			}} />
-			<SampleDev id="sample-dev" className="dev-BG" onOpenModal={(content, src, shouldShowScrubber = true) => {
+			<SampleDev id="react" className="dev-BG" onOpenModal={(content, src, shouldShowScrubber = true) => {
 				setModalContent(content);
 				setModalSrc(src);
 				setShowScrubber(shouldShowScrubber);
 				setIsModalOpen(true);
 			}} />
-		<CaseStudies id="case-studies" />
 			<BrandCrawler />
+			<ThreeTabs id="three-tabs" onOpenModal={(content, src, shouldShowScrubber = true) => {
+				setModalContent(content);
+				setModalSrc(src);
+				setShowScrubber(shouldShowScrubber);
+				setIsModalOpen(true);
+			}} />
 			<ContactMe id="contact" />
 		</div>
 
