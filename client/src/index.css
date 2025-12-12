@@ -278,20 +278,7 @@ svg {
 	background-color: #cccccc;
 }
 
-.about-container, .banners-container, .videos-container, .dev-container {
-	display: flex;
-	flex-wrap: wrap;
-	justify-content: center;
-	align-items: center;
-	flex-direction: row;
-	/* padding: .5% 8%; */
-	gap: 5%;
-	height: auto;
-	width: auto;
-	max-width: 1380px;
-	max-width: 1440px;
-	margin-top: 1vh;
-}
+.about-container,
 .stuff-i-done-container {
 	display: flex;
 	flex-wrap: wrap;
