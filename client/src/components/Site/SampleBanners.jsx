@@ -23,8 +23,8 @@ import Scrubber from "./Scrubber";
 import Icon_Premiere from "../Icon_Premiere";
 
 const SampleBanners = ({ id, className, onOpenModal }) => {
-	
-	const [ activeCard, setActiveCard ] = useState(1);
+
+	const [activeCard, setActiveCard] = useState(1);
 
 	const handleCardClick = (cardNumber) => {
 		setActiveCard(cardNumber);
@@ -33,17 +33,12 @@ const SampleBanners = ({ id, className, onOpenModal }) => {
 	return (
 		<>
 			<div id={id} className={`centered-container ${className}`}>
+				
 				<div className="banners-container">
-					
-					{/* <div className="three-cards-labels-container"> */}
-						<h1 onClick={() => { handleCardClick(1) }} className={`card-label card-label-banners`}>Banners<span className="material-symbols-outlined asIcon">image_inset</span></h1>
-	
-					{/* </div> */}
+					<h1 onClick={() => { handleCardClick(1) }} className={`card-label card-label-banners`}>Banners<span className="material-symbols-outlined asIcon">image_inset</span></h1>
 				</div>
 
 				<div className="banners-container2">
-
-					{/* Card 1 */}
 					<div className={`card card-1 ${activeCard !== 1 ? 'hidden' : 'selected'}`}>
 						<div className="thumbnails-container">
 							<p>These are some examples. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod sunt in ratione dolorem facere neque ut, id quibusdam et eum fugit enim quos eaque dolores est! Suscipit quibusdam ab beatae. Illum facere labore est corporis fugit accusantium numquam earum itaque provident harum. Laborum in quibusdam vel iusto aliquam molestiae facere?</p>
@@ -162,28 +157,13 @@ const SampleBanners = ({ id, className, onOpenModal }) => {
 										</div>
 									</div>
 								</div>
-						<img src={thumb6} width="300" height="250" className="thumbnail-image" />
+								<img src={thumb6} width="300" height="250" className="thumbnail-image" />
+							</div>
+						</div>
+						<Peekaboo id="peekaboo-container" onClick={() => onOpenModal(<video className="flash-content" src="https://www.kirk-mendoza.com/video/pg-site.mp4" type="video/mp4" autoPlay loop muted controls width="auto" height="20%"></video>, "https://www.kirk-mendoza.com/video/pg-site.mp4")} />
 					</div>
 				</div>
-				<Peekaboo id="peekaboo-container" onClick={() => onOpenModal(<video className="flash-content" src="https://www.kirk-mendoza.com/video/pg-site.mp4" type="video/mp4" autoPlay loop muted controls width="auto" height="20%"></video>, "https://www.kirk-mendoza.com/video/pg-site.mp4")} />
-			</div>
-					{/* Card 2 */}
-					<div className={`card card-2 ${activeCard !== 2 ? 'hidden' : 'selected'}`}>
-						<div className="thumbnails-container">
-							<p>Here's stuff about videos. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rerum reprehenderit asperiores ipsa repellendus alias earum dicta cupiditate natus odio suscipit.</p>
-							<video src="https://www.kirk-mendoza.com/video/kirk-mendoza_motion-graphics.mp4" type="video/mp4" autoPlay loop muted width="auto" min-width="100%" height="20%" background="cover"></video>
-						</div>
-					</div>
 
-					{/* Card 3 */}
-					<div className={`card card-3 ${activeCard !== 3 ? 'hidden' : 'selected'}`}>
-						<div className="thumbnails-container">
-							<p>Here's stuff about development.</p>
-							<p>Remember Flash? See some classic work.</p>
-						</div>
-					</div>
-
-				</div>
 			</div>
 		</>
 	)
