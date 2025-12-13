@@ -29,6 +29,7 @@ const ThreeTabs = ({ id, className, onOpenModal }) => {
 	return (
 		<>
 			<div id={id} className={`three-tabs-BG ${className}`}>
+
 				<div className="three-tabs-container">
 					<h1>About Me</h1>
 					<div className="three-cards-labels-container">
@@ -37,7 +38,8 @@ const ThreeTabs = ({ id, className, onOpenModal }) => {
 						<h2 onClick={() => { handleCardClick(3) }} className={`card-label card-label-2 ${activeCard === 3 ? 'selected' : ''}`}>Boy at <span className="material-symbols-outlined filled" >favorite</span> </h2>
 					</div>
 				</div>
-				<div className="three-cards-container">
+				
+				<div className="three-cards-container2">
 
 					{/* Card 1 */}
 					<div className={`card card-1 ${activeCard !== 1 ? 'hidden' : 'selected'}`}>

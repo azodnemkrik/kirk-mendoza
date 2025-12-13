@@ -85,7 +85,7 @@ h2 {
 	top: 250px;
 	margin: 20px 10px;
 	display: flex;
-	flex-wrap: wrap;
+	flex-wrap: nowrap;
 	justify-content: space-evenly;
 	gap: 1.25rem;
 	align-items: center;
@@ -423,7 +423,7 @@ li {
 .three-tabs-container h1 {
 	margin: 0px 0px;
 	padding: 2px 40px;
-	color: #00a1e4;
+	color: #0054a6;
 	/* filter: drop-shadow(0px 0px 0px #000000A6); */
 	/* box-shadow: #000000A6 5px -5px 5px 1px; */
 }
@@ -499,6 +499,11 @@ li {
 	background: linear-gradient(to bottom, #00a1e4 0%, #003367 70%, #001428 95%);
 	/* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
 	/* box-shadow: #00000046 0px -3px 3px 2px; */
+}
+
+.three-cards-container2 {
+	/* background-color: #cccccc; */
+	background: linear-gradient(to bottom, #CCCCCC 0%, #aaaaaa 15%, #666666 50%, #333333 95%);
 }
 
 
@@ -910,6 +915,11 @@ video {
 
 .contact-BG {
 	background-color: #003ae8;
+}
+
+.three-tabs-BG {
+	/* background-color: #cccccc; */
+	background: linear-gradient(to bottom, #CCCCCC 0%, #aaaaaa 15%, #666666 50%, #333333 95%);
 }
 
 .brands {

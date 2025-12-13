@@ -44,6 +44,12 @@ function App() {
 		<>
 		<Navigation ref={navRef} pathname={pathname} isFixed={isFixed} />
 		<div className="wrapper">
+			<ThreeTabs id="about" onOpenModal={(content, src, shouldShowScrubber = true) => {
+				setModalContent(content);
+				setModalSrc(src);
+				setShowScrubber(shouldShowScrubber);
+				setIsModalOpen(true);
+			}} />
 			<About id="about-me" />
 			<SampleBanners id="banners" className="banners-BG" onOpenModal={(content, src, shouldShowScrubber = true) => {
 				setModalContent(content);
@@ -64,12 +70,6 @@ function App() {
 				setIsModalOpen(true);
 			}} />
 			<BrandCrawler />
-			<ThreeTabs id="three-tabs" onOpenModal={(content, src, shouldShowScrubber = true) => {
-				setModalContent(content);
-				setModalSrc(src);
-				setShowScrubber(shouldShowScrubber);
-				setIsModalOpen(true);
-			}} />
 			<ContactMe id="contact" />
 		</div>
 
