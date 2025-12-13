@@ -14,37 +14,33 @@ const Navigation = forwardRef(({ id, className, pathname, isFixed }, ref) => {
 
 
 	useEffect(() => {
-		navTL
-			.add("frame1")
-			// .to("#navigation", 1 ,{ height: "5em" , ease: "power4.out"}, "frame1+=3.5")
-			// .to(".logo-container", 1, { width: "40em", ease: "power4.out" }, "frame1+=3.5")
-			// .to(".logo-container", 1, { height: "6em", ease: "power4.out" }, "frame1+=3.5") // keep
-			.to(".logo-container", .75, { height: "7.5vh", ease: "power4.inOut" }, "frame1+=3.15")
-			;
-
+		// Timeline initialized but no animations currently active
+		navTL.add("frame1");
 	})
 
 	return (
 		<div id={id} className={className} ref={ref || internalRef} style={{ position: isFixed ? 'fixed' : 'sticky', top: 0, width: '100%', zIndex: 1000 }}>
 			<div id="navigation" className="centered-container">
 				<LogoHero className="heroLogo" />
-				<div className="navigation-bar" >
-					<Link to={{pathname: '/', hash: '#about-me'}} className="nav-link link-about-me">
-						About Me
-					</Link>
-					<Link to={{pathname: '/', hash: '#banners'}} className="nav-link link-banners">
-						Banners
-					</Link>
-					<Link to={{pathname: '/', hash: '#videos'}} className="nav-link link-videos">
-						Video
-					</Link>
-					<Link to={{pathname: '/', hash: '#react'}} className="nav-link link-react">
-						React
-					</Link>
-					<Link to={{pathname: '/', hash: '#contact'}} className="nav-link link-contact">
-						Contact
-					</Link>
-				</div>
+				<nav >
+					<ul className="navigation-bar">
+						<li>
+							<Link to={{ pathname: '/', hash: '#about-me' }} className="nav-link link-about-me">About Me</Link>
+						</li>
+						<li>
+							<Link to={{ pathname: '/', hash: '#banners' }} className="nav-link link-about-me">Banners</Link>
+						</li>
+						<li>
+							<Link to={{ pathname: '/', hash: '#videos' }} className="nav-link link-about-me">Videos</Link>
+						</li>
+						<li>
+							<Link to={{ pathname: '/', hash: '#react' }} className="nav-link link-about-me">React</Link>
+						</li>
+						<li>
+							<Link to={{ pathname: '/', hash: '#contact' }} className="nav-link link-about-me">Contact</Link>
+						</li>
+					</ul>
+				</nav>
 			</div>
 		</div>
 	)
