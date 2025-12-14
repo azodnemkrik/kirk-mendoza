@@ -100,7 +100,8 @@ h2 {
 	grid-auto-flow: column;
 	align-items: center;
 	overflow-x: scroll;
-	-webkit-overflow-scrolling: touch; /* Smooth scrolling on iOS */
+	-webkit-overflow-scrolling: touch;
+	/* Smooth scrolling on iOS */
 	width: 100%;
 	max-width: 100%;
 	z-index: 1000;
@@ -131,7 +132,7 @@ h2 {
 	position: relative;
 	left: -15px;
 	right: 0;
-	width: px;
+	width: auto;
 	height: 20px;
 	/* height: auto; */
 	background-color: #0054a6;
@@ -1217,21 +1218,20 @@ video {
 		width: 12px;
 		height: 12px;
 	}
-}
+	
+	/* Navigation Links */
+	.nav-link {
+		font-size: 1.3em;
+		margin: 8px 24px;
+	}
+
+	.nav-link:before,
+	.nav-link:after {
+		padding: 20px 10px;
+	}}
 
 @media (max-width: 480px) {
 	.carousel-wrapper {
 		height: 300px;
-	}
-}
-
-@media (max-width: 768px) {
-
-	.nav-link {
-		width: auto;
-		height: 42px;
-		/* line-height: 100%; */
-		margin: 4px 20px;
-		padding: 0px 0px;
 	}
 }
