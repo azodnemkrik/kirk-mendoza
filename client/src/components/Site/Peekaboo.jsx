@@ -6,6 +6,7 @@ gsap.registerPlugin(MorphSVGPlugin);
 const Peekaboo = ({ id, className ,onClick }) => {
    const [hasPlayed, setHasPlayed] = useState(false);
    const maintl = useRef(null);
+   const touchTimer = useRef(null);
 
 	useEffect(() => {
 		// Create timeline only once
@@ -60,8 +61,38 @@ const Peekaboo = ({ id, className ,onClick }) => {
       console.log("flash");
    };
 
+   const handleTouchStart = (e) => {
+      // Trigger animation on touch
+      handleMouseEnter();
+      
+      // Set a timer for long press (3500ms)
+      touchTimer.current = setTimeout(() => {
+         // Long press detected - trigger the modal
+         if (onClick) {
+            onClick(e);
+         }
+      }, 3500);
+      
+      // Prevent default click behavior
+      e.preventDefault();
+   };
+
+   const handleTouchEnd = (e) => {
+      // Clear the timer if user releases before long press
+      if (touchTimer.current) {
+         clearTimeout(touchTimer.current);
+         touchTimer.current = null;
+      }
+      
+      // Reverse animation when touch is released
+      handleMouseLeave();
+      
+      // Prevent default click
+      e.preventDefault();
+   };
+
 	return (
-		<div id={id} className={`float peekaboo-container ${className}`} onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave} onClick={onClick}>
+		<div id={id} className={`float peekaboo-container ${className}`} onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave} onTouchStart={handleTouchStart} onTouchEnd={handleTouchEnd} onClick={onClick}>
 			<svg id="peekaboo" xmlns="http://www.w3.org/2000/svg" width="214.38" height="367.63" viewBox="0 0 214.38 367.63">
 				<g id="start-state">
 					<path id="opening-start" className="guide" d="M213.12,184.23c.13-16.01.43-50,.65-65.34.15-10.61.34-26.71.45-39.79.06-7.72.1-16.44.17-23.72v312c-.02,2.46-.57-13.48-.61-16.49-.27-19.21-.51-30.25-.68-55.84-.16-23.85-.22-54.72-.2-82.63.02-3.22.18-17.75.22-28.19Z" />
