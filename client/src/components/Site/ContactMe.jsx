@@ -3,6 +3,10 @@ import React from "react";
 
 const ContactMe = ({ id, className }) => {
 
+	const reachOut = async () => {
+		const name = formData
+	}
+
 	useEffect(() => {
 
 	})
@@ -13,26 +17,23 @@ const ContactMe = ({ id, className }) => {
 				{/* <video src="https://www.kirk-mendoza.com/video/kirk-mendoza_motion-graphics.mp4" type="video/mp4" autoPlay loop muted width="auto" min-width="100%" height="20%" background="cover"></video> */}
 				<h1>Contact Me</h1>
 				<p> This is where Contact information would go. The idea is to provide ways for visitors to get in touch. This will be populated with relevant contact details and a form.</p>
-				<form action={contact}>
+				<form action={reachOut}>
 					<div className="two-column-layout">
 						<label>
-							First:<br /> <input className="two-column-form-left" type="text" name="first_name" />
+							Name:<input className="" type="text" name="name" />
 						</label>
 						<label>
-							<span className="bumpLabel">Last:</span><br /> <input className="two-column-form-right" type="text" name="last_name" />
+							Email<input className="" type="text" name="email" />
 						</label>
 					</div>
 					<div className="two-column-layout">
 						<label>
-							Username:<br /> <input className="two-column-form-left" type="text" name="username" />
+							Subject:<br /> <input className="" type="text" name="subject" />
 						</label>
 						<label>
-							Password:<br /> <input className="two-column-form-right" type="text" name="password" />
+							Message:<br /> <input className="" type="text" name="message" />
 						</label>
 					</div>
-					<label>
-						Organization Code: <span className="hint">(provided by your Administrator)</span><br /> <input type="text" name="org_code" />
-					</label>
 
 					<button type="submit">Submit</button>
 				</form>
