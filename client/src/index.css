@@ -1,3 +1,30 @@
+:root {
+	/* Blues */
+	--color-light-blue: #00a1e4;
+	--color-medium-blue: #0054a6;
+	--color-dark-blue: #003367;
+	--color-super-dark-blue: #001428;
+
+	/* Grays */
+	--color-light-gray: #cccccc;
+	--color-medium-gray: #aaaaaa;
+	--color-dark-gray: #333333;
+
+	/* Others */
+	--color-white: #FFFFFF;
+	--color-darkest: #111111;
+	--color-black: #000000;
+	--color-yellow: #fff000;
+	--color-blue: #0000ff;
+	--color-red: #ff0000;
+	--color-gold: #c48300;
+	/* Add alpha variants as needed, e.g.: */
+	--color-black-25: #00000040;
+	--color-black-30: #0000004D;
+	--color-black-65: #000000A6;
+	--color-black-90: #000000E6;
+}
+
 body,
 html {
 	width: 100%;
@@ -15,7 +42,7 @@ html {
 	font-size: 16px;
 	font-size: 1.05em;
 	line-height: 1.5;
-	color: #333333;
+	color: var(--color-dark-gray);
 }
 
 /* Enable smooth scrolling for anchor jumps */
@@ -118,7 +145,7 @@ h2 {
 	margin: 4px 20px;
 	padding: 0px 0px;
 	color: #ffffff;
-	background-color: #0054a6;
+	background-color: var(--color-medium-blue);
 	transition: .25s;
 	text-decoration: none;
 	width: auto;
@@ -129,7 +156,7 @@ h2 {
 .nav-link:before,
 .nav-link:after {
 	content: '.';
-	color: #0054a6;
+	color: var(--color-medium-blue);
 	display: inline-block;
 	position: relative;
 	left: -15px;
@@ -137,7 +164,7 @@ h2 {
 	width: auto;
 	height: 20px;
 	/* height: auto; */
-	background-color: #0054a6;
+	background-color: var(--color-medium-blue);
 	/* background-color: red; */
 	padding: 8px 8px;
 	transform: skewX(-16deg);
@@ -147,32 +174,32 @@ h2 {
 
 .nav-link:after {
 	/* content:''; */
-	/* color: #0054a6; */
+	/* color: var(--color-medium-blue); */
 	/* display: inline-block; */
 	/* position: relative; */
 	left: 15px;
 	/* right: 0; */
 	/* width: 12px; */
 	/* height: auto; */
-	/* background-color: #0054a6; */
+	/* background-color: var(--color-medium-blue); */
 	/* padding: 4px 8px; */
 	/* transform: skewX(-15deg); */
 	border-radius: 0px 0px 10px 0px;
 }
 
 .nav-link:hover {
-	background-color: #00a1e4;
-	color: #333333;
+	background-color: var(--color-light-blue);
+	color: var(--color-dark-gray);
 }
 
 .nav-link:hover::before {
-	background-color: #00a1e4;
-	color: #00a1e4;
+	background-color: var(--color-light-blue);
+	color: var(--color-light-blue);
 }
 
 .nav-link:hover::after {
-	background-color: #00a1e4;
-	color: #00a1e4;
+	background-color: var(--color-light-blue);
+	color: var(--color-light-blue);
 }
 
 #navigation {
@@ -235,7 +262,7 @@ h2 {
 }
 
 /* Ensure anchored sections aren't hidden behind the sticky/fixed nav */
-#about-me,
+#about,
 #banners,
 #videos,
 #react,
@@ -251,7 +278,7 @@ h2 {
 }
 
 .accent-blue {
-	color: #0054a6;
+	color: var(--color-medium-blue);
 }
 
 
@@ -284,15 +311,15 @@ svg {
 	width: 100%;
 	height: auto;
 	border-radius: 50%;
-	border: 0.75em solid #00a1e4;
+	border: 0.75em solid var(--color-light-blue);
 	margin-bottom: 20px;
 	min-width: 250px;
 	max-width: 275px;
 }
 
 .aboutBG {
-	background-color: #cccccc;
-	background: linear-gradient(to bottom, #aaaaaa 10%, #cccccc 95%);
+	background-color: var(--color-light-gray);
+	background: linear-gradient(to bottom, var(--color-medium-gray) 10%, var(--color-light-gray) 95%);
 }
 
 .about-container {
@@ -397,7 +424,7 @@ li {
 .skillLabel {
 	font-family: 'SegoePro Semibold', sans-serif;
 	font-size: 14px;
-	color: #333333;
+	color: var(--color-dark-gray);
 	text-align: left;
 	margin-top: -22px !important;
 	transition: .2s;
@@ -439,7 +466,7 @@ li {
 .three-tabs-container h1 {
 	margin: 0px 0px;
 	padding: 2px 40px;
-	color: #0054a6;
+	color: var(--color-medium-blue);
 	/* filter: drop-shadow(0px 0px 0px #000000A6); */
 	/* box-shadow: #000000A6 5px -5px 5px 1px; */
 }
@@ -448,8 +475,8 @@ li {
 .banners-container h1 {
 	margin: 0px 0px 0px 0px;
 	/* padding: 5px 40px 0px 40px; */
-	color: #00a1e4;
-	background-color: #001428;
+	color: var(--color-light-blue);
+	background-color: var(--color-super-dark-blue);
 	/* filter: drop-shadow(0px 0px 0px #000000A6); */
 	box-shadow: #0000004D 5px -5px 15px 1px;
 }
@@ -465,9 +492,17 @@ li {
 .dev-container h1 {
 	margin: 0px 0px 0px 0px;
 	/* padding: 5px 40px 0px 40px; */
-	color: #0054a6;
+	color: var(--color-medium-blue);
 	/* filter: drop-shadow(0px 0px 0px #000000A6); */
 	/* box-shadow: #000000A6 5px -5px 5px 1px; */
+}
+
+.contact-container h1 {
+	margin: 0px 0px 0px 0px;
+	/* padding: 5px 40px 0px 40px; */
+	color: var(--color-dark-gray);
+	/* filter: drop-shadow(0px 0px 0px #000000A6); */
+	box-shadow: #000000A6 5px -5px 5px 1px;
 }
 
 
@@ -482,10 +517,10 @@ li {
 	height: auto;
 	gap: 0px;
 	z-index: 19;
-	/* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#0054a6+0,000000+100 */
-	background: linear-gradient(to top, #0054a6 0%, #003367 70%, #001428 95%);
+	/* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/var(--color-medium-blue)+0,000000+100 */
+	background: linear-gradient(to top, var(--color-medium-blue) 0%, var(--color-dark-blue) 70%, var(--color-super-dark-blue) 95%);
 	/* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-	/* box-shadow: #00000046 0px -3px 3px 2px; */
+	box-shadow: #00000046 0px -3px 3px 2px;
 }
 
 .videos-container2 {
@@ -497,10 +532,10 @@ li {
 	height: auto;
 	gap: 0px;
 	z-index: 19;
-	/* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#0054a6+0,000000+100 */
-	background: linear-gradient(to bottom, #CCCCCC 10%, #aaaaaa 25%, #666666 50%, #333333 95%);
+	/* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/var(--color-medium-blue)+0,000000+100 */
+	background: linear-gradient(to bottom, var(--color-light-gray) 10%, var(--color-medium-gray) 25%, #666666 50%, var(--color-dark-gray) 95%);
 	/* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-	/* box-shadow: #00000046 0px -3px 3px 2px; */
+	box-shadow: #00000046 0px -3px 3px 2px;
 }
 
 .dev-container2 {
@@ -512,15 +547,30 @@ li {
 	height: auto;
 	gap: 0px;
 	z-index: 19;
-	/* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#0054a6+0,000000+100 */
-	background: linear-gradient(to bottom, #00a1e4 0%, #003367 70%, #001428 95%);
+	/* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/var(--color-medium-blue)+0,000000+100 */
+	background: linear-gradient(to bottom, var(--color-light-blue) 0%, var(--color-dark-blue) 70%, var(--color-super-dark-blue) 95%);
 	/* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-	/* box-shadow: #00000046 0px -3px 3px 2px; */
+	box-shadow: #00000046 0px -3px 3px 2px;
+}
+
+.contact-container2 {
+	color: #111111;
+	width: 100%;
+	height: 100%;
+	margin: -1px 0px;
+	padding: 0;
+	height: auto;
+	gap: 0px;
+	z-index: 19;
+	/* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/var(--color-medium-blue)+0,000000+100 */
+	background: linear-gradient(to bottom, var(--color-light-gray) 10%, var(--color-medium-gray) 25%, #666666 50%, var(--color-dark-gray) 95%);
+	/* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	box-shadow: #00000046 0px -3px 3px 2px;
 }
 
 .three-cards-container2 {
-	/* background-color: #cccccc; */
-	background: linear-gradient(to bottom, #CCCCCC 0%, #aaaaaa 15%, #666666 50%, #333333 95%);
+	/* background-color: var(--color-light-gray); */
+	background: linear-gradient(to bottom, var(--color-light-gray) 0%, var(--color-medium-gray) 15%, #666666 50%, var(--color-dark-gray) 95%);
 }
 
 
@@ -535,8 +585,8 @@ li {
 	height: auto;
 	gap: 0px;
 	z-index: 19;
-	/* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#0054a6+0,000000+100 */
-	background: linear-gradient(to top, #0054a6 0%, #003367 70%, #001428 95%);
+	/* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/var(--color-medium-blue)+0,000000+100 */
+	background: linear-gradient(to top, var(--color-medium-blue) 0%, var(--color-dark-blue) 70%, var(--color-super-dark-blue) 95%);
 	/* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
 	/* box-shadow: #00000046 0px -3px 3px 2px; */
 }
@@ -561,9 +611,12 @@ li {
 	padding: 0px 0px;
 	cursor: pointer;
 	transition: .25s;
-	-webkit-user-select: none; /* Safari */
-	-moz-user-select: none; /* Firefox */
-	-ms-user-select: none; /* IE 10+ and Edge */
+	-webkit-user-select: none;
+	/* Safari */
+	-moz-user-select: none;
+	/* Firefox */
+	-ms-user-select: none;
+	/* IE 10+ and Edge */
 	user-select: none;
 	/* here */
 	/* border-radius: 10px 10px 0 0; */
@@ -575,17 +628,18 @@ li {
 
 
 .card-label.selected {
-	color: #00a1e4;
+	color: var(--color-light-blue);
 	/* border-radius: 20px 0px 0 0; */
-	/* border-top: 1px solid #0054a6;
-	border-left: 1px solid #0054a6;
-	border-right: 1px solid #0054a6;
-	border-bottom: 1px solid #001428; */
-	background-color: #001428;
+	/* border-top: 1px solid var(--color-medium-blue);
+	border-left: 1px solid var(--color-medium-blue);
+	border-right: 1px solid var(--color-medium-blue);
+	border-bottom: 1px solid var(--color-super-dark-blue); */
+	background-color: var(--color-super-dark-blue);
 	/* box-shadow: #00000046 0px -3px 3px 2px; */
 }
 
-.card-label:before, .card-label:after {
+.card-label:before,
+.card-label:after {
 	content: '.';
 	position: relative;
 	width: 21px;
@@ -604,7 +658,7 @@ li {
 
 /* .card-label.selected:before {
 	content: '';
-	color: #0054a6;
+	color: var(--color-medium-blue);
 	display: inline-block;
 	position: relative;
 	left: -15px;
@@ -648,12 +702,12 @@ li {
 /* Override for dev section */
 .card-label-dev .skill .skillIcon path,
 .card-label-dev .skill .skillIcon circle {
-	fill: #0054a6;
+	fill: var(--color-medium-blue);
 }
 
 .card {
 	position: relative;
-	border-top: 1px solid #0054a6;
+	border-top: 1px solid var(--color-medium-blue);
 	width: 100%;
 	height: auto;
 	border-radius: 0px 0px 20px 20px;
@@ -670,7 +724,7 @@ li {
 
 .section-content {
 	position: relative;
-	/* border-top: 1px solid #0054a6; */
+	/* border-top: 1px solid var(--color-medium-blue); */
 	width: 100%;
 	height: auto;
 	border-radius: 0px 0px 20px 20px;
@@ -681,6 +735,7 @@ li {
 	justify-content: center;
 	transition: transform 0.3s, box-shadow 0.3s;
 	background-color: none;
+	min-height: 500px;
 }
 
 /* Banners */
@@ -700,12 +755,13 @@ li {
 
 .thumbnails-container p {
 	margin: 5% 8% 0% 8%;
-	/* color: #00a1e4; */
+	/* color: var(--color-light-blue); */
 }
 
 
 .thumbnail {
-	width: 300px; /* Fixed width */
+	width: 300px;
+	/* Fixed width */
 	height: 250px;
 	cursor: pointer;
 	/* box-shadow: #00000000 0px 0px 0px; */
@@ -754,7 +810,7 @@ li {
 }
 
 .thumbnail-info .thumbnail-info-title {
-	color: #00a1e4;
+	color: var(--color-light-blue);
 	font-weight: normal;
 	font-family: "BulletSmallCaps", sans-serif;
 	font-size: 2.75em;
@@ -802,7 +858,7 @@ li {
 .video-size {
 	width: 480px;
 	height: 270px;
-	border: 1px solid #cccccc;
+	border: 1px solid var(--color-light-gray);
 	/* object-fit: cover; */
 	/* transition: filter .2s; */
 }
@@ -892,16 +948,17 @@ video {
 	align-items: center;
 	gap: 15px;
 	/* border-radius: 20px 0px 0 0; */
-	/* border-top: 1px solid #0054a6;
-	border-left: 1px solid #0054a6;
-	border-right: 1px solid #0054a6;
-	border-bottom: 1px solid #001428; */
-	/* background-color: #001428; */
+	/* border-top: 1px solid var(--color-medium-blue);
+	border-left: 1px solid var(--color-medium-blue);
+	border-right: 1px solid var(--color-medium-blue);
+	border-bottom: 1px solid var(--color-super-dark-blue); */
+	/* background-color: var(--color-super-dark-blue); */
 }
 
-.card-label-banners:before, .card-label-banners:after {
-	color: #001428;
-	background-color: #001428;
+.card-label-banners:before,
+.card-label-banners:after {
+	color: var(--color-super-dark-blue);
+	background-color: var(--color-super-dark-blue);
 }
 
 .card-label-videos {
@@ -910,16 +967,17 @@ video {
 	align-items: center;
 	gap: 15px;
 	/* border-radius: 20px 0px 0 0; */
-	/* border-top: 1px solid #0054a6;
-	border-left: 1px solid #0054a6;
-	border-right: 1px solid #0054a6;
-	border-bottom: 1px solid #CCCCCC; */
-	background-color: #CCCCCC;
+	/* border-top: 1px solid var(--color-medium-blue);
+	border-left: 1px solid var(--color-medium-blue);
+	border-right: 1px solid var(--color-medium-blue);
+	border-bottom: 1px solid var(--color-light-gray); */
+	background-color: var(--color-light-gray);
 }
 
-.card-label-videos:before, .card-label-videos:after {
-	color: #CCCCCC;
-	background-color: #CCCCCC;
+.card-label-videos:before,
+.card-label-videos:after {
+	color: var(--color-light-gray);
+	background-color: var(--color-light-gray);
 }
 
 .card-label-dev {
@@ -929,16 +987,17 @@ video {
 	gap: 15px;
 	justify-content: center;
 	/* border-radius: 20px 0px 0 0; */
-	/* border-top: 1px solid #0054a6;
-	border-left: 1px solid #0054a6;
-	border-right: 1px solid #0054a6;
-	border-bottom: 1px solid #00a1e4; */
-	background-color: #00a1e4;
+	/* border-top: 1px solid var(--color-medium-blue);
+	border-left: 1px solid var(--color-medium-blue);
+	border-right: 1px solid var(--color-medium-blue);
+	border-bottom: 1px solid var(--color-light-blue); */
+	background-color: var(--color-light-blue);
 }
 
-.card-label-dev:before, .card-label-dev:after {
-	color: #00a1e4;
-	background-color: #00a1e4;
+.card-label-dev:before,
+.card-label-dev:after {
+	color: var(--color-light-blue);
+	background-color: var(--color-light-blue);
 }
 
 /* React Icon Only */
@@ -950,18 +1009,42 @@ video {
 	/* transform: scale(0.8); */
 }
 
+.card-label-contact {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	gap: 15px;
+	/* border-radius: 20px 0px 0 0; */
+	/* border-top: 1px solid var(--color-medium-blue);
+	border-left: 1px solid var(--color-medium-blue);
+	border-right: 1px solid var(--color-medium-blue);
+	border-bottom: 1px solid var(--color-super-dark-blue); */
+	background-color: var(--color-light-gray);
+}
+
+.card-label-contact:before,
+.card-label-contact:after {
+	color: var(--color-light-gray);
+	background-color: var(--color-light-gray);
+}
+
 .banners-BG {
-	background: linear-gradient(to bottom, #cccccc 4%, #000000 20%);
+	background: linear-gradient(to bottom, var(--color-light-gray) 4%, #000000 20%);
 	flex-direction: column;
 }
 
 .videos-BG {
-	background: linear-gradient(to bottom, #0054a6 4%, #000000 20%);
+	background: linear-gradient(to bottom, var(--color-medium-blue) 4%, #000000 20%);
 	flex-direction: column;
 }
 
 .dev-BG {
-	background: linear-gradient(to bottom, #333333 4%, #000000 40%);
+	background: linear-gradient(to bottom, var(--color-dark-gray) 4%, #000000 40%);
+	flex-direction: column;
+}
+
+.contact-BG {
+	background: linear-gradient(to bottom, var(--color-super-dark-blue) 4%, #000000 40%);
 	flex-direction: column;
 }
 
@@ -969,13 +1052,9 @@ video {
 	background-color: #0FF;
 }
 
-.contact-BG {
-	background-color: #003ae8;
-}
-
 .three-tabs-BG {
-	/* background-color: #cccccc; */
-	background: linear-gradient(to bottom, #CCCCCC 0%, #aaaaaa 15%, #666666 50%, #333333 95%);
+	/* background-color: var(--color-light-gray); */
+	background: linear-gradient(to bottom, var(--color-light-gray) 0%, var(--color-medium-gray) 15%, #666666 50%, var(--color-dark-gray) 95%);
 }
 
 .brands {
@@ -1005,7 +1084,7 @@ video {
 	display: flex;
 	flex-direction: column;
 	position: relative;
-	background-color: #00a1e4;
+	background-color: var(--color-light-blue);
 	border-radius: 25px 0px 25px 0px;
 	padding: 20px;
 	max-width: 90%;
@@ -1022,7 +1101,7 @@ video {
 	background: none;
 	border: none;
 	font-size: 32px;
-	color: #333333;
+	color: var(--color-dark-gray);
 	cursor: pointer;
 	line-height: 1;
 	padding: 0;
@@ -1033,7 +1112,7 @@ video {
 }
 
 .modal-close-btn:hover {
-	color: #00a1e4;
+	color: var(--color-light-blue);
 }
 
 .presentation-banner {
@@ -1205,21 +1284,23 @@ video {
 
 .carousel-dot:hover {
 	background: rgba(255, 255, 255, 0.6);
-	background: #00a1e4;
+	background: var(--color-light-blue);
 	transform: scale(1.2);
 }
 
 .carousel-dot.active {
 	background: #fff;
-	background: #0054a6ff;
+	background: var(--color-medium-blue)ff;
 	width: 14px;
 	height: 14px;
 }
 
 
 @media (max-width: 768px) {
+
 	/* HTML font size */
-	html, body {
+	html,
+	body {
 		font-size: 1.15em;
 	}
 
@@ -1228,7 +1309,7 @@ video {
 	}
 
 	/* Video Thumbnails */
-	.thumbnails-container p ~ .video-size {
+	.thumbnails-container p~.video-size {
 		transform: scale(0.85);
 	}
 
@@ -1294,7 +1375,7 @@ video {
 		align-self: center;
 		border-radius: 100px 0 100px 0;
 		border-radius: 50%;
-		border: 0.75em solid #00a1e4;
+		border: 0.75em solid var(--color-light-blue);
 		margin-top: 20px;
 		min-width: 250px;
 		max-width: 200px;

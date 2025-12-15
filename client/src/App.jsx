@@ -6,7 +6,7 @@ import About from './components/Site/About';
 import ThreeTabs from './components/Site/ThreeTabs';
 import BrandCrawler from './components/Site/BrandCrawler';
 import CaseStudies from './components/Site/CaseStudies';
-import ContactMe from './components/Site/ContactMe';
+import Contact from './components/Site/Contact';
 import Modal from './components/Site/Modal';
 import SampleBanners from './components/Site/SampleBanners';
 import SampleVideos from './components/Site/SampleVIdeos';
@@ -45,7 +45,7 @@ function App() {
 		<>
 		<Navigation ref={navRef} pathname={pathname} isFixed={isFixed} />
 		<div className="wrapper">
-			<ThreeTabs id="about-me" onOpenModal={(content, src, shouldShowScrubber = true) => {
+			<ThreeTabs id="about" onOpenModal={(content, src, shouldShowScrubber = true) => {
 				setModalContent(content);
 				setModalSrc(src);
 				setShowScrubber(shouldShowScrubber);
@@ -69,7 +69,7 @@ function App() {
 				setShowScrubber(shouldShowScrubber);
 				setIsModalOpen(true);
 			}} />
-			<ContactMe id="contact" />
+			<Contact id="contact" className="contact-BG" />
 			<Footer />
 		</div>
 
