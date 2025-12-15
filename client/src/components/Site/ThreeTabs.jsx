@@ -17,6 +17,8 @@ import Icon_JavaScript from "../Icon_JavaScript";
 import Icon_XD from "../Icon_XD";
 import Scrubber from "./Scrubber";
 import About from "./About";
+import Professional from "./Professional";
+import Personal from "./Personal";
 
 const ThreeTabs = ({ id, className, onOpenModal }) => {
 
@@ -163,12 +165,12 @@ const ThreeTabs = ({ id, className, onOpenModal }) => {
 
 					{/* Card 2 */}
 					<div className={`card card-2 ${activeCard !== 2 ? 'hidden' : 'selected'}`}>
-						<About />
+						<Professional />
 					</div>
 
 					{/* Card 3 */}
 					<div className={`card card-3 ${activeCard !== 3 ? 'hidden' : 'selected'}`}>
-						<About />
+						<Personal />
 					</div>
 
 				</div>
