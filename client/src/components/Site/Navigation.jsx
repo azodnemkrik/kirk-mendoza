@@ -25,7 +25,7 @@ const Navigation = forwardRef(({ id, className, pathname, isFixed }, ref) => {
 				<HamburgerMenu />
 				<nav >
 					<ul className="navigation-bar">
-						{/* <li>
+						<li>
 							<Link to={{ pathname: '/', hash: '#about-me' }} className="nav-link link-about-me">About Me</Link>
 						</li>
 						<li>
@@ -39,7 +39,7 @@ const Navigation = forwardRef(({ id, className, pathname, isFixed }, ref) => {
 						</li>
 						<li>
 							<Link to={{ pathname: '/', hash: '#contact' }} className="nav-link link-about-me">Contact</Link>
-						</li> */}
+						</li>
 					</ul>
 				</nav>
 			</div>

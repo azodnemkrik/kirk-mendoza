@@ -11,6 +11,7 @@ import Modal from './components/Site/Modal';
 import SampleBanners from './components/Site/SampleBanners';
 import SampleVideos from './components/Site/SampleVIdeos';
 import SampleDev from './components/Site/SampleDev';
+import Footer from './components/Site/Footer';
 
 function App() {
 
@@ -71,6 +72,7 @@ function App() {
 			}} />
 			<BrandCrawler />
 			<ContactMe id="contact" />
+			<Footer />
 		</div>
 
 		<Modal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} src={modalSrc} showScrubber={showScrubber}>
