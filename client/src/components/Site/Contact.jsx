@@ -44,9 +44,10 @@ const Contact = ({ id, className, onOpenModal }) => {
 
 				<div className="contact-container2">
 
-					{/* <div className="section-content"> */}
-						<div className="thumbnails-container">
+						<div className="section-content">
+							
 							<p> This is where Contact information would go. The idea is to provide ways for visitors to get in touch. This will be populated with relevant contact details and a form.</p>
+
 							<form action={reachOut}>
 								<label>
 									Name:<input className="" type="text" name="name" />
@@ -64,8 +65,7 @@ const Contact = ({ id, className, onOpenModal }) => {
 								<button type="submit">Submit</button>
 							</form>
 						</div>
-					{/* </div> */}
-				</div>
+\				</div>
 			</div>
 		</>
 	)
@@ -83,7 +83,7 @@ export default Contact;
 
 // 		<div className="banners-container2">
 // 			<div className="section-content">
-// 				<div className="thumbnails-container">
+// 				<div className="section-content">
 // 					<p>These are some examples. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod sunt in ratione dolorem facere neque ut, id quibusdam et eum fugit enim quos eaque dolores est! Suscipit quibusdam ab beatae. Illum facere labore est corporis fugit accusantium numquam earum itaque provident harum. Laborum in quibusdam vel iusto aliquam molestiae facere?</p>
 // 					<div className="thumbnail">
 // 						<div className="thumbnail-info">

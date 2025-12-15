@@ -39,9 +39,11 @@ const SampleBanners = ({ id, className, onOpenModal }) => {
 				</div>
 
 				<div className="banners-container2">
-					{/* <div className="section-content"> */}
-						<div className="thumbnails-container">
+
+						<div className="section-content">
+							
 							<p>These are some examples. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod sunt in ratione dolorem facere neque ut, id quibusdam et eum fugit enim quos eaque dolores est! Suscipit quibusdam ab beatae. Illum facere labore est corporis fugit accusantium numquam earum itaque provident harum. Laborum in quibusdam vel iusto aliquam molestiae facere?</p>
+
 							<div className="thumbnail">
 								<div className="thumbnail-info">
 									<div className="thumbnail-info-top container">
@@ -62,6 +64,7 @@ const SampleBanners = ({ id, className, onOpenModal }) => {
 								</div>
 								<img src={thumb1} width="300" height="250" className="thumbnail-image" />
 							</div>
+
 							<div className="thumbnail">
 								<div className="thumbnail-info">
 									<div className="thumbnail-info-top container">
@@ -81,6 +84,7 @@ const SampleBanners = ({ id, className, onOpenModal }) => {
 								</div>
 								<img src={thumb2} width="300" height="250" className="thumbnail-image" />
 							</div>
+
 							<div className="thumbnail">
 								<div className="thumbnail-info">
 									<div className="thumbnail-info-top container">
@@ -100,6 +104,7 @@ const SampleBanners = ({ id, className, onOpenModal }) => {
 								</div>
 								<img src={thumb3} width="300" height="250" className="thumbnail-image" />
 							</div>
+
 							<div className="thumbnail">
 								<div className="thumbnail-info">
 									<div className="thumbnail-info-top container">
@@ -120,6 +125,7 @@ const SampleBanners = ({ id, className, onOpenModal }) => {
 								</div>
 								<img src={thumb4} width="300" height="250" className="thumbnail-image" />
 							</div>
+
 							<div className="thumbnail">
 								<div className="thumbnail-info">
 									<div className="thumbnail-info-top container">
@@ -140,6 +146,7 @@ const SampleBanners = ({ id, className, onOpenModal }) => {
 								</div>
 								<img src={thumb5} width="300" height="250" className="thumbnail-image" />
 							</div>
+
 							<div className="thumbnail">
 								<div className="thumbnail-info">
 									<div className="thumbnail-info-top container">
@@ -159,10 +166,10 @@ const SampleBanners = ({ id, className, onOpenModal }) => {
 								</div>
 								<img src={thumb6} width="300" height="250" className="thumbnail-image" />
 							</div>
+							
 						</div>
 						<Peekaboo id="peekaboo-container" onClick={() => onOpenModal(<video className="flash-content" src="https://www.kirk-mendoza.com/video/pg-site.mp4" type="video/mp4" autoPlay loop muted controls width="auto" height="20%"></video>, "https://www.kirk-mendoza.com/video/pg-site.mp4")} />
 					</div>
-				{/* </div> */}
 
 			</div>
 		</>

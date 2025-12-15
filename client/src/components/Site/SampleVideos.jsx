@@ -28,9 +28,10 @@ const SampleVideos = ({ id, className, onOpenModal }) => {
 
 				<div className="videos-container2">
 
-					{/* <div className="section-content"> */}
-						<div className="thumbnails-container">
+						<div className="section-content">
+
 							<p>These are some examples. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod sunt in ratione dolorem facere neque ut, id quibusdam et eum fugit enim quos eaque dolores est! Suscipit quibusdam ab beatae. Illum facere labore est corporis fugit accusantium numquam earum itaque provident harum. Laborum in quibusdam vel iusto aliquam molestiae facere?</p>
+
 							<div className="thumbnail video-size">
 								<div className="thumbnail-info video-size">
 									<div className="thumbnail-info-top container">
@@ -38,7 +39,6 @@ const SampleVideos = ({ id, className, onOpenModal }) => {
 										<div className="thumbnail-description">Script Writing • Storyboard • Illustration<br />Animation • Editing</div>
 									</div>
 									<div className="thumbnail-info-bottom container">
-
 										<div onClick={() => onOpenModal(<div><h2>Ogilvy: Magic Intro</h2><video src="https://www.kirk-mendoza.com/video/ogilvy_magic_intro.mp4" type="video/mp4" autoPlay controls width="auto" min-width="100%" height="20%" background="cover"></video></div>, "https://www.kirk-mendoza.com/video/ogilvy_magic_intro.mp4", false)} className="nav-link">View</div>
 										<div className="container skills-used">
 											<Icon_AfterEffects className="skillIcon" />
@@ -50,6 +50,7 @@ const SampleVideos = ({ id, className, onOpenModal }) => {
 								</div>
 								<img src={thumb1} width="300" height="250" className="thumbnail-image video-size" />
 							</div>
+
 							<div className="thumbnail video-size">
 								<div className="thumbnail-info video-size">
 									<div className="thumbnail-info-top container">
@@ -69,6 +70,7 @@ const SampleVideos = ({ id, className, onOpenModal }) => {
 								</div>
 								<img src={thumb2} width="300" height="250" className="thumbnail-image video-size" />
 							</div>
+
 							<div className="thumbnail video-size">
 								<div className="thumbnail-info video-size">
 									<div className="thumbnail-info-top container">
@@ -87,6 +89,7 @@ const SampleVideos = ({ id, className, onOpenModal }) => {
 								</div>
 								<img src={thumb3} width="300" height="250" className="thumbnail-image video-size" />
 							</div>
+
 							<div className="thumbnail video-size">
 								<div className="thumbnail-info video-size">
 									<div className="thumbnail-info-top container">
@@ -106,6 +109,7 @@ const SampleVideos = ({ id, className, onOpenModal }) => {
 								</div>
 								<img src={thumb4} width="300" height="250" className="thumbnail-image video-size" />
 							</div>
+
 							<div className="thumbnail " style={{ width: '250px', height: '375px' }}>
 								<div className="thumbnail-info "  style={{ width: '250px', height: '375px' }}>
 									<div className="thumbnail-info-top container">
@@ -125,9 +129,8 @@ const SampleVideos = ({ id, className, onOpenModal }) => {
 								</div>
 								<img src={thumb5} width="250" height="375" className="thumbnail-image" />
 							</div>
-						</div>
-					{/* </div> */}
 
+						</div>
 				</div>
 			</div>
 		</>
