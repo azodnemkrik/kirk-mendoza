@@ -28,7 +28,7 @@ const SampleVideos = ({ id, className, onOpenModal }) => {
 
 				<div className="videos-container2">
 
-					<div className="section-content">
+					{/* <div className="section-content"> */}
 						<div className="thumbnails-container">
 							<p>These are some examples. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod sunt in ratione dolorem facere neque ut, id quibusdam et eum fugit enim quos eaque dolores est! Suscipit quibusdam ab beatae. Illum facere labore est corporis fugit accusantium numquam earum itaque provident harum. Laborum in quibusdam vel iusto aliquam molestiae facere?</p>
 							<div className="thumbnail video-size">
@@ -126,7 +126,7 @@ const SampleVideos = ({ id, className, onOpenModal }) => {
 								<img src={thumb5} width="250" height="375" className="thumbnail-image" />
 							</div>
 						</div>
-					</div>
+					{/* </div> */}
 
 				</div>
 			</div>

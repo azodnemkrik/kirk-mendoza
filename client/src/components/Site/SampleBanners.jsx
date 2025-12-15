@@ -39,7 +39,7 @@ const SampleBanners = ({ id, className, onOpenModal }) => {
 				</div>
 
 				<div className="banners-container2">
-					<div className="section-content">
+					{/* <div className="section-content"> */}
 						<div className="thumbnails-container">
 							<p>These are some examples. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod sunt in ratione dolorem facere neque ut, id quibusdam et eum fugit enim quos eaque dolores est! Suscipit quibusdam ab beatae. Illum facere labore est corporis fugit accusantium numquam earum itaque provident harum. Laborum in quibusdam vel iusto aliquam molestiae facere?</p>
 							<div className="thumbnail">
@@ -162,7 +162,7 @@ const SampleBanners = ({ id, className, onOpenModal }) => {
 						</div>
 						<Peekaboo id="peekaboo-container" onClick={() => onOpenModal(<video className="flash-content" src="https://www.kirk-mendoza.com/video/pg-site.mp4" type="video/mp4" autoPlay loop muted controls width="auto" height="20%"></video>, "https://www.kirk-mendoza.com/video/pg-site.mp4")} />
 					</div>
-				</div>
+				{/* </div> */}
 
 			</div>
 		</>
