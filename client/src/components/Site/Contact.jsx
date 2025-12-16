@@ -42,13 +42,13 @@ const Contact = ({ id, className, onOpenModal }) => {
 					<h1 className="card-label card-label-contact">Contact<span className="material-symbols-outlined asIcon">mail</span></h1>
 				</div>
 
-				<div className="contact-container2">
+				<div className="contact-container2 section-container">
 
 						<div className="section-content">
-							
+
 							<p> This is where Contact information would go. The idea is to provide ways for visitors to get in touch. This will be populated with relevant contact details and a form.</p>
 
-							<form action={reachOut}>
+							<form className="contact-form" action={reachOut}>
 								<label>
 									Name:<input className="" type="text" name="name" />
 								</label>

@@ -49,11 +49,11 @@ const SampleDev = ({ id, className, onOpenModal }) => {
 		<>
 			<div id={id} className={`centered-container ${className}`}>
 
-				<div className="dev-container">
+				<div className="dev-container ">
 					<h1 onClick={() => { handleCardClick(1) }} className={`card-label card-label-dev`}>React <Icon_React className="icon-react" /></h1>
 				</div>
 
-				<div className="dev-container2">
+				<div className="dev-container2 section-container">
 
 					<div className="section-content">
 						<p>These are some examples. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod sunt in ratione dolorem facere neque ut, id quibusdam et eum fugit enim quos eaque dolores est! Suscipit quibusdam ab beatae. Illum facere labore est corporis fugit accusantium numquam earum itaque provident harum. Laborum in quibusdam vel iusto aliquam molestiae facere?</p>
