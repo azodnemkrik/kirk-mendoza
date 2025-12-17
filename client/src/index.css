@@ -251,6 +251,7 @@ svg {
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
+	justify-content: space-between;
 	align-items: center;
 	width: 300px;
 	/* Fixed width */
@@ -262,6 +263,15 @@ svg {
 	background-color: #000000E6;
 	opacity: 0;
 	visibility: hidden;
+	gap: 1rem;
+}
+
+.thumbnail-info-top {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	flex: 3;
+	/* gap: 1em; */
 }
 
 .thumbnail-info .thumbnail-info-title {
@@ -298,6 +308,23 @@ svg {
 	font-size: 1em;
 	line-height: 1.5;
 	text-align: center;
+}
+
+.thumbnail-button {
+	/* position: absolute; */
+	bottom: 0;
+	background-color: var(--color-light-blue);
+	color: var(--color-dark-gray);
+	width: 100%;
+	text-align: center;
+	/* font-family: 'SegoePro Semibold', sans-serif; */
+	font-size: 1em;
+	padding: 8px 0px;
+	/* border: none; */
+	/* border-radius: 5px; */
+	cursor: pointer;
+	transition: background-color .2s, color .2s;
+	text-decoration: none;
 }
 
 /* Material Symbols filled variant */
@@ -733,8 +760,8 @@ li {
 }
 
 .peekaboo-container {
-	position: absolute;
-	bottom: 0;
+	/* position: absolute; */
+	/* bottom: 0; */
 	right: 0;
 	width: 150px;
 	width: 7em;
