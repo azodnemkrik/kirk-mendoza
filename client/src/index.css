@@ -60,11 +60,20 @@ h1 {
 	font-weight: normal;
 	font-family: BulletSmallCaps, sans-serif;
 	line-height: .75em;
-	line-height: .5em;
+	line-height: .45em;
 }
 
 h2 {
+	font-family: 'YanoneKaffeesatz-Bold';
+	color: var(--color-dark-gray);
+	font-style: normal;
 	font-weight: bold;
+	/* font-size: 3.25em; */
+	font-size: calc(1.5vw + 1.5vh);
+	font-size: 3em;
+	line-height: 1.2;
+	line-height: 1rem;
+	line-height: 1.75rem;
 	font-variant: all-small-caps;
 }
 
@@ -118,6 +127,11 @@ h2 {
 @font-face {
 	font-family: 'BulletSmallCaps';
 	src: url(./fonts/BulletSmallCaps.woff) format('woff')
+}
+
+@font-face {
+	font-family: 'YanoneKaffeesatz-Bold';
+	src: url(./fonts/YanoneKaffeesatz-Bold.woff) format('woff')
 }
 
 /* ----UNIVERSALS---- */
@@ -469,6 +483,17 @@ svg {
 	align-self: center;
 }
 
+.profile-container {
+	display: flex;
+	flex: 1;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	width: auto;
+	height: auto;
+	margin-right: 20px;
+}
+
 .profileImage {
 	flex: 1;
 	/* align-self: flex-start; */
@@ -493,26 +518,32 @@ svg {
 	align-items: center;
 	flex-direction: row;
 	padding: .5% 8% 0;
-	gap: 5%;
+	gap: 2%;
 	height: auto;
 	width: auto;
 	max-width: 1380px;
-	margin-top: 1vh;
+	/* margin-top: 1vh; */
+	margin: 3vh 0;
 	/* min-height: 500px; */
 }
 
+
 .aboutText {
-	flex: 2;
+	flex: 3;
 	gap: .875em;
-	gap: 1em;
+	gap: 1.15em;
 	display: flex;
 	flex-direction: column;
 	align-items: flex-start;
 	height: auto;
 	width: auto;
 	min-width: 300px;
-	max-width: 900px;
+	max-width: 600px;
 	padding: 10px 0px 10px 0px;
+}
+
+.aboutText p {
+	/* width: 500px */
 }
 
 /* Skills Styles */
@@ -523,10 +554,11 @@ svg {
 	flex-wrap: wrap;
 	padding: 0;
 	gap: 20px;
+	gap: 10px;
 	height: auto;
 	width: auto;
 	max-width: 1380px;
-	margin-bottom: 20px;
+	/* margin-bottom: 20px; */
 }
 
 li {
@@ -1073,11 +1105,11 @@ video {
 	align-items: center;
 	width: 100%;
 	max-width: 1380px;*/
-	margin: 30px auto; 
+	margin: 30px auto;
 }
 
 
-.contact-content div h1{
+.contact-content div h1 {
 	font-size: 3em;
 	line-height: .5em;
 	font-style: small-caps;
@@ -1098,6 +1130,7 @@ video {
 	border-radius: 30px 0 30px 0;
 	box-shadow: #000000A6 0px 16px 24px;
 }
+
 .contact-form div label,
 .contact-form div input,
 .contact-form div select,
@@ -1351,8 +1384,22 @@ video {
 	}
 
 	h1 {
-		font-size: 3.1rem;
+		font-size: 3.25rem;
 	}
+
+	h2 {
+		font-size: 2.3rem;
+		white-space: nowrap;
+	}
+
+	.aboutText {
+		align-items: center;
+	}
+
+	.aboutText p {
+		width: auto;
+	}
+
 
 	/* Video Thumbnails */
 	.section-content p~.video-size {
