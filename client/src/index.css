@@ -532,6 +532,7 @@ svg {
 	flex: 3;
 	gap: .875em;
 	gap: 1.15em;
+	gap: .5em;
 	display: flex;
 	flex-direction: column;
 	align-items: flex-start;

@@ -38,8 +38,12 @@ const About = ({ id, className }) => {
 				<div className="aboutText">
 					{/* <p>As a front-end web developer, I've spent the last 20 years building digital ad experiences that are clean, fast, and easy to use. At the same time, my animation background pulled me into motion graphics and video editing, and that blend of visuals and code is where I do my best work.</p> */}
 					<h1>Hi, I'm <span className="accent-blue">Kirk</span>!</h1>
-					<h2>Web Dev <span className="accent-blue">•</span> Animation <span className="accent-blue">•</span> Motion Graphics</h2>
+					<br/>
+					<h2> Web Dev <span className="accent-blue">•</span> Animation <span className="accent-blue">•</span> Motion Graphics</h2>
 					<p>With 20+ years of experience, blending visuals and code to solve problems is where I do my best work.</p>
+					<br/>
+					<h2><span className="accent-blue">Full-Stack</span> Developer</h2>
+					<p>Full-Stack certified, expanding into back-end and React.</p>
 					<div className="skills-container">
 						<Icon_HTML className="grayScale" />
 						<Icon_CSS className="grayScale" />
@@ -51,11 +55,10 @@ const About = ({ id, className }) => {
 						<Icon_Illustrator className="grayScale" />
 						<Icon_AfterEffects className="grayScale" />
 						<Icon_Premiere className="grayScale" />
+						<Icon_React className="grayScale" />
 					</div>
 
-					<h2>Recently certified <span className="accent-blue">Full-Stack</span> Developer</h2>
 					<div className="skills-container">
-						<Icon_React className="grayScale"/>
 					</div>
 
 					{/* <p>I've had the opportunity to work with a number of recognizable brands and agencies, collaborating closely with design, marketing, and technical teams. Clear communication is one of my strongest assets, and clients appreciate that I make the process smooth, efficient, and easy to understand.</p>
