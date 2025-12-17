@@ -1042,7 +1042,7 @@ video {
 
 .contact-container h1 {
 	margin: 0px 0px 0px 0px;
-	color: var(--color-dark-gray);
+	color: var(--color-darkest);
 	box-shadow: #000000A6 5px -5px 5px 1px;
 }
 
@@ -1052,7 +1052,7 @@ video {
 }
 
 .contact-container2 {
-	color: #111111;
+	color: var(--color-dark-gray);
 	width: 100%;
 	height: 100%;
 	margin: -1px 0px;
@@ -1066,6 +1066,175 @@ video {
 	box-shadow: #00000046 0px -3px 3px 2px;
 }
 
+.contact-content {
+	/* display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+	max-width: 1380px;*/
+	margin: 30px auto; 
+}
+
+
+.contact-content div h1{
+	font-size: 3em;
+	line-height: .5em;
+	font-style: small-caps;
+}
+
+.contact-form {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+	max-width: 600px;
+	gap: 15px;
+	margin-top: 20px;
+	margin: 10px 20px 20px 20px;
+	background-color: var(--color-light-blue);
+	padding: 30px;
+	border-radius: 30px 0 30px 0;
+	box-shadow: #000000A6 0px 16px 24px;
+}
+.contact-form div label,
+.contact-form div input,
+.contact-form div select,
+.contact-form div textarea,
+.contact-form button {
+	font-family: 'SegoePro Semibold', sans-serif;
+}
+
+.contact-form div {
+	width: 100%;
+}
+
+
+.contact-form div label {
+	font-size: .75em;
+	color: var(--color-dark-gray);
+	color: var(--color-medium-blue);
+	line-height: 0;
+}
+
+.contact-form div input {
+	width: 100%;
+	border: 1px solid var(--color-medium-gray);
+	border-radius: 20px 0 20px 0;
+	border-radius: 5px;
+	font-size: 1em;
+	padding: 10px;
+	box-sizing: border-box;
+}
+
+.contact-form div input::placeholder,
+.contact-form div textarea::placeholder {
+	color: var(--color-medium-gray);
+	font-style: italic;
+}
+
+.contact-form div select {
+	-webkit-appearance: none;
+	appearance: none;
+	width: 100%;
+	padding: 10px;
+	background-color: #f0f0f0;
+	border: 1px solid var(--color-medium-gray);
+	border-radius: 5px;
+	border-right: 16px solid transparent;
+	font-size: 1rem;
+	cursor: pointer;
+
+	/* Add a custom SVG arrow as a background image */
+	/* background-image: url('data:image/svg+xml;charset=UTF-8,<svg xmlns="www.w3.org" width="12" height="12" viewBox="0 0 12 12"><path fill="#000000" d="M10 3L6 9 2 3z"/></svg>'); */
+	background-image: url('data:image/svg+xml;utf8,<svg fill=\"%230054a6\" height="16" viewBox="0 0 20 20" width="16" xmlns="http://www.w3.org/2000/svg"><polygon points="5,7 10,12 15,7"/></svg>');
+	background-repeat: no-repeat;
+	background-position: right 0em center;
+	background-size: 1em 1em;
+	background-repeat: no-repeat;
+	padding-right: 2.5em;
+
+	/* Adjust padding to prevent text from overlapping the arrow */
+	padding-right: 35px;
+
+}
+
+/* .contact-form div select:after {
+	color: var(--color-dark-blue);
+	content: 'dsfasdfasdfasdfasd▾';
+	position: absolute;
+	right: 15px;
+	pointer-events: none;
+} */
+
+.contact-form div textarea {
+	width: 100%;
+	height: 100px;
+	padding: 10px;
+	background-color: #f0f0f0;
+	border: 1px solid var(--color-medium-gray);
+	border-radius: 5px;
+	/* border-right: 16px solid transparent; */
+	font-size: 1rem;
+	cursor: pointer;
+	resize: vertical;
+	box-sizing: border-box;
+}
+
+.contact-form button {
+	background-color: var(--color-medium-blue);
+	color: #FFFFFF;
+	border: none;
+	padding: 0px;
+	font-size: 1em;
+	/* border-radius: 20px 0 20px 0; */
+	cursor: pointer;
+	line-height: 1;
+	transition: background-color 0.3s;
+}
+
+.contact-form button:before,
+.contact-form button:after {
+	content: '.';
+	color: var(--color-medium-blue);
+	display: inline-block;
+	position: relative;
+	left: -15px;
+	right: 0;
+	width: auto;
+	height: 20px;
+	/* height: auto; */
+	background-color: var(--color-medium-blue);
+	;
+	/* background-color: red; */
+	padding: 8px 8px;
+	transform: skewX(-16deg);
+	border-radius: 10px 0 0 0;
+	transition: .25s;
+}
+
+.contact-form button:after {
+	left: 15px;
+	border-radius: 0px 0px 10px 0px;
+}
+
+
+
+.contact-form button:hover {
+	background-color: var(--color-white);
+	color: var(--color-dark-blue);
+}
+
+.contact-form button:hover::before {
+	background-color: var(--color-white);
+	color: var(--color-white);
+}
+
+.contact-form button:hover::after {
+	background-color: var(--color-white);
+	color: var(--color-white);
+}
 
 /* Modal Styles */
 
@@ -1239,6 +1408,7 @@ video {
 	.nav-link {
 		font-size: 1.3em;
 		margin: 8px 24px;
+		line-height: .75;
 	}
 
 	.nav-link:before,

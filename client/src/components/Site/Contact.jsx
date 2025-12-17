@@ -44,28 +44,35 @@ const Contact = ({ id, className, onOpenModal }) => {
 
 				<div className="contact-container2 section-container">
 
-						<div className="section-content">
+					<div className="section-content contact-content">
 
-							<p> This is where Contact information would go. The idea is to provide ways for visitors to get in touch. This will be populated with relevant contact details and a form.</p>
-
-							<form className="contact-form" action={reachOut}>
-								<label>
-									Name:<input className="" type="text" name="name" />
-								</label>
-								<label>
-									Email<input className="" type="text" name="email" />
-								</label>
-								<label>
-									Subject:<br /> <input className="" type="text" name="subject" />
-								</label>
-								<label>
-									Message:<br /> <input className="" type="text" name="message" />
-								</label>
-
-								<button type="submit">Submit</button>
-							</form>
+						<div>
+							<h1 >Let's work <span className="accent-blue">together</span>!</h1>
+							<p>Tell me about your project and how I can help.</p>
 						</div>
-\				</div>
+						<form className="contact-form" action={reachOut}>
+							<div><label> Name*</label><br />
+								<input className="name" type="text" name="name" required placeholder="Inigo Montoya"/>
+							</div>
+							<div><label>Email*</label><br />
+								<input className="email" type="email" name="email" required placeholder="gproberts@pptd.com"/>
+							</div>
+							<div><label>Subject</label><br />
+								<select className="subject"  name="subject">
+									<option value="" defaultValue >-- Select One --</option>
+									<option value="I've got a QUESTION..." selected >I've got a QUESTION...</option>
+									<option value="I'd like to COLLABORATE..." >I'd like to COLLABORATE...</option>
+									<option value="I'd like to HIRE YOU...">I'd like to HIRE YOU...</option>
+									<option value="I'm just SAYING HI!">I'm just SAYING HI!</option>
+								</select>
+							</div>
+							<div><label>Message</label><br />
+								<textarea className="message" name="message" placeholder='"Hey Kirk, I really like your site...."'/>
+							</div>
+							<button type="submit" >Submit</button>
+						</form>
+					</div>
+				</div>
 			</div>
 		</>
 	)
