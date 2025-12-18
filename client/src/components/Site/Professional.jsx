@@ -36,7 +36,7 @@ const Professional = ({ id, className }) => {
 				<div>
 				</div>
 				<div className="aboutText">
-					<h1>I'm a <span className="accent-blue">Professional</span>!</h1><br/>
+					<h1>I'm a <span className="accent-blue">Boy at <span className="material-symbols-outlined filled" >favorite</span> </span>!</h1><br/>
 					<h2>I enjoy puzzle solving.</h2>
 					<p>I believe in clear communication, thoughtful problem-solving, and building solutions that balance performance, design, and usability.</p>
 				</div>

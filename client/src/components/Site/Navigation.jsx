@@ -26,19 +26,20 @@ const Navigation = forwardRef(({ id, className, pathname, isFixed }, ref) => {
 				<nav >
 					<ul className="navigation-bar">
 						<li>
-							<Link to={{ pathname: '/', hash: '#about' }} className="nav-link link-about-me">About Me</Link>
+							<div onClick={() => { window.location.hash = '#about'; }} className="link-about-me">About Me</div>
+							{/* <div onClick={() => { handleCardClick(1) }} className={`card-label-3 three-tabs-button ${activeCard === 1 ? 'selected' : ''}`}>About Me</div> */}
 						</li>
 						<li>
-							<Link to={{ pathname: '/', hash: '#banners' }} className="nav-link link-banners">Banners</Link>
+							<div onClick={() => { window.location.hash = '#banners'; }} className="link-banners">Banners</div>
 						</li>
 						<li>
-							<Link to={{ pathname: '/', hash: '#videos' }} className="nav-link link-videos">Videos</Link>
+							<div onClick={() => { window.location.hash = '#videos'; }} className="link-videos">Videos</div>
 						</li>
 						<li>
-							<Link to={{ pathname: '/', hash: '#react' }} className="nav-link link-react">React</Link>
+							<div onClick={() => { window.location.hash = '#react'; }} className="link-react">React</div>
 						</li>
 						<li>
-							<Link to={{ pathname: '/', hash: '#contact' }} className="nav-link link-contact">Contact</Link>
+							<div onClick={() => { window.location.hash = '#contact'; }} className="link-contact">Contact</div>
 						</li>
 					</ul>
 				</nav>

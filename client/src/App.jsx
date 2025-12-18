@@ -32,7 +32,7 @@ function App() {
 		}
 
 		const handleScroll = () => {
-			setIsFixed(window.scrollY > 150);
+			setIsFixed(window.scrollY > 30000);
 		};
 
 		window.addEventListener('scroll', handleScroll);
