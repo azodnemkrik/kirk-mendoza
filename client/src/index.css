@@ -25,6 +25,7 @@
 	--color-black-30: #0000004D;
 	--color-black-65: #000000A6;
 	--color-black-90: #000000E6;
+
 }
 
 body,
@@ -419,12 +420,12 @@ svg {
 	height: auto;
 	line-height: 100%;
 	cursor: pointer;
-	
+
 	padding: 8px 20px;
 	border-radius: 10px 0 10px 0;
 }
 
-.navigation-bar li div{
+.navigation-bar li div {
 	text-decoration: none;
 	color: var(--color-white);
 	transform: skewX(15deg);
@@ -435,63 +436,6 @@ svg {
 	background-color: var(--color-light-blue);
 	color: var(--color-dark-gray);
 }
-
-
-/* .nav-link {
-	white-space: nowrap;
-	display: inline-block;
-	margin: 4px 20px;
-	padding: 0px 0px;
-	color: #ffffff;
-	background-color: var(--color-medium-blue);
-	transition: .25s;
-	text-decoration: none;
-	width: auto;
-	height: auto;
-	line-height: 100%;
-	
-	padding: 8px 8px;
-	border-radius: 10px 0 10px 0;
-} */
-
-/* .nav-link:before,
-.nav-link:after {
-	content: '.';
-	color: var(--color-medium-blue);
-	display: inline-block;
-	position: relative;
-	left: -15px;
-	right: 0;
-	width: auto;
-	height: 20px;
-	height: auto;
-	background-color: var(--color-medium-blue);
-	background-color: red;
-	padding: 8px 8px;
-	transform: skewX(-16deg);
-	border-radius: 10px 0 0 0;
-	transition: .25s;
-} */
-
-/* .nav-link:after {
-	left: 15px;
-	border-radius: 0px 0px 10px 0px;
-}
-
-.nav-link:hover {
-	background-color: var(--color-light-blue);
-	color: var(--color-dark-gray);
-}
-
-.nav-link:hover::before {
-	background-color: var(--color-light-blue);
-	color: var(--color-light-blue);
-}
-
-.nav-link:hover::after {
-	background-color: var(--color-light-blue);
-	color: var(--color-light-blue);
-} */
 
 #navigation {
 	flex-direction: column;
@@ -537,8 +481,46 @@ svg {
 
 /* ----ABOUT---- */
 
+.about-sections {
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+	height: auto;
+	/* gap: 2rem; */
+	margin: 3rem;
+}
+
+details[name="about-section"] summary { 
+	white-space: nowrap;
+	margin-inline-start: 0rem;
+	list-style-position: outside;
+	font-family: 'YanoneKaffeesatz-Bold';
+	font-variant: all-small-caps;
+	font-size: 3em;
+	line-height: .75rem;
+
+	/* border-radius: 30px; */
+	/* background: oklch(95% 0.1812 38.35); */
+}
+
+details[name="about-section"]::details-content {
+	padding-block: 1rem;
+	width: 100%;
+	/* color: var(--color-dark-gray); */
+	/* font-family: 'BulletSmallCaps', sans-serif; */
+	/* line-height: 1em; */
+	/* justify-self: flex-start !important; */
+}
+
+
+summary::marker {
+	color: var(--color-medium-blue);
+	font-size: 2rem;
+}
+
+
 #about {
-    min-height: 5vh;
+	min-height: 5vh;
 }
 
 .intro-about {
@@ -572,7 +554,9 @@ svg {
 }
 
 .aboutBG {
-	/* background-color: var(--color-light-gray); */
+	background-color: var(--color-light-gray);
+	flex-direction: column;
+	align-items: flex-start;
 	/* background: linear-gradient(to bottom, var(--color-medium-gray) 10%, var(--color-light-gray) 95%); */
 }
 
@@ -580,8 +564,8 @@ svg {
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: center;
-	align-items: center;
 	align-items: flex-start;
+	align-items: center;
 	flex-direction: row;
 	padding: .5% 8% 0;
 	gap: 2%;
@@ -743,6 +727,7 @@ li {
 	transform: skewX(-15deg);
 	border-radius: 10px 0 10px 0;
 }
+
 /* ----Three Cards Styles---- */
 
 .three-cards-container2 {

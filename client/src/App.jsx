@@ -45,7 +45,13 @@ function App() {
 		<>
 		<Navigation ref={navRef} pathname={pathname} isFixed={isFixed} />
 		<div className="wrapper">
-			<ThreeTabs id="about" onOpenModal={(content, src, shouldShowScrubber = true) => {
+			{/* <ThreeTabs id="about" onOpenModal={(content, src, shouldShowScrubber = true) => {
+				setModalContent(content);
+				setModalSrc(src);
+				setShowScrubber(shouldShowScrubber);
+				setIsModalOpen(true);
+			}} /> */}
+			<About id="about" onOpenModal={(content, src, shouldShowScrubber = true) => {
 				setModalContent(content);
 				setModalSrc(src);
 				setShowScrubber(shouldShowScrubber);

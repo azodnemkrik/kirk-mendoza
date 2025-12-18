@@ -25,21 +25,21 @@ const Navigation = forwardRef(({ id, className, pathname, isFixed }, ref) => {
 				<HamburgerMenu />
 				<nav >
 					<ul className="navigation-bar">
-						<li>
-							<div onClick={() => { window.location.hash = '#about'; }} className="link-about-me">About Me</div>
+						<li onClick={() => { window.location.hash = '#about'; }} className="link-about-me">
+							<div>About Me</div>
 							{/* <div onClick={() => { handleCardClick(1) }} className={`card-label-3 three-tabs-button ${activeCard === 1 ? 'selected' : ''}`}>About Me</div> */}
 						</li>
-						<li>
-							<div onClick={() => { window.location.hash = '#banners'; }} className="link-banners">Banners</div>
+						<li onClick={() => { window.location.hash = '#banners'; }} className="link-banners">
+							<div>Banners</div>
 						</li>
-						<li>
-							<div onClick={() => { window.location.hash = '#videos'; }} className="link-videos">Videos</div>
+						<li onClick={() => { window.location.hash = '#videos'; }} className="link-videos">
+							<div>Videos</div>
 						</li>
-						<li>
-							<div onClick={() => { window.location.hash = '#react'; }} className="link-react">React</div>
+						<li onClick={() => { window.location.hash = '#react'; }} className="link-react">
+							<div>React</div>
 						</li>
-						<li>
-							<div onClick={() => { window.location.hash = '#contact'; }} className="link-contact">Contact</div>
+						<li onClick={() => { window.location.hash = '#contact'; }} className="link-contact">
+							<div>Contact</div>
 						</li>
 					</ul>
 				</nav>
