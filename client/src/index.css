@@ -8,6 +8,7 @@
 	/* Grays */
 	--color-light-gray: #cccccc;
 	--color-medium-gray: #aaaaaa;
+	--color-medium-dark-gray: #bbbbbb;
 	--color-dark-gray: #333333;
 
 	/* Others */
@@ -270,6 +271,7 @@ svg {
 	display: flex;
 	flex-direction: column;
 	justify-content: space-around;
+	justify-content: flex-end;
 	flex: 3;
 	/* gap: 1em; */
 }
@@ -311,19 +313,15 @@ svg {
 }
 
 .thumbnail-button {
-	/* position: absolute; */
 	bottom: 0;
 	background-color: var(--color-light-blue);
-	color: var(--color-dark-gray);
+	color: var(--color-dark-blue);
 	width: 100%;
 	text-align: center;
-	/* font-family: 'SegoePro Semibold', sans-serif; */
 	font-size: 1em;
 	padding: 8px 0px;
-	/* border: none; */
-	/* border-radius: 5px; */
 	cursor: pointer;
-	transition: background-color .2s, color .2s;
+	/* transition: background-color .2s, color .2s; */
 	text-decoration: none;
 }
 
@@ -348,7 +346,7 @@ svg {
 
 .card {
 	position: relative;
-	border-top: 1px solid var(--color-medium-blue);
+	/* border-top: 1px solid var(--color-medium-blue); */
 	width: 100%;
 	height: auto;
 	border-radius: 0px 0px 20px 20px;
@@ -503,6 +501,11 @@ svg {
 
 
 /* ----ABOUT---- */
+
+#about {
+    min-height: 5vh;
+}
+
 .intro-about {
 	padding-top: 2%;
 	width: 50%;
@@ -534,8 +537,8 @@ svg {
 }
 
 .aboutBG {
-	background-color: var(--color-light-gray);
-	background: linear-gradient(to bottom, var(--color-medium-gray) 10%, var(--color-light-gray) 95%);
+	/* background-color: var(--color-light-gray); */
+	/* background: linear-gradient(to bottom, var(--color-medium-gray) 10%, var(--color-light-gray) 95%); */
 }
 
 .about-container {
@@ -665,6 +668,7 @@ li {
 	width: 100%;
 	max-width: 1380px;
 	margin: 0 auto;
+	padding: 20px 0;
 }
 
 .three-tabs-container h1 {
@@ -673,10 +677,21 @@ li {
 	color: var(--color-medium-blue);
 }
 
+.three-tabs-button {
+	cursor: pointer;
+	margin: 30px 0px;
+	padding: 5px 10px;
+	color: #FFFFFF;
+	background-color: var(--color-medium-blue);
+	transition: .25s;
+	display: inline-block;
+	white-space: nowrap;
+}
+
 /* ----Three Cards Styles---- */
 
 .three-cards-container2 {
-	background: linear-gradient(to bottom, var(--color-light-gray) 0%, var(--color-medium-gray) 15%, #666666 50%, var(--color-dark-gray) 95%);
+	/* background: linear-gradient(to bottom, var(--color-light-gray) 0%, var(--color-medium-gray) 15%, #666666 50%, var(--color-dark-gray) 95%); */
 }
 
 .three-cards-container {
@@ -705,13 +720,18 @@ li {
 }
 
 .three-tabs-BG {
-	background: linear-gradient(to bottom, var(--color-light-gray) 0%, var(--color-medium-gray) 15%, #666666 50%, var(--color-dark-gray) 95%);
+	background: linear-gradient(to bottom, var(--color-light-gray) 0%, var(--color-medium-dark-gray) 95%);
 }
 
 .section-container {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
+}
+
+.professionalBG {
+	flex-direction: column;
+	/* background: linear-gradient(to bottom, var(--color-light-gray) 10%, var(--color-medium-gray) 25%, #666666 50%, var(--color-dark-gray) 95%); */
 }
 
 /* --------BANNERS-------- */
@@ -726,7 +746,7 @@ li {
 
 
 .banners-BG {
-	background: linear-gradient(to bottom, var(--color-light-gray) 4%, #000000 20%);
+	background: linear-gradient(to bottom, var(--color-medium-dark-gray) 4%, #000000 20%);
 	flex-direction: column;
 }
 
@@ -819,9 +839,10 @@ video {
 
 .video-duration {
 	font-family: "BulletSmallCaps", sans-serif;
-	font-size: .65em;
+	font-family: "YanoneKaffeesatz-Bold", sans-serif;
+	font-size: .45em;
 	color: #FFFFFF;
-	line-height: 1.5;
+	line-height: 1.0;
 	text-align: center;
 }
 
@@ -1504,6 +1525,8 @@ video {
 		margin-top: 20px;
 		min-width: 250px;
 		max-width: 200px;
+		min-width: 50px;
+		max-width: 150px;
 	}
 }
 

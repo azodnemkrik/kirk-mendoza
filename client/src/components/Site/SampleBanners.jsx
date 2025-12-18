@@ -44,108 +44,10 @@ const SampleBanners = ({ id, className, onOpenModal }) => {
 
 						<p>These are some examples. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod sunt in ratione dolorem facere neque ut, id quibusdam et eum fugit enim quos eaque dolores est! Suscipit quibusdam ab beatae. Illum facere labore est corporis fugit accusantium numquam earum itaque provident harum. Laborum in quibusdam vel iusto aliquam molestiae facere?</p>
 
-						{/* <div className="thumbnail">
-								<div className="thumbnail-info">
-										<div className="thumbnail-info-title">Visit<br />Mississippi</div>
-										<div className="thumbnail-description">Animation • Development</div>
-										<div onClick={() => onOpenModal(<div><h2>Visit Mississippi</h2><iframe src="/banners/visit_mississippi/visit_mississippi-300x250/index.html" width="300" height="250"></iframe></div>, "/banners/visit_mississippi/visit_mississippi-300x250/index.html", false)} className="nav-link">View</div>
-										<div className="container skills-used">
-											<Icon_HTML className="skillIcon" />
-											<Icon_CSS className="skillIcon" />
-											<Icon_JavaScript className="skillIcon" />
-											<Icon_GSAP className="skillIcon gsap" />
-											<Icon_Illustrator className="skillIcon" />
-											<Icon_Figma className="skillIcon" />
-										</div>
-								</div>
-								<img src={thumb1} width="300" height="250" className="thumbnail-image" />
-							</div>
-
-							<div className="thumbnail">
-								<div className="thumbnail-info">
-										<div className="thumbnail-info-title">Borden<br />Cheese</div>
-										<div className="thumbnail-description">Animation • Development</div>
-										<div onClick={() => onOpenModal(<div><h2>Borden Cheese</h2><iframe src="/banners/borden/crisps_n_cubes-300x250/index.html" width="300" height="250"></iframe></div>, "/banners/borden/crisps_n_cubes-300x250/index.html")} className="nav-link">View</div>
-										<div className="container skills-used">
-											<Icon_HTML className="skillIcon" />
-											<Icon_CSS className="skillIcon" />
-											<Icon_JavaScript className="skillIcon" />
-											<Icon_GSAP className="skillIcon gsap" />
-											<Icon_PhotoShop className="skillIcon" />
-										</div>
-									</div>
-								<img src={thumb2} width="300" height="250" className="thumbnail-image" />
-							</div>
-
-							<div className="thumbnail">
-								<div className="thumbnail-info">
-										<div className="thumbnail-info-title">Refocus</div>
-										<div className="thumbnail-description">Animation • Development</div>
-										<div onClick={() => onOpenModal(<div><h2>Refocus</h2><iframe src="/banners/refocus/30-percent-more-film-300x250/index.html" width="300" height="250"></iframe></div>, "/banners/refocus/30-percent-more-film-300x250/index.html")} className="nav-link">View</div>
-										<div className="container skills-used">
-											<Icon_HTML className="skillIcon" />
-											<Icon_CSS className="skillIcon" />
-											<Icon_JavaScript className="skillIcon" />
-											<Icon_GSAP className="skillIcon gsap" />
-											<Icon_Figma className="skillIcon" />
-										</div>
-									</div>
-								<img src={thumb3} width="300" height="250" className="thumbnail-image" />
-							</div>
-
-							<div className="thumbnail">
-								<div className="thumbnail-info">
-										<div className="thumbnail-info-title">Microsoft</div>
-										<div className="thumbnail-description">Animation • Development<br />Project Management</div>
-										<div onClick={() => onOpenModal(<div><h2>Microsoft</h2><iframe src="/banners/microsoft/microsoft_neutral-300x250/index.html" width="300" height="250"></iframe></div>, "/banners/microsoft/microsoft_neutral-300x250/index.html")} className="nav-link">View</div>
-										<div className="container skills-used">
-											<Icon_HTML className="skillIcon" />
-											<Icon_CSS className="skillIcon" />
-											<Icon_JavaScript className="skillIcon" />
-											<Icon_GSAP className="skillIcon gsap" />
-											<Icon_XD className="skillIcon" />
-											<Icon_PhotoShop className="skillIcon" />
-										</div>
-								</div>
-								<img src={thumb4} width="300" height="250" className="thumbnail-image" />
-							</div>
-
-							<div className="thumbnail">
-								<div className="thumbnail-info">
-										<div className="thumbnail-info-title">XBox</div>
-										<div className="thumbnail-description">Animation • Development<br />Project Management</div>
-										<div onClick={() => onOpenModal(<div><h2>XBox</h2><iframe src="/banners/xbox/xbox_titan-300x250/index.html" width="300" height="250"></iframe></div>, "/banners/xbox/xbox_titan-300x250/index.html")} className="nav-link">View</div>
-										<div className="container skills-used">
-											<Icon_HTML className="skillIcon" />
-											<Icon_CSS className="skillIcon" />
-											<Icon_JavaScript className="skillIcon" />
-											<Icon_GSAP className="skillIcon gsap" />
-											<Icon_PhotoShop className="skillIcon" />
-											<Icon_Premiere className="skillIcon" />
-										</div>
-								</div>
-								<img src={thumb5} width="300" height="250" className="thumbnail-image" />
-							</div>
-
-							<div className="thumbnail">
-								<div className="thumbnail-info">
-										<div className="thumbnail-info-title">Discover</div>
-										<div className="thumbnail-description">Animation • Development</div>
-										<div onClick={() => onOpenModal(<div><h2>Discover</h2><iframe src="/banners/discover/stackable-300x250/index.html" width="300" height="250"></iframe></div>, "/banners/discover/stackable-300x250/index.html")} className="nav-link">View</div>
-										<div className="container skills-used">
-											<Icon_HTML className="skillIcon" />
-											<Icon_CSS className="skillIcon" />
-											<Icon_JavaScript className="skillIcon" />
-											<Icon_GSAP className="skillIcon gsap" />
-											<Icon_Figma className="skillIcon" />
-										</div>
-								</div>
-								<img src={thumb6} width="300" height="250" className="thumbnail-image" />
-							</div> */}
 						<div className="thumbnail">
 							<div className="thumbnail-info">
 								<div className="thumbnail-info-top">
-									<div className="thumbnail-info-title">Visit<br />Mississippi</div>
+									<div className="thumbnail-info-title">Visit<br />Mississippi</div><br />
 									<div className="thumbnail-description">Animation • Development</div>
 									<div className="container skills-used">
 										<Icon_HTML className="skillIcon" />
@@ -163,82 +65,92 @@ const SampleBanners = ({ id, className, onOpenModal }) => {
 
 						<div className="thumbnail">
 							<div className="thumbnail-info">
-								<div className="thumbnail-info-title">Borden<br />Cheese</div>
-								<div className="thumbnail-description">Animation • Development</div>
-								<div onClick={() => onOpenModal(<div><h2>Borden Cheese</h2><iframe src="/banners/borden/crisps_n_cubes-300x250/index.html" width="300" height="250"></iframe></div>, "/banners/borden/crisps_n_cubes-300x250/index.html")} className="nav-link">View</div>
-								<div className="container skills-used">
-									<Icon_HTML className="skillIcon" />
-									<Icon_CSS className="skillIcon" />
-									<Icon_JavaScript className="skillIcon" />
-									<Icon_GSAP className="skillIcon gsap" />
-									<Icon_PhotoShop className="skillIcon" />
+								<div className="thumbnail-info-top">
+									<div className="thumbnail-info-title">Borden<br />Cheese</div><br />
+									<div className="thumbnail-description">Animation • Development</div>
+									<div className="container skills-used">
+										<Icon_HTML className="skillIcon" />
+										<Icon_CSS className="skillIcon" />
+										<Icon_JavaScript className="skillIcon" />
+										<Icon_GSAP className="skillIcon gsap" />
+										<Icon_PhotoShop className="skillIcon" />
+									</div>
 								</div>
+								<div onClick={() => onOpenModal(<div><h2>Borden Cheese</h2><iframe src="/banners/borden/crisps_n_cubes-300x250/index.html" width="300" height="250"></iframe></div>, "/banners/borden/crisps_n_cubes-300x250/index.html", true)} className="thumbnail-button">View</div>
 							</div>
 							<img src={thumb2} width="300" height="250" className="thumbnail-image" />
 						</div>
 
 						<div className="thumbnail">
 							<div className="thumbnail-info">
-								<div className="thumbnail-info-title">Refocus</div>
-								<div className="thumbnail-description">Animation • Development</div>
-								<div onClick={() => onOpenModal(<div><h2>Refocus</h2><iframe src="/banners/refocus/30-percent-more-film-300x250/index.html" width="300" height="250"></iframe></div>, "/banners/refocus/30-percent-more-film-300x250/index.html")} className="nav-link">View</div>
-								<div className="container skills-used">
-									<Icon_HTML className="skillIcon" />
-									<Icon_CSS className="skillIcon" />
-									<Icon_JavaScript className="skillIcon" />
-									<Icon_GSAP className="skillIcon gsap" />
-									<Icon_Figma className="skillIcon" />
+								<div className="thumbnail-info-top">
+									<div className="thumbnail-info-title">Refocus</div><br />
+									<div className="thumbnail-description">Animation • Development</div>
+									<div className="container skills-used">
+										<Icon_HTML className="skillIcon" />
+										<Icon_CSS className="skillIcon" />
+										<Icon_JavaScript className="skillIcon" />
+										<Icon_GSAP className="skillIcon gsap" />
+										<Icon_Figma className="skillIcon" />
+									</div>
 								</div>
+								<div onClick={() => onOpenModal(<div><h2>Refocus</h2><iframe src="/banners/refocus/30-percent-more-film-300x250/index.html" width="300" height="250"></iframe></div>, "/banners/refocus/30-percent-more-film-300x250/index.html", true)} className="thumbnail-button">View</div>
 							</div>
 							<img src={thumb3} width="300" height="250" className="thumbnail-image" />
 						</div>
 
 						<div className="thumbnail">
 							<div className="thumbnail-info">
-								<div className="thumbnail-info-title">Microsoft</div>
-								<div className="thumbnail-description">Animation • Development<br />Project Management</div>
-								<div onClick={() => onOpenModal(<div><h2>Microsoft</h2><iframe src="/banners/microsoft/microsoft_neutral-300x250/index.html" width="300" height="250"></iframe></div>, "/banners/microsoft/microsoft_neutral-300x250/index.html")} className="nav-link">View</div>
-								<div className="container skills-used">
-									<Icon_HTML className="skillIcon" />
-									<Icon_CSS className="skillIcon" />
-									<Icon_JavaScript className="skillIcon" />
-									<Icon_GSAP className="skillIcon gsap" />
-									<Icon_XD className="skillIcon" />
-									<Icon_PhotoShop className="skillIcon" />
+								<div className="thumbnail-info-top">
+									<div className="thumbnail-info-title">Microsoft</div><br />
+									<div className="thumbnail-description">Animation • Development<br />Project Management</div>
+									<div className="container skills-used">
+										<Icon_HTML className="skillIcon" />
+										<Icon_CSS className="skillIcon" />
+										<Icon_JavaScript className="skillIcon" />
+										<Icon_GSAP className="skillIcon gsap" />
+										<Icon_XD className="skillIcon" />
+										<Icon_PhotoShop className="skillIcon" />
+									</div>
 								</div>
+								<div onClick={() => onOpenModal(<div><h2>Microsoft</h2><iframe src="/banners/microsoft/microsoft_neutral-300x250/index.html" width="300" height="250"></iframe></div>, "/banners/microsoft/microsoft_neutral-300x250/index.html", true)} className="thumbnail-button">View</div>
 							</div>
 							<img src={thumb4} width="300" height="250" className="thumbnail-image" />
 						</div>
 
 						<div className="thumbnail">
 							<div className="thumbnail-info">
-								<div className="thumbnail-info-title">XBox</div>
-								<div className="thumbnail-description">Animation • Development<br />Project Management</div>
-								<div onClick={() => onOpenModal(<div><h2>XBox</h2><iframe src="/banners/xbox/xbox_titan-300x250/index.html" width="300" height="250"></iframe></div>, "/banners/xbox/xbox_titan-300x250/index.html")} className="nav-link">View</div>
-								<div className="container skills-used">
-									<Icon_HTML className="skillIcon" />
-									<Icon_CSS className="skillIcon" />
-									<Icon_JavaScript className="skillIcon" />
-									<Icon_GSAP className="skillIcon gsap" />
-									<Icon_PhotoShop className="skillIcon" />
-									<Icon_Premiere className="skillIcon" />
+								<div className="thumbnail-info-top">
+									<div className="thumbnail-info-title">XBox</div><br />
+									<div className="thumbnail-description">Animation • Development<br />Project Management</div>
+									<div className="container skills-used">
+										<Icon_HTML className="skillIcon" />
+										<Icon_CSS className="skillIcon" />
+										<Icon_JavaScript className="skillIcon" />
+										<Icon_GSAP className="skillIcon gsap" />
+										<Icon_PhotoShop className="skillIcon" />
+										<Icon_Premiere className="skillIcon" />
+									</div>
 								</div>
+								<div onClick={() => onOpenModal(<div><h2>XBox</h2><iframe src="/banners/xbox/xbox_titan-300x250/index.html" width="300" height="250"></iframe></div>, "/banners/xbox/xbox_titan-300x250/index.html", true)} className="thumbnail-button">View</div>
 							</div>
 							<img src={thumb5} width="300" height="250" className="thumbnail-image" />
 						</div>
 
 						<div className="thumbnail">
 							<div className="thumbnail-info">
-								<div className="thumbnail-info-title">Discover</div>
-								<div className="thumbnail-description">Animation • Development</div>
-								<div onClick={() => onOpenModal(<div><h2>Discover</h2><iframe src="/banners/discover/stackable-300x250/index.html" width="300" height="250"></iframe></div>, "/banners/discover/stackable-300x250/index.html")} className="nav-link">View</div>
-								<div className="container skills-used">
-									<Icon_HTML className="skillIcon" />
-									<Icon_CSS className="skillIcon" />
-									<Icon_JavaScript className="skillIcon" />
-									<Icon_GSAP className="skillIcon gsap" />
-									<Icon_Figma className="skillIcon" />
-								</div>
+								<div className="thumbnail-info-top">
+									<div className="thumbnail-info-title">Discover</div><br />
+									<div className="thumbnail-description">Animation • Development</div>
+									<div className="container skills-used">
+										<Icon_HTML className="skillIcon" />
+										<Icon_CSS className="skillIcon" />
+										<Icon_JavaScript className="skillIcon" />
+										<Icon_GSAP className="skillIcon gsap" />
+										<Icon_Figma className="skillIcon" />
+									</div>
+								</div>	
+								<div onClick={() => onOpenModal(<div><h2>Discover</h2><iframe src="/banners/discover/stackable-300x250/index.html" width="300" height="250"></iframe></div>, "/banners/discover/stackable-300x250/index.html", true)} className="thumbnail-button">View</div>
 							</div>
 							<img src={thumb6} width="300" height="250" className="thumbnail-image" />
 						</div>
@@ -247,7 +159,6 @@ const SampleBanners = ({ id, className, onOpenModal }) => {
 
 					</div>
 				</div>
-
 			</div>
 		</>
 	)

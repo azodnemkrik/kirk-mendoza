@@ -35,9 +35,9 @@ const ThreeTabs = ({ id, className, onOpenModal }) => {
 				<div className="three-tabs-container">
 					<h1>About Me</h1>
 					<div className="three-cards-labels-container">
-						<p onClick={() => { handleCardClick(1) }} className={`card-label-3 ${activeCard === 1 ? 'selected' : ''}`}>Hi!</p>
-						<p onClick={() => { handleCardClick(2) }} className={`card-label-1 ${activeCard === 2 ? 'selected' : ''}`}>Professionally</p>
-						<p onClick={() => { handleCardClick(3) }} className={`card-label-2 ${activeCard === 3 ? 'selected' : ''}`}>Boy at <span className="material-symbols-outlined filled" >favorite</span> </p>
+						<p onClick={() => { handleCardClick(1) }} className={`card-label-3 three-tabs-button ${activeCard === 1 ? 'selected' : ''}`}>Overview</p>
+						<p onClick={() => { handleCardClick(2) }} className={`card-label-1 three-tabs-button ${activeCard === 2 ? 'selected' : ''}`}>My Approach</p>
+						<p onClick={() => { handleCardClick(3) }} className={`card-label-2 three-tabs-button ${activeCard === 3 ? 'selected' : ''}`}>Beyond Work</p>
 					</div>
 				</div>
 				

@@ -21,6 +21,7 @@ import Icon_JavaScript from "../Icon_JavaScript";
 import Icon_Premiere from "../Icon_Premiere";
 import Icon_React from "../Icon_React";
 import Icon_XD from "../Icon_XD";
+import BrandCrawler from "./BrandCrawler";
 const Professional = ({ id, className }) => {
 
 	const navRef = useRef(null);
@@ -35,15 +36,12 @@ const Professional = ({ id, className }) => {
 				<div>
 				</div>
 				<div className="aboutText">
-					<h1>I'm a <span className="accent-blue">Professional</span>!</h1>
-					
-					<p>I've had the opportunity to work with a number of recognizable brands and agencies, collaborating closely with design, marketing, and technical teams. Clear communication is one of my strongest assets, and clients appreciate that I make the process smooth, efficient, and easy to understand.</p>
-
-					<p>Whether I'm developing a responsive interface, producing a motion graphic, or bringing a product story to life with video, I focus on building work that feels professional, intuitive, and impactful.</p>
-
-					<p>Outside of work, I'm a family guy who enjoys creating things — whether it’s code, visuals, or something fun with my kids. I love what I do, and I bring that passion into every project I take on.</p>
+					<h1>I'm a <span className="accent-blue">Professional</span>!</h1><br/>
+					<h2>I enjoy puzzle solving.</h2>
+					<p>I believe in clear communication, thoughtful problem-solving, and building solutions that balance performance, design, and usability.</p>
 				</div>
 			</div>
+<BrandCrawler />
 		</div>
 	)
 }

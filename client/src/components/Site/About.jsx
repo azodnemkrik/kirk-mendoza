@@ -43,7 +43,9 @@ const About = ({ id, className }) => {
 					<p>With 20+ years of experience, blending visuals and code to solve problems is where I do my best work.</p>
 					<br/>
 					<h2><span className="accent-blue">Full-Stack</span> Developer</h2>
-					<p>Full-Stack certified, expanding into back-end and React.</p>
+					<p>Recently Full-Stack certified, adding back-end development and React.</p>
+					<br/>
+					<h2>Tech Stack:</h2>
 					<div className="skills-container">
 						<Icon_HTML className="grayScale" />
 						<Icon_CSS className="grayScale" />
