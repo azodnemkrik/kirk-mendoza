@@ -66,24 +66,30 @@ const About = ({ id, className }) => {
 
 				<div className="details-container">
 					<details className="details" name="">
-						<summary>My Approach</summary>
+						<summary>Personal Practices</summary>
 						<div className="about-detail">
-							<p>
-								I care a lot about how things are built and how they're communicated. Clear conversations upfront lead to better solutions and fewer surprises later.
-							</p>
-							<p>
-								I enjoy solving problems at the intersection of visuals and code—finding clean, practical answers to complex challenges.
-							</p>
-							<p>
-								With over 20 years of experience, I've learned that the best work comes from collaboration, curiosity, and keeping things simple.
-							</p>
+							<ul>
+								<li>Clear communication is key — it saves time and reduces surprises for everyone. 💬</li>
+								<li>I take ownership of my work and stand behind the outcome. ✅</li>
+								<li>Positive thinking and strong collaboration often lead to some truly great results. 🏅</li>
+								<li>I approach problem-solving like a fun jigsaw puzzle or a LEGO build. 🧩</li>
+								<li>Don’t forget to eat! Seriously — especially lunch. 🥪</li>
+							</ul>
 						</div>
 					</details>
 
 					<details className="details" name="">
 						<summary>Beyond Work</summary>
 						<div className="about-detail">
-							Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ipsam adipisci totam tenetur eligendi repudiandae ratione ducimus blanditiis delectus minus laboriosam, provident neque porro cum laborum explicabo, consequuntur iste eos nesciunt.
+							<ul>
+								<li>Situated about an hour outside of Chicago.🍕</li>
+								<li>Married once👩🏼‍🤝‍👨🏽, parented twice.🧑🏽‍🤝‍🧑🏻</li>
+								<li>3D-printing hobbyist. 🗿</li>
+								<li>Mild toy collector (robots, LEGO, Star Wars...) 🤖</li>
+							</ul>
+
+
+
 						</div>
 					</details>
 				</div>
