@@ -23,6 +23,7 @@ const Navigation = forwardRef(({ id, className, pathname, isFixed }, ref) => {
 			<div id="navigation" className="centered-container navigation">
 				<div className="nav-splitter">
 					<div className="nav-left">
+						{/* <img src="/km-insignia.svg" alt="Kirk Mendoza Logo Insignia" className="logo-insignia" /> */}
 						<LogoHero className="heroLogo" />
 					</div>
 					<div className="nav-right">

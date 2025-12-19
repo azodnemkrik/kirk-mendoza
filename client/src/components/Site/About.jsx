@@ -39,8 +39,8 @@ const About = ({ id, className }) => {
 				</div>
 
 				<div className="aboutText">
-					<h1>Hi, I'm <span className="accent-blue">Kirk</span></h1>
-					<h2> Web Dev <span className="accent-blue">•</span> Animation <span className="accent-blue">•</span> Motion Graphics</h2>
+					<h1><span className="noWrap">Hi, I'm <span className="accent-blue">Kirk</span></span></h1>
+					<h2> Web Dev <span className="accent-blue">•</span> Animation <span className="accent-blue">•</span> <span className="noWrap">Motion Graphics</span></h2>
 					<p>With 20+ years of experience, blending visuals and code to solve problems is where I do my best work.</p>
 					<h2><span className="accent-blue">Full-Stack</span> Developer</h2>
 					<p>Recently Full-Stack certified, adding back-end development and React.</p>
@@ -65,7 +65,7 @@ const About = ({ id, className }) => {
 				</div>
 
 				<div className="details-container">
-					<details className="details" name="about-section">
+					<details className="details" name="">
 						<summary>My Approach</summary>
 						<div className="about-detail">
 							<p>
@@ -80,7 +80,7 @@ const About = ({ id, className }) => {
 						</div>
 					</details>
 
-					<details className="details" name="about-section">
+					<details className="details" name="">
 						<summary>Beyond Work</summary>
 						<div className="about-detail">
 							Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ipsam adipisci totam tenetur eligendi repudiandae ratione ducimus blanditiis delectus minus laboriosam, provident neque porro cum laborum explicabo, consequuntur iste eos nesciunt.
