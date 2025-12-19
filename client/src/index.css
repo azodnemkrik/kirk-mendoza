@@ -382,25 +382,58 @@ svg {
 
 /* ----NAVIGATION---- */
 
-#navigation nav {
-	/* width: 100%; */
-	max-width: 100%;
-	/* overflow: hidden; */
+.navigation {
+	position: sticky;
+	z-index: 1000;
+	background-color: #000000;
+	box-shadow: #000000A6 0px 5px 10px 0px;
+}
+
+#hamburger-menu {
+	display: none;
+}
+
+
+.nav-splitter {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	width: 100%;
+	max-width: 1440px;
+	height: 90px;
+	max-height: 100px;
+	/* height: 7.5vw; */
+	/* justify-content: center; */
+}
+
+.nav-left {
+	/* display: flex; */
+	width: 40%;
+	height: auto;
+	/* background-color: lightblue; */
+}
+
+.nav-right {
+	display: flex;
+	width: 60%;
+	justify-content: flex-end;
+	margin-right: 1rem;
+	/* background-color: purple; */
 }
 
 .navigation-bar {
-	display: flex;
-	justify-content: center;
-	gap: 1.5rem;
-	align-self: center;
-	grid-auto-columns: auto;
-	grid-auto-flow: column;
-	overflow-x: scroll;
-	-webkit-overflow-scrolling: touch;
+	display: block;
+	/* justify-content: center; */
+	/* gap: 1.5rem; */
+	/* align-self: center; */
+	/* grid-auto-columns: auto; */
+	/* grid-auto-flow: column; */
+	/* overflow-x: scroll; */
+	/* -webkit-overflow-scrolling: touch; */
+	/* width: 100%; */
+	/* max-width: 100%; */
+	max-width: 1440px;
 	width: 100%;
-	max-width: 100%;
-	max-width: 1380px;
-	/* justify-self: center; */
 	z-index: 1000;
 }
 
@@ -438,13 +471,10 @@ svg {
 }
 
 #navigation {
-	flex-direction: column;
-	align-items: center;
-	justify-content: flex-start;
-	position: sticky;
-	z-index: 1000;
-	background-color: #000000;
-	box-shadow: #000000A6 0px 5px 10px 0px;
+	/* flex-direction: column; */
+	/* align-items: center; */
+	/* justify-content: flex-start; */
+
 }
 
 #navigation .heroLogo {}
@@ -472,6 +502,7 @@ svg {
 	align-items: start;
 	flex-direction: row;
 	padding: .5% 8%;
+	margin-bottom: 5%;
 	gap: 5%;
 	/* width: auto; */
 	/* height: 7.5vh; */
@@ -665,17 +696,18 @@ summary::marker {
 /* Skills Styles */
 .skills-container {
 	display: flex;
-	justify-content: center;
+	justify-content: space-evenly;
 	align-items: center;
 	flex-wrap: wrap;
 	padding: 0;
 	gap: 2rem;
-	/* justify-content: space-between; */
 	gap: 10px;
 	height: auto;
 	width: auto;
 	max-width: 1380px;
 	margin-bottom: 20px;
+	/* justify-content: center; */
+	/* justify-content: space-between; */
 }
 
 li {
@@ -1608,6 +1640,15 @@ video {
 	}
 
 	/* Navigation Links */
+
+	#hamburger-menu {
+		display: block;
+	}
+
+	.navigation-bar {
+		display: none;
+	}
+
 	.nav-link {
 		font-size: 1.3em;
 		margin: 8px 24px;
