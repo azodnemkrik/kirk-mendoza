@@ -10,6 +10,8 @@ const BrandCrawler = ({ className }) => {
          <div className="brand-crawler-container">
             <img className="brands" src={brandClients} alt="Brands" />
             <img className="brands" src={brandClients} alt="Brands" />
+            <img className="brands" src={brandClients} alt="Brands" />
+            <img className="brands" src={brandClients} alt="Brands" />
          </div>
       </div>
    )

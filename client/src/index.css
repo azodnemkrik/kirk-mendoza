@@ -1062,7 +1062,7 @@ video {
 .brand-crawler-container {
 	display: flex;
 	width: fit-content;
-	animation: scroll 45s linear infinite;
+	animation: scroll 25s linear infinite;
 }
 
 .brand-crawler {
@@ -1118,7 +1118,7 @@ video {
 	}
 
 	100% {
-		transform: translateX(-50%);
+		transform: translateX(-25%);
 	}
 }
 
@@ -1615,6 +1615,7 @@ video {
 
 	h1 {
 		font-size: 3.25rem;
+		font-size: 4rem;
 	}
 
 	h2 {
