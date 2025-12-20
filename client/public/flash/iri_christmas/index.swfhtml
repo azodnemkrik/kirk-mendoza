@@ -1,0 +1,38 @@
+<html>
+	<head>
+		<script src='../ruffle.js'></script>
+		<script type='text/javascript'>
+			var url;
+			var player;
+
+			function init() {
+				url = "christmas.swf";
+
+				window.RufflePlayer = window.RufflePlayer || {};
+				var container = document.getElementById("swfcontainer");
+				var ruffle = window.RufflePlayer.newest();
+				player = ruffle.createPlayer();
+				container.appendChild(player);
+				window.RufflePlayer.config = {
+					autoPlay: true,
+					base: "./",
+					logLevel: "error",
+					publicPath: "../",
+					showSwfDownload: true,
+					warnOnUnsupportedContent: true,
+				};
+				player.load(url);
+				player.style.width = "800px";
+				player.style.height = "600px";
+				player.style.objectFit = "fill";
+				player.style.overflow = "hidden";
+				player.style.position = "absolute";
+				player.style.transform = "translate(-50%, -7px)";
+			}
+		</script>
+		<title>Ian Ryan Interactive - XMAS 2004</title>
+	</head>
+	<body onload="init();">
+		<div id="swfcontainer" width="800" height="600" align="center" scale="showAll"></div>
+	</body>
+</html>

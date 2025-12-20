@@ -5,7 +5,7 @@ import Scrubber from "./Scrubber";
 // Helper to detect if src is a video file
 const isVideoFile = (src) => {
 	if (!src) return false;
-	const videoExtensions = ['.mp4', '.webm', '.ogg', '.mov', '.avi', '.mkv', '.m4v'];
+	const videoExtensions = ['.mp4', '.webm', '.ogg', '.mov', '.avi', '.mkv', '.m4v', '.swfhtml'];
 	const lowerSrc = src.toLowerCase();
 	return videoExtensions.some(ext => lowerSrc.includes(ext));
 };
@@ -55,16 +55,16 @@ const Modal = ({ isOpen, onClose, src, children, showScrubber = true }) => {
 	// Access iframe's maintl timeline (skip for videos)
 	useEffect(() => {
 		console.log("iframe useEffect - isOpen:", isOpen, "src:", src);
-		
+
 		// Reset timeline state when src changes or modal closes
 		setIframeTimeline(null);
-		
+
 		// Skip timeline detection for video files
 		if (isVideoFile(src)) {
 			console.log("Video file detected, skipping timeline detection");
 			return;
 		}
-		
+
 		if (!isOpen || !src) {
 			console.log("Exiting early - no isOpen or src");
 			return;
@@ -78,13 +78,13 @@ const Modal = ({ isOpen, onClose, src, children, showScrubber = true }) => {
 		// Retry mechanism to find iframe (Safari needs more time)
 		let attempts = 0;
 		const maxAttempts = 10;
-		
+
 		const findIframe = () => {
 			attempts++;
 			console.log(`Attempt ${attempts} to find iframe...`);
-			
+
 			const iframe = document.querySelector('.modal-content iframe');
-			
+
 			if (iframe) {
 				console.log("Found iframe element:", iframe);
 				iframeElement = iframe;
@@ -97,29 +97,29 @@ const Modal = ({ isOpen, onClose, src, children, showScrubber = true }) => {
 				console.warn("Iframe not found after", maxAttempts, "attempts");
 			}
 		};
-		
+
 		const setupIframeListener = (iframe) => {
 
 			// Function to check for maintl
 			const checkForMaintlWithRetry = () => {
 				console.log("checkForMaintlWithRetry started!");
-				
+
 				let maintlAttempts = 0;
 				const maxMaintlAttempts = 20;
-				
+
 				const checkForMaintl = () => {
 					maintlAttempts++;
 					console.log(`Checking for maintl (attempt ${maintlAttempts}/${maxMaintlAttempts})`);
-					
+
 					try {
 						// Access the iframe's window and get maintl
 						const iframeWindow = iframe.contentWindow;
 						console.log("iframeWindow:", iframeWindow);
 						console.log("Looking for maintl:", iframeWindow.maintl);
-						
+
 						// Try to get maintl (might be undefined if using 'let' instead of 'var')
 						let gsapTL = iframeWindow.maintl;
-						
+
 						// If not found, try to manually assign it to window for banners using 'let'
 						if (!gsapTL && iframeWindow.document) {
 							console.log("maintl not on window, checking if we can add it...");
@@ -139,7 +139,7 @@ const Modal = ({ isOpen, onClose, src, children, showScrubber = true }) => {
 							console.log("Got maintl from iframe:", gsapTL);
 							console.log("Timeline duration:", gsapTL.duration());
 							console.log("Timeline progress:", gsapTL.progress());
-							
+
 							// Set the timeline to state so Scrubber component can use it
 							console.log("Setting iframeTimeline state...");
 							setIframeTimeline(gsapTL);
@@ -157,29 +157,29 @@ const Modal = ({ isOpen, onClose, src, children, showScrubber = true }) => {
 						// This will fail if iframe is cross-origin
 					}
 				};
-				
+
 				checkForMaintl();
 			};
 
 			// Check if iframe is already loaded (cached)
 			// readyState can be 'complete' or 'interactive' when already loaded
-			const isAlreadyLoaded = iframe.contentDocument && 
-				(iframe.contentDocument.readyState === 'complete' || 
-				 iframe.contentDocument.readyState === 'interactive');
-			
+			const isAlreadyLoaded = iframe.contentDocument &&
+				(iframe.contentDocument.readyState === 'complete' ||
+					iframe.contentDocument.readyState === 'interactive');
+
 			console.log("Iframe readyState:", iframe.contentDocument?.readyState, "isAlreadyLoaded:", isAlreadyLoaded);
-			
+
 			if (isAlreadyLoaded) {
 				// Iframe already loaded, check for maintl immediately
 				console.log("Iframe already loaded, checking for maintl immediately");
 				checkForMaintlWithRetry();
 			}
-			
+
 			// Also add load listener for future loads or in case readyState check was wrong
 			loadHandler = checkForMaintlWithRetry;
 			iframe.addEventListener('load', loadHandler);
 		};
-		
+
 		// Start looking for iframe after a short delay
 		const initialTimeoutId = setTimeout(findIframe, 100);
 		timeoutIds.push(initialTimeoutId);
@@ -197,19 +197,19 @@ const Modal = ({ isOpen, onClose, src, children, showScrubber = true }) => {
 	return (
 		<div ref={backdropRef} className="modal-backdrop" onClick={onClose} style={{ opacity: 0, visibility: 'hidden' }}>
 
-				<button className="modal-close-btn" onClick={onClose}>×</button>
+			<button className="modal-close-btn" onClick={onClose}>×</button>
 
-				<div ref={contentRef} className="modal-content" onClick={(e) => e.stopPropagation()} style={{ opacity: 0, visibility: 'hidden', transform: 'scale(0.8) translateY(20px)' }}>
-					{children}
-					{console.log("Rendering Modal - iframeTimeline:", iframeTimeline, "isVideo:", isVideoFile(src))}
-					{showScrubber && !isVideoFile(src) && iframeTimeline ? (
-						<Scrubber timeline={iframeTimeline} />
-					) : showScrubber && !isVideoFile(src) && !iframeTimeline ? (
-						<div style={{color: 'white', padding: '10px'}}>Waiting for timeline...</div>
-					) : null}
-				</div>
-
+			<div ref={contentRef} className="modal-content" onClick={(e) => e.stopPropagation()} style={{ opacity: 0, visibility: 'hidden', transform: 'scale(0.8) translateY(20px)' }}>
+				{children}
+				{console.log("Rendering Modal - iframeTimeline:", iframeTimeline, "isVideo:", isVideoFile(src))}
+				{showScrubber && !isVideoFile(src) && iframeTimeline ? (
+					<Scrubber timeline={iframeTimeline} />
+				) : showScrubber && !isVideoFile(src) && !iframeTimeline ? (
+					<div style={{ color: 'white', padding: '10px' }}>Waiting for timeline...</div>
+				) : null}
 			</div>
+
+		</div>
 	);
 };
 

@@ -933,6 +933,15 @@ li {
 	height: auto;
 }
 
+#container  {
+	width: 750px;
+	height: 550px;
+}
+
+.iri {
+	margin: 0;
+	padding: 0;	
+}
 
 
 /* --------VIDEOS-------- */

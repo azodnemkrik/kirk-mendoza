@@ -155,7 +155,8 @@ const SampleBanners = ({ id, className, onOpenModal }) => {
 							</div>
 							<img src={thumb6} width="300" height="250" className="thumbnail-image" />
 						</div>
-						<Peekaboo id="peekaboo-container" onClick={() => onOpenModal(<video className="flash-content" src="https://www.kirk-mendoza.com/video/pg-site.mp4" type="video/mp4" autoPlay loop muted controls width="auto" height="20%"></video>, "https://www.kirk-mendoza.com/video/pg-site.mp4")} />
+						{/* <Peekaboo id="peekaboo-container" onClick={() => onOpenModal(<video className="flash-content" src="https://www.kirk-mendoza.com/video/pg-site.mp4" type="video/mp4" autoPlay loop muted controls width="auto" height="20%"></video>, "https://www.kirk-mendoza.com/video/pg-site.mp4")} /> */}
+						<Peekaboo id="peekaboo-container" onClick={() => onOpenModal(<div><h2>IRI Christmas</h2><iframe src="/flash/iri_christmas/index.swfhtml" className="iri" width="800" height="600" align="middle" scale="autoSize" ></iframe></div>, "/flash/iri_christmas/index.swfhtml", false)} />
 
 					</div>
 				</div>
