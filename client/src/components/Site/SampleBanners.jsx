@@ -21,6 +21,7 @@ import Icon_JavaScript from "../Icon_JavaScript";
 import Icon_XD from "../Icon_XD";
 import Scrubber from "./Scrubber";
 import Icon_Premiere from "../Icon_Premiere";
+import BrandCrawler from "./BrandCrawler";
 
 const SampleBanners = ({ id, className, onOpenModal }) => {
 
@@ -42,7 +43,7 @@ const SampleBanners = ({ id, className, onOpenModal }) => {
 
 					<div className="section-content">
 
-						<p>These are some examples. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod sunt in ratione dolorem facere neque ut, id quibusdam et eum fugit enim quos eaque dolores est! Suscipit quibusdam ab beatae. Illum facere labore est corporis fugit accusantium numquam earum itaque provident harum. Laborum in quibusdam vel iusto aliquam molestiae facere?</p>
+						<p><span className="h2-style"> Every display ad </span><br/>is built with care with attention to detail and utilizes the <i>GreenSock Animation Platform (GSAP)</i>. My goal is always to create work that feels premium, intentional, and far from cookie-cutter.</p>
 
 						<div className="thumbnail">
 							<div className="thumbnail-info">
@@ -154,7 +155,6 @@ const SampleBanners = ({ id, className, onOpenModal }) => {
 							</div>
 							<img src={thumb6} width="300" height="250" className="thumbnail-image" />
 						</div>
-
 						<Peekaboo id="peekaboo-container" onClick={() => onOpenModal(<video className="flash-content" src="https://www.kirk-mendoza.com/video/pg-site.mp4" type="video/mp4" autoPlay loop muted controls width="auto" height="20%"></video>, "https://www.kirk-mendoza.com/video/pg-site.mp4")} />
 
 					</div>

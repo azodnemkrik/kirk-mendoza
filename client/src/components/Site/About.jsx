@@ -21,6 +21,7 @@ import Icon_JavaScript from "../Icon_JavaScript";
 import Icon_Premiere from "../Icon_Premiere";
 import Icon_React from "../Icon_React";
 import Icon_XD from "../Icon_XD";
+import BrandCrawler from "./BrandCrawler";
 const About = ({ id, className }) => {
 
 	const navRef = useRef(null);
@@ -63,16 +64,15 @@ const About = ({ id, className }) => {
 					<Icon_Premiere className="grayScale" />
 					<Icon_React className="grayScale" />
 				</div>
-
 				<div className="details-container">
 					<details className="details" name="">
 						<summary>Personal Practices</summary>
 						<div className="about-detail">
 							<ul>
-								<li>Clear communication is key — it saves time and reduces surprises for everyone. 💬</li>
-								<li>I take ownership of my work and stand behind the outcome. ✅</li>
-								<li>Positive thinking and strong collaboration often lead to some truly great results. 🏅</li>
-								<li>I approach problem-solving like a fun jigsaw puzzle or a LEGO build. 🧩</li>
+								<li>Clear communication — it saves time for everyone and reduces unwanted surprises. 💬</li>
+								<li>Own the work — I'm responsible for everything I submit and stand behind it, whatever the outcome. ✅</li>
+								<li>Positive thinking and strong collaboration can lead to truly great things. 🏅</li>
+								<li>When coding or even in life, I see problem-solving as a jigsaw puzzle or LEGO build - challenging & fun! 🧩</li>
 								<li>Don’t forget to eat! Seriously — especially lunch. 🥪</li>
 							</ul>
 						</div>
@@ -87,15 +87,11 @@ const About = ({ id, className }) => {
 								<li>3D-printing hobbyist. 🗿</li>
 								<li>Mild toy collector (robots, LEGO, Star Wars...) 🤖</li>
 							</ul>
-
-
-
 						</div>
 					</details>
 				</div>
-
 			</div>
-
+			<BrandCrawler className="brand-crawler" />
 		</div>
 	)
 }

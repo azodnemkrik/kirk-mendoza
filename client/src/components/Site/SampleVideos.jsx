@@ -9,6 +9,7 @@ import Icon_Figma from "../Icon_Figma";
 import Icon_PhotoShop from "../Icon_PhotoShop";
 import Icon_AfterEffects from "../Icon_AfterEffects";
 import Icon_Premiere from "../Icon_Premiere";
+import BrandCrawler from "./BrandCrawler";
 
 const SampleVideos = ({ id, className, onOpenModal }) => {
 
@@ -122,6 +123,10 @@ const SampleVideos = ({ id, className, onOpenModal }) => {
 
 					</div>
 				</div>
+				{/* <div className="brand-crawler-section">
+					<h2>Brands I've worked with</h2>
+				</div> */}
+				<BrandCrawler className="brand-crawler" />
 			</div>
 		</>
 	)
