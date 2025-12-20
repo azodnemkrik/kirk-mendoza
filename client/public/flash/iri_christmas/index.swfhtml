@@ -5,9 +5,38 @@
 			var url;
 			var player;
 
+			function getResponsiveSize(baseWidth, baseHeight) {
+				// Get viewport dimensions
+				const vw = window.innerWidth;
+				const vh = window.innerHeight;
+				// Calculate aspect ratio
+				const aspect = baseWidth / baseHeight;
+				// Set max width/height to fit viewport, with some margin
+				let width = Math.min(baseWidth, vw * 0.95);
+				let height = width / aspect;
+				if (height > vh * 0.85) {
+					height = vh * 0.85;
+					width = height * aspect;
+				}
+				return {
+					width,
+					height
+				};
+			}
+
+			function setPlayerSize(player, baseWidth, baseHeight) {
+				const {
+					width,
+					height
+				} = getResponsiveSize(baseWidth, baseHeight);
+				player.style.width = width + "px";
+				player.style.height = height + "px";
+				player.style.maxWidth = "100vw";
+				player.style.maxHeight = "100vh";
+			}
+
 			function init() {
 				url = "christmas.swf";
-
 				window.RufflePlayer = window.RufflePlayer || {};
 				var container = document.getElementById("swfcontainer");
 				var ruffle = window.RufflePlayer.newest();
@@ -22,12 +51,22 @@
 					warnOnUnsupportedContent: true,
 				};
 				player.load(url);
-				player.style.width = "800px";
-				player.style.height = "600px";
-				player.style.objectFit = "fill";
-				player.style.overflow = "hidden";
-				player.style.position = "absolute";
-				player.style.transform = "translate(-50%, -7px)";
+				// Set initial size
+				setPlayerSize(player, 800, 600);
+				// Update size on window resize
+				window.addEventListener('resize', function () {
+					setPlayerSize(player, 800, 600);
+				});
+				player.style.display = "block";
+				player.style.margin = "0 auto";
+				player.style.position = "relative";
+				player.style.left = "0";
+				player.style.top = "0";
+				player.style.transform = "none";
+				player.style.maxWidth = "100vw";
+				player.style.maxHeight = "100vh";
+				player.style.width = width + "px";
+				player.style.height = height + "px";
 			}
 		</script>
 		<title>Ian Ryan Interactive - XMAS 2004</title>
