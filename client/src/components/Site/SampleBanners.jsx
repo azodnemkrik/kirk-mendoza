@@ -43,7 +43,7 @@ const SampleBanners = ({ id, className, onOpenModal }) => {
 
 					<div className="section-content">
 
-						<p><span className="h2-style"> Every display ad </span><br />is built with care with attention to detail and utilizes the <i>GreenSock Animation Platform (GSAP)</i>. My goal is always to create work that feels premium, intentional, and far from cookie-cutter.</p>
+						<p><span className="h2-style"> Every display ad </span><br />is built with attention to detail and utilizes the <i>GreenSock Animation Platform (GSAP)</i>. I aim to create work that feels premium, intentional, and far from cookie-cutter.</p>
 
 						<div className="thumbnail">
 							<div className="thumbnail-info">
@@ -156,12 +156,14 @@ const SampleBanners = ({ id, className, onOpenModal }) => {
 							<img src={thumb6} width="300" height="250" className="thumbnail-image" />
 						</div>
 						{/* <Peekaboo id="peekaboo-container" onClick={() => onOpenModal(<video className="flash-content" src="https://www.kirk-mendoza.com/video/pg-site.mp4" type="video/mp4" autoPlay loop muted controls width="auto" height="20%"></video>, "https://www.kirk-mendoza.com/video/pg-site.mp4")} /> */}
-						<Peekaboo id="peekaboo-container" onClick={() => onOpenModal(<div><h2>IRI Christmas</h2><iframe src="/flash/iri_christmas/index.swfhtml" style={{ width: "100vw", height: "100vh", maxWidth: 800, maxHeight: 600, border: "none" }}
+						<Peekaboo id="peekaboo-container" onClick={() => onOpenModal(<div><h2>IRI: Digital Greeting Card</h2><iframe src="/flash/iri_christmas/index.swfhtml" style={{
+							display: "block", width: "100vw", height: "100vh", border: "none", margin: 0, overflow: "hidden"
+						}}
 							allowFullScreen className="iri" ></iframe></div>, "/flash/iri_christmas/index.swfhtml", false)} />
 
 					</div>
 				</div>
-			</div>
+			</div >
 		</>
 	)
 }

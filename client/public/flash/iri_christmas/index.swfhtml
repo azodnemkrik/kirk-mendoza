@@ -6,12 +6,17 @@
 			var player;
 
 			function getResponsiveSize(baseWidth, baseHeight) {
-				// Get viewport dimensions
 				const vw = window.innerWidth;
 				const vh = window.innerHeight;
-				// Calculate aspect ratio
 				const aspect = baseWidth / baseHeight;
-				// Set max width/height to fit viewport, with some margin
+				// If viewport is larger than base, use base size
+				if (vw >= baseWidth && vh >= baseHeight) {
+					return {
+						width: baseWidth,
+						height: baseHeight
+					};
+				}
+				// Otherwise, scale down to fit viewport
 				let width = Math.min(baseWidth, vw * 0.95);
 				let height = width / aspect;
 				if (height > vh * 0.85) {
