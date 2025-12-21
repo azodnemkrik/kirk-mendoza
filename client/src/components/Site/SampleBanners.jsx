@@ -43,7 +43,7 @@ const SampleBanners = ({ id, className, onOpenModal }) => {
 
 					<div className="section-content">
 
-						<p><span className="h2-style"> Every display ad </span><br />is built with attention to detail and utilizes the <i>GreenSock Animation Platform (GSAP)</i>. I aim to create work that feels premium, intentional, and far from cookie-cutter.</p>
+						<p><span className="h2-style light-blue"> Every display ad </span><br />is built with attention to detail and utilizes the <i>GreenSock Animation Platform (GSAP)</i>. I aim to create work that feels premium, intentional, and far from cookie-cutter.</p>
 
 						<div className="thumbnail">
 							<div className="thumbnail-info">

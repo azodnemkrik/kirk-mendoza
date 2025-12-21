@@ -28,6 +28,22 @@
 
 }
 
+.light-blue {
+	color: var(--color-light-blue);
+}
+
+.medium-blue {
+	color: var(--color-medium-blue);
+}
+
+.dark-blue {
+	color: var(--color-dark-blue);
+}
+
+.super-dark-blue {
+	color: var(--color-super-dark-blue);
+}
+
 body,
 html {
 	width: 100%;
@@ -54,6 +70,15 @@ html {
 	padding: 0;
 	margin: 0;
 	z-index: 20
+}
+
+a {
+	text-decoration: none;
+	color: var(--color-dark-blue);
+}
+
+a:hover {
+	color: var(--color-light-blue);
 }
 
 h1 {
@@ -384,7 +409,7 @@ svg {
 .section-content h2 {}
 
 .h2-style {
-	color: var(--color-light-blue);
+	/* color: var(--color-light-blue); */
 	font-family: 'YanoneKaffeesatz-Bold';
 	font-size: 3.9rem;
 	line-height: 2.5rem;
@@ -584,6 +609,29 @@ svg {
 }
 
 /* Personal Practices */
+.about-detail .li-linkedin:before {
+	content: ' ';
+	display: inline-block;
+	width: 23px;
+	height: 23px;
+	background-image: url('linkedin.svg');
+	background-size: contain;
+	background-repeat: no-repeat;
+	vertical-align: middle;
+	margin-right: 0.25em;
+	text-shadow: #00000086 0px 1px 2px;
+}
+
+.about-detail .li-resume:before {
+	content: '📄 ';
+	text-shadow: #00000086 0px 1px 2px;
+}
+
+.about-detail .li-easter:before {
+	content: '🥚 ';
+	text-shadow: #00000086 0px 1px 2px;
+}
+
 .about-detail .li-communication:before {
 	content: '💬 ';
 	text-shadow: #00000086 0px 1px 2px;
@@ -950,7 +998,7 @@ li {
 }
 
 .banners-container div {
-	transform: skewX(15deg); 
+	transform: skewX(15deg);
 }
 
 
@@ -1037,9 +1085,13 @@ li {
 }
 
 .videos-container div {
-	transform: skewX(15deg); 
+	transform: skewX(15deg);
 }
 
+.videos-container2 .section-content p {
+	color: var(--color-dark-gray);
+	margin: 5% 8% 0% 8%;
+}
 
 
 .videos-BG {
@@ -1132,7 +1184,7 @@ video {
 .dev-container h1 span {
 	display: flex;
 	gap: 10px;
-	transform: skewX(15deg); 
+	transform: skewX(15deg);
 	white-space: nowrap;
 }
 
@@ -1411,6 +1463,13 @@ video {
 	margin: 0;
 	padding: 0;
 	display: block;
+    /* Ensure pointer cursor on image map hover */
+    cursor: pointer;
+}
+
+/* Show pointer cursor for image map areas */
+area {
+    cursor: pointer;
 }
 
 
@@ -1430,7 +1489,7 @@ video {
 }
 
 .contact-container div {
-	transform: skewX(15deg); 
+	transform: skewX(15deg);
 }
 
 .contact-BG {

@@ -47,7 +47,7 @@ const Contact = ({ id, className, onOpenModal }) => {
 					<div className="section-content contact-content">
 
 						<div>
-							<h1 >Let's work <span className="accent-blue">together</span>!</h1>
+							<h2>Let's work <span className="accent-blue">together</span>!</h2>
 							<p>Tell me about your project and how I can help.</p>
 						</div>
 						<form className="contact-form" action={reachOut}>

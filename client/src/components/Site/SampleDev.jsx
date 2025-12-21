@@ -56,7 +56,7 @@ const SampleDev = ({ id, className, onOpenModal }) => {
 				<div className="dev-container2 section-container">
 
 					<div className="section-content">
-						<p>These are some examples. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod sunt in ratione dolorem facere neque ut, id quibusdam et eum fugit enim quos eaque dolores est! Suscipit quibusdam ab beatae. Illum facere labore est corporis fugit accusantium numquam earum itaque provident harum. Laborum in quibusdam vel iusto aliquam molestiae facere?</p>
+						<p><span className="h2-style medium-blue"> I Graduated</span><br />recently from UIC / Fullstack Academy completing an intensive, project-based curriculum. I honed in on my skills in React.js and Full-stack Development. Let's put these skills to work!</p>
 						<Carousel images={carouselImages} />
 					</div>
 

@@ -21,8 +21,9 @@ import Icon_JavaScript from "../Icon_JavaScript";
 import Icon_Premiere from "../Icon_Premiere";
 import Icon_React from "../Icon_React";
 import Icon_XD from "../Icon_XD";
+
 import BrandCrawler from "./BrandCrawler";
-const About = ({ id, className }) => {
+const About = ({ id, className, onOpenModal }) => {
 
 	const navRef = useRef(null);
 
@@ -65,6 +66,20 @@ const About = ({ id, className }) => {
 					<Icon_React className="grayScale" />
 				</div>
 				<div className="details-container">
+
+					<details className="details" name="">
+						<summary>Credentials & Stuff</summary>
+						<div className="about-detail">
+							<ul>
+								<li className="li-linkedin">Check out my <a href="https://www.linkedin.com/in/kirkmendoza" target="_blank" rel="noopener noreferrer">LinkedIn profile</a> for the 🥩 & 🥔.</li>
+								<li className="li-resume"><a href="#">Download</a> a formal resume. </li>
+								<li className="li-easter">There are a couple. 😉</li>
+							</ul>
+						</div>
+					</details>
+
+					<hr />
+					
 					<details className="details" name="">
 						<summary>Personal Practices</summary>
 						<div className="about-detail">
@@ -78,11 +93,13 @@ const About = ({ id, className }) => {
 						</div>
 					</details>
 
+					<hr />
+
 					<details className="details" name="">
 						<summary>Beyond Work</summary>
 						<div className="about-detail">
 							<ul>
-								<li className="li-chicago" >Situated about an hour from of Chicago.</li>
+								<li className="li-chicago" >Situated about an hour from downtown Chicago.</li>
 								<li className="li-married" >Married once, parented twice.🧑🏽‍🤝‍🧑🏻</li>
 								<li className="li-3dprint" >3D-printing hobbyist.</li>
 								<li className="li-toy" >Mild toy collector <span className="italic">(80's robots, LEGO...)</span></li>
@@ -91,7 +108,7 @@ const About = ({ id, className }) => {
 					</details>
 				</div>
 			</div>
-			<BrandCrawler className="brand-crawler" />
+			<BrandCrawler className="brand-crawler" onOpenModal={onOpenModal} />
 		</div>
 	)
 }
