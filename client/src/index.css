@@ -950,17 +950,6 @@ li {
 }
 
 .banners-container div {
-	/* font-size: 4em;
-	font-size: 4.25rem;
-	font-weight: normal;
-	font-family: BulletSmallCaps, sans-serif;
-	line-height: .75em;
-	line-height: .45em;
-	margin: 0px 0px 0px 0px;
-	color: var(--color-light-blue);
-	color: var(--color-white);
-	background-color: var(--color-super-dark-blue);
-	box-shadow: #0000004D 5px -5px 15px 1px;*/
 	transform: skewX(15deg); 
 }
 
@@ -1038,8 +1027,20 @@ li {
 .videos-container h1 {
 	margin: 0px 0px 0px 0px;
 	color: #111111;
+	background-color: var(--color-super-dark-blue);
+	background-color: var(--color-light-gray);
 	box-shadow: #00000040 5px -8px 8px 0px;
+	width: auto;
+	padding: 8px 20px 0px 20px;
+	transform: skewX(-15deg);
+	border-radius: 30px 0px 20px 0px;
 }
+
+.videos-container div {
+	transform: skewX(15deg); 
+}
+
+
 
 .videos-BG {
 	background: linear-gradient(to bottom, var(--color-medium-blue) 4%, var(--color-dark-gray) 20%);
@@ -1120,6 +1121,23 @@ video {
 .dev-container h1 {
 	margin: 0px 0px 0px 0px;
 	color: var(--color-medium-blue);
+	background-color: var(--color-light-blue);
+	box-shadow: #00000040 5px -8px 8px 0px;
+	width: auto;
+	transform: skewX(-15deg);
+	padding: 8px 20px 0px 20px;
+	border-radius: 30px 0px 20px 0px;
+}
+
+.dev-container h1 span {
+	display: flex;
+	gap: 10px;
+	transform: skewX(15deg); 
+	white-space: nowrap;
+}
+
+.icon-react {
+	/* transform: skewX(-15deg);  */
 }
 
 .dev-BG {
@@ -1404,6 +1422,15 @@ video {
 	margin: 0px 0px 0px 0px;
 	color: var(--color-darkest);
 	box-shadow: #000000A6 5px -5px 5px 1px;
+	background-color: var(--color-light-gray);
+	width: auto;
+	transform: skewX(-15deg);
+	padding: 8px 20px 0px 20px;
+	border-radius: 30px 0px 20px 0px;
+}
+
+.contact-container div {
+	transform: skewX(15deg); 
 }
 
 .contact-BG {

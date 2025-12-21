@@ -24,7 +24,7 @@ const SampleVideos = ({ id, className, onOpenModal }) => {
 			<div id={id} className={`centered-container ${className}`}>
 
 				<div className="videos-container label-container">
-					<h1 onClick={() => { handleCardClick(1) }} className={`section-label section-label-videos`}>Videos<span className="material-symbols-outlined asIcon">live_tv</span></h1>
+					<h1 onClick={() => { handleCardClick(1) }} className={`section-label section-label-videos`}><div>Videos<span className="material-symbols-outlined asIcon">live_tv</span></div></h1>
 				</div>
 
 				<div className="videos-container2 section-container">

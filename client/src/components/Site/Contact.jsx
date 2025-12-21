@@ -39,7 +39,7 @@ const Contact = ({ id, className, onOpenModal }) => {
 			<div id={id} className={`centered-container ${className}`}>
 
 				<div className="contact-container label-container">
-					<h1 className="section-label section-label-contact">Contact<span className="material-symbols-outlined asIcon">mail</span></h1>
+					<h1 className="section-label section-label-contact"><div>Contact<span className="material-symbols-outlined asIcon">mail</span></div></h1>
 				</div>
 
 				<div className="contact-container2 section-container">

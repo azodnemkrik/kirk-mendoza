@@ -49,8 +49,8 @@ const SampleDev = ({ id, className, onOpenModal }) => {
 		<>
 			<div id={id} className={`centered-container ${className}`}>
 
-				<div className="dev-container label-container">
-					<h1 onClick={() => { handleCardClick(1) }} className={`section-label section-label-dev`}>React <Icon_React className="icon-react" /></h1>
+				<div className="dev-container ">
+					<h1 onClick={() => { handleCardClick(1) }} className={`section-label section-label-dev`}><span>React <Icon_React className="icon-react" /></span></h1>
 				</div>
 
 				<div className="dev-container2 section-container">
