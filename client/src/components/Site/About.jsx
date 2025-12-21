@@ -41,10 +41,10 @@ const About = ({ id, className }) => {
 
 				<div className="aboutText">
 					<h1><span className="noWrap">Hi, I'm <span className="accent-blue">Kirk</span></span></h1>
-					<h2> Web Dev <span className="accent-blue">•</span> Animation <span className="accent-blue">•</span> <span className="noWrap">Motion Graphics</span></h2>
-					<p>With 20+ years of experience, blending visuals and code to solve problems is where I do my best work.</p>
+					<h2> Web Developer <span className="accent-blue">•</span> Animator <span className="accent-blue">•</span> <span className="noWrap">Project Solver</span></h2>
+					<p>With 20+ years of experience, I use code to bring static visuals and idea sparks to life. Solving project challenges is where I do my best work.</p>
 					<h2><span className="accent-blue">Full-Stack</span> Developer</h2>
-					<p>Recently Full-Stack certified, adding back-end development and React.</p>
+					<p>I have recently been Full-Stack certified, adding React to my Tech Stack. I look forward to taking on more jobs in this area.</p>
 				</div>
 
 			</div>
@@ -69,11 +69,11 @@ const About = ({ id, className }) => {
 						<summary>Personal Practices</summary>
 						<div className="about-detail">
 							<ul>
-								<li className="li-communication">Clear communication - it saves time for everyone and reduces unwanted surprises. </li>
-								<li className="li-work">Own the work - I'm responsible for everything I submit and stand behind it, whatever the outcome. </li>
-								<li className="li-positive">Positive thinking and strong collaboration can lead to truly great things. </li>
-								<li className="li-puzzle">In coding <i>(and life)</i>, I see problem-solving as a jigsaw puzzle or LEGO build - challenging & fun! </li>
-								<li className="li-eat">Don’t forget to eat! Seriously - especially lunch. </li>
+								<li className="li-communication">Clear communication - Let's save on billable time and reduce as many surprises.</li>
+								<li className="li-work">Accountability - With roles defined, I know I'm responsible for everything I submit and stand behind my work. </li>
+								<li className="li-positive">Positive Vibes - Keeping things positive and collaborative has lead to many great outcomes – including reduced stress. It's really worked so far. ☺️</li>
+								<li className="li-puzzle">I see coding, project solving <span className="italic">(and life in general)</span> like building with LEGO – Although challenging, there's a specific fun involved.</li>
+								<li className="li-eat">Take your Lunch Breaks - It's truly important that you don't forget to eat!</li>
 							</ul>
 						</div>
 					</details>
@@ -82,10 +82,10 @@ const About = ({ id, className }) => {
 						<summary>Beyond Work</summary>
 						<div className="about-detail">
 							<ul>
-								<li className="li-chicago" >Situated about an hour outside of Chicago.</li>
+								<li className="li-chicago" >Situated about an hour from of Chicago.</li>
 								<li className="li-married" >Married once, parented twice.🧑🏽‍🤝‍🧑🏻</li>
 								<li className="li-3dprint" >3D-printing hobbyist.</li>
-								<li className="li-toy" >Mild toy collector (robots, LEGO, Star Wars...)</li>
+								<li className="li-toy" >Mild toy collector <span className="italic">(80's robots, LEGO...)</span></li>
 							</ul>
 						</div>
 					</details>

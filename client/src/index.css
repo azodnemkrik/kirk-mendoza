@@ -83,6 +83,11 @@ h2 {
 	white-space: nowrap;
 }
 
+.italic {
+	font-style: italic;
+	font-family: "SegoePro Regular", sans-serif;
+}
+
 .wrapper {
 	padding: 0;
 	margin: 0;
@@ -567,7 +572,7 @@ svg {
 .about-detail li {
 	line-height: 1.25em;
 	/* list-style-type: none; */
-	/* display: list-item; */
+	display: list-item;
 	padding-bottom: 1.5rem;
 	padding-left: 30px;
 	text-indent: -29px;
@@ -581,39 +586,48 @@ svg {
 /* Personal Practices */
 .about-detail .li-communication:before {
 	content: '💬 ';
+	text-shadow: #00000086 0px 1px 2px;
 }
 
 .about-detail .li-work:before {
 	content: '✅ ';
+	text-shadow: #00000086 0px 1px 2px;
 }
 
 .about-detail .li-positive:before {
-	content: '🏅 ';
+	content: '✌️ ';
+	text-shadow: #00000086 0px 1px 2px;
 }
 
 .about-detail .li-puzzle:before {
 	content: '🧩 ';
+	text-shadow: #00000086 0px 1px 2px;
 }
 
 .about-detail .li-eat:before {
 	content: '🥪 ';
+	text-shadow: #00000086 0px 1px 2px;
 }
 
 /* Beyond Work */
 .about-detail .li-chicago:before {
 	content: '🍕 ';
+	text-shadow: #00000086 0px 1px 2px;
 }
 
 .about-detail .li-married:before {
 	content: '👩🏼‍🤝‍👨🏽 ';
+	text-shadow: #00000086 0px 1px 2px;
 }
 
 .about-detail .li-3dprint:before {
 	content: '🗿 ';
+	text-shadow: #00000086 0px 1px 2px;
 }
 
 .about-detail .li-toy:before {
 	content: '🤖 ';
+	text-shadow: #00000086 0px 1px 2px;
 }
 
 .details {
@@ -932,6 +946,7 @@ li {
 	padding: 8px 20px 0px 20px;
 	transform: skewX(-15deg);
 	border-radius: 20px 0px 0 0;
+	border-radius: 30px 0px 20px 0px;
 }
 
 .banners-container div {
