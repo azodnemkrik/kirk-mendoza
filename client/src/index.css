@@ -175,7 +175,7 @@ svg {
 }
 
 
-.card-label {
+.section-label {
 	display: inline-block;
 	color: #FFFFFF;
 	padding: 3px 10px;
@@ -193,13 +193,13 @@ svg {
 }
 
 
-.card-label.selected {
+.section-label.selected {
 	color: var(--color-light-blue);
 	background-color: var(--color-super-dark-blue);
 }
 
-.card-label:before,
-.card-label:after {
+/* .section-label:before,
+.section-label:after {
 	content: '.';
 	position: relative;
 	width: 21px;
@@ -207,9 +207,9 @@ svg {
 	padding: 8px 0px 0 0;
 	border-radius: 10px 0px 0 0;
 	transform: skewX(-15deg);
-}
+} */
 
-.card-label:after {
+.section-label:after {
 	right: unset;
 	left: 12px;
 	padding: 8px 0px 0 0;
@@ -344,8 +344,8 @@ svg {
 }
 
 /* Override for dev section */
-.card-label-dev .skill .skillIcon path,
-.card-label-dev .skill .skillIcon circle {
+.section-label-dev .skill .skillIcon path,
+.section-label-dev .skill .skillIcon circle {
 	fill: var(--color-medium-blue);
 }
 
@@ -928,6 +928,25 @@ li {
 	color: var(--color-white);
 	background-color: var(--color-super-dark-blue);
 	box-shadow: #0000004D 5px -5px 15px 1px;
+	width: auto;
+	padding: 8px 20px 0px 20px;
+	transform: skewX(-15deg);
+	border-radius: 20px 0px 0 0;
+}
+
+.banners-container div {
+	/* font-size: 4em;
+	font-size: 4.25rem;
+	font-weight: normal;
+	font-family: BulletSmallCaps, sans-serif;
+	line-height: .75em;
+	line-height: .45em;
+	margin: 0px 0px 0px 0px;
+	color: var(--color-light-blue);
+	color: var(--color-white);
+	background-color: var(--color-super-dark-blue);
+	box-shadow: #0000004D 5px -5px 15px 1px;*/
+	transform: skewX(15deg); 
 }
 
 
@@ -953,15 +972,15 @@ li {
 }
 
 /* Background Colors */
-.card-label-banners {
+.section-label-banners {
 	display: flex;
 	flex-direction: row;
 	align-items: center;
 	gap: 15px;
 }
 
-.card-label-banners:before,
-.card-label-banners:after {
+.section-label-banners:before,
+.section-label-banners:after {
 	color: var(--color-super-dark-blue);
 	background-color: var(--color-super-dark-blue);
 }
@@ -1065,7 +1084,7 @@ video {
 }
 
 /* Background Colors */
-.card-label-videos {
+.section-label-videos {
 	display: flex;
 	flex-direction: row;
 	align-items: center;
@@ -1073,8 +1092,8 @@ video {
 	background-color: var(--color-light-gray);
 }
 
-.card-label-videos:before,
-.card-label-videos:after {
+.section-label-videos:before,
+.section-label-videos:after {
 	color: var(--color-light-gray);
 	background-color: var(--color-light-gray);
 }
@@ -1189,7 +1208,7 @@ video {
 
 
 /* Background Colors */
-.card-label-dev {
+.section-label-dev {
 	display: flex;
 	flex-direction: row;
 	align-items: center;
@@ -1198,14 +1217,14 @@ video {
 	background-color: var(--color-light-blue);
 }
 
-.card-label-dev:before,
-.card-label-dev:after {
+.section-label-dev:before,
+.section-label-dev:after {
 	color: var(--color-light-blue);
 	background-color: var(--color-light-blue);
 }
 
 /* React Icon Only */
-.card-label-dev .skill {
+.section-label-dev .skill {
 	margin-top: 0px !important;
 	pointer-events: none;
 	cursor: default !important;
@@ -1335,7 +1354,7 @@ video {
 }
 
 /* Background Colors */
-.card-label-contact {
+.section-label-contact {
 	display: flex;
 	flex-direction: row;
 	align-items: center;
@@ -1343,8 +1362,8 @@ video {
 	background-color: var(--color-light-gray);
 }
 
-.card-label-contact:before,
-.card-label-contact:after {
+.section-label-contact:before,
+.section-label-contact:after {
 	color: var(--color-light-gray);
 	background-color: var(--color-light-gray);
 }
@@ -1846,6 +1865,10 @@ video {
 
 	.modal-content {
 		padding: 0px;
+	}
+
+	.brand-crawler {
+		transform: translate(0, 0px);
 	}
 
 }

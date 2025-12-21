@@ -35,8 +35,8 @@ const SampleBanners = ({ id, className, onOpenModal }) => {
 		<>
 			<div id={id} className={`centered-container ${className}`}>
 
-				<div className="banners-container ">
-					<h1 onClick={() => { handleCardClick(1) }} className={`card-label card-label-banners`}>Banners<span className="material-symbols-outlined asIcon">image_inset</span></h1>
+				<div className="banners-container label-container">
+					<h1 onClick={() => { handleCardClick(1) }} className={`section-label section-label-banners`}><div>Banners<span className="material-symbols-outlined asIcon">image_inset</span></div></h1>
 				</div>
 
 				<div className="banners-container2 section-container">
