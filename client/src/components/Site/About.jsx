@@ -71,9 +71,9 @@ const About = ({ id, className, onOpenModal }) => {
 						<summary>Credentials & Stuff</summary>
 						<div className="about-detail">
 							<ul>
-								<li className="li-linkedin">Check out my <a href="https://www.linkedin.com/in/kirkmendoza" target="_blank" rel="noopener noreferrer">LinkedIn profile</a> for the 🥩 & 🥔.</li>
-								<li className="li-resume"><a href="#">Download</a> a formal resume. </li>
-								<li className="li-easter">There are a couple. 😉</li>
+								<li className="li-linkedin">Check out my <a href="https://www.linkedin.com/in/kirkmendoza" target="_blank" rel="noopener noreferrer">LinkedIn profile</a> for all the 🥩 & 🥔.</li>
+								<li className="li-resume"><a href="./documents/Resume-Kirk-Mendoza-2026.pdf" target="_blank" rel="noopener noreferrer">Download</a> a good old fashioned, formal resume. </li>
+								<li className="li-easter">As of today, there are 3. Can you find them? 😜</li>
 							</ul>
 						</div>
 					</details>
@@ -102,7 +102,8 @@ const About = ({ id, className, onOpenModal }) => {
 								<li className="li-chicago" >Situated about an hour from downtown Chicago.</li>
 								<li className="li-married" >Married once, parented twice.🧑🏽‍🤝‍🧑🏻</li>
 								<li className="li-3dprint" >3D-printing hobbyist.</li>
-								<li className="li-toy" >Mild toy collector <span className="italic">(80's robots, LEGO...)</span></li>
+								<li className="li-toy" >Mild toy collector <span className="italic">(LEGO Star Wars, 80's robots...)</span><br/>
+								<div className="detail-image-container"><img src="../images/lego1.jpeg" alt="" /></div></li>
 							</ul>
 						</div>
 					</details>

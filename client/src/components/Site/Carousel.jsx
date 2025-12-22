@@ -27,7 +27,7 @@ const Carousel = ({ images }) => {
 
 	const goToSlide = (newIndex, direction = 'next') => {
 		if (isAnimating.current || newIndex === currentIndex) return;
-		
+
 		isAnimating.current = true;
 
 		const currentImg = imageRefs.current[currentIndex];
@@ -108,8 +108,8 @@ const Carousel = ({ images }) => {
 
 	return (
 		<div className="carousel-wrapper">
-			<div 
-				className="carousel" 
+			<div
+				className="carousel"
 				ref={carouselRef}
 				onTouchStart={handleTouchStart}
 				onTouchMove={handleTouchMove}
@@ -128,15 +128,15 @@ const Carousel = ({ images }) => {
 				</div>
 
 				{/* Navigation Arrows */}
-				<button 
-					className="carousel-arrow carousel-arrow-left" 
+				<button
+					className="carousel-arrow carousel-arrow-left"
 					onClick={handlePrev}
 					aria-label="Previous slide"
 				>
 					<span className="material-symbols-outlined">chevron_left</span>
 				</button>
-				<button 
-					className="carousel-arrow carousel-arrow-right" 
+				<button
+					className="carousel-arrow carousel-arrow-right"
 					onClick={handleNext}
 					aria-label="Next slide"
 				>

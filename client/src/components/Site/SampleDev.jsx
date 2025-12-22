@@ -55,8 +55,14 @@ const SampleDev = ({ id, className, onOpenModal }) => {
 
 				<div className="dev-container2 section-container">
 
+
+					<p>
+						<span className="h2-style medium-blue"> I Graduated</span><br />recently from
+
+						<a href="https://bootcamp.uic.edu/programs/coding" target="_blank" rel="noopener noreferrer"> <span className="school accent-red">UIC / Fullstack Academy</span>	
+						</a> completing an intensive, project-based curriculum. I honed in on my skills in React.js and Full-stack Development. Let's put these skills to work!
+					</p>
 					<div className="section-content">
-						<p><span className="h2-style medium-blue"> I Graduated</span><br />recently from UIC / Fullstack Academy completing an intensive, project-based curriculum. I honed in on my skills in React.js and Full-stack Development. Let's put these skills to work!</p>
 						<Carousel images={carouselImages} />
 					</div>
 

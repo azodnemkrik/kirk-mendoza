@@ -55,7 +55,7 @@ const Contact = ({ id, className, onOpenModal }) => {
 								<input className="name" type="text" name="name" required placeholder="Inigo Montoya"/>
 							</div>
 							<div><label>Email*</label><br />
-								<input className="email" type="email" name="email" required placeholder="gproberts@pptd.com"/>
+								<input className="email" type="email" name="email" required placeholder="mniim_ykmf@ptd.com"/>
 							</div>
 							<div><label>Subject</label><br />
 								<select className="subject"  name="subject">
@@ -67,8 +67,10 @@ const Contact = ({ id, className, onOpenModal }) => {
 								</select>
 							</div>
 							<div><label>Message</label><br />
-								<textarea className="message" name="message" placeholder='"Hey Kirk, I really like your site...."'/>
+								<textarea className="message" name="message" placeholder='"Hey Kirk, Nice site... Do you happen to have 6 fingers?"'/>
 							</div>
+							<div type="submit" >Submit</div>
+							
 							<button type="submit" >Submit</button>
 						</form>
 					</div>

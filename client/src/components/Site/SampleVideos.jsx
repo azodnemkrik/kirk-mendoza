@@ -29,9 +29,11 @@ const SampleVideos = ({ id, className, onOpenModal }) => {
 
 				<div className="videos-container2 section-container">
 
+					<p>
+						<span className="h2-style medium-blue"> I Edit & Animate</span><br />motion graphics videos using Adobe Premiere & After Effects, respectively. My main goal is ensuring that the story / information is conveyed clearly for my clients. Although not every client knows what they want, all of them can spot what they don't want.
+					</p>
+					
 					<div className="section-content">
-
-						<p><span className="h2-style medium-blue"> I Edit & Animate</span><br />motion graphics videos using Adobe Premiere & After Effects, respectively. My main goal is ensuring that the story / information is conveyed clearly for my clients. Although not every client knows what they want, all of them can spot what they don't want.</p>
 
 						<div className="thumbnail video-size">
 							<div className="thumbnail-info video-size">
