@@ -431,7 +431,7 @@ svg {
 }
 
 .section-content h2 {
-	text-align:  center;
+	text-align: center;
 }
 
 .h2-style {
@@ -480,30 +480,24 @@ svg {
 
 .nav-left {
 	/* display: flex; */
-	width: 40%;
+	width: 50%;
 	height: auto;
 	/* background-color: lightblue; */
+}
+
+
+.nav-right {
+	display: flex;
+	width: 50%;
+	justify-content: flex-end;
+	margin-right: 1rem;
+	/* background-color: purple; */
 }
 
 .heroLogo {
 	display: flex;
 	justify-content: flex-start;
-}
-
-/* .logo-insignia { */
-/* height: 80px; */
-/* margin: 45px 0 0 10px; */
-/* display: none; */
-/* margin-left: 1rem;
-/* margin-right: 1rem; */
-/* } */
-
-.nav-right {
-	display: flex;
-	width: 60%;
-	justify-content: flex-end;
-	margin-right: 1rem;
-	/* background-color: purple; */
+	justify-content: space-around;
 }
 
 .navigation-bar {
@@ -524,7 +518,7 @@ svg {
 
 .navigation-bar li {
 	transform: skewX(-15deg);
-	border-radius: 10px 0 10px 0;
+	/* border-radius: 10px 0 10px 0; */
 
 	white-space: nowrap;
 	display: inline-block;
@@ -532,6 +526,7 @@ svg {
 	/* padding: 0px 0px; */
 	color: #ffffff;
 	background-color: var(--color-medium-blue);
+	background-color: #0054a600;
 	transition: .25s;
 	text-decoration: none;
 	width: auto;
@@ -539,7 +534,7 @@ svg {
 	line-height: 100%;
 	cursor: pointer;
 
-	padding: 8px 20px;
+	padding: 8px;
 	border-radius: 10px 0 10px 0;
 }
 
@@ -567,7 +562,7 @@ svg {
 /* Logo Hero Styles */
 #logo {
 	height: auto;
-	align-self: center;
+	/* align-self: center; */
 }
 
 .logo-kirk {
@@ -1904,6 +1899,15 @@ area {
 		/* white-space: nowrap; */
 	}
 
+	/* Navigation */
+	.nav-left {
+		width: 65%;
+	}
+
+	.nav-right {
+		width: 35%;
+	}
+
 	.aboutText {
 		align-items: center;
 	}
@@ -1980,7 +1984,7 @@ area {
 	.logo-container {
 		width: 23rem;
 		height: auto;
-		margin: 0 0 10px 10px;
+		margin: 0 0 15px 10px;
 	}
 
 	/* .logo-insignia { */
