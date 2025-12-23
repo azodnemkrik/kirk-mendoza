@@ -6,6 +6,7 @@ import { MorphSVGPlugin } from "gsap/dist/MorphSVGPlugin";
 import { SplitText } from "gsap/dist/SplitText";
 import LogoHero from "./LogoHero";
 import HamburgerMenu from "../HamburgerMenu";
+import React_Icon from "../React_Icon";
 gsap.registerPlugin(DrawSVGPlugin, MorphSVGPlugin, SplitText);
 
 const navTL = gsap.timeline();
@@ -26,29 +27,24 @@ const Navigation = forwardRef(({ id, className, pathname, isFixed }, ref) => {
 						{/* <img src="/km-insignia.svg" alt="Kirk Mendoza Logo Insignia" className="logo-insignia" /> */}
 						<LogoHero className="heroLogo" />
 					</div>
-					<div className="nav-right">
-						<nav>
-							<ul className="navigation-bar">
-								<li onClick={() => { window.location.hash = '#about'; }} className="link-about-me">
-									<div>About Me</div>
-									{/* <div onClick={() => { handleCardClick(1) }} className={`card-label-3 three-tabs-button ${activeCard === 1 ? 'selected' : ''}`}>About Me</div> */}
-								</li>
-								<li onClick={() => { window.location.hash = '#banners'; }} className="link-banners">
-									<div>Banners</div>
-								</li>
-								<li onClick={() => { window.location.hash = '#videos'; }} className="link-videos">
-									<div>Videos</div>
-								</li>
-								<li onClick={() => { window.location.hash = '#react'; }} className="link-react">
-									<div>React</div>
-								</li>
-								<li onClick={() => { window.location.hash = '#contact'; }} className="link-contact">
-									<div>Contact</div>
-								</li>
-							</ul>
-						</nav>
+					<ul className="nav-right navigation-bar">
+						<li onClick={() => { window.location.hash = '#about'; }} className="link-about-me">
+							<div className="container" ><span className="material-symbols-outlined">home</span><span className="linkLabel">About Me</span></div>
+						</li>
+						<li onClick={() => { window.location.hash = '#banners'; }} className="link-banners">
+							<div className="container" ><span className="material-symbols-outlined">image_inset</span><span className="linkLabel">Banners</span></div>
+						</li>
+						<li onClick={() => { window.location.hash = '#videos'; }} className="link-videos">
+							<div className="container" ><span className="material-symbols-outlined">live_tv</span><span className="linkLabel">Videos</span></div>
+						</li>
+						<li onClick={() => { window.location.hash = '#react'; }} className="link-react">
+							<div className="container" ><React_Icon className="icon-react" /><span className="linkLabel">React</span></div>
+						</li>
+						<li onClick={() => { window.location.hash = '#contact'; }} className="link-contact">
+							<div className="container" ><span className="material-symbols-outlined">mail</span><span className="linkLabel">Contact</span></div>
+						</li>
 						<HamburgerMenu />
-					</div>
+					</ul>
 
 				</div>
 
