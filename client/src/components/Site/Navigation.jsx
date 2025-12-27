@@ -28,8 +28,8 @@ const Navigation = forwardRef(({ id, className, pathname, isFixed }, ref) => {
 						<LogoHero className="heroLogo" />
 					</div>
 					<ul className="nav-right navigation-bar">
-						<li onClick={() => { window.location.hash = '#about'; }} className="link-about-me">
-							<div className="container" ><span className="material-symbols-outlined">home</span><span className="linkLabel">About Me</span></div>
+						<li onClick={() => { window.location.hash = '#home'; }} className="link-home">
+							<div className="container" ><span className="material-symbols-outlined">home</span><span className="linkLabel">Home</span></div>
 						</li>
 						<li onClick={() => { window.location.hash = '#banners'; }} className="link-banners">
 							<div className="container" ><span className="material-symbols-outlined">image_inset</span><span className="linkLabel">Banners</span></div>

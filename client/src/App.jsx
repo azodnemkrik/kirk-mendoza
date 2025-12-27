@@ -12,6 +12,7 @@ import SampleBanners from './components/Site/SampleBanners';
 import SampleVideos from './components/Site/SampleVIdeos';
 import SampleDev from './components/Site/SampleDev';
 import Footer from './components/Site/Footer';
+import NavigationMobile from './components/Site/NavigationMobile.jsx';
 
 function App() {
 
@@ -43,45 +44,48 @@ function App() {
 
 	return (
 		<>
-		<Navigation ref={navRef} pathname={pathname} isFixed={isFixed} />
-		<div className="wrapper">
-			{/* <ThreeTabs id="about" onOpenModal={(content, src, shouldShowScrubber = true) => {
-				setModalContent(content);
-				setModalSrc(src);
-				setShowScrubber(shouldShowScrubber);
-				setIsModalOpen(true);
-			}} /> */}
-			<About id="about" onOpenModal={(content, src, shouldShowScrubber = true) => {
-				setModalContent(content);
-				setModalSrc(src);
-				setShowScrubber(shouldShowScrubber);
-				setIsModalOpen(true);
-			}} />
-			<SampleBanners id="banners" className="banners-BG" onOpenModal={(content, src, shouldShowScrubber = true) => {
-				setModalContent(content);
-				setModalSrc(src);
-				setShowScrubber(shouldShowScrubber);
-				setIsModalOpen(true);
-			}} />
-			<SampleVideos id="videos" className="videos-BG" onOpenModal={(content, src, shouldShowScrubber = true) => {
-				setModalContent(content);
-				setModalSrc(src);
-				setShowScrubber(shouldShowScrubber);
-				setIsModalOpen(true);
-			}} />
-			<SampleDev id="react" className="dev-BG" onOpenModal={(content, src, shouldShowScrubber = true) => {
-				setModalContent(content);
-				setModalSrc(src);
-				setShowScrubber(shouldShowScrubber);
-				setIsModalOpen(true);
-			}} />
-			<Contact id="contact" className="contact-BG" />
-			<Footer />
-		</div>
+			<Navigation ref={navRef} pathname={pathname} isFixed={isFixed} />
 
-		<Modal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} src={modalSrc} showScrubber={showScrubber}>
-			{modalContent}
-		</Modal>
+			<div className="wrapper" id="ho" >
+				{/* <ThreeTabs id="about" onOpenModal={(content, src, shouldShowScrubber = true) => {
+				setModalContent(content);
+				setModalSrc(src);
+				setShowScrubber(shouldShowScrubber);
+				setIsModalOpen(true);
+				}} /> */}
+				<About onOpenModal={(content, src, shouldShowScrubber = true) => {
+					setModalContent(content);
+					setModalSrc(src);
+					setShowScrubber(shouldShowScrubber);
+					setIsModalOpen(true);
+				}} />
+				<SampleBanners id="banners" className="banners-BG" onOpenModal={(content, src, shouldShowScrubber = true) => {
+					setModalContent(content);
+					setModalSrc(src);
+					setShowScrubber(shouldShowScrubber);
+					setIsModalOpen(true);
+				}} />
+				<SampleVideos id="videos" className="videos-BG" onOpenModal={(content, src, shouldShowScrubber = true) => {
+					setModalContent(content);
+					setModalSrc(src);
+					setShowScrubber(shouldShowScrubber);
+					setIsModalOpen(true);
+				}} />
+				<SampleDev id="react" className="dev-BG" onOpenModal={(content, src, shouldShowScrubber = true) => {
+					setModalContent(content);
+					setModalSrc(src);
+					setShowScrubber(shouldShowScrubber);
+					setIsModalOpen(true);
+				}} />
+				<Contact id="contact" className="contact-BG" />
+				<Footer />
+			</div>
+
+			<Modal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} src={modalSrc} showScrubber={showScrubber}>
+				{modalContent}
+			</Modal>
+			
+			<NavigationMobile className={"navigation-mobile"} />
 
 			<Routes>
 				<Route path="/" element={

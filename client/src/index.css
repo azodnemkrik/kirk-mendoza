@@ -171,7 +171,9 @@ h2 {
 	src: url(./fonts/YanoneKaffeesatz-Bold.woff) format('woff')
 }
 
-/* ----UNIVERSALS---- */
+
+
+/* ----------------UNIVERSALS---------------- */
 
 .container {
 	display: flex;
@@ -186,7 +188,9 @@ h2 {
 #videos,
 #react,
 #contact {
-	scroll-margin-top: calc(7.5vh + 100px);
+	/* scroll-margin-top: calc(7.5vh + 100px); */
+	scroll-margin-top: calc(90px);
+
 	/* 7.5vh for logo height + ~100px for navigation bar and spacing */
 }
 
@@ -338,7 +342,7 @@ svg {
 	color: var(--color-light-blue);
 	font-weight: normal;
 	font-family: "BulletSmallCaps", sans-serif;
-	font-size: 2.75em;
+	font-size: 2.25em;
 	line-height: 0.65em;
 	text-align: center;
 	-webkit-filter: drop-shadow(2px 2px 2px #000000A6);
@@ -453,7 +457,9 @@ svg {
 	display: none !important;
 }
 
-/* ----NAVIGATION---- */
+
+
+/* ----------------NAVIGATION---------------- */
 
 .navigation {
 	position: sticky;
@@ -585,24 +591,19 @@ svg {
 	width: 23rem;
 	height: auto;
 	margin-bottom: 20px;
-	/* display: flex; */
-	/* flex-wrap: wrap; */
-	/* justify-content: flex-start; */
-	/* align-items: start; */
-	/* flex-direction: row; */
-	/* padding: .5% 8%; */
-	/* margin-bottom: 5%; */
-	/* gap: 5%; */
-	/* width: auto; */
-	/* height: 7.5vh; */
-	/* width: 30vw; */
-	/* height: auto; */
-	/* width: 30rem; */
-	/* max-width: 1380px; */
+}
+
+/* Mobile Navigation */
+.navigation-mobile {
+	width: 100%;
+	height: 100%;
+	background-color: var(--color-black-90);
+	z-index: 1100;
 }
 
 
-/* ----ABOUT---- */
+
+/* ----------------ABOUT---------------- */
 
 :root {
 	interpolate-size: allow-keywords;
@@ -997,7 +998,8 @@ li {
 	border-radius: 10px 0 10px 0;
 }
 
-/* ----Three Cards Styles---- */
+
+/* ----------------Three Cards Styles---------------- */
 
 .three-cards-container2 {
 	/* background: linear-gradient(to bottom, var(--color-light-gray) 0%, var(--color-medium-gray) 15%, #666666 50%, var(--color-dark-gray) 95%); */
@@ -1049,7 +1051,8 @@ li {
 	/* background: linear-gradient(to bottom, var(--color-light-gray) 10%, var(--color-medium-gray) 25%, #666666 50%, var(--color-dark-gray) 95%); */
 }
 
-/* --------BANNERS-------- */
+
+/* --------------------BANNERS-------------------- */
 
 /* H1's */
 .banners-container h1 {
@@ -1138,7 +1141,7 @@ li {
 }
 
 
-/* --------VIDEOS-------- */
+/* --------------------VIDEOS-------------------- */
 
 .videos-container h1 {
 	margin: 0px 0px 0px 0px;
@@ -1236,7 +1239,7 @@ video {
 
 
 
-/* --------DEV / REACT-------- */
+/* --------------------DEV / REACT-------------------- */
 
 .dev-container h1 {
 	margin: 0px 0px 0px 0px;
@@ -1559,7 +1562,7 @@ area {
 
 
 
-/* --------CONTACT-------- */
+/* --------------------CONTACT-------------------- */
 
 .contact-container h1 {
 	margin: 0px 0px 0px 0px;
@@ -1779,7 +1782,7 @@ area {
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	z-index: 5000;
+	z-index: 1000;
 
 	display: flex;
 	align-items: center;
@@ -1831,7 +1834,7 @@ area {
 	width: 40px;
 	height: 40px;
 	transition: color 0.2s;
-	z-index: 5001;
+	z-index: 1001;
 }
 
 .modal-close-btn:hover {

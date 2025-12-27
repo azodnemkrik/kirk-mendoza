@@ -21,8 +21,8 @@ import Icon_JavaScript from "../Icon_JavaScript";
 import Icon_Premiere from "../Icon_Premiere";
 import Icon_React from "../Icon_React";
 import Icon_XD from "../Icon_XD";
-
 import BrandCrawler from "./BrandCrawler";
+
 const About = ({ id, className, onOpenModal }) => {
 
 	const navRef = useRef(null);
