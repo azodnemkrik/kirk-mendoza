@@ -1,13 +1,12 @@
 import React from "react";	
-import HamburgerMenu from "../HamburgerMenu";
 import React_Icon from "../React_Icon";
 
 const NavigationMobile = ( { className } ) => {
 	
 
    return (
-      <div className={` ${className}`}>
-					 <ul className="nav-right navigation-bar">
+      <div className={`float ${className}`}>
+					 <ul className="navigation-bar-mobile">
 						<li onClick={() => { window.location.hash = '#home'; }} className="link-home">
 							<div className="container" ><span className="material-symbols-outlined">home</span><span className="linkLabel">Home</span></div>
 						</li>
@@ -24,7 +23,6 @@ const NavigationMobile = ( { className } ) => {
 							<div className="container" ><span className="material-symbols-outlined">mail</span><span className="linkLabel">Contact</span></div>
 						</li>
 					</ul>
-					<HamburgerMenu />
       </div>
 
 

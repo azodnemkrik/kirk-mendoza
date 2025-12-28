@@ -469,6 +469,7 @@ svg {
 }
 
 #hamburger-menu {
+	padding-right: 30px;
 	display: none;
 }
 
@@ -525,7 +526,8 @@ svg {
 	z-index: 1000;
 }
 
-.navigation-bar li {
+.navigation-bar li,
+.navigation-bar-mobile li {
 	transform: skewX(-15deg);
 	white-space: nowrap;
 	display: inline-block;
@@ -545,7 +547,8 @@ svg {
 	border-radius: 10px 0 10px 0;
 }
 
-.navigation-bar li .container {
+.navigation-bar li .container,
+.navigation-bar-mobile li .container {
 	text-decoration: none;
 	color: var(--color-white);
 	transform: skewX(15deg);
@@ -553,13 +556,23 @@ svg {
 	gap: 10px;
 }
 
-.navigation-bar li:hover {
+.navigation-bar li:hover,
+.navigation-bar-mobile li:hover {
 	background-color: var(--color-light-blue);
 	color: var(--color-dark-gray);
 }
 
-.navigation-bar li .container .material-symbols-outlined {
+.navigation-bar li .container .material-symbols-outlined,
+.navigation-bar-mobile li .container .material-symbols-outlined {
 	font-size: 1.5rem;
+}
+
+.navigation-bar li .active,
+.navigation-bar-mobile li .active {
+	width: 200px;
+	height: auto;
+	background-color: var(--color-light-blue);
+	color: var(--color-dark-gray);
 }
 
 #navigation {
@@ -595,13 +608,43 @@ svg {
 
 /* Mobile Navigation */
 .navigation-mobile {
+	position: fixed;
+	display: flex;
+	align-items: center;
+	justify-content: center;
 	width: 100%;
 	height: 100%;
 	background-color: var(--color-black-90);
 	z-index: 1100;
+	top: 90px;
+	left: 100%;
+	/* visibility: hidden; */
 }
 
+.navigation-bar-mobile {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: flex-start;
+	gap: 10px;
+	padding: 40px 0px;
+	margin-top: -90px;
+}
 
+.showMobileMenu {
+	left: 0%;
+	transition: left 0.3s ease-in-out;
+}
+
+.hideMobileMenu {
+	left: 100%;
+	transition: left 0.3s ease-in-out;
+}
+
+.active {
+	background-color: var(--color-light-blue);
+	color: red;
+}
 
 /* ----------------ABOUT---------------- */
 
@@ -1897,7 +1940,7 @@ area {
 
 
 @media (max-width: 1400px) {
-	.linkLabel {
+	.nav-right .linkLabel {
 		/* display: none; */
 		width: 0;
 		overflow: hidden;
@@ -2015,6 +2058,10 @@ area {
 
 	.navigation-bar li {
 		display: none;
+	}
+
+	.navigation-mobile {
+		visibility: visible;
 	}
 
 	.logo-container {

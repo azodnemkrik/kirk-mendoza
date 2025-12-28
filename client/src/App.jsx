@@ -1,11 +1,7 @@
 import { useState, useEffect, useRef } from 'react'
-import { Link, Route, Routes, useLocation, useNavigate } from 'react-router-dom';
+import { Route, Routes, useLocation, useNavigate } from 'react-router-dom';
 import Navigation from './components/Site/Navigation';
-import LogoHero from './components/Site/LogoHero';
 import About from './components/Site/About';
-import ThreeTabs from './components/Site/ThreeTabs';
-import BrandCrawler from './components/Site/BrandCrawler';
-import CaseStudies from './components/Site/CaseStudies';
 import Contact from './components/Site/Contact';
 import Modal from './components/Site/Modal';
 import SampleBanners from './components/Site/SampleBanners';
@@ -26,10 +22,13 @@ function App() {
 	const [modalSrc, setModalSrc] = useState(null);
 	const [showScrubber, setShowScrubber] = useState(true);
 
+	const [menuIsOpen, setMenuIsOpen] = useState(false);
+
 	useEffect(() => {
 		if (location.hash) {
 			const el = document.querySelector(location.hash);
 			if (el) el.scrollIntoView({ behavior: 'smooth' });
+			console.log('location.hash changed:', location.hash);
 		}
 
 		const handleScroll = () => {
@@ -44,7 +43,7 @@ function App() {
 
 	return (
 		<>
-			<Navigation ref={navRef} pathname={pathname} isFixed={isFixed} />
+			<Navigation ref={navRef} pathname={pathname} isFixed={isFixed} menuIsOpen={menuIsOpen} setMenuIsOpen={setMenuIsOpen} />
 
 			<div className="wrapper" id="ho" >
 				{/* <ThreeTabs id="about" onOpenModal={(content, src, shouldShowScrubber = true) => {
@@ -84,8 +83,6 @@ function App() {
 			<Modal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} src={modalSrc} showScrubber={showScrubber}>
 				{modalContent}
 			</Modal>
-			
-			<NavigationMobile className={"navigation-mobile"} />
 
 			<Routes>
 				<Route path="/" element={
