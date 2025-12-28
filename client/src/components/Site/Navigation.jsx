@@ -11,7 +11,7 @@ gsap.registerPlugin(DrawSVGPlugin, MorphSVGPlugin, SplitText);
 
 const navTL = gsap.timeline();
 
-const Navigation = forwardRef(({ id, className, pathname, isFixed , menuIsOpen, setMenuIsOpen }, ref) => {
+const Navigation = forwardRef(({ id, className, pathname , menuIsOpen, setMenuIsOpen }, ref) => {
 
 	const internalRef = useRef(null);
 
@@ -35,27 +35,27 @@ const Navigation = forwardRef(({ id, className, pathname, isFixed , menuIsOpen, 
 	}
 
 	return (
-		<div id={id} className={className} ref={ref || internalRef} style={{ position: isFixed ? 'fixed' : 'sticky', top: 0, width: '100%', zIndex: 1000 }}>
+		<div id={id} className={className} ref={ref || internalRef} style={{ position: 'fixed', top: 0, width: '100%', zIndex: 1000 }}>
 
 			<div className={"float navigation-mobile " + (menuIsOpen ? "showMobileMenu" : "hideMobileMenu")}>
 				<ul className={"navigation-bar-mobile "}>
 
 					<li onClick={() => handlePathnameChange('#home')} className={`link-home ${location.hash === '#home' ? 'active' : ''}`}>
-						<div className="container" ><span className="material-symbols-outlined">home</span><span className="linkLabel">Home</span></div>
+						<div className={`container ${location.hash === '#home' ? 'active' : ''}`} ><span className={`material-symbols-outlined ${location.hash === '#home' ? 'active' : ''}`}>home</span><span className={`linkLabel ${location.hash === '#home' ? 'active' :""}`}>Home</span></div>
 					</li>
 
 					<li onClick={() => handlePathnameChange('#banners')} className={`link-banners ${location.hash === '#banners' ? 'active' : ''}`}>
-						<div className="container" ><span className="material-symbols-outlined">image_inset</span><span className="linkLabel">Banners</span></div>
+						<div className={`container ${location.hash === '#banners' ? 'active' : ''}`} ><span className={`material-symbols-outlined ${location.hash === '#banners' ? 'active' : ''}`}>image_inset</span><span className={`linkLabel ${location.hash === '#banners' ? 'active' :""}`}>Banners</span></div>
 					</li>
 
 					<li onClick={() => { handlePathnameChange('#videos') }} className={`link-videos ${location.hash === '#videos' ? 'active' : ''}`} >
-						<div className="container" ><span className="material-symbols-outlined">live_tv</span><span className="linkLabel">Videos</span></div>
+						<div className={`container ${location.hash === '#videos' ? 'active' : ''}`} ><span className={`material-symbols-outlined ${location.hash === '#videos' ? 'active' : ''}`}>live_tv</span><span className={`linkLabel ${location.hash === '#videos' ? 'active' :""}`}>Videos</span></div>
 					</li>
 					<li onClick={() => { handlePathnameChange('#react') }} className={`link-react ${location.hash === '#react' ? 'active' : ''}`} >
-						<div className="container" ><React_Icon className="icon-react" /><span className="linkLabel">React</span></div>
+						<div className={`container ${location.hash === '#react' ? 'active' : ''}`} ><React_Icon className={`icon-react ${location.hash === '#react' ? 'active' : ''}`} /><span className={`linkLabel ${location.hash === '#react' ? 'active' :""}`}>React</span></div>
 					</li>
 					<li onClick={() => { handlePathnameChange('#contact') }} className={`link-contact ${location.hash === '#contact' ? 'active' : ''}`} >
-						<div className="container" ><span className="material-symbols-outlined">mail</span><span className="linkLabel">Contact</span></div>
+						<div className={`container ${location.hash === '#contact' ? 'active' : ''}`} ><span className={`material-symbols-outlined ${location.hash === '#contact' ? 'active' : ''}`}>mail</span><span className={`linkLabel ${location.hash === '#contact' ? 'active' :""}`}>Contact</span></div>
 					</li>
 				</ul>
 			</div>
@@ -69,19 +69,19 @@ const Navigation = forwardRef(({ id, className, pathname, isFixed , menuIsOpen, 
 					</div>
 					<ul className="nav-right navigation-bar">
 						<li onClick={() => { handlePathnameChange('#home') }}  className={`link-home ${location.hash === '#home' ? 'active' : ''}`}>
-							<div className="container" ><span className="material-symbols-outlined">home</span><span className="linkLabel">Home</span></div>
+							<div className={`container ${location.hash === '#home' ? 'active' : ''}`} ><span className={`material-symbols-outlined ${location.hash === '#home' ? 'active' : ''}`}>home</span><span className={`linkLabel ${location.hash === '#home' ? 'active' :""}`}>Home</span></div>
 						</li>
 						<li onClick={() => { handlePathnameChange('#banners') }} className={`link-banners ${location.hash === '#banners' ? 'active' : ''}`}>
-							<div className="container" ><span className="material-symbols-outlined">image_inset</span><span className="linkLabel">Banners</span></div>
+							<div className={`container ${location.hash === '#banners' ? 'active' : ''}`} ><span className={`material-symbols-outlined ${location.hash === '#banners' ? 'active' : ''}`}>image_inset</span><span className={`linkLabel ${location.hash === '#banners' ? 'active' :""}`}>Banners</span></div>
 						</li>
 						<li onClick={() => { handlePathnameChange('#videos') }} className={`link-videos ${location.hash === '#videos' ? 'active' : ''}`}>
-							<div className="container" ><span className="material-symbols-outlined">live_tv</span><span className="linkLabel">Videos</span></div>
+							<div className={`container ${location.hash === '#videos' ? 'active' : ''}`} ><span className={`material-symbols-outlined ${location.hash === '#videos' ? 'active' : ''}`}>live_tv</span><span className={`linkLabel ${location.hash === '#videos' ? 'active' :""}`}>Videos</span></div>
 						</li>
 						<li onClick={() => { handlePathnameChange('#react') }} className={`link-react ${location.hash === '#react' ? 'active' : ''}`}>
-							<div className="container" ><React_Icon className="icon-react" /><span className="linkLabel">React</span></div>
+							<div className={`container ${location.hash === '#react' ? 'active' : ''}`} ><React_Icon className={`icon-react ${location.hash === '#react' ? 'active' : ''}`} /><span className={`linkLabel ${location.hash === '#react' ? 'active' :""}`}>React</span></div>
 						</li>
 						<li onClick={() => { handlePathnameChange('#contact') }} className={`link-contact ${location.hash === '#contact' ? 'active' : ''}`}>
-							<div className="container" ><span className="material-symbols-outlined">mail</span><span className="linkLabel">Contact</span></div>
+							<div className={`container ${location.hash === '#contact' ? 'active' : ''}`} ><span className={`material-symbols-outlined ${location.hash === '#contact' ? 'active' : ''}`}>mail</span><span className={`linkLabel ${location.hash === '#contact' ? 'active' :""}`}>Contact</span></div>
 						</li>
 					</ul>
 					<HamburgerMenu menuIsOpen={menuIsOpen} setMenuIsOpen={setMenuIsOpen} onClick={handleMenuToggle}/>

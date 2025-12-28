@@ -16,7 +16,6 @@ function App() {
 	const location = useLocation();
 	const { pathname } = location;
 	const navRef = useRef(null);
-	const [isFixed, setIsFixed] = useState(false);
 	const [isModalOpen, setIsModalOpen] = useState(false);
 	const [modalContent, setModalContent] = useState(null);
 	const [modalSrc, setModalSrc] = useState(null);
@@ -31,28 +30,21 @@ function App() {
 			console.log('location.hash changed:', location.hash);
 		}
 
-		const handleScroll = () => {
-			setIsFixed(window.scrollY > 30000);
-		};
-
-		window.addEventListener('scroll', handleScroll);
-		return () => window.removeEventListener('scroll', handleScroll);
-
 
 	}, [location]);
 
 	return (
 		<>
-			<Navigation ref={navRef} pathname={pathname} isFixed={isFixed} menuIsOpen={menuIsOpen} setMenuIsOpen={setMenuIsOpen} />
+			<Navigation ref={navRef} pathname={pathname} menuIsOpen={menuIsOpen} setMenuIsOpen={setMenuIsOpen} />
 
-			<div className="wrapper" id="ho" >
+			<div className="wrapper">
 				{/* <ThreeTabs id="about" onOpenModal={(content, src, shouldShowScrubber = true) => {
 				setModalContent(content);
 				setModalSrc(src);
 				setShowScrubber(shouldShowScrubber);
 				setIsModalOpen(true);
 				}} /> */}
-				<About onOpenModal={(content, src, shouldShowScrubber = true) => {
+				<About  id="home" onOpenModal={(content, src, shouldShowScrubber = true) => {
 					setModalContent(content);
 					setModalSrc(src);
 					setShowScrubber(shouldShowScrubber);
