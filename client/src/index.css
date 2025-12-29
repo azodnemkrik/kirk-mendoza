@@ -462,7 +462,7 @@ svg {
 /* ----------------NAVIGATION---------------- */
 
 .navigation {
-	position: sticky;
+	position: fixed;
 	z-index: 1000;
 	background-color: #000000;
 	box-shadow: #000000A6 0px 5px 10px 0px;
@@ -1725,7 +1725,7 @@ area {
 	gap: 15px;
 	margin-top: 20px;
 	margin: 10px 20px 20px 20px;
-	background-color: var(--color-light-blue);
+	background-color: var(--color-medium-blue);
 	padding: 30px;
 	border-radius: 30px 0 30px 0;
 	box-shadow: #000000A6 0px 16px 24px;
@@ -1735,7 +1735,7 @@ area {
 .contact-form div input,
 .contact-form div select,
 .contact-form div textarea,
-.contact-form button {
+.formSubmit {
 	font-family: 'SegoePro Semibold', sans-serif;
 }
 
@@ -1747,7 +1747,7 @@ area {
 .contact-form div label {
 	font-size: .75em;
 	color: var(--color-dark-gray);
-	color: var(--color-medium-blue);
+	color: var(--color-light-blue);
 	line-height: 0;
 }
 
@@ -1815,19 +1815,53 @@ area {
 	box-sizing: border-box;
 }
 
-.contact-form button {
+.contact-form p {
+	text-align: center;
+	transform: skewX(15deg);
+	color: var(--color-medium-blue) !important;
+	transition: color 0.2s ease-in-out;
+}
+
+.formSubmit {
+	all: unset;
+	text-align: center;
+	width: 100px !important;
+	height: 30px;
+	align-self: center;
+	cursor: pointer;
+	border-radius: 10px 0 10px 0;
+	padding: 8px 12px;
+	background-color: var(--color-medium-gray);
+	transform: skewX(-15deg);
+	margin-top: 20px;
+	transition: 
+		background-color 0.2s ease-in-out,
+		color 0.2s ease-in-out;
+
+}
+
+.formSubmit:hover {
+	background-color: var(--color-light-blue);
+
+	p {
+		color: var(--color-white) !important;
+	}
+}
+
+/* .contact-form button {
 	background-color: var(--color-medium-blue);
 	color: #FFFFFF;
 	border: none;
-	padding: 0px;
+	padding: 8px 12px;
 	font-size: 1em;
-	/* border-radius: 20px 0 20px 0; */
+	border-radius: 20px 0 20px 0;
 	cursor: pointer;
 	line-height: 1;
 	transition: background-color 0.3s;
-}
+	transform: skewX(15deg);
+} */
 
-.contact-form button:before,
+/* .contact-form button:before,
 .contact-form button:after {
 	content: '.';
 	color: var(--color-medium-blue);
@@ -1837,10 +1871,9 @@ area {
 	right: 0;
 	width: auto;
 	height: 20px;
-	/* height: auto; */
+	height: auto;
 	background-color: var(--color-medium-blue);
-	;
-	/* background-color: red; */
+	background-color: red;
 	padding: 8px 8px;
 	transform: skewX(-16deg);
 	border-radius: 10px 0 0 0;
@@ -1867,7 +1900,7 @@ area {
 .contact-form button:hover::after {
 	background-color: var(--color-white);
 	color: var(--color-white);
-}
+} */
 
 /* Modal Styles */
 
@@ -2056,7 +2089,8 @@ area {
 		padding: 2rem 2rem;
 	}
 
-	.contact-content p { /* Unique to Contact */
+	.contact-content p {
+		/* Unique to Contact */
 		padding: 0;
 	}
 
