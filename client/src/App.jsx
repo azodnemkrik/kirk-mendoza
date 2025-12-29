@@ -9,6 +9,7 @@ import SampleVideos from './components/Site/SampleVIdeos';
 import SampleDev from './components/Site/SampleDev';
 import Footer from './components/Site/Footer';
 import NavigationMobile from './components/Site/NavigationMobile.jsx';
+import BrandCrawler from './components/Site/BrandCrawler.jsx';
 
 function App() {
 
@@ -44,6 +45,7 @@ function App() {
 				setShowScrubber(shouldShowScrubber);
 				setIsModalOpen(true);
 				}} /> */}
+				<div id="spacer"></div>
 				<About  id="home" onOpenModal={(content, src, shouldShowScrubber = true) => {
 					setModalContent(content);
 					setModalSrc(src);

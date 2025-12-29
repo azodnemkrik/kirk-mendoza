@@ -12,6 +12,43 @@ gsap.registerPlugin(DrawSVGPlugin, MorphSVGPlugin, SplitText);
 const navTL = gsap.timeline();
 
 const Navigation = forwardRef(({ id, className, pathname , menuIsOpen, setMenuIsOpen }, ref) => {
+	// List of section IDs in scroll order
+	const sectionIds = ["home", "banners", "videos", "react", "contact"];
+	const [activeSection, setActiveSection] = useState("");
+
+	useEffect(() => {
+		const handleScroll = () => {
+			// Find the section currently in view
+			let found = false;
+			for (const id of sectionIds) {
+				const el = document.getElementById(id);
+				if (el) {
+					const rect = el.getBoundingClientRect();
+					// Adjust offset as needed (e.g., for fixed nav height)
+					if (rect.top <= 180 && rect.bottom > 180) {
+						if (activeSection !== id) {
+							setActiveSection(id);
+							if (window.location.hash !== `#${id}`) {
+								window.history.replaceState(null, "", `#${id}`);
+							}
+						}
+						found = true;
+						break;
+					}
+				}
+			}
+			if (!found && activeSection !== "") {
+				setActiveSection("");
+			}
+		};
+
+		window.addEventListener("scroll", handleScroll, { passive: true });
+		// Run on mount in case already scrolled
+		handleScroll();
+		return () => {
+			window.removeEventListener("scroll", handleScroll);
+		};
+	}, [activeSection]);
 
 	const internalRef = useRef(null);
 
@@ -33,6 +70,11 @@ const Navigation = forwardRef(({ id, className, pathname , menuIsOpen, setMenuIs
 		window.location.hash = myHash
 		console.log("pathname changed:", pathname);
 	}
+
+	const onScroll = (e) => {
+		// console.log("scrolling", e);
+	}
+
 
 	return (
 		<div id={id} className={className} ref={ref || internalRef} style={{ position: 'fixed', top: 0, width: '100%', zIndex: 1000 }}>

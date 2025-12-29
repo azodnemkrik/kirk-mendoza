@@ -85,7 +85,7 @@ const About = ({ id, className, onOpenModal }) => {
 						<div className="about-detail">
 							<ul>
 								<li className="li-communication">Clear communication - Let's save on billable time and reduce as many surprises.</li>
-								<li className="li-work">Accountability - With roles defined, I know I'm responsible for everything I submit and stand behind my work. </li>
+								<li className="li-work">Accountability - Especially with roles defined, I know I'm responsible for everything I submit and stand behind my work. </li>
 								<li className="li-positive">Positive Vibes - Keeping things positive and collaborative has lead to many great outcomes – including reduced stress. It's really worked so far. ☺️</li>
 								<li className="li-puzzle">I see coding, project solving <span className="italic">(and life in general)</span> like building with LEGO – Although challenging, there's a specific fun involved.</li>
 								<li className="li-eat">Take your Lunch Breaks - It's truly important that you don't forget to eat!</li>

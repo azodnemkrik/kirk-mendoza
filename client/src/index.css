@@ -694,8 +694,10 @@ svg {
 	;
 }
 
-#home {
-	margin-top: 90px;
+#spacer {
+	height: 90px;
+	width: 100%;
+	background-color: var(--color-light-gray);
 }
 
 .about-sections {
@@ -884,6 +886,11 @@ summary::marker {
 	width: auto;
 	height: auto;
 	margin-right: 20px;
+	-webkit-filter: drop-shadow(0px 8px 5px #0000004D);
+	-moz-filter: drop-shadow(0px 8px 5px #0000004D);
+	-ms-filter: drop-shadow(0px 8px 5px #0000004D);
+	-o-filter: drop-shadow(0px 8px 5px #0000004D);
+	filter: drop-shadow(0px 8px 5px #0000004D);
 }
 
 .profileImage {
@@ -892,7 +899,7 @@ summary::marker {
 	width: 100%;
 	height: auto;
 	border-radius: 50%;
-	border: 0.75em solid var(--color-light-blue);
+	border: 0.5em solid var(--color-light-blue);
 	margin-bottom: 20px;
 	min-width: 250px;
 	max-width: 275px;
@@ -1697,6 +1704,10 @@ area {
 	margin: 30px auto;
 }
 
+.contact-content p {
+	margin: 0% 8%;
+	padding: 0% 0%;
+}
 
 .contact-content div h1 {
 	font-size: 3em;
@@ -2045,6 +2056,10 @@ area {
 		padding: 2rem 2rem;
 	}
 
+	.contact-content p { /* Unique to Contact */
+		padding: 0;
+	}
+
 	/* Video Thumbnails */
 	.section-content p~.video-size {
 		transform: scale(0.85);
@@ -2143,7 +2158,7 @@ area {
 		align-self: center;
 		border-radius: 100px 0 100px 0;
 		border-radius: 50%;
-		border: 0.75em solid var(--color-light-blue);
+		border: 0.5em solid var(--color-light-blue);
 		/* margin-top: 20px; */
 		/* min-width: 50px; */
 		/* max-width: 150px; */
@@ -2176,7 +2191,7 @@ area {
 	}
 
 	.modal-content {
-		padding: 0px;
+		padding: 20px;
 	}
 
 	.brand-crawler {
