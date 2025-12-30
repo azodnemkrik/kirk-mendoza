@@ -5,7 +5,7 @@ import About from './components/Site/About';
 import Contact from './components/Site/Contact';
 import Modal from './components/Site/Modal';
 import SampleBanners from './components/Site/SampleBanners';
-import SampleVideos from './components/Site/SampleVIdeos';
+import SampleVideos from './components/Site/SampleVideos';
 import SampleDev from './components/Site/SampleDev';
 import Footer from './components/Site/Footer';
 
