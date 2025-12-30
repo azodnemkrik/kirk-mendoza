@@ -41,5 +41,4 @@ export default async function handler(req, res) {
 		res.status(500).json({ error: "Failed to send email." });
 	}
 }
-
 module.exports = router;
