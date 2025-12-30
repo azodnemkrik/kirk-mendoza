@@ -1,15 +1,5 @@
-import { Link } from "react-router-dom"
 import { useEffect, useRef } from "react";
 import profileImage from '../../images/profile-kirk.jpg';
-import iconAfterEffects from '../../images/after_effects.svg';
-import iconCSS from '../../images/css.svg';
-import iconFigma from '../../images/figma.svg';
-import iconGSAP from '../../images/gsap.svg';
-import iconHTML from '../../images/html.svg';
-import iconIllustrator from '../../images/illustrator.svg';
-import iconPhotoshop from '../../images/photoshop.svg';
-import iconPremiere from '../../images/premiere.svg';
-import iconReact from '../../images/react.svg';
 import Icon_AfterEffects from "../Icon_AfterEffects";
 import Icon_PhotoShop from "../Icon_PhotoShop";
 import Icon_CSS from "../Icon_CSS";
