@@ -93,11 +93,9 @@ h1 {
 h2 {
 	font-family: 'YanoneKaffeesatz-Bold';
 	color: var(--color-dark-gray);
-	/* font-style: normal; */
-	/* font-weight: bold; */
-	/* font-size: 3.25em; */
+	/* font-size: 3.9rem; */
 	font-size: calc(1.5vw + 1.5vh);
-	font-size: 3.9rem;
+	font-size: 3.5rem;
 	line-height: 1.2;
 	line-height: 1rem;
 	line-height: 2.5rem;
