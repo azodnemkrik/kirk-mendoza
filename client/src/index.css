@@ -733,7 +733,7 @@ svg {
 	display: inline-block;
 	width: 23px;
 	height: 23px;
-	background-image: url('linkedin.svg');
+	background-image: url('/linkedin.svg');
 	background-size: contain;
 	background-repeat: no-repeat;
 	vertical-align: middle;
