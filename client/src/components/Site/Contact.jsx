@@ -6,6 +6,11 @@ const Contact = ({ id, className, onOpenModal }) => {
 
 	const [activeCard, setActiveCard] = useState(1);
 
+	const [name, setName] = useState('');
+	const [email, setEmail] = useState('');
+	const [subject, setSubject] = useState('');
+	const [message, setMessage] = useState('');
+
 	// const reachOut = "https://formspree.io/f/mayvlgrq";
 
 	const navigate = useNavigate();
@@ -13,10 +18,10 @@ const Contact = ({ id, className, onOpenModal }) => {
 	const reachOut = async (e) => {
 		e.preventDefault();
 		const formData = new FormData(e.target);
-		const name = formData.get("name");
-		const email = formData.get("email");
-		const subject = formData.get("subject");
-		const message = formData.get("message");
+		setName(formData.get("name"));
+		setEmail(formData.get("email"));
+		setSubject(formData.get("subject"));
+		setMessage(formData.get("message"));
 		const visitor = {
 			name,
 			email,
@@ -29,7 +34,12 @@ const Contact = ({ id, className, onOpenModal }) => {
 		try {
 			await axios.post('/api/reach-out', visitor);
 			alert("Your message sent successfully!");
-			navigate('/');
+			setName('');
+			setEmail('');
+			setSubject('');
+			setMessage('');
+			// navigate('/');
+			window.location.hash = '#home'
 		} catch (error) {
 			alert("Something went wrong. Please try again later.");
 			console.error(error);
@@ -60,25 +70,22 @@ const Contact = ({ id, className, onOpenModal }) => {
 						<h2>Let's work <span className="accent-blue">together</span>!</h2>
 						<p>Have a project in mind? Tell me about your project and how I can help. Looking forward to hearing from you!</p>
 
-						<div>
-						</div>
-						{/* <form className="contact-form" action={reachOut} onSubmit={reachOut} > */}
-						{/* <div> */}
 						<form className="contact-form" onSubmit={reachOut} >
+
 							<div>
 								<label> Name*</label><br />
-								<input className="name" type="text" name="name" required placeholder="Inigo Montoya" />
+								<input className="name" type="text" name="name" required placeholder="Inigo Montoya" value={name} onChange={e => setName(e.target.value)} />
 							</div>
 
 							<div>
 								<label>Email*</label><br />
-								<input className="email" type="email" name="email" required placeholder="mniim_ykmf@ptd.com" />
+								<input className="email" type="email" name="email" required placeholder="mniim_ykmf@ptd.com" value={email} onChange={e => setEmail(e.target.value)} />
 							</div>
 
-							<input type="text" name="website" autoComplete="off" tabIndex="-1" style={{ position: 'absolute' , left: '-99999px', visibility: 'hidden' }} />
+							<input type="text" name="website" autoComplete="off" tabIndex="-1" style={{ position: 'absolute', left: '-99999px', visibility: 'hidden' }} />
 
 							<div><label>Subject</label><br />
-								<select className="subject" name="subject">
+								<select className="subject" name="subject" value={subject} onChange={e => setSubject(e.target.value)}>
 									<option value="" defaultValue >-- Select One --</option>
 									<option value="I've got a QUESTION..." selected >I've got a QUESTION...</option>
 									<option value="I'd like to COLLABORATE..." >I'd like to COLLABORATE...</option>
@@ -89,12 +96,10 @@ const Contact = ({ id, className, onOpenModal }) => {
 
 							<div>
 								<label>Message</label><br />
-								<textarea className="message" name="message" placeholder='"Hey Kirk, Nice site... Do you happen to have 6 fingers?"' />
+								<textarea className="message" name="message" placeholder='"Hey Kirk, Nice site... Do you happen to have 6 fingers on your right hand?"' value={message} onChange={e => setMessage(e.target.value)} />
 							</div>
 
 							<button className="formSubmit" type="submit" ><p>Submit</p></button>
-
-							{/* </div> */}
 
 						</form>
 					</div>
