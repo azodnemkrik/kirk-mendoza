@@ -27,10 +27,11 @@ export default async function handler(req, res) {
 	});
 
 	const mailOptions = {
-		from: email,
-		to: process.env.CONTACT_EMAIL_TO, // your destination email address
+		from: process.env.CONTACT_EMAIL_USER, // must match your DreamHost SMTP user
+		to: process.env.CONTACT_EMAIL_TO,
 		subject: `[Contact Form] ${subject}`,
 		text: `Name: ${name}\nEmail: ${email}\n\n${message}`,
+		replyTo: email, // this lets you reply to the visitor
 	};
 
 	try {
