@@ -24,6 +24,14 @@ export default async function handler(req, res) {
 		},
 	});
 
+	const mailOptions = {
+		from: process.env.CONTACT_EMAIL_USER,
+		to: process.env.CONTACT_EMAIL_TO,
+		subject: `[Contact Form] ${subject}`,
+		text: `Name: ${name}\nEmail: ${email}\n\n${message}`,
+		replyTo: email,
+	};
+
 	// WEBMAIL EXAMPLE:
 	// const transporter = nodemailer.createTransport({
 	// 	host: "smtp.dreamhost.com",
@@ -35,13 +43,13 @@ export default async function handler(req, res) {
 	// 	},
 	// });
 
-	const mailOptions = {
-		from: process.env.CONTACT_EMAIL_USER, // must match your DreamHost SMTP user
-		to: process.env.CONTACT_EMAIL_TO,
-		subject: `[Contact Form] ${subject}`,
-		text: `Name: ${name}\nEmail: ${email}\n\n${message}`,
-		replyTo: email, // this lets you reply to the visitor
-	};
+	// const mailOptions = {
+	// 	from: process.env.CONTACT_EMAIL_USER, // must match your DreamHost SMTP user
+	// 	to: process.env.CONTACT_EMAIL_TO,
+	// 	subject: `[Contact Form] ${subject}`,
+	// 	text: `Name: ${name}\nEmail: ${email}\n\n${message}`,
+	// 	replyTo: email, // this lets you reply to the visitor
+	// };
 
 	try {
 		await transporter.sendMail(mailOptions);
