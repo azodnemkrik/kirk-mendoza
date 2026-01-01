@@ -15,16 +15,25 @@ export default async function handler(req, res) {
 		return res.status(400).json({ error: "All fields are required." });
 	}
 
-	// WEBMAIL EXAMPLE:
+	// GMAIL EXAMPLE:
 	const transporter = nodemailer.createTransport({
-		host: "smtp.dreamhost.com",
-		port: 465, // use 465 for SSL, or 587 for STARTTLS
-		secure: true, // true for port 465, false for 587
+		service: "gmail",
 		auth: {
 			user: process.env.CONTACT_EMAIL_USER,
 			pass: process.env.CONTACT_EMAIL_PASS,
 		},
 	});
+
+	// WEBMAIL EXAMPLE:
+	// const transporter = nodemailer.createTransport({
+	// 	host: "smtp.dreamhost.com",
+	// 	port: 465, // use 465 for SSL, or 587 for STARTTLS
+	// 	secure: true, // true for port 465, false for 587
+	// 	auth: {
+	// 		user: process.env.CONTACT_EMAIL_USER,
+	// 		pass: process.env.CONTACT_EMAIL_PASS,
+	// 	},
+	// });
 
 	const mailOptions = {
 		from: process.env.CONTACT_EMAIL_USER, // must match your DreamHost SMTP user
