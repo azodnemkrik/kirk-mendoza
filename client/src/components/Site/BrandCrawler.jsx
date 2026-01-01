@@ -21,7 +21,7 @@ const BrandCrawler = ({ className, onOpenModal }) => {
                                     </div>
 
                                     <map name="imageMap">
-                                                  <area shape="rect" coords="1925,0,2082,70" alt="Contact" onClick={() => onOpenModal(<video className="flash-content" src="https://www.kirk-mendoza.com/video/pg-site.mp4" type="video/mp4" autoPlay loop muted controls width="auto" height="20%"></video>, "https://www.kirk-mendoza.com/video/pg-site.mp4")}/>
+                                                  <area shape="rect" coords="1925,0,2082,70" alt="Contact" onClick={() => onOpenModal(<video className="flash-content" src="https://www.littlerobotmedia.com/media/video/pg-site.mp4" type="video/mp4" autoPlay loop muted controls width="auto" height="20%"></video>, "https://www.littlerobotmedia.com/video/pg-site.mp4")}/>
                                     </map>
 
                          </div>
