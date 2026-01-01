@@ -383,6 +383,12 @@ svg {
 	cursor: pointer;
 	/* transition: background-color .2s, color .2s; */
 	text-decoration: none;
+	transition: .2s;
+}
+
+.thumbnail-button:hover {
+	background-color: var(--color-medium-blue);
+	color: var(--color-white);
 }
 
 /* Material Symbols filled variant */
@@ -1038,7 +1044,7 @@ li {
 }
 
 .skillIcon:hover+.skillLabel,
-.skillIcon:hover~.skillLabel {
+.skillIcon:hover~.skillLabel{
 	opacity: 1;
 }
 
@@ -1134,8 +1140,7 @@ li {
 }
 
 .section-container p {
-	/* color: var(--color-dark-gray); */
-	padding: 2rem 2rem;
+	/* padding: 2rem 2rem; */
 	max-width: 975px;
 }
 
@@ -1177,9 +1182,10 @@ li {
 	width: 100%;
 	height: 100%;
 	margin: -1px 0px;
-	padding: 0;
+	padding: 2rem;
+	gap: 2rem;
+	/* padding: 2rem 2rem; */
 	height: auto;
-	gap: 0px;
 	z-index: 19;
 	/* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/var(--color-medium-blue)+0,000000+100 */
 	background: linear-gradient(to top, var(--color-medium-blue) 0%, var(--color-dark-blue) 70%, var(--color-super-dark-blue) 95%);
@@ -1270,8 +1276,9 @@ li {
 	height: 100%;
 	margin: -1px 0px;
 	padding: 0;
+	padding: 2rem;
+	gap: 2rem;
 	height: auto;
-	gap: 0px;
 	z-index: 19;
 	/* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/var(--color-medium-blue)+0,000000+100 */
 	background: linear-gradient(to bottom, var(--color-light-gray) 10%, var(--color-medium-gray) 25%, #666666 50%, var(--color-dark-gray) 95%);
@@ -1314,6 +1321,11 @@ video {
 	width: 20px;
 	height: 20px !important;
 }
+
+/* .skills-used .skill {
+	margin-top: 0px !important;
+	transform: scale(0.5);
+} */
 
 /* Background Colors */
 .section-label-videos {
@@ -1378,9 +1390,9 @@ video {
 	width: 100%;
 	height: 100%;
 	margin: -1px 0px;
-	padding: 0;
+	padding: 2rem;
+	gap: 2rem;
 	height: auto;
-	gap: 0px;
 	z-index: 19;
 	/* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/var(--color-medium-blue)+0,000000+100 */
 	background: linear-gradient(to bottom, var(--color-light-blue) 0%, var(--color-dark-blue) 70%, var(--color-super-dark-blue) 95%);
@@ -1587,11 +1599,14 @@ video {
 .carousel-dots {
 	position: absolute;
 	bottom: 60px;
+	bottom: -50px;
+	bottom: -1.5rem;
 	left: 50%;
 	transform: translateX(-50%);
 	display: flex;
 	gap: 12px;
 	z-index: 100;
+	align-items: center;
 }
 
 .carousel-dot {
@@ -1600,20 +1615,20 @@ video {
 	border-radius: 50%;
 	border: none;
 	background: rgba(255, 255, 255, 0.4);
-	background: #00000066;
+	background: #FFFFFF66;
 	cursor: pointer;
 	transition: all 0.3s ease;
 	padding: 0;
 }
 
 .carousel-dot:hover {
-	background: rgba(255, 255, 255, 0.6);
+	/* background: rgba(255, 255, 255, 0.6); */
 	background: var(--color-light-blue);
 	transform: scale(1.2);
 }
 
 .carousel-dot.active {
-	background: var(--color-medium-blue);
+	background: var(--color-white);
 	width: 14px;
 	height: 14px;
 }
@@ -2100,6 +2115,19 @@ area {
 	.thumbnail-info .thumbnail-info-title {
 		font-size: 2.25em;
 	}
+
+	.banners-container2,
+	.videos-container2 {
+		padding: 1rem;
+		gap: 1rem;
+	}
+
+
+	.dev-container2 {
+		padding: 1rem;
+		gap: 0rem;
+	}
+
 
 	/* Responsive Carousel */
 	.carousel-wrapper {

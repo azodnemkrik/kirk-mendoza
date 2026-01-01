@@ -35,17 +35,19 @@ const SampleBanners = ({ id, className, onOpenModal }) => {
 		<>
 			<div id={id} className={`centered-container ${className}`}>
 
+
 				<div className="banners-container label-container">
 					<h1 onClick={() => { handleCardClick(1) }} className={`section-label section-label-banners`}><div>Banners<span className="material-symbols-outlined asIcon">image_inset</span></div></h1>
 				</div>
 
 				<div className="banners-container2 section-container">
-
+				
 					<p>
 						<span className="h2-style light-blue"> Every display ad </span><br />is built with attention to detail and utilizes the <i>GreenSock Animation Platform (GSAP)</i>. I aim to create work that feels premium, intentional, and far from cookie-cutter.
 					</p>
 					
 					<div className="section-content">
+
 
 
 						<div className="thumbnail">
@@ -54,12 +56,12 @@ const SampleBanners = ({ id, className, onOpenModal }) => {
 									<div className="thumbnail-info-title">Visit<br />Mississippi</div><br />
 									<div className="thumbnail-description">Animation • Development</div>
 									<div className="container skills-used">
-										<Icon_HTML className="skillIcon" />
-										<Icon_CSS className="skillIcon" />
-										<Icon_JavaScript className="skillIcon" />
-										<Icon_GSAP className="skillIcon gsap" />
-										<Icon_Illustrator className="skillIcon" />
-										<Icon_Figma className="skillIcon" />
+										<Icon_HTML className="" />
+										<Icon_CSS className="" />
+										<Icon_JavaScript className="" />
+										<Icon_GSAP className=" gsap" />
+										<Icon_Illustrator className="" />
+										<Icon_Figma className="" />
 									</div>
 								</div>
 								<div onClick={() => onOpenModal(<div><h2>Visit Mississippi</h2><iframe src="/banners/visit_mississippi/visit_mississippi-300x250/index.html" width="300" height="250"></iframe></div>, "/banners/visit_mississippi/visit_mississippi-300x250/index.html", false)} className="thumbnail-button">View</div>
@@ -73,11 +75,11 @@ const SampleBanners = ({ id, className, onOpenModal }) => {
 									<div className="thumbnail-info-title">Borden<br />Cheese</div><br />
 									<div className="thumbnail-description">Animation • Development</div>
 									<div className="container skills-used">
-										<Icon_HTML className="skillIcon" />
-										<Icon_CSS className="skillIcon" />
-										<Icon_JavaScript className="skillIcon" />
-										<Icon_GSAP className="skillIcon gsap" />
-										<Icon_PhotoShop className="skillIcon" />
+										<Icon_HTML className="" />
+										<Icon_CSS className="" />
+										<Icon_JavaScript className="" />
+										<Icon_GSAP className=" gsap" />
+										<Icon_PhotoShop className="" />
 									</div>
 								</div>
 								<div onClick={() => onOpenModal(<div><h2>Borden Cheese</h2><iframe src="/banners/borden/crisps_n_cubes-300x250/index.html" width="300" height="250"></iframe></div>, "/banners/borden/crisps_n_cubes-300x250/index.html", true)} className="thumbnail-button">View</div>
@@ -91,11 +93,11 @@ const SampleBanners = ({ id, className, onOpenModal }) => {
 									<div className="thumbnail-info-title">Refocus</div><br />
 									<div className="thumbnail-description">Animation • Development</div>
 									<div className="container skills-used">
-										<Icon_HTML className="skillIcon" />
-										<Icon_CSS className="skillIcon" />
-										<Icon_JavaScript className="skillIcon" />
-										<Icon_GSAP className="skillIcon gsap" />
-										<Icon_Figma className="skillIcon" />
+										<Icon_HTML className="" />
+										<Icon_CSS className="" />
+										<Icon_JavaScript className="" />
+										<Icon_GSAP className=" gsap" />
+										<Icon_Figma className="" />
 									</div>
 								</div>
 								<div onClick={() => onOpenModal(<div><h2>Refocus</h2><iframe src="/banners/refocus/30-percent-more-film-300x250/index.html" width="300" height="250"></iframe></div>, "/banners/refocus/30-percent-more-film-300x250/index.html", true)} className="thumbnail-button">View</div>
@@ -109,12 +111,12 @@ const SampleBanners = ({ id, className, onOpenModal }) => {
 									<div className="thumbnail-info-title">Microsoft</div><br />
 									<div className="thumbnail-description">Animation • Development<br />Project Management</div>
 									<div className="container skills-used">
-										<Icon_HTML className="skillIcon" />
-										<Icon_CSS className="skillIcon" />
-										<Icon_JavaScript className="skillIcon" />
-										<Icon_GSAP className="skillIcon gsap" />
-										<Icon_XD className="skillIcon" />
-										<Icon_PhotoShop className="skillIcon" />
+										<Icon_HTML className="" />
+										<Icon_CSS className="" />
+										<Icon_JavaScript className="" />
+										<Icon_GSAP className=" gsap" />
+										<Icon_XD className="" />
+										<Icon_PhotoShop className="" />
 									</div>
 								</div>
 								<div onClick={() => onOpenModal(<div><h2>Microsoft</h2><iframe src="/banners/microsoft/microsoft_neutral-300x250/index.html" width="300" height="250"></iframe></div>, "/banners/microsoft/microsoft_neutral-300x250/index.html", true)} className="thumbnail-button">View</div>
@@ -128,12 +130,12 @@ const SampleBanners = ({ id, className, onOpenModal }) => {
 									<div className="thumbnail-info-title">XBox</div><br />
 									<div className="thumbnail-description">Animation • Development<br />Project Management</div>
 									<div className="container skills-used">
-										<Icon_HTML className="skillIcon" />
-										<Icon_CSS className="skillIcon" />
-										<Icon_JavaScript className="skillIcon" />
-										<Icon_GSAP className="skillIcon gsap" />
-										<Icon_PhotoShop className="skillIcon" />
-										<Icon_Premiere className="skillIcon" />
+										<Icon_HTML className="" />
+										<Icon_CSS className="" />
+										<Icon_JavaScript className="" />
+										<Icon_GSAP className=" gsap" />
+										<Icon_PhotoShop className="" />
+										<Icon_Premiere className="" />
 									</div>
 								</div>
 								<div onClick={() => onOpenModal(<div><h2>XBox</h2><iframe src="/banners/xbox/xbox_titan-300x250/index.html" width="300" height="250"></iframe></div>, "/banners/xbox/xbox_titan-300x250/index.html", true)} className="thumbnail-button">View</div>
@@ -147,11 +149,11 @@ const SampleBanners = ({ id, className, onOpenModal }) => {
 									<div className="thumbnail-info-title">Discover</div><br />
 									<div className="thumbnail-description">Animation • Development</div>
 									<div className="container skills-used">
-										<Icon_HTML className="skillIcon" />
-										<Icon_CSS className="skillIcon" />
-										<Icon_JavaScript className="skillIcon" />
-										<Icon_GSAP className="skillIcon gsap" />
-										<Icon_Figma className="skillIcon" />
+										<Icon_HTML className="" />
+										<Icon_CSS className="" />
+										<Icon_JavaScript className="" />
+										<Icon_GSAP className=" gsap" />
+										<Icon_Figma className="" />
 									</div>
 								</div>
 								<div onClick={() => onOpenModal(<div><h2>Discover</h2><iframe src="/banners/discover/stackable-300x250/index.html" width="300" height="250"></iframe></div>, "/banners/discover/stackable-300x250/index.html", true)} className="thumbnail-button">View</div>
