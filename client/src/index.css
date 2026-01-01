@@ -491,10 +491,9 @@ svg {
 }
 
 .nav-left {
-	/* display: flex; */
 	width: 35%;
 	height: auto;
-	/* background-color: lightblue; */
+	padding: 0 0 0 2rem;
 }
 
 
@@ -2083,6 +2082,7 @@ area {
 	/* Navigation */
 	.nav-left {
 		width: 65%;
+		padding: 0;
 	}
 
 	.nav-right {
