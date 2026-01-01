@@ -200,11 +200,8 @@ const SampleBanners = ({ id, className, onOpenModal }) => {
 						</div>
 
 						{/* <Peekaboo id="peekaboo-container" onClick={() => onOpenModal(<video className="flash-content" src="https://www.kirk-mendoza.com/video/pg-site.mp4" type="video/mp4" autoPlay loop muted controls width="auto" height="20%"></video>, "https://www.kirk-mendoza.com/video/pg-site.mp4")} /> */}
-						<Peekaboo id="peekaboo-container" onClick={() => onOpenModal(<div><h2>IRI: Digital Greeting Card</h2><iframe src="/flash/iri_christmas/index.html" style={{
-							display: "block", width: "100vw", height: "100vh", border: "none", margin: 0, overflow: "hidden"
-						}}
-							allowFullScreen className="iri" ></iframe></div>, "/flash/iri_christmas/index.html", false)} />
-
+						{/* <Peekaboo id="peekaboo-container" onClick={() => onOpenModal(<div><h2>IRI: Digital Greeting Card</h2><iframe src="/flash/iri_christmas/index.html" style={{ display: "block", width: "100vw", height: "100vh", border: "none", margin: 0, overflow: "hidden" }} allowFullScreen className="iri" ></iframe></div>, "/flash/iri_christmas/index.html", false)} /> */}
+						<Peekaboo id="peekaboo-container" onClick={() => onOpenModal(<div><h2>IRI: Digital Greeting Card</h2><iframe src="https://www.littlerobotmedia.com/media/flash/iri_christmas/index.html" style={{ display: "block", width: "100vw", height: "100vh", border: "none", margin: 0, overflow: "hidden" }} allowFullScreen className="iri" ></iframe></div>, "https://www.littlerobotmedia.com/media/flash/iri_christmas/index.html", false)} />
 					</div>
 				</div>
 			</div >
