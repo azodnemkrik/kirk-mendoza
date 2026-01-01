@@ -2,10 +2,12 @@ import { useState } from "react";
 import React from "react";
 import thumb1 from '../../../public/banners/visit_mississippi/visit_mississippi-300x250.jpg';
 import thumb2 from '../../../public/banners/borden/crisps_n_cubes-300x250.jpg';
-import thumb3 from '../../../public/banners/refocus/30-percent-more-film-300x250.jpg';
+import thumb3 from '../../../public/banners/refocus/seller_benefits-300x250.jpg';
 import thumb4 from '../../../public/banners/microsoft/microsoft_neutral-300x250.jpg';
 import thumb5 from '../../../public/banners/xbox/xbox_titan-300x250.jpg';
-import thumb6 from '../../../public/banners/discover/stackable-300x250.jpg';
+import thumb6 from '../../../public/banners/discover/storefronts-300x250.jpg';
+import thumb7 from '../../../public/banners/discover/cityscapes-300x250.jpg';
+import thumb8 from '../../../public/banners/discover/stackable-300x250.jpg';
 import Peekaboo from "./Peekaboo";
 import cssIcon from '../../images/css.svg';
 import htmlIcon from '../../images/html.svg';
@@ -100,7 +102,7 @@ const SampleBanners = ({ id, className, onOpenModal }) => {
 										<Icon_Figma className="" />
 									</div>
 								</div>
-								<div onClick={() => onOpenModal(<div><h2>Refocus</h2><iframe src="/banners/refocus/30-percent-more-film-300x250/index.html" width="300" height="250"></iframe></div>, "/banners/refocus/30-percent-more-film-300x250/index.html", true)} className="thumbnail-button">View</div>
+								<div onClick={() => onOpenModal(<div><h2>Refocus</h2><iframe src="/banners/refocus/seller_benefits-300x250/index.html" width="300" height="250"></iframe></div>, "/banners/refocus/seller_benefits-300x250/index.html", true)} className="thumbnail-button">View</div>
 							</div>
 							<img src={thumb3} width="300" height="250" className="thumbnail-image" />
 						</div>
@@ -146,7 +148,7 @@ const SampleBanners = ({ id, className, onOpenModal }) => {
 						<div className="thumbnail">
 							<div className="thumbnail-info">
 								<div className="thumbnail-info-top">
-									<div className="thumbnail-info-title">Discover</div><br />
+									<div className="thumbnail-info-title">Discover: Storefronts</div><br />
 									<div className="thumbnail-description">Animation • Development</div>
 									<div className="container skills-used">
 										<Icon_HTML className="" />
@@ -156,10 +158,47 @@ const SampleBanners = ({ id, className, onOpenModal }) => {
 										<Icon_Figma className="" />
 									</div>
 								</div>
-								<div onClick={() => onOpenModal(<div><h2>Discover</h2><iframe src="/banners/discover/stackable-300x250/index.html" width="300" height="250"></iframe></div>, "/banners/discover/stackable-300x250/index.html", true)} className="thumbnail-button">View</div>
+								<div onClick={() => onOpenModal(<div><h2>Discover: Storefronts</h2><iframe src="/banners/discover/storefronts-300x250/index.html" width="300" height="250"></iframe></div>, "/banners/discover/storefronts-300x250/index.html", true)} className="thumbnail-button">View</div>
 							</div>
 							<img src={thumb6} width="300" height="250" className="thumbnail-image" />
 						</div>
+
+						<div className="thumbnail">
+							<div className="thumbnail-info">
+								<div className="thumbnail-info-top">
+									<div className="thumbnail-info-title">Discover: Cityscapes</div><br />
+									<div className="thumbnail-description">Animation • Development</div>
+									<div className="container skills-used">
+										<Icon_HTML className="" />
+										<Icon_CSS className="" />
+										<Icon_JavaScript className="" />
+										<Icon_GSAP className=" gsap" />
+										<Icon_Figma className="" />
+									</div>
+								</div>
+								<div onClick={() => onOpenModal(<div><h2>Discover: Cityscapes</h2><iframe src="/banners/discover/cityscapes-300x250/index.html" width="300" height="250"></iframe></div>, "/banners/discover/cityscapes-300x250/index.html", true)} className="thumbnail-button">View</div>
+							</div>
+							<img src={thumb7} width="300" height="250" className="thumbnail-image" />
+						</div>
+
+						<div className="thumbnail">
+							<div className="thumbnail-info">
+								<div className="thumbnail-info-top">
+									<div className="thumbnail-info-title">Discover: No</div><br />
+									<div className="thumbnail-description">Animation • Development</div>
+									<div className="container skills-used">
+										<Icon_HTML className="" />
+										<Icon_CSS className="" />
+										<Icon_JavaScript className="" />
+										<Icon_GSAP className=" gsap" />
+										<Icon_Figma className="" />
+									</div>
+								</div>
+								<div onClick={() => onOpenModal(<div><h2>Discover: No</h2><iframe src="/banners/discover/stackable-300x250/index.html" width="300" height="250"></iframe></div>, "/banners/discover/stackable-300x250/index.html", true)} className="thumbnail-button">View</div>
+							</div>
+							<img src={thumb8} width="300" height="250" className="thumbnail-image" />
+						</div>
+
 						{/* <Peekaboo id="peekaboo-container" onClick={() => onOpenModal(<video className="flash-content" src="https://www.kirk-mendoza.com/video/pg-site.mp4" type="video/mp4" autoPlay loop muted controls width="auto" height="20%"></video>, "https://www.kirk-mendoza.com/video/pg-site.mp4")} /> */}
 						<Peekaboo id="peekaboo-container" onClick={() => onOpenModal(<div><h2>IRI: Digital Greeting Card</h2><iframe src="/flash/iri_christmas/index.swfhtml" style={{
 							display: "block", width: "100vw", height: "100vh", border: "none", margin: 0, overflow: "hidden"
