@@ -1,9 +1,18 @@
 const Footer = () => (
-  <footer style={{
-    background: '#222', color: '#fff', textAlign: 'center', padding: '2em 0', marginTop: '0em', fontSize: '1em'
-  }}>
-    <div>© {new Date().getFullYear()} Kirk Mendoza. All rights reserved.</div>
-  </footer>
+	<footer style={{
+		background: '#222', color: '#fff', textAlign: 'center', padding: '2em 0', marginTop: '0em', fontSize: '1em'
+	}}>
+		<div className="footer-splitter">
+			<div className="footer-left">
+				<div>© {new Date().getFullYear()} Kirk Mendoza. All rights reserved.</div>
+			</div>
+			<div className="footer-right">
+				<a href="https://www.linkedin.com/in/kirkmendoza/" className="social-icon" target="_blank"><i className="fa-brands fa-square-linkedin"></i></a>
+				<a href="https://www.facebook.com/kirkmendoza/" className="social-icon" target="_blank"><i className="fa-brands fa-facebook-f"></i></a>
+				<a href="https://www.instagram.com/mendoza_kirk/" className="social-icon" target="_blank"><i className="fa-brands fa-instagram"></i></a>	
+			</div>
+		</div>
+	</footer>
 );
 
 export default Footer;

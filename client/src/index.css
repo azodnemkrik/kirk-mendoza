@@ -478,7 +478,8 @@ svg {
 }
 
 
-.nav-splitter {
+.nav-splitter,
+.footer-splitter {
 	display: flex;
 	flex-direction: row;
 	align-items: center;
@@ -505,6 +506,39 @@ svg {
 	gap: auto;
 	/* background-color: purple; */
 }
+
+.footer-left{
+	display: flex;
+	width: 50%;
+	height: auto;
+	padding: 0 2rem;
+}
+
+.footer-right{
+	display: flex;
+	width: 50%;
+	justify-content: flex-end;
+	gap: 1rem;
+	height: auto;
+	padding: 0 2rem;
+}
+
+.social-icon {
+	text-decoration: none;
+	color:unset;
+}
+
+.fa-brands {
+	color: unset;
+	font-size: 1.5rem;
+	transition: .2s;
+}
+
+.fa-brands:hover {
+	color: var(--color-light-blue);
+	cursor: pointer;
+}
+
 
 .heroLogo {
 	display: flex;
@@ -1831,6 +1865,7 @@ area {
 	text-align: center;
 	transform: skewX(15deg);
 	color: var(--color-medium-blue) !important;
+	color: var(--color-super-dark-blue) !important;
 	transition: color 0.2s ease-in-out;
 }
 
