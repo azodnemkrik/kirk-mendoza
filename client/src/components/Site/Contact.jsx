@@ -4,12 +4,11 @@ import { useNavigate } from "react-router-dom";
 
 const Contact = ({ id, className, onOpenModal }) => {
 
-	const [activeCard, setActiveCard] = useState(1);
-
 	const [name, setName] = useState('');
 	const [email, setEmail] = useState('');
 	const [subject, setSubject] = useState('');
 	const [message, setMessage] = useState('');
+	const [isSubmitting, setIsSubmitting] = useState(false);
 
 	// const reachOut = "https://formspree.io/f/mayvlgrq";
 
@@ -17,6 +16,7 @@ const Contact = ({ id, className, onOpenModal }) => {
 
 	const reachOut = async (e) => {
 		e.preventDefault();
+		setIsSubmitting(true);
 		const formData = new FormData(e.target);
 		setName(formData.get("name"));
 		setEmail(formData.get("email"));
@@ -33,17 +33,18 @@ const Contact = ({ id, className, onOpenModal }) => {
 		// Submission Logic
 		try {
 			await axios.post('/api/reach-out', visitor);
+			alert("Your message sent successfully!");
 			setName('');
 			setEmail('');
 			setSubject('');
 			setMessage('');
-			alert("Your message sent successfully!");
 			// navigate('/');
 			window.location.hash = '#home'
 		} catch (error) {
 			alert("Something went wrong. Please try again later.");
 			console.error(error);
 		}
+		setIsSubmitting(false);
 
 		// try {
 		// 	// const { data } = await axios.post('/api/reach-out', visitor)
@@ -99,7 +100,7 @@ const Contact = ({ id, className, onOpenModal }) => {
 								<textarea className="message" name="message" placeholder='"Hey Kirk, Nice site... Do you happen to have 6 fingers on your right hand?"' value={message} onChange={e => setMessage(e.target.value)} />
 							</div>
 
-							<button className="formSubmit" type="submit" ><p>Submit</p></button>
+							<button className="formSubmit" type="submit" disabled={isSubmitting}><p>Submit</p></button>
 
 						</form>
 					</div>
