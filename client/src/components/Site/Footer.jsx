@@ -4,7 +4,7 @@ const Footer = ( { id } ) => (
 	}}>
 		<div className="footer-splitter">
 			<div className="footer-left">
-				<div><span className="copyright">© {new Date().getFullYear()} Kirk Mendoza.</span> All rights reserved.</div>
+				<div><span className="nowrap-text">© {new Date().getFullYear()} Kirk Mendoza.</span> All rights reserved.</div>
 			</div>
 			<div className="footer-right">
 				<a href="https://www.linkedin.com/in/kirkmendoza/" className="social-icon" target="_blank"><i className="fa-brands fa-square-linkedin"></i></a>

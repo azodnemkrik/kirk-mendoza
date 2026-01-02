@@ -506,8 +506,8 @@ footer {
 	padding: 0 2rem;
 }
 
-.copyright {
-	white-space: nowrap;
+.nowrap-text {
+	white-space: nowrap !important;
 }
 
 .social-icon {
@@ -999,11 +999,11 @@ li {
 }
 
 .grayScale {
-	-webkit-filter: grayscale(100%) brightness(30%) contrast(70%) drop-shadow(0px 0px 0px #00000000);
-	-moz-filter: grayscale(100%) brightness(30%) contrast(70%) drop-shadow(0px 0px 0px #00000000);
-	-ms-filter: grayscale(100%) brightness(30%) contrast(70%) drop-shadow(0px 0px 0px #00000000);
-	-o-filter: grayscale(100%) brightness(30%) contrast(70%) drop-shadow(0px 0px 0px #00000000);
-	filter: grayscale(100%) brightness(30%) contrast(70%) drop-shadow(0px 0px 0px #00000000);
+	-webkit-filter: grayscale(0%) brightness(30%) contrast(70%) drop-shadow(0px 0px 0px #00000000);
+	-moz-filter: grayscale(0%) brightness(30%) contrast(70%) drop-shadow(0px 0px 0px #00000000);
+	-ms-filter: grayscale(0%) brightness(30%) contrast(70%) drop-shadow(0px 0px 0px #00000000);
+	-o-filter: grayscale(0%) brightness(30%) contrast(70%) drop-shadow(0px 0px 0px #00000000);
+	filter: grayscale(30%) brightness(50%) contrast(70%) drop-shadow(0px 0px 0px #00000000);
 	transition: .2s;
 }
 
