@@ -490,25 +490,29 @@ footer {
 	justify-content: center;
 }
 
-.footer-left{
+.footer-left {
 	display: flex;
-	width: 50%;
+	width: 70%;
 	height: auto;
 	padding: 0 2rem;
 }
 
-.footer-right{
+.footer-right {
 	display: flex;
-	width: 50%;
+	width: 30%;
 	justify-content: flex-end;
 	gap: 1rem;
 	height: auto;
 	padding: 0 2rem;
 }
 
+.copyright {
+	white-space: nowrap;
+}
+
 .social-icon {
 	text-decoration: none;
-	color:unset;
+	color: unset;
 }
 
 .fa-brands {
@@ -1029,7 +1033,7 @@ li {
 }
 
 .skillIcon:hover+.skillLabel,
-.skillIcon:hover~.skillLabel{
+.skillIcon:hover~.skillLabel {
 	opacity: 1;
 }
 
@@ -1814,7 +1818,7 @@ area {
 	background-color: var(--color-medium-gray);
 	transform: skewX(-15deg);
 	margin-top: 20px;
-	transition: 
+	transition:
 		background-color 0.2s ease-in-out,
 		color 0.2s ease-in-out;
 
@@ -2017,9 +2021,18 @@ area {
 	}
 
 	/* Footer */
+
 	.footer-left {
-		font-size: .9rem;	
+		font-size: .9rem;
+		width: 70%;
+		/* padding: 0 2rem; */
 	}
+
+	.footer-right {
+		width: 30%;
+		gap: 8px;
+	}
+
 
 	/* Video Thumbnails */
 	.section-content p~.video-size {

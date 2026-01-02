@@ -60,7 +60,7 @@ const SampleDev = ({ id, className, onOpenModal }) => {
 						<span className="h2-style medium-blue"> I Graduated</span><br />recently from
 
 						<a href="https://bootcamp.uic.edu/programs/coding" target="_blank" rel="noopener noreferrer"> <span className="school accent-red">UIC / Fullstack Academy</span>	
-						</a> completing an intensive, project-based curriculum. I honed in on my skills in React.js and Full-Stack Development. Ask me about my final project and I can demo it for you. Let's put these skills to work!
+						</a> completing an intensive, project-based curriculum. I honed in on my skills in React.js and Full-Stack Development. Ask me about my final project - I'd love to demo it for you! Let's put these new skills to work! 🤜🤛
 					</p>
 					<div className="section-content">
 						<Carousel images={carouselImages} />
