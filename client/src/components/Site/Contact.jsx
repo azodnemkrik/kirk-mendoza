@@ -33,11 +33,11 @@ const Contact = ({ id, className, onOpenModal }) => {
 		// Submission Logic
 		try {
 			await axios.post('/api/reach-out', visitor);
-			alert("Your message sent successfully!");
 			setName('');
 			setEmail('');
 			setSubject('');
 			setMessage('');
+			alert("Your message sent successfully!");
 			// navigate('/');
 			window.location.hash = '#home'
 		} catch (error) {
