@@ -105,7 +105,7 @@ const Navigation = forwardRef(({ id, className, pathname , menuIsOpen, setMenuIs
 
 			<div id="navigation" className="centered-container navigation">
 				<div className="nav-splitter">
-					<div className="nav-left">
+					<div className="nav-left" onClick={() => handlePathnameChange('#home')}>
 						{/* <img src="/km-insignia.svg" alt="Kirk Mendoza Logo Insignia" className="logo-insignia" /> */}
 						<LogoHero className="heroLogo" />
 					</div>
