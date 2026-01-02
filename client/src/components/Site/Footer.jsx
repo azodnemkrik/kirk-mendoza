@@ -1,5 +1,5 @@
-const Footer = () => (
-	<footer style={{
+const Footer = ( { id } ) => (
+	<footer id={id} style={{
 		background: '#222', color: '#fff', textAlign: 'center', padding: '1em 0', marginTop: '0em', fontSize: '1em'
 	}}>
 		<div className="footer-splitter">

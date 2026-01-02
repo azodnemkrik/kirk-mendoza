@@ -463,7 +463,7 @@ svg {
 	max-width: 1440px;
 	height: 90px;
 	max-height: 100px;
-	justify-self: center;
+	justify-self: center !important;
 	/* height: 7.5vw; */
 	/* justify-content: center; */
 }
@@ -482,6 +482,12 @@ svg {
 	/* margin-right: 1rem; */
 	gap: auto;
 	/* background-color: purple; */
+}
+
+footer {
+	display: flex;
+	align-items: center;
+	justify-content: center;
 }
 
 .footer-left{

@@ -65,7 +65,7 @@ function App() {
 					setIsModalOpen(true);
 				}} />
 				<Contact id="contact" className="contact-BG" />
-				<Footer />
+				<Footer id="footer" />
 			</div>
 
 			<Modal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} src={modalSrc} showScrubber={showScrubber}>
