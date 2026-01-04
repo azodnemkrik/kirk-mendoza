@@ -31,7 +31,7 @@ const About = ({ id, className, onOpenModal }) => {
 				</div>
 
 				<div className="aboutText">
-					<h1><span className="noWrap">Hi, I'm <span className="accent-blue">Kirk</span></span></h1>
+					<h1><span className="noWrap">Hi, I'm <span className="accent-blue">Kirk</span>!</span></h1>
 					<h2> Web Developer <span className="accent-blue">•</span> Animator <span className="accent-blue">•</span> <span className="noWrap">Project Solver</span></h2>
 					<p>With 20+ years of experience, I use code to bring static visuals and idea-sparks to life. Solving project challenges is where I do my best work.</p>
 					<h2><span className="accent-blue">Full-Stack</span> Developer</h2>
