@@ -440,7 +440,7 @@ let ember_stage = new EmberStage(document.querySelector('#ember_canvas'), false,
 
   // Add other listeners
   document.querySelector('.cta-button').addEventListener(myEvent, function () {
-    window.open(clickTag);
+    // window.open(clickTag);
   })
 
 })();
