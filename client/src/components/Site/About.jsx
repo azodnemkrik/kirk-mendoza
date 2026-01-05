@@ -63,7 +63,7 @@ const About = ({ id, className, onOpenModal }) => {
 							<ul>
 								<li className="li-linkedin">Check out my <a href="https://www.linkedin.com/in/kirkmendoza" target="_blank" rel="noopener noreferrer">LinkedIn profile</a> for all the 🥩 & 🥔.</li>
 								<li className="li-resume"><a href="./documents/Resume-Kirk-Mendoza-2026.pdf" target="_blank" rel="noopener noreferrer">Download</a> a good old fashioned, formal resume. </li>
-								<li className="li-easter">As of today, there are 3. Can you find them? 😜</li>
+								<li className="li-easter">As of today, there are 4. Send me a note via my <a href="#contact">Contact form</a> if you think you've found them all! ☺️</li>
 							</ul>
 						</div>
 					</details>
@@ -74,7 +74,7 @@ const About = ({ id, className, onOpenModal }) => {
 						<summary>Personal Practices</summary>
 						<div className="about-detail">
 							<ul>
-								<li className="li-communication">Clear communication - Let's save on billable time and reduce as many surprises.</li>
+								<li className="li-communication">Clear communication - Let's save on billable time and reduce as many surprises as we possibly can.</li>
 								<li className="li-work">Accountability - Especially with roles defined, I know I'm responsible for everything I submit and stand behind my work. </li>
 								<li className="li-positive">Positive Vibes - Keeping things positive and collaborative has lead to many great outcomes – including reduced stress. It's really worked so far. ☺️</li>
 								<li className="li-puzzle">I see coding, project solving <span className="italic">(and life in general)</span> like building with LEGO – Although challenging, there's a specific fun involved.</li>

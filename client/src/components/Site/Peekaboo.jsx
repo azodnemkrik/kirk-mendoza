@@ -23,7 +23,7 @@ const Peekaboo = ({ id, className ,onClick }) => {
 			.from("#opening", .4, { ease: "power4.inOut", morphSVG: { shape: "#opening-start", shapeIndex: "auto" } }, "frame2")
 			.from("#wrinkle1", .4, { y: 15, rotation: -10, ease: "power3.inOut", morphSVG: { shape: "#wrinkle1-start", shapeIndex: "auto" } }, "frame2")
 			.from("#wrinkle2", .4, { y: -15, rotation: -10, ease: "power3.inOut", morphSVG: { shape: "#wrinkle2-start", shapeIndex: "auto" } }, "frame2")
-			.from("#hand", .4, { x: 110, y: 150, rotation: -30, ease: "power3.inOut" }, "frame2")
+			.from("#hand", .4, { x: 125, y: 150, scaleX: .35, rotation: -10, ease: "power3.inOut" }, "frame2")
 			.from("#eyes", .4, { x: 80, y: -20, scale: .5, transformOrigin: "center", ease: "power4.inOut" }, "frame2")
 
 			.add("frame3", "+=0")

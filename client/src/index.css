@@ -1218,6 +1218,17 @@ li {
 	height: auto;
 }
 
+#peekaboo-2 {
+	transform: translate(-50px, 0px);
+}
+
+#peekaboo-container-2{
+	margin-top: -290px;
+	cursor: pointer !important;
+	/*width: 100%;
+	bottom: 40px */
+}
+
 #container {
 	width: 750px;
 	height: 550px;
@@ -1675,6 +1686,7 @@ area {
 .contact-BG {
 	background: linear-gradient(to bottom, var(--color-super-dark-blue) 4%, #000000 40%);
 	flex-direction: column;
+	overflow: hidden;
 }
 
 .contact-container2 {
