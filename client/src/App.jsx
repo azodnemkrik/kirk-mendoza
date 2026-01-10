@@ -42,7 +42,7 @@ function App() {
 
 	useEffect(() => {
 		const handleHashChange = () => {
-			track("pageview");
+			track("pageview", { hash: window.location.hash });
 			console.log("Hash changed to:", window.location.hash);
 		};
 		window.addEventListener("hashchange", handleHashChange);
