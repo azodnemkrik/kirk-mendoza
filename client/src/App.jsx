@@ -8,6 +8,7 @@ import SampleBanners from './components/Site/SampleBanners';
 import SampleVideos from './components/Site/SampleVideos';
 import SampleDev from './components/Site/SampleDev';
 import Footer from './components/Site/Footer';
+import { Analytics } from "@vercel/analytics/react";
 
 function App() {
 
@@ -40,7 +41,7 @@ function App() {
 
 				<div id="spacer"></div>
 
-				<About  id="home" onOpenModal={(content, src, shouldShowScrubber = true) => {
+				<About id="home" onOpenModal={(content, src, shouldShowScrubber = true) => {
 					setModalContent(content);
 					setModalSrc(src);
 					setShowScrubber(shouldShowScrubber);
@@ -65,12 +66,12 @@ function App() {
 					setIsModalOpen(true);
 				}} />
 				<Contact id="contact" className="contact-BG" />
-				<Footer id="footer"  onOpenModal={(content, src, shouldShowScrubber = true) => {
+				<Footer id="footer" onOpenModal={(content, src, shouldShowScrubber = true) => {
 					setModalContent(content);
 					setModalSrc(src);
 					setShowScrubber(shouldShowScrubber);
 					setIsModalOpen(true);
-				}}/>
+				}} />
 			</div>
 
 			<Modal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} src={modalSrc} showScrubber={showScrubber}>
@@ -83,6 +84,7 @@ function App() {
 					</>
 				} />
 			</Routes>
+			<Analytics />
 		</>
 	)
 }
