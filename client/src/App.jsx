@@ -1,4 +1,4 @@
-import { useState, useEffect, useRef } from 'react'
+import { useState, useEffect, useRef, use } from 'react'
 import { Route, Routes, useLocation, useNavigate } from 'react-router-dom';
 import Navigation from './components/Site/Navigation';
 import About from './components/Site/About';
@@ -28,8 +28,8 @@ function App() {
 		if (location.hash) {
 			const el = document.querySelector(location.hash);
 			if (el) el.scrollIntoView({ behavior: 'smooth' });
-			console.log('location.hash changed:', location.hash);
-			track('hashchange', { hash: location.hash });
+			// console.log('location.hash changed:', location.hash);
+			// track('hashchange', { hash: location.hash });
 
 			// window.addEventListener("hashchange", handleHashChange);
 			// return () => {
@@ -39,6 +39,17 @@ function App() {
 
 
 	}, [location]);
+
+	useEffect(() => {
+		const handleHashChange = () => {
+			track("pageview");
+			console.log("Hash changed to:", window.location.hash);
+		};
+		window.addEventListener("hashchange", handleHashChange);
+		return () => {
+			window.removeEventListener("hashchange", handleHashChange);
+		};
+	}, []);
 
 	return (
 		<>
