@@ -28,16 +28,7 @@ function App() {
 		if (location.hash) {
 			const el = document.querySelector(location.hash);
 			if (el) el.scrollIntoView({ behavior: 'smooth' });
-			// console.log('location.hash changed:', location.hash);
-			// track('hashchange', { hash: location.hash });
-
-			// window.addEventListener("hashchange", handleHashChange);
-			// return () => {
-			// 	window.removeEventListener("hashchange", handleHashChange);
-			// };
 		}
-
-
 	}, [location]);
 
 	useEffect(() => {
@@ -48,6 +39,22 @@ function App() {
 		window.addEventListener("hashchange", handleHashChange);
 		return () => {
 			window.removeEventListener("hashchange", handleHashChange);
+		};
+	}, []);
+
+	useEffect(() => {
+		const sendHashPageview = () => {
+			if (window.gtag) {
+				window.gtag('config', 'G-3T7SKWRTEZ', {
+					page_path: window.location.pathname + window.location.hash,
+				});
+			}
+		};
+		window.addEventListener('hashchange', sendHashPageview);
+		// Optionally, send initial pageview with hash
+		sendHashPageview();
+		return () => {
+			window.removeEventListener('hashchange', sendHashPageview);
 		};
 	}, []);
 
