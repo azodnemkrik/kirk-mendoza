@@ -31,10 +31,10 @@ function App() {
 			console.log('location.hash changed:', location.hash);
 			track('hashchange', { hash: location.hash });
 
-			window.addEventListener("hashchange", handleHashChange);
-			return () => {
-				window.removeEventListener("hashchange", handleHashChange);
-			};
+			// window.addEventListener("hashchange", handleHashChange);
+			// return () => {
+			// 	window.removeEventListener("hashchange", handleHashChange);
+			// };
 		}
 
 
