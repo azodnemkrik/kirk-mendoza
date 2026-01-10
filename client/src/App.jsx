@@ -9,6 +9,7 @@ import SampleVideos from './components/Site/SampleVideos';
 import SampleDev from './components/Site/SampleDev';
 import Footer from './components/Site/Footer';
 import { Analytics } from "@vercel/analytics/react";
+import { track } from "@vercel/analytics";
 
 function App() {
 
@@ -28,6 +29,7 @@ function App() {
 			const el = document.querySelector(location.hash);
 			if (el) el.scrollIntoView({ behavior: 'smooth' });
 			console.log('location.hash changed:', location.hash);
+			track('hash_change', { hash: location.hash });
 		}
 
 
