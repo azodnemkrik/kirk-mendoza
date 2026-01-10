@@ -29,7 +29,12 @@ function App() {
 			const el = document.querySelector(location.hash);
 			if (el) el.scrollIntoView({ behavior: 'smooth' });
 			console.log('location.hash changed:', location.hash);
-			track('hash_change', { hash: location.hash });
+			track('hashchange', { hash: location.hash });
+
+			window.addEventListener("hashchange", handleHashChange);
+			return () => {
+				window.removeEventListener("hashchange", handleHashChange);
+			};
 		}
 
 
