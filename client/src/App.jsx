@@ -24,39 +24,41 @@ function App() {
 
 	const [menuIsOpen, setMenuIsOpen] = useState(false);
 
-	// useEffect(() => {
-	// 	if (location.hash) {
-	// 		const el = document.querySelector(location.hash);
-	// 		if (el) el.scrollIntoView({ behavior: 'smooth' });
-	// 	}
-	// }, [location]);
+	/*
+	useEffect(() => {
+		if (location.hash) {
+			const el = document.querySelector(location.hash);
+			if (el) el.scrollIntoView({ behavior: 'smooth' });
+		}
+	}, [location]);
 
-	// useEffect(() => {
-	// 	const handleHashChange = () => {
-	// 		track("pageview", { hash: window.location.hash });
-	// 		console.log("Hash changed to:", window.location.hash);
-	// 	};
-	// 	window.addEventListener("hashchange", handleHashChange);
-	// 	return () => {
-	// 		window.removeEventListener("hashchange", handleHashChange);
-	// 	};
-	// }, []);
+	useEffect(() => {
+		const handleHashChange = () => {
+			track("pageview", { hash: window.location.hash });
+			console.log("Hash changed to:", window.location.hash);
+		};
+		window.addEventListener("hashchange", handleHashChange);
+		return () => {
+			window.removeEventListener("hashchange", handleHashChange);
+		};
+	}, []);
 
-	// useEffect(() => {
-	// 	const sendHashPageview = () => {
-	// 		if (window.gtag) {
-	// 			window.gtag('config', 'G-3T7SKWRTEZ', {
-	// 				page_path: window.location.pathname + window.location.hash,
-	// 			});
-	// 		}
-	// 	};
-	// 	window.addEventListener('hashchange', sendHashPageview);
-	// 	// Optionally, send initial pageview with hash
-	// 	sendHashPageview();
-	// 	return () => {
-	// 		window.removeEventListener('hashchange', sendHashPageview);
-	// 	};
-	// }, []);
+	useEffect(() => {
+		const sendHashPageview = () => {
+			if (window.gtag) {
+				window.gtag('config', 'G-3T7SKWRTEZ', {
+					page_path: window.location.pathname + window.location.hash,
+				});
+			}
+		};
+		window.addEventListener('hashchange', sendHashPageview);
+		// Optionally, send initial pageview with hash
+		sendHashPageview();
+		return () => {
+			window.removeEventListener('hashchange', sendHashPageview);
+		};
+	}, []);
+	*/
 
 	useEffect(() => {
 		const handleHashChange = () => {

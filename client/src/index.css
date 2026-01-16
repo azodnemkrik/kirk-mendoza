@@ -1224,6 +1224,7 @@ li {
 
 #peekaboo-container-2{
 	margin-top: -290px;
+	margin-right: 500px;
 	cursor: pointer !important;
 	/*width: 100%;
 	bottom: 40px */
@@ -2031,6 +2032,15 @@ area {
 	.contact-content p {
 		/* Unique to Contact */
 		padding: 0;
+	}
+
+	.contact-content {
+		margin: unset;
+		margin: 30px auto 120px
+	}
+
+	#peekaboo-container-2 {
+		margin-right: -100px;
 	}
 
 	/* Footer */
