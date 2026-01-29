@@ -11,15 +11,7 @@ import carouselImg8 from '../../../public/dev/carousel/itg-frame-08.jpg';
 import carouselImg9 from '../../../public/dev/carousel/itg-frame-09.jpg';
 import carouselImg10 from '../../../public/dev/carousel/itg-frame-10.jpg';
 import Carousel from "./Carousel";
-import Icon_Illustrator from "../Icon_Illustrator";
-import Icon_HTML from "../Icon_HTML";
-import Icon_CSS from "../Icon_CSS";
-import Icon_GSAP from "../Icon_GSAP";
-import Icon_Figma from "../Icon_Figma";
-import Icon_PhotoShop from "../Icon_PhotoShop";
-import Icon_JavaScript from "../Icon_JavaScript";
-import Icon_XD from "../Icon_XD";
-import Scrubber from "./Scrubber";
+
 import Icon_React from "../Icon_React";
 
 const SampleDev = ({ id, className, onOpenModal }) => {
@@ -55,16 +47,15 @@ const SampleDev = ({ id, className, onOpenModal }) => {
 
 				<div className="dev-container2 section-container">
 
-
-					<p>
-						<span className="h2-style medium-blue"> I Graduated</span><br />recently from
-
-						<a href="https://bootcamp.uic.edu/programs/coding" target="_blank" rel="noopener noreferrer"> <span className="school accent-red">UIC / Fullstack Academy</span>	
-						</a> completing an intensive, project-based curriculum. I honed in on my skills in React.js and Full-Stack Development. Ask me about my final project - I'd love to demo it for you! Let's put these new skills to work! <span className="nowrap-text">🤜🤛</span>
+					<p>I recently dove into Full-Stack development at <a href="https://bootcamp.uic.edu/programs/coding" target="_blank" rel="noopener noreferrer"> <span className="school accent-red">UIC / Fullstack Academy</span>
+					</a>, where I built my first full React.js project from scratch in just three weeks, handling every aspect myself while keeping up with full-time work. I presented it in a class demo video (starts at <a href="https://youtu.be/KMYDDZ4toh4?si=kV3oInc2ZKB0Ckr1&t=1999" target="_blank" rel="noopener noreferrer"><span className="school">33:19</span></a>). If you have questions or want more details, feel free to reach out—I’m happy to chat about how it works. In that short time, I applied my new skills confidently, solved the tricky parts as they came up, and I’m looking forward to gaining more experience with React through future projects.
 					</p>
+					
 					<div className="section-content">
 						<Carousel images={carouselImages} />
+						<iframe width="560" height="315" src="https://www.youtube.com/embed/KMYDDZ4toh4?start=1999" title="React Project Demo" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
 					</div>
+
 
 				</div>
 			</div>

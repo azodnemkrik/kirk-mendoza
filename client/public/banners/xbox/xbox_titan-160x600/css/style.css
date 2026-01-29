@@ -1,0 +1,388 @@
+/* -- BOILER PLATE -- START */
+body,
+html {
+  color: #000000;
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  margin: 0;
+  background: #808080;
+  -webkit-font-smoothing: antialiased !important;
+  text-rendering: optimizeLegibility !important;
+  -webkit-text-size-adjust: 100%;
+}
+
+div {
+  padding: 0;
+  margin: 0;
+  z-index: 20;
+}
+
+.wrapper {
+  background: #000000;
+  padding: 0;
+  margin: 0;
+  position: absolute;
+  transform: translateZ(0);
+  -webkit-transform: translateZ(0);
+}
+
+.banner {
+  width: 160px;
+  height: 600px;
+  overflow: hidden;
+  position: relative;
+}
+
+.banner .border {
+  position: absolute;
+  z-index: 100;
+  pointer-events: none;
+  background: #B5B5B5;
+}
+
+.banner .border-top {
+  width: 100%;  
+  height: 1px;
+  top: 0;
+  left: 0;
+}
+
+.banner .border-bottom {
+  width: 100%;
+  height: 1px;
+  bottom: 0;
+  left: 0;
+}
+
+.banner .border-left {
+  height: 100%;
+  width: 1px;
+  top: 1px;
+  left: 0;
+}
+
+.banner .border-right {
+  height: 100%;
+  width: 1px;
+  top: 1px;
+  right: 0;
+}
+
+.banner .stage {
+  position: absolute;
+  z-index: 20;
+  width: 160px;
+  height: 600px;
+  opacity: 0;
+  visibility: hidden;
+  cursor: pointer;
+}
+
+.float {
+  display: block;
+  position: absolute;
+  z-index: 20;
+}
+/* -- BOILER PLATE -- END */
+
+
+.carouselVid {
+  /* width: 230px;
+  height: 151px; */
+  width: 151px;
+  height: 106px;
+  border-radius: 10px;
+  border: 1px solid #682014; 
+  background-color:  #682014; 
+  /* opacity: .2; */
+}
+.vid6, .vid5, .vid4 {
+}
+
+
+
+
+/* -- FONTS -- */
+@font-face {
+  font-family: 'SegoeUI Regular';
+  src: url('../fonts/SegoeUI-Regular.woff') format('woff');
+} 
+@font-face {
+  font-family: 'Segoe UI Black';
+  src: url('../fonts/SegoeUI-Black.woff') format('woff');
+} 
+@font-face {
+  font-family: 'Segoe UI Bold';
+  src: url('../fonts/SegoeUI-Bold.woff') format('woff');
+} 
+
+@font-face {
+  font-family: 'Segoe Pro Condensed';
+  src: url('../fonts/SegoePro-Cond.woff') format('woff');
+} 
+
+
+
+/* Buttons */
+.navButton {
+  width: 160px;
+  height: 240px;
+  /* background-color: red; */
+  opacity: 0;
+}
+
+.navLeft {
+  top: 0px;
+  left: 0px;
+  /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#000000+0,000000+100&0.3+0,0+100 */
+  background: linear-gradient(to bottom,  rgba(0,0,0,0.7) 0%,rgba(0,0,0,0) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+}
+
+.navRight {
+  bottom: 0px;
+  right: 0px;
+  /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#000000+0,000000+100&0+0,0.6+100 */
+  background: linear-gradient(to bottom,  rgba(0,0,0,0) 0%,rgba(0,0,0,0.7) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+}
+
+
+
+/* -- SPRITESHEET -- */
+/* SPRITE SHEET - JPG */
+.jpg-element {
+  position: absolute;
+  display: block;
+  background-image: url('../images/jpg-element.jpg');
+  background-repeat: no-repeat;
+  background-size: 160px 600px;
+  overflow: hidden;
+  z-index: 20;
+}
+.background {
+  width: 160px;
+  height: 600px;
+  background-position: 0px 0px;
+}
+
+.png-element {
+  position: absolute;
+  display: block;
+  z-index: 20;
+  background-image: url('../images/png-element.png');
+  background-repeat: no-repeat;
+  background-size: 218px 118px; /*436px 236px;*/
+  overflow: hidden;
+}
+
+.doomLogo {
+  width: 218px; /*432px;*/
+  height: 123px; /*242px;*/
+  background-position: -1px -1px; /*-2px -2px;*/
+}
+
+/* Sprite sheet positioning */
+
+
+
+
+/* -- PROJECT STYLING & POSITIONING-- */
+.doomLogo {
+  top: 165px;
+  left: 50%;
+  transform: translateX(-50%);
+  pointer-events: none;
+}
+
+.background {
+  pointer-events: none;
+}
+
+.banner .stage {
+  font-family: "SegoeUI Regular", Arial, Helvetica, sans-serif; 
+}
+
+.introGradient {
+  width: 160px;
+  height: 600px;
+  /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#000000+1,37150e+81 */
+  background: linear-gradient(to bottom,  rgba(0,0,0,1) 1%,rgba(55,21,14,1) 81%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+}
+
+.logo {
+  position: absolute;
+  left: 17px;
+  top: 17px;
+  height: 32px;
+  pointer-events: none;
+  z-index: 1001;
+}
+
+.text {
+  font-family: "Segoe UI Black", Arial, Helvetica, sans-serif;
+  width: 160px;
+  /* top: 50%; */
+  text-align: center;
+  pointer-events: none;
+  color: #FFFFFF;
+  font-size: 20px;
+  /* letter-spacing: -0.5px; */
+  line-height: 28px;
+}
+
+
+.text1 {
+  font-family: "Segoe UI Bold";
+  font-size: 12px;
+  top: 296px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  line-height: 13px;
+}
+
+
+.text2 {
+  font-family: 'SegoeUI Regular', Arial, Helvetica, sans-serif;
+  font-size: 8.5px;
+  /* letter-spacing: -.1px; */
+  bottom: 63px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.text3 {
+  font-family: 'Segoe Pro Condensed', Arial, Helvetica, sans-serif;
+  font-size: 12px;
+  line-height: 14px;
+  text-align: left;
+  bottom: 15px;
+  left: 17px;
+  /* transform: translate(-50%, -50%); */
+}
+
+/* Play Doom: */
+.text4 {
+  top: 102px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 100;
+}
+
+/* The Dark */
+.text5 {
+  top: 123px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 22;
+}
+
+/* Ages Now */
+.text6 {
+  top: 142px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 22;
+}
+
+.green_shape {
+  width: 17px;
+  height: 6px;
+  top: 152px;
+  left: 50%;
+  transform: translateX(-50%);  
+  pointer-events: none;
+}
+
+
+/* -- CTA -- */
+.cta-button {
+  top: 477px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 130px;
+  height: 21px;
+  background-color: #9bf00b;
+  overflow: hidden;
+  z-index: 100;
+  /* opacity: .2; */
+}
+
+.cta-text {
+  top: 7px;
+  left: 16px;
+  font-family: 'Segoe UI Black';
+  font-size: 10px;
+  line-height: 7px;
+  pointer-events: none;
+  color: #054b16;
+}
+
+.ctaArrowContainer {
+  top: 7px;
+  left: 107px;
+  width: 20px;
+  height: 11px;
+  position: relative;
+  display: flex;
+  align-self: center;
+  justify-content: center;
+  overflow: hidden !important;
+  pointer-events: none;
+}
+
+ 
+.ctaArrow {
+  width: 5px;
+  position: absolute;
+  pointer-events: none;
+  fill: #054b16;
+}
+
+
+.ctaBackgroundArrow{
+  top: 0px;
+  left: -42px;
+  width: 200px;
+  height: 23px;
+  scale: 1.55;
+  pointer-events: none;
+}
+
+/* -- REPLAY -- */
+.replay-button {
+  width: 12px;
+  height: 12px;
+  right: 4px;
+  top: 4px;
+  z-index: 31 !important;
+  opacity: 0;
+  visibility: hidden;
+  cursor: pointer;
+}
+
+.replay-icon {
+  width: 11px;
+  height: 11px;
+}
+
+.ref {
+  top: 0px;
+  left: 0px;
+  width: 160px;
+  height: 600px;
+  background-size: 160px 600px;
+  pointer-events: none;
+  opacity: 0.5;
+}
+
+#ember_canvas {
+  z-index: 20 !important;
+  position: absolute;
+  width: 160px;
+  height: 600px;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  pointer-events: none;
+}

@@ -69,7 +69,8 @@ const Contact = ({ id, className, onOpenModal }) => {
 
 					<div className="section-content contact-content">
 						<h2>Let's work <span className="accent-blue">together</span>!</h2>
-						<p>Have a project in mind? Tell me about your project and how I can help. Looking forward to hearing from you!</p>
+						<p>Got a question, an idea for collaboration, or a project you’d like me to work on? Found the Easter Eggs and want to request a limited-edition sticker? Drop me a message, and let’s connect!</p>
+						{/* <p>Have a project in mind? Tell me about your project and how I can help. Looking forward to hearing from you!</p> */}
 
 						<form className="contact-form" onSubmit={reachOut} >
 
@@ -91,7 +92,7 @@ const Contact = ({ id, className, onOpenModal }) => {
 									<option value="I've got a QUESTION..." selected >I've got a QUESTION...</option>
 									<option value="I'd like to COLLABORATE..." >I'd like to COLLABORATE...</option>
 									<option value="I'd like to HIRE YOU...">I'd like to HIRE YOU...</option>
-									<option value="I'm just SAYING HI!">I'm just SAYING HI!</option>
+									<option value="I found your EASTER EGGS!">I found your EASTER EGGS!</option>
 								</select>
 							</div>
 
@@ -100,7 +101,7 @@ const Contact = ({ id, className, onOpenModal }) => {
 								<textarea className="message" name="message" placeholder='"Hey Kirk, Nice site... Do you happen to have 6 fingers on your right hand?"' value={message} onChange={e => setMessage(e.target.value)} />
 							</div>
 
-							<button className="formSubmit" type="submit" disabled={isSubmitting}><p>Submit</p></button>
+							<button className="formSubmit" type="submit" disabled={isSubmitting}><p>Send</p></button>
 
 						</form>
 					</div>

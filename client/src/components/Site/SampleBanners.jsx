@@ -43,19 +43,97 @@ const SampleBanners = ({ id, className, onOpenModal }) => {
 				</div>
 
 				<div className="banners-container2 section-container">
-				
+
 					<p>
-						<span className="h2-style light-blue"> Every display ad </span><br />is built with attention to detail and utilizes the <i>GreenSock Animation Platform (GSAP)</i>. I aim to create work that feels premium, intentional, and far from cookie-cutter.
+						Most banners are built from scratch and hand-coded using techniques that keep files lean for fast, smooth performance.
+I avoid bloated tools so each piece feels intentional, polished, and far from cookie-cutter.
 					</p>
-					
+					<p><span className="h2-style light-blue">Interactive Ads</span></p>
 					<div className="section-content">
 
-
-
+						{/* XBox */}
 						<div className="thumbnail">
 							<div className="thumbnail-info">
 								<div className="thumbnail-info-top">
-									<div className="thumbnail-info-title">Visit<br />Mississippi</div><br />
+									<div className="thumbnail-info-title">XBox</div>
+									<div className="thumbnail-description">Animation • Development<br />Editing • Project Management</div>
+									<div className="container skills-used">
+										<Icon_HTML className="" />
+										<Icon_CSS className="" />
+										<Icon_JavaScript className="" />
+										<Icon_GSAP className=" gsap" />
+										<Icon_PhotoShop className="" />
+										<Icon_Premiere className="" />
+									</div>
+									<div>
+										<div className="thumbnail-view-a-size">Select a Size</div>
+										<div className="thumbnail-resizes-container">
+											<div className="thumbnail-resize" onClick={() => onOpenModal(<div className="v-container"><h2 className="view-horizontal-text">XBox</h2><iframe src="/banners/xbox/xbox_titan-160x600/index.html" width="160" height="600"></iframe></div>, "/banners/xbox/xbox_titan-160x600/index.html", true)}>160x600</div>|
+											<div className="thumbnail-resize" onClick={() => onOpenModal(<div><h2>XBox</h2><iframe src="/banners/xbox/xbox_titan-300x250/index.html" width="300" height="250"></iframe></div>, "/banners/xbox/xbox_titan-300x250/index.html", true)}>300x250</div>|
+											<div className="thumbnail-resize" onClick={() => onOpenModal(<div><h2>XBox</h2><iframe src="/banners/xbox/xbox_titan-300x600/index.html" width="300" height="600"></iframe></div>, "/banners/xbox/xbox_titan-300x600/index.html", true)}>300x600</div><span className="view-horizontal">|</span>
+											<div className="thumbnail-resize view-horizontal" onClick={() => onOpenModal(<div><h2>XBox</h2><iframe src="/banners/xbox/xbox_titan-728x90/index.html" width="728" height="90"></iframe></div>, "/banners/xbox/xbox_titan-728x90/index.html", true)}>728x90</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<img src={thumb5} width="300" height="250" className="thumbnail-image" />
+						</div>
+						
+						{/* Coca-Cola */}
+						<div className="thumbnail">
+							<div className="thumbnail-info">
+								<div className="thumbnail-info-top">
+									<div className="thumbnail-info-title">Coca-Cola</div>
+									<div className="thumbnail-description">Design • Animation<br/>Development</div>
+									<div className="container skills-used">
+										<Icon_HTML className="" />
+										<Icon_CSS className="" />
+										<Icon_JavaScript className="" />
+										<Icon_GSAP className=" gsap" />
+										<Icon_Illustrator className="" />
+										<Icon_Figma className="" />
+									</div>
+									<div>
+										<div className="thumbnail-view-a-size">Select a Size</div>
+										<div className="thumbnail-resizes-container">
+											<div className="thumbnail-resize" onClick={() => onOpenModal(<div className="v-container"><h2 className="view-horizontal-text">Coca-Cola</h2><iframe src="/banners/coca_cola/coca_cola-share-160x600/index.html" width="160" height="600"></iframe></div>, "/banners/coca_cola/coca_cola-share-160x600/index.html", false)}>160x600</div>|
+											<div className="thumbnail-resize" onClick={() => onOpenModal(<div><h2>Coca-Cola</h2><iframe src="/banners/coca_cola/coca_cola-share-300x250/index.html" width="300" height="250"></iframe></div>, "/banners/coca_cola/coca_cola-share-300x250/index.html", false)}>300x250</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<img src="/banners/coca_cola/coca_cola-share-300x250.jpg" width="300" height="250" className="thumbnail-image" />
+						</div>
+						
+						{/* Apple Watch */}
+						<div className="thumbnail">
+							<div className="thumbnail-info">
+								<div className="thumbnail-info-top">
+									<div className="thumbnail-info-title">Apple Watch</div>
+									<div className="thumbnail-description">Design • Animation<br/>Development</div>
+									<div className="container skills-used">
+										<Icon_HTML className="" />
+										<Icon_CSS className="" />
+										<Icon_JavaScript className="" />
+										<Icon_GSAP className=" gsap" />
+										<Icon_PhotoShop className="" />
+									</div>
+									<div>
+										<div className="thumbnail-view-a-size">Select a Size</div>
+										<div className="thumbnail-resizes-container">
+											<div className="thumbnail-resize" onClick={() => onOpenModal(<div><h2>Apple Watch</h2><iframe src="/banners/apple/apple_watch-300x600/index.html" width="300" height="600"></iframe></div>, "/banners/apple/apple_watch-300x600/index.html", false)}>300x600</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<img src="/banners/apple/apple_watch-300x600.jpg" width="300" height="600" className="thumbnail-image" />
+						</div>
+						
+						{/* Visit Mississippi */}
+						<div className="thumbnail">
+							<div className="thumbnail-info">
+								<div className="thumbnail-info-top">
+									<div className="thumbnail-info-title">Visit<br />Mississippi</div>
 									<div className="thumbnail-description">Animation • Development</div>
 									<div className="container skills-used">
 										<Icon_HTML className="" />
@@ -65,34 +143,53 @@ const SampleBanners = ({ id, className, onOpenModal }) => {
 										<Icon_Illustrator className="" />
 										<Icon_Figma className="" />
 									</div>
+									<div>
+										<div className="thumbnail-view-a-size">Select a Size</div>
+										<div className="thumbnail-resizes-container">
+											<div className="thumbnail-resize" onClick={() => onOpenModal(<div className="v-container"><h2 className="view-horizontal-text">Visit Mississippi</h2><iframe src="/banners/visit_mississippi/visit_mississippi-160x600/index.html" width="160" height="600"></iframe></div>, "/banners/visit_mississippi/visit_mississippi-160x600/index.html", false)}>160x600</div>|
+											<div className="thumbnail-resize" onClick={() => onOpenModal(<div><h2>Visit Mississippi</h2><iframe src="/banners/visit_mississippi/visit_mississippi-300x250/index.html" width="300" height="250"></iframe></div>, "/banners/visit_mississippi/visit_mississippi-300x250/index.html", false)}>300x250</div>|
+											<div className="thumbnail-resize" onClick={() => onOpenModal(<div><h2>Visit Mississippi</h2><iframe src="/banners/visit_mississippi/visit_mississippi-300x600/index.html" width="300" height="600"></iframe></div>, "/banners/visit_mississippi/visit_mississippi-300x600/index.html", false)}>300x600</div><span className="view-horizontal">|</span>
+											<div className="thumbnail-resize view-horizontal" onClick={() => onOpenModal(<div><h2>Visit Mississippi</h2><iframe src="/banners/visit_mississippi/visit_mississippi-728x90/index.html" width="728" height="90"></iframe></div>, "/banners/visit_mississippi/visit_mississippi-728x90/index.html", false)}>728x90</div>
+										</div>
+									</div>
 								</div>
-								<div onClick={() => onOpenModal(<div><h2>Visit Mississippi</h2><iframe src="/banners/visit_mississippi/visit_mississippi-300x250/index.html" width="300" height="250"></iframe></div>, "/banners/visit_mississippi/visit_mississippi-300x250/index.html", false)} className="thumbnail-button">View</div>
 							</div>
 							<img src={thumb1} width="300" height="250" className="thumbnail-image" />
 						</div>
-
+						
+						{/* MVB Bank */}
 						<div className="thumbnail">
 							<div className="thumbnail-info">
 								<div className="thumbnail-info-top">
-									<div className="thumbnail-info-title">Borden<br />Cheese</div><br />
+									<div className="thumbnail-info-title">MVB: Market Stats</div>
 									<div className="thumbnail-description">Animation • Development</div>
 									<div className="container skills-used">
 										<Icon_HTML className="" />
 										<Icon_CSS className="" />
 										<Icon_JavaScript className="" />
 										<Icon_GSAP className=" gsap" />
-										<Icon_PhotoShop className="" />
+										<Icon_Illustrator className="" />
+										<Icon_Figma className="" />
+									</div>
+									<div>
+										<div className="thumbnail-view-a-size">Select a Size</div>
+										<div className="thumbnail-resizes-container">
+											<div className="thumbnail-resize" onClick={() => onOpenModal(<div className="v-container"><h2 className="view-horizontal-text">MVB: Market Stats</h2><iframe src="/banners/mvb/market_stats-160x600/index.html" width="160" height="600"></iframe></div>, "/banners/mvb/market_stats-160x600/index.html", false)}>160x600</div>|
+											<div className="thumbnail-resize" onClick={() => onOpenModal(<div><h2>MVB: Market Stats</h2><iframe src="/banners/mvb/market_stats-300x250/index.html" width="300" height="250"></iframe></div>, "/banners/mvb/market_stats-300x250/index.html", false)}>300x250</div>|
+											<div className="thumbnail-resize" onClick={() => onOpenModal(<div><h2>MVB: Market Stats</h2><iframe src="/banners/mvb/market_stats-300x600/index.html" width="300" height="600"></iframe></div>, "/banners/mvb/market_stats-300x600/index.html", false)}>300x600</div><span className="view-horizontal">|</span>
+											<div className="thumbnail-resize view-horizontal" onClick={() => onOpenModal(<div><h2>MVB: Market Stats</h2><iframe src="/banners/mvb/market_stats-728x90/index.html" width="728" height="90"></iframe></div>, "/banners/mvb/market_stats-728x90/index.html", false)}>728x90</div>
+										</div>
 									</div>
 								</div>
-								<div onClick={() => onOpenModal(<div><h2>Borden Cheese</h2><iframe src="/banners/borden/crisps_n_cubes-300x250/index.html" width="300" height="250"></iframe></div>, "/banners/borden/crisps_n_cubes-300x250/index.html", true)} className="thumbnail-button">View</div>
 							</div>
-							<img src={thumb2} width="300" height="250" className="thumbnail-image" />
+							<img src="/banners/mvb/market_stats-300x250.jpg" width="300" height="250" className="thumbnail-image" />
 						</div>
 
+						{/* Refocus */}
 						<div className="thumbnail">
 							<div className="thumbnail-info">
 								<div className="thumbnail-info-top">
-									<div className="thumbnail-info-title">Refocus</div><br />
+									<div className="thumbnail-info-title">Refocus</div>
 									<div className="thumbnail-description">Animation • Development</div>
 									<div className="container skills-used">
 										<Icon_HTML className="" />
@@ -101,16 +198,31 @@ const SampleBanners = ({ id, className, onOpenModal }) => {
 										<Icon_GSAP className=" gsap" />
 										<Icon_Figma className="" />
 									</div>
+									<div>
+										<div className="thumbnail-view-a-size">Select a Size</div>
+										<div className="thumbnail-resizes-container">
+											<div className="thumbnail-resize" onClick={() => onOpenModal(<div className="v-container"><h2 className="view-horizontal-text">Refocus</h2><iframe src="/banners/refocus/seller_benefits-160x600/index.html" width="160" height="600"></iframe></div>, "/banners/refocus/seller_benefits-160x600/index.html", false)}>160x600</div>|
+											<div className="thumbnail-resize" onClick={() => onOpenModal(<div><h2>Refocus</h2><iframe src="/banners/refocus/seller_benefits-300x250/index.html" width="300" height="250"></iframe></div>, "/banners/refocus/seller_benefits-300x250/index.html", false)}>300x250</div>|
+											<div className="thumbnail-resize" onClick={() => onOpenModal(<div><h2>Refocus</h2><iframe src="/banners/refocus/seller_benefits-300x600/index.html" width="300" height="600"></iframe></div>, "/banners/refocus/seller_benefits-300x600/index.html", false)}>300x600</div><span className="view-horizontal">|</span>
+											<div className="thumbnail-resize view-horizontal" onClick={() => onOpenModal(<div><h2>Refocus</h2><iframe src="/banners/refocus/seller_benefits-728x90/index.html" width="728" height="90"></iframe></div>, "/banners/refocus/seller_benefits-728x90/index.html", false)}>728x90</div>
+										</div>
+									</div>
 								</div>
-								<div onClick={() => onOpenModal(<div><h2>Refocus</h2><iframe src="/banners/refocus/seller_benefits-300x250/index.html" width="300" height="250"></iframe></div>, "/banners/refocus/seller_benefits-300x250/index.html", true)} className="thumbnail-button">View</div>
 							</div>
 							<img src={thumb3} width="300" height="250" className="thumbnail-image" />
 						</div>
+					</div>
 
+					<p>
+						<span className="h2-style light-blue"> Animated Ads </span><br />
+					</p>
+
+					<div className="section-content">
+						{/* Microsoft */}
 						<div className="thumbnail">
 							<div className="thumbnail-info">
 								<div className="thumbnail-info-top">
-									<div className="thumbnail-info-title">Microsoft</div><br />
+									<div className="thumbnail-info-title">Microsoft</div>
 									<div className="thumbnail-description">Animation • Development<br />Project Management</div>
 									<div className="container skills-used">
 										<Icon_HTML className="" />
@@ -120,35 +232,52 @@ const SampleBanners = ({ id, className, onOpenModal }) => {
 										<Icon_XD className="" />
 										<Icon_PhotoShop className="" />
 									</div>
+									<div>
+										<div className="thumbnail-view-a-size">Select a Size</div>
+										<div className="thumbnail-resizes-container">
+											<div className="thumbnail-resize" onClick={() => onOpenModal(<div className="v-container"><h2 className="view-horizontal-text">Microsoft</h2><iframe src="/banners/microsoft/microsoft_neutral-160x600/index.html" width="160" height="600"></iframe></div>, "/banners/microsoft/microsoft_neutral-160x600/index.html", true)}>160x600</div>|
+											<div className="thumbnail-resize" onClick={() => onOpenModal(<div><h2>Microsoft</h2><iframe src="/banners/microsoft/microsoft_neutral-300x250/index.html" width="300" height="250"></iframe></div>, "/banners/microsoft/microsoft_neutral-300x250/index.html", true)}>300x250</div>|
+											<div className="thumbnail-resize" onClick={() => onOpenModal(<div><h2>Microsoft</h2><iframe src="/banners/microsoft/microsoft_neutral-300x600/index.html" width="300" height="600"></iframe></div>, "/banners/microsoft/microsoft_neutral-300x600/index.html", true)}>300x600</div><span className="view-horizontal">|</span>
+											<div className="thumbnail-resize view-horizontal" onClick={() => onOpenModal(<div><h2>Microsoft</h2><iframe src="/banners/microsoft/microsoft_neutral-728x90/index.html" width="728" height="90"></iframe></div>, "/banners/microsoft/microsoft_neutral-728x90/index.html", true)}>728x90</div>
+										</div>
+									</div>
 								</div>
-								<div onClick={() => onOpenModal(<div><h2>Microsoft</h2><iframe src="/banners/microsoft/microsoft_neutral-300x250/index.html" width="300" height="250"></iframe></div>, "/banners/microsoft/microsoft_neutral-300x250/index.html", true)} className="thumbnail-button">View</div>
 							</div>
 							<img src={thumb4} width="300" height="250" className="thumbnail-image" />
 						</div>
 
+						{/* Borden */}
 						<div className="thumbnail">
 							<div className="thumbnail-info">
 								<div className="thumbnail-info-top">
-									<div className="thumbnail-info-title">XBox</div><br />
-									<div className="thumbnail-description">Animation • Development<br />Project Management</div>
+									<div className="thumbnail-info-title">Borden<br />Cheese</div>
+									<div className="thumbnail-description">Animation • Development</div>
 									<div className="container skills-used">
 										<Icon_HTML className="" />
 										<Icon_CSS className="" />
 										<Icon_JavaScript className="" />
 										<Icon_GSAP className=" gsap" />
 										<Icon_PhotoShop className="" />
-										<Icon_Premiere className="" />
+									</div>
+									<div>
+										<div className="thumbnail-view-a-size">Select a Size</div>
+										<div className="thumbnail-resizes-container">
+											<div className="thumbnail-resize" onClick={() => onOpenModal(<div><h2 className="view-horizontal-text">Borden Cheese</h2><iframe src="/banners/borden/crisps_n_cubes-160x600/index.html" width="160" height="600"></iframe></div>, "/banners/borden/crisps_n_cubes-160x600/index.html", false)}>160x600</div>|
+											<div className="thumbnail-resize" onClick={() => onOpenModal(<div><h2>Borden Cheese</h2><iframe src="/banners/borden/crisps_n_cubes-300x250/index.html" width="300" height="250"></iframe></div>, "/banners/borden/crisps_n_cubes-300x250/index.html", false)}>300x250</div>|
+											<div className="thumbnail-resize" onClick={() => onOpenModal(<div><h2>Borden Cheese</h2><iframe src="/banners/borden/crisps_n_cubes-300x600/index.html" width="300" height="600"></iframe></div>, "/banners/borden/crisps_n_cubes-300x600/index.html", false)}>300x600</div><span className="view-horizontal">|</span>
+											<div className="thumbnail-resize view-horizontal" onClick={() => onOpenModal(<div><h2>Borden Cheese</h2><iframe src="/banners/borden/crisps_n_cubes-728x90/index.html" width="728" height="90"></iframe></div>, "/banners/borden/crisps_n_cubes-728x90/index.html", false)}>728x90</div>
+										</div>
 									</div>
 								</div>
-								<div onClick={() => onOpenModal(<div><h2>XBox</h2><iframe src="/banners/xbox/xbox_titan-300x250/index.html" width="300" height="250"></iframe></div>, "/banners/xbox/xbox_titan-300x250/index.html", true)} className="thumbnail-button">View</div>
 							</div>
-							<img src={thumb5} width="300" height="250" className="thumbnail-image" />
+							<img src={thumb2} width="300" height="250" className="thumbnail-image" />
 						</div>
 
+						{/* Discover: Storefronts */}
 						<div className="thumbnail">
 							<div className="thumbnail-info">
 								<div className="thumbnail-info-top">
-									<div className="thumbnail-info-title">Discover: Storefronts</div><br />
+									<div className="thumbnail-info-title">Discover: Storefronts</div>
 									<div className="thumbnail-description">Animation • Development</div>
 									<div className="container skills-used">
 										<Icon_HTML className="" />
@@ -157,16 +286,25 @@ const SampleBanners = ({ id, className, onOpenModal }) => {
 										<Icon_GSAP className=" gsap" />
 										<Icon_Figma className="" />
 									</div>
+									<div>
+										<div className="thumbnail-view-a-size">Select a Size</div>
+										<div className="thumbnail-resizes-container">
+											<div className="thumbnail-resize" onClick={() => onOpenModal(<div className="v-container"><h2 className="view-horizontal-text">Discover: Storefronts</h2><iframe src="/banners/discover/storefronts-160x600/index.html" width="160" height="600"></iframe></div>, "/banners/discover/storefronts-160x600/index.html", true)}>160x600</div>|
+											<div className="thumbnail-resize" onClick={() => onOpenModal(<div><h2>Discover: Storefronts</h2><iframe src="/banners/discover/storefronts-300x250/index.html" width="300" height="250"></iframe></div>, "/banners/discover/storefronts-300x250/index.html", true)}>300x250</div>|
+											<div className="thumbnail-resize" onClick={() => onOpenModal(<div><h2>Discover: Storefronts</h2><iframe src="/banners/discover/storefronts-300x600/index.html" width="300" height="600"></iframe></div>, "/banners/discover/storefronts-300x600/index.html", true)}>300x600</div><span className="view-horizontal">|</span>
+											<div className="thumbnail-resize view-horizontal" onClick={() => onOpenModal(<div><h2>Discover: Storefronts</h2><iframe src="/banners/discover/storefronts-728x90/index.html" width="728" height="90"></iframe></div>, "/banners/discover/storefronts-728x90/index.html", true)}>728x90</div>
+										</div>
+									</div>
 								</div>
-								<div onClick={() => onOpenModal(<div><h2>Discover: Storefronts</h2><iframe src="/banners/discover/storefronts-300x250/index.html" width="300" height="250"></iframe></div>, "/banners/discover/storefronts-300x250/index.html", true)} className="thumbnail-button">View</div>
 							</div>
 							<img src={thumb6} width="300" height="250" className="thumbnail-image" />
 						</div>
 
+						{/* Discover: Cityscapes */}
 						<div className="thumbnail">
 							<div className="thumbnail-info">
 								<div className="thumbnail-info-top">
-									<div className="thumbnail-info-title">Discover: Cityscapes</div><br />
+									<div className="thumbnail-info-title">Discover: Cityscapes</div>
 									<div className="thumbnail-description">Animation • Development</div>
 									<div className="container skills-used">
 										<Icon_HTML className="" />
@@ -175,16 +313,25 @@ const SampleBanners = ({ id, className, onOpenModal }) => {
 										<Icon_GSAP className=" gsap" />
 										<Icon_Figma className="" />
 									</div>
+									<div>
+										<div className="thumbnail-view-a-size">Select a Size</div>
+										<div className="thumbnail-resizes-container">
+											<div className="thumbnail-resize" onClick={() => onOpenModal(<div className="v-container"><h2 className="view-horizontal-text">Discover: Cityscapes</h2><iframe src="/banners/discover/cityscapes-160x600/index.html" width="160" height="600"></iframe></div>, "/banners/discover/cityscapes-160x600/index.html", true)}>160x600</div>|
+											<div className="thumbnail-resize" onClick={() => onOpenModal(<div><h2>Discover: Cityscapes</h2><iframe src="/banners/discover/cityscapes-300x250/index.html" width="300" height="250"></iframe></div>, "/banners/discover/cityscapes-300x250/index.html", true)}>300x250</div>|
+											<div className="thumbnail-resize" onClick={() => onOpenModal(<div><h2>Discover: Cityscapes</h2><iframe src="/banners/discover/cityscapes-300x600/index.html" width="300" height="600"></iframe></div>, "/banners/discover/cityscapes-300x600/index.html", true)}>300x600</div><span className="view-horizontal">|</span>
+											<div className="thumbnail-resize view-horizontal" onClick={() => onOpenModal(<div><h2>Discover: Cityscapes</h2><iframe src="/banners/discover/cityscapes-728x90/index.html" width="728" height="90"></iframe></div>, "/banners/discover/cityscapes-728x90/index.html", true)}>728x90</div>
+										</div>
+									</div>
 								</div>
-								<div onClick={() => onOpenModal(<div><h2>Discover: Cityscapes</h2><iframe src="/banners/discover/cityscapes-300x250/index.html" width="300" height="250"></iframe></div>, "/banners/discover/cityscapes-300x250/index.html", true)} className="thumbnail-button">View</div>
 							</div>
 							<img src={thumb7} width="300" height="250" className="thumbnail-image" />
 						</div>
 
+						{/* Discover: No */}
 						<div className="thumbnail">
 							<div className="thumbnail-info">
 								<div className="thumbnail-info-top">
-									<div className="thumbnail-info-title">Discover: No</div><br />
+									<div className="thumbnail-info-title">Discover: No</div>
 									<div className="thumbnail-description">Animation • Development</div>
 									<div className="container skills-used">
 										<Icon_HTML className="" />
@@ -193,17 +340,48 @@ const SampleBanners = ({ id, className, onOpenModal }) => {
 										<Icon_GSAP className=" gsap" />
 										<Icon_Figma className="" />
 									</div>
+									<div>
+										<div className="thumbnail-view-a-size">Select a Size</div>
+										<div className="thumbnail-resizes-container">
+											<div className="thumbnail-resize" onClick={() => onOpenModal(<div><h2>Discover: No</h2><iframe src="/banners/discover/stackable-300x250/index.html" width="300" height="250"></iframe></div>, "/banners/discover/stackable-300x250/index.html", true)}>300x250</div>|
+											<div className="thumbnail-resize" onClick={() => onOpenModal(<div><h2>Discover: No</h2><iframe src="/banners/discover/stackable-300x600/index.html" width="300" height="600"></iframe></div>, "/banners/discover/stackable-300x600/index.html", true)}>300x600</div>
+										</div>
+									</div>
 								</div>
-								<div onClick={() => onOpenModal(<div><h2>Discover: No</h2><iframe src="/banners/discover/stackable-300x250/index.html" width="300" height="250"></iframe></div>, "/banners/discover/stackable-300x250/index.html", true)} className="thumbnail-button">View</div>
 							</div>
 							<img src={thumb8} width="300" height="250" className="thumbnail-image" />
 						</div>
 
-						{/* <Peekaboo id="peekaboo-container" onClick={() => onOpenModal(<video className="flash-content" src="https://www.kirk-mendoza.com/video/pg-site.mp4" type="video/mp4" autoPlay loop muted controls width="auto" height="20%"></video>, "https://www.kirk-mendoza.com/video/pg-site.mp4")} /> */}
-						{/* <Peekaboo id="peekaboo-container" onClick={() => onOpenModal(<div><h2>IRI: Digital Greeting Card</h2><iframe src="/flash/iri_christmas/index.html" style={{ display: "block", width: "100vw", height: "100vh", border: "none", margin: 0, overflow: "hidden" }} allowFullScreen className="iri" ></iframe></div>, "/flash/iri_christmas/index.html", false)} /> */}
+						{/* Plugra */}
+						<div className="thumbnail">
+							<div className="thumbnail-info">
+								<div className="thumbnail-info-top">
+									<div className="thumbnail-info-title">Plugra</div>
+									<div className="thumbnail-description">Animation • Development</div>
+									<div className="container skills-used">
+										<Icon_HTML className="" />
+										<Icon_CSS className="" />
+										<Icon_JavaScript className="" />
+										<Icon_GSAP className=" gsap" />
+										<Icon_PhotoShop className="" />
+									</div>
+									<div>
+										<div className="thumbnail-view-a-size">Select a Size</div>
+										<div className="thumbnail-resizes-container">
+											<div className="thumbnail-resize" onClick={() => onOpenModal(<div className="v-container"><h2 className="view-horizontal-text">Plugra</h2><iframe src="/banners/plugra/retail-160x600/index.html" width="160" height="600"></iframe></div>, "/banners/plugra/retail-160x600/index.html", false)}>160x600</div>|
+											<div className="thumbnail-resize" onClick={() => onOpenModal(<div><h2>Plugra</h2><iframe src="/banners/plugra/retail-300x250/index.html" width="300" height="250"></iframe></div>, "/banners/plugra/retail-300x250/index.html", false)}>300x250</div>|
+											<div className="thumbnail-resize" onClick={() => onOpenModal(<div><h2>Plugra</h2><iframe src="/banners/plugra/retail-300x600/index.html" width="300" height="600"></iframe></div>, "/banners/plugra/retail-300x600/index.html", false)}>300x600</div><span className="view-horizontal">|</span>
+											<div className="thumbnail-resize view-horizontal" onClick={() => onOpenModal(<div><h2>Plugra</h2><iframe src="/banners/plugra/retail-728x90/index.html" width="728" height="90"></iframe></div>, "/banners/plugra/retail-728x90/index.html", false)}>728x90</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<img src="/banners/plugra/retail-300x250.jpg" width="300" height="250" className="thumbnail-image" />
+						</div>
+
 						<Peekaboo id="peekaboo-container" onClick={() => onOpenModal(<div><h2>IRI: Digital Greeting Card</h2><iframe src="https://www.littlerobotmedia.com/media/flash/iri_christmas/index.html" style={{ display: "block", width: "100vw", height: "100vh", border: "none", margin: 0, overflow: "hidden" }} allowFullScreen className="iri" ></iframe></div>, "https://www.littlerobotmedia.com/media/flash/iri_christmas/index.html", false)} />
 					</div>
-				</div>
+				</div >
 			</div >
 		</>
 	)
