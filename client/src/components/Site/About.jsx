@@ -39,7 +39,7 @@ const About = ({ id, className, onOpenModal }) => {
 			</div>
 
 			<div className="about-sections">
-				<h2 style={{textAlign: "left", marginBottom: "1rem"}}>Tech Stack</h2>
+				<h2 className="tech-stack">Tech Stack</h2>
 				<div className="skills-container">
 					<Icon_HTML className="grayScale" alt="HTML" />
 					<Icon_CSS className="grayScale" alt="CSS" />

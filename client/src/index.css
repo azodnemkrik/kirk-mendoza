@@ -342,7 +342,7 @@ svg {
 	font-weight: normal;
 	font-family: "BulletSmallCaps", sans-serif;
 	font-size: 2.25em;
-		font-size: 2.25rem;
+	font-size: 2.25rem;
 	font-size: 2.25rem;
 	line-height: 0.65em;
 	margin-top: 1rem;
@@ -393,7 +393,8 @@ svg {
 	gap: 5px;
 	background-color: var(--color-light-gray);
 }
-.thumbnail-view-a-size{
+
+.thumbnail-view-a-size {
 	text-align: center;
 	font-variant: all-small-caps;
 	color: var(--color-light-blue);
@@ -993,6 +994,11 @@ summary::marker {
 	margin-top: 2rem;
 }
 
+.tech-stack {
+	text-align: left;
+	margin: 0 0 1rem 2rem;
+}
+
 /* Skills Styles */
 .skills-container {
 	display: flex;
@@ -1273,7 +1279,7 @@ li {
 	transform: translate(-50px, 0px);
 }
 
-#peekaboo-container-2{
+#peekaboo-container-2 {
 	margin-top: -290px;
 	margin-right: 500px;
 	cursor: pointer !important;
@@ -2128,7 +2134,7 @@ area {
 
 
 	/* Video Thumbnails */
-	.section-content p~.video-size, 
+	.section-content p~.video-size,
 	.section-content p~.video-size-vertical {
 		transform: scale(0.85);
 	}
@@ -2282,6 +2288,11 @@ area {
 	.profileImage {
 		min-width: 100px;
 		max-width: 200px;
+	}
+
+	.tech-stack {
+		text-align: center;
+		margin: 0 0 1rem 0;
 	}
 
 	.view-horizontal {
