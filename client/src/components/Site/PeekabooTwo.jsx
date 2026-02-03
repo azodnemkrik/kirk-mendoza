@@ -3,7 +3,7 @@ import { gsap } from "gsap/dist/gsap";
 import { MorphSVGPlugin } from "gsap/dist/MorphSVGPlugin";
 gsap.registerPlugin(MorphSVGPlugin);
 
-const PeekabooTwo = ({ id, className, onClick }) => {
+const PeekabooTwo = ({ id, className, onClick, onUserInteraction }) => {
 	const [hasPlayed, setHasPlayed] = useState(false);
 	const maintl = useRef(null);
 	const touchTimer = useRef(null);
@@ -39,6 +39,9 @@ const PeekabooTwo = ({ id, className, onClick }) => {
 	}, []);
 
 	const handleMouseEnter = () => {
+		if (onUserInteraction) {
+			onUserInteraction(`PeekabooTwo Hover: ${id || "peekaboo-2"}`);
+		}
 		if (maintl.current) {
 			// If timeline is at the start or reversing, play forward
 			if (maintl.current.progress() === 0 || maintl.current.reversed()) {
@@ -57,8 +60,13 @@ const PeekabooTwo = ({ id, className, onClick }) => {
 		}
 	};
 
-	const handleClick = () => {
-		console.log("flash");
+	const handleClick = (e) => {
+		if (onUserInteraction) {
+			onUserInteraction(`PeekabooTwo Click: ${id || "peekaboo-2"}`);
+		}
+		if (onClick) {
+			onClick(e);
+		}
 	};
 
 	const handleTouchStart = (e) => {
@@ -68,6 +76,9 @@ const PeekabooTwo = ({ id, className, onClick }) => {
 		// Set a timer for long press (3500ms)
 		touchTimer.current = setTimeout(() => {
 			// Long press detected - trigger the modal
+			if (onUserInteraction) {
+				onUserInteraction(`PeekabooTwo Long Press: ${id || "peekaboo-2"}`);
+			}
 			if (onClick) {
 				onClick(e);
 			}
@@ -92,7 +103,7 @@ const PeekabooTwo = ({ id, className, onClick }) => {
 	};
 
 	return (
-		<div id={id} className={`float ${className}`} onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave} onTouchStart={handleTouchStart} onTouchEnd={handleTouchEnd} onClick={onClick}>
+		<div id={id} className={`float ${className}`} onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave} onTouchStart={handleTouchStart} onTouchEnd={handleTouchEnd} onClick={handleClick}>
 			<svg id="peekaboo-2" xmlns="http://www.w3.org/2000/svg" width="360.48" height="168.91" viewBox="0 0 360.48 168.91">
 				<g id="start-state-2" className="guide">
 					<path id="opening-2-start" className="guide" d="M360.48,168.91H121.74c1.17-1.03,95.63-.37,101.57-.53,7.6-.17,31.71-.17,36.06-.33,5.72.5,37.05.39,43.27.39s39.74-.89,57.83.47Z" />

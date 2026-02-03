@@ -60,12 +60,12 @@ function App() {
 	}, []);
 	*/
 
-	const trackMenuClick = (label) => {
-		window.gtag && window.gtag('event', 'menu_click', {
-			event_category: 'Navigation',
-			event_label: window.location.pathname + window.location.hash,
+	const trackUserInteraction = (interactionLabel) => {
+		window.gtag && window.gtag('event', 'user_interaction', {
+			event_category: 'User Action',
+			event_label: interactionLabel,
 		});
-		console.log("Menu click tracked:", label);
+		console.log("User interaction tracked:", interactionLabel);
 	};
 
 	useEffect(() => {
@@ -96,38 +96,38 @@ function App() {
 
 	return (
 		<>
-			<Navigation ref={navRef} pathname={pathname} menuIsOpen={menuIsOpen} setMenuIsOpen={setMenuIsOpen} onMenuClick={trackMenuClick}/>
+			<Navigation ref={navRef} pathname={pathname} menuIsOpen={menuIsOpen} setMenuIsOpen={setMenuIsOpen} onUserInteraction={trackUserInteraction}/>
 
 			<div className="wrapper">
 
 				<div id="spacer"></div>
 
-				<About id="home" onOpenModal={(content, src, shouldShowScrubber = true) => {
+			<About id="home" onUserInteraction={trackUserInteraction} onOpenModal={(content, src, shouldShowScrubber = true) => {
 					setModalContent(content);
 					setModalSrc(src);
 					setShowScrubber(shouldShowScrubber);
 					setIsModalOpen(true);
 				}} />
-				<SampleBanners id="banners" className="banners-BG" onOpenModal={(content, src, shouldShowScrubber = true) => {
+				<SampleBanners id="banners" className="banners-BG" onUserInteraction={trackUserInteraction} onOpenModal={(content, src, shouldShowScrubber = true) => {
 					setModalContent(content);
 					setModalSrc(src);
 					setShowScrubber(shouldShowScrubber);
 					setIsModalOpen(true);
 				}} />
-				<SampleVideos id="videos" className="videos-BG" onOpenModal={(content, src, shouldShowScrubber = true) => {
+				<SampleVideos id="videos" className="videos-BG" onUserInteraction={trackUserInteraction} onOpenModal={(content, src, shouldShowScrubber = true) => {
 					setModalContent(content);
 					setModalSrc(src);
 					setShowScrubber(shouldShowScrubber);
 					setIsModalOpen(true);
 				}} />
-				<SampleDev id="react" className="dev-BG" onOpenModal={(content, src, shouldShowScrubber = true) => {
+				<SampleDev id="react" className="dev-BG" onUserInteraction={trackUserInteraction} onOpenModal={(content, src, shouldShowScrubber = true) => {
 					setModalContent(content);
 					setModalSrc(src);
 					setShowScrubber(shouldShowScrubber);
 					setIsModalOpen(true);
 				}} />
-				<Contact id="contact" className="contact-BG" />
-				<Footer id="footer" onOpenModal={(content, src, shouldShowScrubber = true) => {
+				<Contact id="contact" className="contact-BG" onUserInteraction={trackUserInteraction} />
+				<Footer id="footer" onUserInteraction={trackUserInteraction} onOpenModal={(content, src, shouldShowScrubber = true) => {
 					setModalContent(content);
 					setModalSrc(src);
 					setShowScrubber(shouldShowScrubber);

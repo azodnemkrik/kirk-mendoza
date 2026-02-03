@@ -61,12 +61,12 @@ const Modal = ({ isOpen, onClose, src, children, showScrubber = true }) => {
 
 		// Skip timeline detection for video files
 		if (isVideoFile(src)) {
-			console.log("Video file detected, skipping timeline detection");
+			// console.log("Video file detected, skipping timeline detection");
 			return;
 		}
 
 		if (!isOpen || !src) {
-			console.log("Exiting early - no isOpen or src");
+			// console.log("Exiting early - no isOpen or src");
 			return;
 		}
 
@@ -86,11 +86,11 @@ const Modal = ({ isOpen, onClose, src, children, showScrubber = true }) => {
 			const iframe = document.querySelector('.modal-content iframe');
 
 			if (iframe) {
-				console.log("Found iframe element:", iframe);
+				// console.log("Found iframe element:", iframe);
 				iframeElement = iframe;
 				setupIframeListener(iframe);
 			} else if (attempts < maxAttempts) {
-				console.log("Iframe not found, retrying in 100ms...");
+				// console.log("Iframe not found, retrying in 100ms...");
 				const tid = setTimeout(findIframe, 100);
 				timeoutIds.push(tid);
 			} else {
@@ -102,34 +102,34 @@ const Modal = ({ isOpen, onClose, src, children, showScrubber = true }) => {
 
 			// Function to check for maintl
 			const checkForMaintlWithRetry = () => {
-				console.log("checkForMaintlWithRetry started!");
+				// console.log("checkForMaintlWithRetry started!");
 
 				let maintlAttempts = 0;
 				const maxMaintlAttempts = 20;
 
 				const checkForMaintl = () => {
 					maintlAttempts++;
-					console.log(`Checking for maintl (attempt ${maintlAttempts}/${maxMaintlAttempts})`);
+					// console.log(`Checking for maintl (attempt ${maintlAttempts}/${maxMaintlAttempts})`);
 
 					try {
 						// Access the iframe's window and get maintl
 						const iframeWindow = iframe.contentWindow;
-						console.log("iframeWindow:", iframeWindow);
-						console.log("Looking for maintl:", iframeWindow.maintl);
+						// console.log("iframeWindow:", iframeWindow);
+						// console.log("Looking for maintl:", iframeWindow.maintl);
 
 						// Try to get maintl (might be undefined if using 'let' instead of 'var')
 						let gsapTL = iframeWindow.maintl;
 
 						// If not found, try to manually assign it to window for banners using 'let'
 						if (!gsapTL && iframeWindow.document) {
-							console.log("maintl not on window, checking if we can add it...");
+							// console.log("maintl not on window, checking if we can add it...");
 							// Execute a small script in the iframe to expose maintl
 							try {
 								const script = iframeWindow.document.createElement('script');
 								script.textContent = 'if (typeof maintl !== "undefined") { window.maintl = maintl; }';
 								iframeWindow.document.body.appendChild(script);
 								gsapTL = iframeWindow.maintl;
-								console.log("After script injection, maintl:", gsapTL);
+								// console.log("After script injection, maintl:", gsapTL);
 							} catch (e) {
 								console.error("Failed to inject script:", e);
 							}

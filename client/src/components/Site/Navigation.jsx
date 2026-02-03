@@ -11,7 +11,7 @@ gsap.registerPlugin(DrawSVGPlugin, MorphSVGPlugin, SplitText);
 
 const navTL = gsap.timeline();
 
-const Navigation = forwardRef(({ id, className, pathname , menuIsOpen, setMenuIsOpen , onMenuClick}, ref) => {
+const Navigation = forwardRef(({ id, className, pathname , menuIsOpen, setMenuIsOpen , onUserInteraction}, ref) => {
 	// List of section IDs in scroll order
 	const sectionIds = ["home", "banners", "videos", "react", "contact"];
 	const [activeSection, setActiveSection] = useState("");
@@ -68,7 +68,9 @@ const Navigation = forwardRef(({ id, className, pathname , menuIsOpen, setMenuIs
 			setMenuIsOpen(false);
 		}
 		window.location.hash = myHash
-		onMenuClick(myHash)
+		if (onUserInteraction) {
+			onUserInteraction(myHash)
+		}
 		console.log("pathname changed:", pathname);
 	}
 

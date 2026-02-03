@@ -13,13 +13,19 @@ import Icon_React from "../Icon_React";
 import Icon_XD from "../Icon_XD";
 import BrandCrawler from "./BrandCrawler";
 
-const About = ({ id, className, onOpenModal }) => {
+const About = ({ id, className, onOpenModal, onUserInteraction }) => {
 
 	const navRef = useRef(null);
 
 	useEffect(() => {
 
 	})
+
+	const handleToyHover = (isHovering) => {
+		if (onUserInteraction) {
+			onUserInteraction(isHovering ? "Easter Egg Hover: Toy Collector" : "Easter Egg Unhover: Toy Collector");
+		}
+	}
 
 	return (
 		<div id={id} className={`centered-container aboutBG ${className}`}>
@@ -91,14 +97,14 @@ const About = ({ id, className, onOpenModal }) => {
 								<li className="li-chicago" >I’m based about an hour outside of downtown Chicago.</li>
 								<li className="li-married" >Married once, parented twice.🧑🏽‍🤝‍🧑🏻</li>
 								<li className="li-3dprint" >I’m a 3D-printing hobbyist who enjoys tinkering and building things off-screen.</li>
-								<li className="li-toy" >Mild toy collector, with a soft spot for LEGO Star Wars and classic ’80s robots.<br/>
+							<li className="li-toy" onMouseEnter={() => handleToyHover(true)} onMouseLeave={() => handleToyHover(false)}>Mild toy collector, with a soft spot for LEGO Star Wars and classic '80s robots.<br/>
 								<div className="detail-image-container"><img src="../images/lego1.jpeg" alt="" /></div></li>
 							</ul>
 						</div>
 					</details>
 				</div>
 			</div>
-			<BrandCrawler className="brand-crawler" onOpenModal={onOpenModal} />
+			<BrandCrawler className="brand-crawler" onOpenModal={onOpenModal} onUserInteraction={onUserInteraction} />
 		</div>
 	)
 }

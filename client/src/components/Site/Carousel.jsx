@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState } from "react";
 import { gsap } from "gsap/dist/gsap";
 
-const Carousel = ({ images }) => {
+const Carousel = ({ images, onUserInteraction }) => {
 	const [currentIndex, setCurrentIndex] = useState(0);
 	const carouselRef = useRef(null);
 	const imageRefs = useRef([]);
@@ -63,16 +63,25 @@ const Carousel = ({ images }) => {
 
 	const handlePrev = () => {
 		const newIndex = currentIndex === 0 ? totalImages - 1 : currentIndex - 1;
+		if (onUserInteraction) {
+			onUserInteraction(`Carousel Click: Prev (to ${newIndex + 1})`);
+		}
 		goToSlide(newIndex, 'prev');
 	};
 
 	const handleNext = () => {
 		const newIndex = currentIndex === totalImages - 1 ? 0 : currentIndex + 1;
+		if (onUserInteraction) {
+			onUserInteraction(`Carousel Click: Next (to ${newIndex + 1})`);
+		}
 		goToSlide(newIndex, 'next');
 	};
 
 	const handleDotClick = (index) => {
 		const direction = index > currentIndex ? 'next' : 'prev';
+		if (onUserInteraction) {
+			onUserInteraction(`Carousel Click: Dot ${index + 1}`);
+		}
 		goToSlide(index, direction);
 	};
 
@@ -93,9 +102,15 @@ const Carousel = ({ images }) => {
 
 		if (Math.abs(diffX) > swipeThreshold) {
 			if (diffX > 0) {
+				if (onUserInteraction) {
+					onUserInteraction("Carousel Swipe: Next");
+				}
 				// Swiped left - go to next
 				handleNext();
 			} else {
+				if (onUserInteraction) {
+					onUserInteraction("Carousel Swipe: Prev");
+				}
 				// Swiped right - go to prev
 				handlePrev();
 			}

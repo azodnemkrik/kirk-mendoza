@@ -2,7 +2,7 @@ import axios from "axios";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 
-const Contact = ({ id, className, onOpenModal }) => {
+const Contact = ({ id, className, onOpenModal, onUserInteraction }) => {
 
 	const [name, setName] = useState('');
 	const [email, setEmail] = useState('');
@@ -16,6 +16,9 @@ const Contact = ({ id, className, onOpenModal }) => {
 
 	const reachOut = async (e) => {
 		e.preventDefault();
+		if (onUserInteraction) {
+			onUserInteraction("Contact Form: Submit Click");
+		}
 		setIsSubmitting(true);
 		const formData = new FormData(e.target);
 		setName(formData.get("name"));
@@ -87,7 +90,12 @@ const Contact = ({ id, className, onOpenModal }) => {
 							<input type="text" name="website" autoComplete="off" tabIndex="-1" style={{ position: 'absolute', left: '-99999px', visibility: 'hidden' }} />
 
 							<div><label>Subject</label><br />
-								<select className="subject" name="subject" value={subject} onChange={e => setSubject(e.target.value)}>
+								<select className="subject" name="subject" value={subject} onChange={e => {
+									setSubject(e.target.value);
+									if (onUserInteraction) {
+										onUserInteraction(`Contact Form: Subject Change - ${e.target.value || "(empty)"}`);
+									}
+								}}>
 									<option value="" defaultValue >-- Select One --</option>
 									<option value="I've got a QUESTION..." selected >I've got a QUESTION...</option>
 									<option value="I'd like to COLLABORATE..." >I'd like to COLLABORATE...</option>

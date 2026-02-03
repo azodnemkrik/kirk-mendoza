@@ -25,12 +25,19 @@ import Scrubber from "./Scrubber";
 import Icon_Premiere from "../Icon_Premiere";
 import BrandCrawler from "./BrandCrawler";
 
-const SampleBanners = ({ id, className, onOpenModal }) => {
+const SampleBanners = ({ id, className, onOpenModal, onUserInteraction }) => {
 
 	const [activeCard, setActiveCard] = useState(1);
 
 	const handleCardClick = (cardNumber) => {
 		setActiveCard(cardNumber);
+	}
+
+	const trackAndOpenModal = (interactionLabel, content, src, shouldShowScrubber = false) => {
+		if (onUserInteraction) {
+			onUserInteraction(interactionLabel);
+		}
+		onOpenModal(content, src, shouldShowScrubber);
 	}
 
 	return (
@@ -68,10 +75,10 @@ I avoid bloated tools so each piece feels intentional, polished, and far from co
 									<div>
 										<div className="thumbnail-view-a-size">Select a Size</div>
 										<div className="thumbnail-resizes-container">
-											<div className="thumbnail-resize" onClick={() => onOpenModal(<div className="v-container"><h2 className="view-horizontal-text">XBox</h2><iframe src="/banners/xbox/xbox_titan-160x600/index.html" width="160" height="600"></iframe></div>, "/banners/xbox/xbox_titan-160x600/index.html", true)}>160x600</div>|
-											<div className="thumbnail-resize" onClick={() => onOpenModal(<div><h2>XBox</h2><iframe src="/banners/xbox/xbox_titan-300x250/index.html" width="300" height="250"></iframe></div>, "/banners/xbox/xbox_titan-300x250/index.html", true)}>300x250</div>|
-											<div className="thumbnail-resize" onClick={() => onOpenModal(<div><h2>XBox</h2><iframe src="/banners/xbox/xbox_titan-300x600/index.html" width="300" height="600"></iframe></div>, "/banners/xbox/xbox_titan-300x600/index.html", true)}>300x600</div><span className="view-horizontal">|</span>
-											<div className="thumbnail-resize view-horizontal" onClick={() => onOpenModal(<div><h2>XBox</h2><iframe src="/banners/xbox/xbox_titan-728x90/index.html" width="728" height="90"></iframe></div>, "/banners/xbox/xbox_titan-728x90/index.html", true)}>728x90</div>
+											<div className="thumbnail-resize" onClick={() => trackAndOpenModal("Banner View: XBox 160x600", <div className="v-container"><h2 className="view-horizontal-text">XBox</h2><iframe src="/banners/xbox/xbox_titan-160x600/index.html" width="160" height="600"></iframe></div>, "/banners/xbox/xbox_titan-160x600/index.html", true)}>160x600</div>|
+											<div className="thumbnail-resize" onClick={() => trackAndOpenModal("Banner View: XBox 300x250", <div><h2>XBox</h2><iframe src="/banners/xbox/xbox_titan-300x250/index.html" width="300" height="250"></iframe></div>, "/banners/xbox/xbox_titan-300x250/index.html", true)}>300x250</div>|
+											<div className="thumbnail-resize" onClick={() => trackAndOpenModal("Banner View: XBox 300x600", <div><h2>XBox</h2><iframe src="/banners/xbox/xbox_titan-300x600/index.html" width="300" height="600"></iframe></div>, "/banners/xbox/xbox_titan-300x600/index.html", true)}>300x600</div><span className="view-horizontal">|</span>
+											<div className="thumbnail-resize view-horizontal" onClick={() => trackAndOpenModal("Banner View: XBox 728x90", <div><h2>XBox</h2><iframe src="/banners/xbox/xbox_titan-728x90/index.html" width="728" height="90"></iframe></div>, "/banners/xbox/xbox_titan-728x90/index.html", true)}>728x90</div>
 										</div>
 									</div>
 								</div>
@@ -96,8 +103,8 @@ I avoid bloated tools so each piece feels intentional, polished, and far from co
 									<div>
 										<div className="thumbnail-view-a-size">Select a Size</div>
 										<div className="thumbnail-resizes-container">
-											<div className="thumbnail-resize" onClick={() => onOpenModal(<div className="v-container"><h2 className="view-horizontal-text">Coca-Cola</h2><iframe src="/banners/coca_cola/coca_cola-share-160x600/index.html" width="160" height="600"></iframe></div>, "/banners/coca_cola/coca_cola-share-160x600/index.html", false)}>160x600</div>|
-											<div className="thumbnail-resize" onClick={() => onOpenModal(<div><h2>Coca-Cola</h2><iframe src="/banners/coca_cola/coca_cola-share-300x250/index.html" width="300" height="250"></iframe></div>, "/banners/coca_cola/coca_cola-share-300x250/index.html", false)}>300x250</div>
+											<div className="thumbnail-resize" onClick={() => trackAndOpenModal("Banner View: Coca-Cola 160x600", <div className="v-container"><h2 className="view-horizontal-text">Coca-Cola</h2><iframe src="/banners/coca_cola/coca_cola-share-160x600/index.html" width="160" height="600"></iframe></div>, "/banners/coca_cola/coca_cola-share-160x600/index.html", false)}>160x600</div>|
+											<div className="thumbnail-resize" onClick={() => trackAndOpenModal("Banner View: Coca-Cola 300x250", <div><h2>Coca-Cola</h2><iframe src="/banners/coca_cola/coca_cola-share-300x250/index.html" width="300" height="250"></iframe></div>, "/banners/coca_cola/coca_cola-share-300x250/index.html", false)}>300x250</div>
 										</div>
 									</div>
 								</div>
@@ -121,7 +128,7 @@ I avoid bloated tools so each piece feels intentional, polished, and far from co
 									<div>
 										<div className="thumbnail-view-a-size">Select a Size</div>
 										<div className="thumbnail-resizes-container">
-											<div className="thumbnail-resize" onClick={() => onOpenModal(<div><h2>Apple Watch</h2><iframe src="/banners/apple/apple_watch-300x600/index.html" width="300" height="600"></iframe></div>, "/banners/apple/apple_watch-300x600/index.html", false)}>300x600</div>
+											<div className="thumbnail-resize" onClick={() => trackAndOpenModal("Banner View: Apple Watch 300x600", <div><h2>Apple Watch</h2><iframe src="/banners/apple/apple_watch-300x600/index.html" width="300" height="600"></iframe></div>, "/banners/apple/apple_watch-300x600/index.html", false)}>300x600</div>
 										</div>
 									</div>
 								</div>
@@ -146,10 +153,10 @@ I avoid bloated tools so each piece feels intentional, polished, and far from co
 									<div>
 										<div className="thumbnail-view-a-size">Select a Size</div>
 										<div className="thumbnail-resizes-container">
-											<div className="thumbnail-resize" onClick={() => onOpenModal(<div className="v-container"><h2 className="view-horizontal-text">Visit Mississippi</h2><iframe src="/banners/visit_mississippi/visit_mississippi-160x600/index.html" width="160" height="600"></iframe></div>, "/banners/visit_mississippi/visit_mississippi-160x600/index.html", false)}>160x600</div>|
-											<div className="thumbnail-resize" onClick={() => onOpenModal(<div><h2>Visit Mississippi</h2><iframe src="/banners/visit_mississippi/visit_mississippi-300x250/index.html" width="300" height="250"></iframe></div>, "/banners/visit_mississippi/visit_mississippi-300x250/index.html", false)}>300x250</div>|
-											<div className="thumbnail-resize" onClick={() => onOpenModal(<div><h2>Visit Mississippi</h2><iframe src="/banners/visit_mississippi/visit_mississippi-300x600/index.html" width="300" height="600"></iframe></div>, "/banners/visit_mississippi/visit_mississippi-300x600/index.html", false)}>300x600</div><span className="view-horizontal">|</span>
-											<div className="thumbnail-resize view-horizontal" onClick={() => onOpenModal(<div><h2>Visit Mississippi</h2><iframe src="/banners/visit_mississippi/visit_mississippi-728x90/index.html" width="728" height="90"></iframe></div>, "/banners/visit_mississippi/visit_mississippi-728x90/index.html", false)}>728x90</div>
+											<div className="thumbnail-resize" onClick={() => trackAndOpenModal("Banner View: Visit Mississippi 160x600", <div className="v-container"><h2 className="view-horizontal-text">Visit Mississippi</h2><iframe src="/banners/visit_mississippi/visit_mississippi-160x600/index.html" width="160" height="600"></iframe></div>, "/banners/visit_mississippi/visit_mississippi-160x600/index.html", false)}>160x600</div>|
+											<div className="thumbnail-resize" onClick={() => trackAndOpenModal("Banner View: Visit Mississippi 300x250", <div><h2>Visit Mississippi</h2><iframe src="/banners/visit_mississippi/visit_mississippi-300x250/index.html" width="300" height="250"></iframe></div>, "/banners/visit_mississippi/visit_mississippi-300x250/index.html", false)}>300x250</div>|
+											<div className="thumbnail-resize" onClick={() => trackAndOpenModal("Banner View: Visit Mississippi 300x600", <div><h2>Visit Mississippi</h2><iframe src="/banners/visit_mississippi/visit_mississippi-300x600/index.html" width="300" height="600"></iframe></div>, "/banners/visit_mississippi/visit_mississippi-300x600/index.html", false)}>300x600</div><span className="view-horizontal">|</span>
+											<div className="thumbnail-resize view-horizontal" onClick={() => trackAndOpenModal("Banner View: Visit Mississippi 728x90", <div><h2>Visit Mississippi</h2><iframe src="/banners/visit_mississippi/visit_mississippi-728x90/index.html" width="728" height="90"></iframe></div>, "/banners/visit_mississippi/visit_mississippi-728x90/index.html", false)}>728x90</div>
 										</div>
 									</div>
 								</div>
@@ -174,10 +181,10 @@ I avoid bloated tools so each piece feels intentional, polished, and far from co
 									<div>
 										<div className="thumbnail-view-a-size">Select a Size</div>
 										<div className="thumbnail-resizes-container">
-											<div className="thumbnail-resize" onClick={() => onOpenModal(<div className="v-container"><h2 className="view-horizontal-text">MVB: Market Stats</h2><iframe src="/banners/mvb/market_stats-160x600/index.html" width="160" height="600"></iframe></div>, "/banners/mvb/market_stats-160x600/index.html", false)}>160x600</div>|
-											<div className="thumbnail-resize" onClick={() => onOpenModal(<div><h2>MVB: Market Stats</h2><iframe src="/banners/mvb/market_stats-300x250/index.html" width="300" height="250"></iframe></div>, "/banners/mvb/market_stats-300x250/index.html", false)}>300x250</div>|
-											<div className="thumbnail-resize" onClick={() => onOpenModal(<div><h2>MVB: Market Stats</h2><iframe src="/banners/mvb/market_stats-300x600/index.html" width="300" height="600"></iframe></div>, "/banners/mvb/market_stats-300x600/index.html", false)}>300x600</div><span className="view-horizontal">|</span>
-											<div className="thumbnail-resize view-horizontal" onClick={() => onOpenModal(<div><h2>MVB: Market Stats</h2><iframe src="/banners/mvb/market_stats-728x90/index.html" width="728" height="90"></iframe></div>, "/banners/mvb/market_stats-728x90/index.html", false)}>728x90</div>
+											<div className="thumbnail-resize" onClick={() => trackAndOpenModal("Banner View: MVB Market Stats 160x600", <div className="v-container"><h2 className="view-horizontal-text">MVB: Market Stats</h2><iframe src="/banners/mvb/market_stats-160x600/index.html" width="160" height="600"></iframe></div>, "/banners/mvb/market_stats-160x600/index.html", false)}>160x600</div>|
+											<div className="thumbnail-resize" onClick={() => trackAndOpenModal("Banner View: MVB Market Stats 300x250", <div><h2>MVB: Market Stats</h2><iframe src="/banners/mvb/market_stats-300x250/index.html" width="300" height="250"></iframe></div>, "/banners/mvb/market_stats-300x250/index.html", false)}>300x250</div>|
+											<div className="thumbnail-resize" onClick={() => trackAndOpenModal("Banner View: MVB Market Stats 300x600", <div><h2>MVB: Market Stats</h2><iframe src="/banners/mvb/market_stats-300x600/index.html" width="300" height="600"></iframe></div>, "/banners/mvb/market_stats-300x600/index.html", false)}>300x600</div><span className="view-horizontal">|</span>
+											<div className="thumbnail-resize view-horizontal" onClick={() => trackAndOpenModal("Banner View: MVB Market Stats 728x90", <div><h2>MVB: Market Stats</h2><iframe src="/banners/mvb/market_stats-728x90/index.html" width="728" height="90"></iframe></div>, "/banners/mvb/market_stats-728x90/index.html", false)}>728x90</div>
 										</div>
 									</div>
 								</div>
@@ -201,10 +208,10 @@ I avoid bloated tools so each piece feels intentional, polished, and far from co
 									<div>
 										<div className="thumbnail-view-a-size">Select a Size</div>
 										<div className="thumbnail-resizes-container">
-											<div className="thumbnail-resize" onClick={() => onOpenModal(<div className="v-container"><h2 className="view-horizontal-text">Refocus</h2><iframe src="/banners/refocus/seller_benefits-160x600/index.html" width="160" height="600"></iframe></div>, "/banners/refocus/seller_benefits-160x600/index.html", false)}>160x600</div>|
-											<div className="thumbnail-resize" onClick={() => onOpenModal(<div><h2>Refocus</h2><iframe src="/banners/refocus/seller_benefits-300x250/index.html" width="300" height="250"></iframe></div>, "/banners/refocus/seller_benefits-300x250/index.html", false)}>300x250</div>|
-											<div className="thumbnail-resize" onClick={() => onOpenModal(<div><h2>Refocus</h2><iframe src="/banners/refocus/seller_benefits-300x600/index.html" width="300" height="600"></iframe></div>, "/banners/refocus/seller_benefits-300x600/index.html", false)}>300x600</div><span className="view-horizontal">|</span>
-											<div className="thumbnail-resize view-horizontal" onClick={() => onOpenModal(<div><h2>Refocus</h2><iframe src="/banners/refocus/seller_benefits-728x90/index.html" width="728" height="90"></iframe></div>, "/banners/refocus/seller_benefits-728x90/index.html", false)}>728x90</div>
+											<div className="thumbnail-resize" onClick={() => trackAndOpenModal("Banner View: Refocus 160x600", <div className="v-container"><h2 className="view-horizontal-text">Refocus</h2><iframe src="/banners/refocus/seller_benefits-160x600/index.html" width="160" height="600"></iframe></div>, "/banners/refocus/seller_benefits-160x600/index.html", false)}>160x600</div>|
+											<div className="thumbnail-resize" onClick={() => trackAndOpenModal("Banner View: Refocus 300x250", <div><h2>Refocus</h2><iframe src="/banners/refocus/seller_benefits-300x250/index.html" width="300" height="250"></iframe></div>, "/banners/refocus/seller_benefits-300x250/index.html", false)}>300x250</div>|
+											<div className="thumbnail-resize" onClick={() => trackAndOpenModal("Banner View: Refocus 300x600", <div><h2>Refocus</h2><iframe src="/banners/refocus/seller_benefits-300x600/index.html" width="300" height="600"></iframe></div>, "/banners/refocus/seller_benefits-300x600/index.html", false)}>300x600</div><span className="view-horizontal">|</span>
+											<div className="thumbnail-resize view-horizontal" onClick={() => trackAndOpenModal("Banner View: Refocus 728x90", <div><h2>Refocus</h2><iframe src="/banners/refocus/seller_benefits-728x90/index.html" width="728" height="90"></iframe></div>, "/banners/refocus/seller_benefits-728x90/index.html", false)}>728x90</div>
 										</div>
 									</div>
 								</div>
@@ -235,10 +242,10 @@ I avoid bloated tools so each piece feels intentional, polished, and far from co
 									<div>
 										<div className="thumbnail-view-a-size">Select a Size</div>
 										<div className="thumbnail-resizes-container">
-											<div className="thumbnail-resize" onClick={() => onOpenModal(<div className="v-container"><h2 className="view-horizontal-text">Microsoft</h2><iframe src="/banners/microsoft/microsoft_neutral-160x600/index.html" width="160" height="600"></iframe></div>, "/banners/microsoft/microsoft_neutral-160x600/index.html", true)}>160x600</div>|
-											<div className="thumbnail-resize" onClick={() => onOpenModal(<div><h2>Microsoft</h2><iframe src="/banners/microsoft/microsoft_neutral-300x250/index.html" width="300" height="250"></iframe></div>, "/banners/microsoft/microsoft_neutral-300x250/index.html", true)}>300x250</div>|
-											<div className="thumbnail-resize" onClick={() => onOpenModal(<div><h2>Microsoft</h2><iframe src="/banners/microsoft/microsoft_neutral-300x600/index.html" width="300" height="600"></iframe></div>, "/banners/microsoft/microsoft_neutral-300x600/index.html", true)}>300x600</div><span className="view-horizontal">|</span>
-											<div className="thumbnail-resize view-horizontal" onClick={() => onOpenModal(<div><h2>Microsoft</h2><iframe src="/banners/microsoft/microsoft_neutral-728x90/index.html" width="728" height="90"></iframe></div>, "/banners/microsoft/microsoft_neutral-728x90/index.html", true)}>728x90</div>
+											<div className="thumbnail-resize" onClick={() => trackAndOpenModal("Banner View: Microsoft 160x600", <div className="v-container"><h2 className="view-horizontal-text">Microsoft</h2><iframe src="/banners/microsoft/microsoft_neutral-160x600/index.html" width="160" height="600"></iframe></div>, "/banners/microsoft/microsoft_neutral-160x600/index.html", true)}>160x600</div>|
+											<div className="thumbnail-resize" onClick={() => trackAndOpenModal("Banner View: Microsoft 300x250", <div><h2>Microsoft</h2><iframe src="/banners/microsoft/microsoft_neutral-300x250/index.html" width="300" height="250"></iframe></div>, "/banners/microsoft/microsoft_neutral-300x250/index.html", true)}>300x250</div>|
+											<div className="thumbnail-resize" onClick={() => trackAndOpenModal("Banner View: Microsoft 300x600", <div><h2>Microsoft</h2><iframe src="/banners/microsoft/microsoft_neutral-300x600/index.html" width="300" height="600"></iframe></div>, "/banners/microsoft/microsoft_neutral-300x600/index.html", true)}>300x600</div><span className="view-horizontal">|</span>
+											<div className="thumbnail-resize view-horizontal" onClick={() => trackAndOpenModal("Banner View: Microsoft 728x90", <div><h2>Microsoft</h2><iframe src="/banners/microsoft/microsoft_neutral-728x90/index.html" width="728" height="90"></iframe></div>, "/banners/microsoft/microsoft_neutral-728x90/index.html", true)}>728x90</div>
 										</div>
 									</div>
 								</div>
@@ -262,10 +269,10 @@ I avoid bloated tools so each piece feels intentional, polished, and far from co
 									<div>
 										<div className="thumbnail-view-a-size">Select a Size</div>
 										<div className="thumbnail-resizes-container">
-											<div className="thumbnail-resize" onClick={() => onOpenModal(<div><h2 className="view-horizontal-text">Borden Cheese</h2><iframe src="/banners/borden/crisps_n_cubes-160x600/index.html" width="160" height="600"></iframe></div>, "/banners/borden/crisps_n_cubes-160x600/index.html", false)}>160x600</div>|
-											<div className="thumbnail-resize" onClick={() => onOpenModal(<div><h2>Borden Cheese</h2><iframe src="/banners/borden/crisps_n_cubes-300x250/index.html" width="300" height="250"></iframe></div>, "/banners/borden/crisps_n_cubes-300x250/index.html", false)}>300x250</div>|
-											<div className="thumbnail-resize" onClick={() => onOpenModal(<div><h2>Borden Cheese</h2><iframe src="/banners/borden/crisps_n_cubes-300x600/index.html" width="300" height="600"></iframe></div>, "/banners/borden/crisps_n_cubes-300x600/index.html", false)}>300x600</div><span className="view-horizontal">|</span>
-											<div className="thumbnail-resize view-horizontal" onClick={() => onOpenModal(<div><h2>Borden Cheese</h2><iframe src="/banners/borden/crisps_n_cubes-728x90/index.html" width="728" height="90"></iframe></div>, "/banners/borden/crisps_n_cubes-728x90/index.html", false)}>728x90</div>
+											<div className="thumbnail-resize" onClick={() => trackAndOpenModal("Banner View: Borden Cheese 160x600", <div><h2 className="view-horizontal-text">Borden Cheese</h2><iframe src="/banners/borden/crisps_n_cubes-160x600/index.html" width="160" height="600"></iframe></div>, "/banners/borden/crisps_n_cubes-160x600/index.html", false)}>160x600</div>|
+											<div className="thumbnail-resize" onClick={() => trackAndOpenModal("Banner View: Borden Cheese 300x250", <div><h2>Borden Cheese</h2><iframe src="/banners/borden/crisps_n_cubes-300x250/index.html" width="300" height="250"></iframe></div>, "/banners/borden/crisps_n_cubes-300x250/index.html", false)}>300x250</div>|
+											<div className="thumbnail-resize" onClick={() => trackAndOpenModal("Banner View: Borden Cheese 300x600", <div><h2>Borden Cheese</h2><iframe src="/banners/borden/crisps_n_cubes-300x600/index.html" width="300" height="600"></iframe></div>, "/banners/borden/crisps_n_cubes-300x600/index.html", false)}>300x600</div><span className="view-horizontal">|</span>
+											<div className="thumbnail-resize view-horizontal" onClick={() => trackAndOpenModal("Banner View: Borden Cheese 728x90", <div><h2>Borden Cheese</h2><iframe src="/banners/borden/crisps_n_cubes-728x90/index.html" width="728" height="90"></iframe></div>, "/banners/borden/crisps_n_cubes-728x90/index.html", false)}>728x90</div>
 										</div>
 									</div>
 								</div>
@@ -289,10 +296,10 @@ I avoid bloated tools so each piece feels intentional, polished, and far from co
 									<div>
 										<div className="thumbnail-view-a-size">Select a Size</div>
 										<div className="thumbnail-resizes-container">
-											<div className="thumbnail-resize" onClick={() => onOpenModal(<div className="v-container"><h2 className="view-horizontal-text">Discover: Storefronts</h2><iframe src="/banners/discover/storefronts-160x600/index.html" width="160" height="600"></iframe></div>, "/banners/discover/storefronts-160x600/index.html", true)}>160x600</div>|
-											<div className="thumbnail-resize" onClick={() => onOpenModal(<div><h2>Discover: Storefronts</h2><iframe src="/banners/discover/storefronts-300x250/index.html" width="300" height="250"></iframe></div>, "/banners/discover/storefronts-300x250/index.html", true)}>300x250</div>|
-											<div className="thumbnail-resize" onClick={() => onOpenModal(<div><h2>Discover: Storefronts</h2><iframe src="/banners/discover/storefronts-300x600/index.html" width="300" height="600"></iframe></div>, "/banners/discover/storefronts-300x600/index.html", true)}>300x600</div><span className="view-horizontal">|</span>
-											<div className="thumbnail-resize view-horizontal" onClick={() => onOpenModal(<div><h2>Discover: Storefronts</h2><iframe src="/banners/discover/storefronts-728x90/index.html" width="728" height="90"></iframe></div>, "/banners/discover/storefronts-728x90/index.html", true)}>728x90</div>
+											<div className="thumbnail-resize" onClick={() => trackAndOpenModal("Banner View: Discover Storefronts 160x600", <div className="v-container"><h2 className="view-horizontal-text">Discover: Storefronts</h2><iframe src="/banners/discover/storefronts-160x600/index.html" width="160" height="600"></iframe></div>, "/banners/discover/storefronts-160x600/index.html", true)}>160x600</div>|
+											<div className="thumbnail-resize" onClick={() => trackAndOpenModal("Banner View: Discover Storefronts 300x250", <div><h2>Discover: Storefronts</h2><iframe src="/banners/discover/storefronts-300x250/index.html" width="300" height="250"></iframe></div>, "/banners/discover/storefronts-300x250/index.html", true)}>300x250</div>|
+											<div className="thumbnail-resize" onClick={() => trackAndOpenModal("Banner View: Discover Storefronts 300x600", <div><h2>Discover: Storefronts</h2><iframe src="/banners/discover/storefronts-300x600/index.html" width="300" height="600"></iframe></div>, "/banners/discover/storefronts-300x600/index.html", true)}>300x600</div><span className="view-horizontal">|</span>
+											<div className="thumbnail-resize view-horizontal" onClick={() => trackAndOpenModal("Banner View: Discover Storefronts 728x90", <div><h2>Discover: Storefronts</h2><iframe src="/banners/discover/storefronts-728x90/index.html" width="728" height="90"></iframe></div>, "/banners/discover/storefronts-728x90/index.html", true)}>728x90</div>
 										</div>
 									</div>
 								</div>
@@ -316,10 +323,10 @@ I avoid bloated tools so each piece feels intentional, polished, and far from co
 									<div>
 										<div className="thumbnail-view-a-size">Select a Size</div>
 										<div className="thumbnail-resizes-container">
-											<div className="thumbnail-resize" onClick={() => onOpenModal(<div className="v-container"><h2 className="view-horizontal-text">Discover: Cityscapes</h2><iframe src="/banners/discover/cityscapes-160x600/index.html" width="160" height="600"></iframe></div>, "/banners/discover/cityscapes-160x600/index.html", true)}>160x600</div>|
-											<div className="thumbnail-resize" onClick={() => onOpenModal(<div><h2>Discover: Cityscapes</h2><iframe src="/banners/discover/cityscapes-300x250/index.html" width="300" height="250"></iframe></div>, "/banners/discover/cityscapes-300x250/index.html", true)}>300x250</div>|
-											<div className="thumbnail-resize" onClick={() => onOpenModal(<div><h2>Discover: Cityscapes</h2><iframe src="/banners/discover/cityscapes-300x600/index.html" width="300" height="600"></iframe></div>, "/banners/discover/cityscapes-300x600/index.html", true)}>300x600</div><span className="view-horizontal">|</span>
-											<div className="thumbnail-resize view-horizontal" onClick={() => onOpenModal(<div><h2>Discover: Cityscapes</h2><iframe src="/banners/discover/cityscapes-728x90/index.html" width="728" height="90"></iframe></div>, "/banners/discover/cityscapes-728x90/index.html", true)}>728x90</div>
+											<div className="thumbnail-resize" onClick={() => trackAndOpenModal("Banner View: Discover Cityscapes 160x600", <div className="v-container"><h2 className="view-horizontal-text">Discover: Cityscapes</h2><iframe src="/banners/discover/cityscapes-160x600/index.html" width="160" height="600"></iframe></div>, "/banners/discover/cityscapes-160x600/index.html", true)}>160x600</div>|
+											<div className="thumbnail-resize" onClick={() => trackAndOpenModal("Banner View: Discover Cityscapes 300x250", <div><h2>Discover: Cityscapes</h2><iframe src="/banners/discover/cityscapes-300x250/index.html" width="300" height="250"></iframe></div>, "/banners/discover/cityscapes-300x250/index.html", true)}>300x250</div>|
+											<div className="thumbnail-resize" onClick={() => trackAndOpenModal("Banner View: Discover Cityscapes 300x600", <div><h2>Discover: Cityscapes</h2><iframe src="/banners/discover/cityscapes-300x600/index.html" width="300" height="600"></iframe></div>, "/banners/discover/cityscapes-300x600/index.html", true)}>300x600</div><span className="view-horizontal">|</span>
+											<div className="thumbnail-resize view-horizontal" onClick={() => trackAndOpenModal("Banner View: Discover Cityscapes 728x90", <div><h2>Discover: Cityscapes</h2><iframe src="/banners/discover/cityscapes-728x90/index.html" width="728" height="90"></iframe></div>, "/banners/discover/cityscapes-728x90/index.html", true)}>728x90</div>
 										</div>
 									</div>
 								</div>
@@ -343,8 +350,8 @@ I avoid bloated tools so each piece feels intentional, polished, and far from co
 									<div>
 										<div className="thumbnail-view-a-size">Select a Size</div>
 										<div className="thumbnail-resizes-container">
-											<div className="thumbnail-resize" onClick={() => onOpenModal(<div><h2>Discover: No</h2><iframe src="/banners/discover/stackable-300x250/index.html" width="300" height="250"></iframe></div>, "/banners/discover/stackable-300x250/index.html", true)}>300x250</div>|
-											<div className="thumbnail-resize" onClick={() => onOpenModal(<div><h2>Discover: No</h2><iframe src="/banners/discover/stackable-300x600/index.html" width="300" height="600"></iframe></div>, "/banners/discover/stackable-300x600/index.html", true)}>300x600</div>
+											<div className="thumbnail-resize" onClick={() => trackAndOpenModal("Banner View: Discover No 300x250", <div><h2>Discover: No</h2><iframe src="/banners/discover/stackable-300x250/index.html" width="300" height="250"></iframe></div>, "/banners/discover/stackable-300x250/index.html", true)}>300x250</div>|
+											<div className="thumbnail-resize" onClick={() => trackAndOpenModal("Banner View: Discover No 300x600", <div><h2>Discover: No</h2><iframe src="/banners/discover/stackable-300x600/index.html" width="300" height="600"></iframe></div>, "/banners/discover/stackable-300x600/index.html", true)}>300x600</div>
 										</div>
 									</div>
 								</div>
@@ -368,10 +375,10 @@ I avoid bloated tools so each piece feels intentional, polished, and far from co
 									<div>
 										<div className="thumbnail-view-a-size">Select a Size</div>
 										<div className="thumbnail-resizes-container">
-											<div className="thumbnail-resize" onClick={() => onOpenModal(<div className="v-container"><h2 className="view-horizontal-text">Plugra</h2><iframe src="/banners/plugra/retail-160x600/index.html" width="160" height="600"></iframe></div>, "/banners/plugra/retail-160x600/index.html", false)}>160x600</div>|
-											<div className="thumbnail-resize" onClick={() => onOpenModal(<div><h2>Plugra</h2><iframe src="/banners/plugra/retail-300x250/index.html" width="300" height="250"></iframe></div>, "/banners/plugra/retail-300x250/index.html", false)}>300x250</div>|
-											<div className="thumbnail-resize" onClick={() => onOpenModal(<div><h2>Plugra</h2><iframe src="/banners/plugra/retail-300x600/index.html" width="300" height="600"></iframe></div>, "/banners/plugra/retail-300x600/index.html", false)}>300x600</div><span className="view-horizontal">|</span>
-											<div className="thumbnail-resize view-horizontal" onClick={() => onOpenModal(<div><h2>Plugra</h2><iframe src="/banners/plugra/retail-728x90/index.html" width="728" height="90"></iframe></div>, "/banners/plugra/retail-728x90/index.html", false)}>728x90</div>
+											<div className="thumbnail-resize" onClick={() => trackAndOpenModal("Banner View: Plugra 160x600", <div className="v-container"><h2 className="view-horizontal-text">Plugra</h2><iframe src="/banners/plugra/retail-160x600/index.html" width="160" height="600"></iframe></div>, "/banners/plugra/retail-160x600/index.html", false)}>160x600</div>|
+											<div className="thumbnail-resize" onClick={() => trackAndOpenModal("Banner View: Plugra 300x250", <div><h2>Plugra</h2><iframe src="/banners/plugra/retail-300x250/index.html" width="300" height="250"></iframe></div>, "/banners/plugra/retail-300x250/index.html", false)}>300x250</div>|
+											<div className="thumbnail-resize" onClick={() => trackAndOpenModal("Banner View: Plugra 300x600", <div><h2>Plugra</h2><iframe src="/banners/plugra/retail-300x600/index.html" width="300" height="600"></iframe></div>, "/banners/plugra/retail-300x600/index.html", false)}>300x600</div><span className="view-horizontal">|</span>
+											<div className="thumbnail-resize view-horizontal" onClick={() => trackAndOpenModal("Banner View: Plugra 728x90", <div><h2>Plugra</h2><iframe src="/banners/plugra/retail-728x90/index.html" width="728" height="90"></iframe></div>, "/banners/plugra/retail-728x90/index.html", false)}>728x90</div>
 										</div>
 									</div>
 								</div>
@@ -379,7 +386,7 @@ I avoid bloated tools so each piece feels intentional, polished, and far from co
 							<img src="/banners/plugra/retail-300x250.jpg" width="300" height="250" className="thumbnail-image" />
 						</div>
 
-						<Peekaboo id="peekaboo-container" onClick={() => onOpenModal(<div><h2>IRI: Digital Greeting Card</h2><iframe src="https://www.littlerobotmedia.com/media/flash/iri_christmas/index.html" style={{ display: "block", width: "100vw", height: "100vh", border: "none", margin: 0, overflow: "hidden" }} allowFullScreen className="iri" ></iframe></div>, "https://www.littlerobotmedia.com/media/flash/iri_christmas/index.html", false)} />
+						<Peekaboo id="peekaboo-container" onUserInteraction={onUserInteraction} onClick={() => onOpenModal(<div><h2>IRI: Digital Greeting Card</h2><iframe src="https://www.littlerobotmedia.com/media/flash/iri_christmas/index.html" style={{ display: "block", width: "100vw", height: "100vh", border: "none", margin: 0, overflow: "hidden" }} allowFullScreen className="iri" ></iframe></div>, "https://www.littlerobotmedia.com/media/flash/iri_christmas/index.html", false)} />
 					</div>
 				</div >
 			</div >
