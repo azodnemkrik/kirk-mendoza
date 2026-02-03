@@ -60,6 +60,14 @@ function App() {
 	}, []);
 	*/
 
+	const trackMenuClick = (label) => {
+		window.gtag && window.gtag('event', 'menu_click', {
+			event_category: 'Navigation',
+			event_label: window.location.pathname + window.location.hash,
+		});
+		console.log("Menu click tracked:", label);
+	};
+
 	useEffect(() => {
 		const handleHashChange = () => {
 			// Scroll to the element if hash exists
@@ -85,10 +93,10 @@ function App() {
 			window.removeEventListener('hashchange', handleHashChange);
 		};
 	}, [location]);
-	
+
 	return (
 		<>
-			<Navigation ref={navRef} pathname={pathname} menuIsOpen={menuIsOpen} setMenuIsOpen={setMenuIsOpen} />
+			<Navigation ref={navRef} pathname={pathname} menuIsOpen={menuIsOpen} setMenuIsOpen={setMenuIsOpen} onMenuClick={trackMenuClick}/>
 
 			<div className="wrapper">
 
