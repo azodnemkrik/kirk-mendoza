@@ -58,7 +58,7 @@ const SampleVideos = ({ id, className, onOpenModal, onUserInteraction }) => {
 										<Icon_Premiere className="skillIcon" />
 									</div>
 								</div>
-								<div onClick={() => trackAndOpenModal("Video View: Ogilvy: Magic Intro", <div><h2>Ogilvy: Magic Intro</h2><video src="https://www.littlerobotmedia.com/media/video/ogilvy_magic_intro.mp4" type="video/mp4" autoPlay controls width="auto" min-width="100%" height="20%" background="cover"></video></div>, "https://www.littlerobotmedia.com/media/video/ogilvy_magic_intro.mp4", false)} className="thumbnail-button">View</div>
+								<div onClick={() => trackAndOpenModal("Video View: Ogilvy: Magic Intro", <div style={{ width: '85vw', height: 'auto' }}><h2>Ogilvy: Magic Intro</h2><video src="https://www.littlerobotmedia.com/media/video/ogilvy_magic_intro.mp4" type="video/mp4" autoPlay controls width="auto" min-width="100%" height="20%" background="cover"></video></div>, "https://www.littlerobotmedia.com/media/video/ogilvy_magic_intro.mp4", false)} className="thumbnail-button">View</div>
 							</div>
 							<img src={thumb1} width="300" height="250" className="thumbnail-image video-size" />
 						</div>
@@ -77,7 +77,7 @@ const SampleVideos = ({ id, className, onOpenModal, onUserInteraction }) => {
 										<Icon_Premiere className="skillIcon" />
 									</div>
 								</div>
-								<div onClick={() => trackAndOpenModal("Video View: Discover: Card Smarts", <div><h2>Discover: Card Smarts</h2><video src="https://www.littlerobotmedia.com/media/video/discover_card_smarts.mp4" type="video/mp4" autoPlay controls width="auto" min-width="100%" height="20%" background="cover"></video></div>, "https://www.littlerobotmedia.com/media/video/discover_card_smarts.mp4", false)} className="thumbnail-button">View</div>
+								<div onClick={() => trackAndOpenModal("Video View: Discover: Card Smarts", <div style={{ width: '85vw', height: 'auto' }}><h2>Discover: Card Smarts</h2><video src="https://www.littlerobotmedia.com/media/video/discover_card_smarts.mp4" type="video/mp4" autoPlay controls width="auto" min-width="100%" height="20%" background="cover"></video></div>, "https://www.littlerobotmedia.com/media/video/discover_card_smarts.mp4", false)} className="thumbnail-button">View</div>
 							</div>
 							<img src={thumb2} width="300" height="250" className="thumbnail-image video-size" />
 						</div>
@@ -95,7 +95,7 @@ const SampleVideos = ({ id, className, onOpenModal, onUserInteraction }) => {
 										<Icon_Premiere className="skillIcon" />
 									</div>
 								</div>
-								<div onClick={() => trackAndOpenModal("Video View: Parchment", <div><h2>Parchment</h2><video src="https://www.littlerobotmedia.com/media/video/parchment.mp4" type="video/mp4" autoPlay controls width="auto" min-width="100%" height="20%" background="cover"></video></div>, "https://www.littlerobotmedia.com/media/video/parchment.mp4", false)} className="thumbnail-button">View</div>
+								<div onClick={() => trackAndOpenModal("Video View: Parchment", <div style={{ width: '85vw', height: 'auto' }}><h2>Parchment</h2><video src="https://www.littlerobotmedia.com/media/video/parchment.mp4" type="video/mp4" autoPlay controls width="auto" min-width="100%" height="20%" background="cover"></video></div>, "https://www.littlerobotmedia.com/media/video/parchment.mp4", false)} className="thumbnail-button">View</div>
 							</div>
 							<img src={thumb3} width="300" height="250" className="thumbnail-image video-size" />
 						</div>
@@ -181,6 +181,24 @@ const SampleVideos = ({ id, className, onOpenModal, onUserInteraction }) => {
 							<img src="https://www.littlerobotmedia.com/media/video/muscle_mac_social_15-seconds.jpg" width="300" height="375" className="thumbnail-image video-size-vertical" />
 						</div>
 
+						{/* Muscle Mac: Product */}
+						<div className="thumbnail video-size">
+							<div className="thumbnail-info video-size">
+								<div className="thumbnail-info-top">
+									<div className="thumbnail-info-title">Muscle Mac: Product<br /><span className="video-duration">(0:25)</span></div>
+									<div className="thumbnail-description">Shoot • Direction<br />Animation • Editing</div>
+									<div className="container skills-used">
+										<Icon_AfterEffects className="skillIcon" />
+										<Icon_Figma className="skillIcon" />
+										<Icon_PhotoShop className="skillIcon" />
+										<Icon_Premiere className="skillIcon" />
+									</div>
+								</div>
+								<div onClick={() => trackAndOpenModal("Video View: Muscle Mac: Product", <div style={{ width: '85vw', height: 'auto' }}><h2>Muscle Mac: Product</h2><video src="https://www.littlerobotmedia.com/media/video/MM-Product-Loop.mp4" type="video/mp4" autoPlay loop controls width="auto" min-width="100%" height="20%" background="cover"></video></div>, "https://www.littlerobotmedia.com/media/video/MM-Product-Loop.mp4", false)} className="thumbnail-button">View</div>
+							</div>
+							<img src="https://www.littlerobotmedia.com/media/video/MM-Product-Loop.jpg" width="300" height="250" className="thumbnail-image video-size" />
+						</div>
+
 						{/* Muscle Mac: Offer */}
 						<div className="thumbnail"  style={{ width: '300px', height: '300px' }}>
 							<div className="thumbnail-info"style={{ width: '300px', height: '300px' }}>
@@ -233,7 +251,7 @@ const SampleVideos = ({ id, className, onOpenModal, onUserInteraction }) => {
 										<Icon_Premiere className="skillIcon" />
 									</div>
 								</div>
-								<div onClick={() => trackAndOpenModal("Video View: Discover: Basketball", <div><h2>Discover: Basketball</h2><video src="https://www.littlerobotmedia.com/media/video/discover_basketball.mp4" type="video/mp4" autoPlay loop controls width="auto" min-width="100%" height="20%" background="cover"></video></div>, "https://www.littlerobotmedia.com/media/video/discover_basketball.mp4", false)} className="thumbnail-button">View</div>
+								<div onClick={() => trackAndOpenModal("Video View: Discover: Basketball", <div style={{ width: '85vw', height: 'auto' }}><h2>Discover: Basketball</h2><video src="https://www.littlerobotmedia.com/media/video/discover_basketball.mp4" type="video/mp4" autoPlay loop controls width="auto" min-width="100%" height="20%" background="cover"></video></div>, "https://www.littlerobotmedia.com/media/video/discover_basketball.mp4", false)} className="thumbnail-button">View</div>
 							</div>
 							<img src={thumb4} width="300" height="250" className="thumbnail-image video-size" />
 						</div>
